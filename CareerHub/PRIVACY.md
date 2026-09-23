@@ -1,20 +1,20 @@
 # Integritet
 
-Det här repot är privat, men karriärhubben ska ändå bara innehålla information som behövs för jobbsökandet.
+Vi sparar bara sådant som hjälper dig i jobbsökandet.
 
-## Det vi kan spara
+## Det som kan vara värdefullt att ha här
 
-- arbetslivserfarenhet och arbetsrelaterade styrkor,
-- önskade roller och arbetsformer,
-- jobbannonser och ansökningsstatus,
+- din arbetslivserfarenhet och dina arbetsrelaterade styrkor,
+- roller och arbetsformer du är intresserad av,
+- jobbannonser och var du befinner dig i en ansökan,
 - ansökningsutkast och intervjuförberedelser.
 
-## Det vi inte behöver spara
+## Det som inte behövs
 
-- privata ekonomiska detaljer,
+- ekonomiska detaljer som inte hör till jobbsökandet,
 - hälsouppgifter,
-- familjeuppgifter som inte behövs för en ansökan,
+- familjeuppgifter som inte behövs i en ansökan,
 - personnummer,
-- privata telefonnummer eller privata e-postadresser i vanliga filer.
+- kontaktuppgifter i vanliga dokument när de inte behövs.
 
-Om Grace senare vill ha e-post- eller sms-påminnelser ska kontaktuppgifterna läggas som privata inställningar i GitHub, inte i dokumenten.
+När du vill lägga till e-post- eller sms-påminnelser kan kontaktuppgifterna hanteras separat från de vanliga dokumenten.

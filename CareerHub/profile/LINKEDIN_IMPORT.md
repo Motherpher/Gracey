@@ -1,7 +1,15 @@
-# Profilkomplettering
+# Komplettera din karriärprofil
 
 LinkedIn är inte ett krav.
 
-Det enklaste är att Grace senare lämnar ett aktuellt CV eller en kort arbetslivslista. Då kan karriärprofilen kompletteras med anställningar, årtal, yrkestitlar, utbildning, certifikat, språk samt system och verktyg.
+När du vill kan du lägga till ett aktuellt CV, en professionell profil eller annan dokumenterad karriärkälla. Då kan profilen kompletteras med sådant som går att verifiera, till exempel:
 
-Inget ska fyllas i från gissningar. Grace bekräftar vad som ska användas.
+- anställningar och årtal,
+- yrkestitlar,
+- utbildning,
+- certifikat,
+- språk,
+- system och verktyg,
+- dokumenterade arbetsprover eller projekt.
+
+Inget förs in i den matchningsbara profilen utan en verifierad karriärkälla.

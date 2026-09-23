@@ -1,6 +1,6 @@
-schema_version: "1.0"
-updated: "2026-09-24T01:24:00+02:00"
-ux_version: "grace-1.1"
+schema_version: "2.0"
+updated: "2026-09-24T01:28:00+02:00"
+ux_version: "grace-1.2"
 
 defaults:
   country: "SE"
@@ -12,73 +12,19 @@ defaults:
 
 lanes:
   core:
-    description: "Huvudspår för den här sökningen. Matchningsprofilen hämtas endast från verifierade karriärkällor."
+    description: "Huvudspåret byggs från verifierade karriärkällor."
     weight: 1.0
-    queries:
-      - "handledare vård"
-      - "handledare omsorg"
-      - "handledare rehabilitering"
-      - "utbildare vård"
-      - "utbildningssamordnare vård"
-      - "samordnare vård"
-      - "samordnare omsorg"
-      - "vårdsamordnare"
-      - "patientkoordinator"
-      - "patientvägledare"
-      - "teamledare vård"
-      - "introduktionsansvarig vård"
-      - "servicekoordinator sjukhus"
-      - "HLR instruktör"
+    queries: []
 
   adjacent:
-    description: "Närliggande möjligheter. Det här är search-only konfiguration och blir aldrig kandidatfakta."
+    description: "Närliggande möjligheter läggs till först när de kan härledas från verifierad karriärevidens."
     weight: 0.9
-    queries:
-      - "verksamhetssamordnare vård"
-      - "verksamhetssamordnare omsorg"
-      - "utbildningskoordinator vård"
-      - "kurskoordinator vård"
-      - "rehabkoordinator"
-      - "bemanningskoordinator vård"
-      - "planeringssamordnare omsorg"
-      - "serviceledare vård"
-      - "rådgivare vård"
-      - "stödkoordinator omsorg"
-      - "onboarding vård"
-      - "mentor vård omsorg"
+    queries: []
 
   bridge:
-    description: "Flexibla alternativ. Specifika önskemål eller behov kan läggas ovanpå som ett tillfälligt sökraster."
+    description: "Flexibla alternativ läggs till först när de kan härledas från verifierad karriärevidens."
     weight: 0.75
-    queries:
-      - "administrativ samordnare vård"
-      - "receptionist vård"
-      - "patientservice"
-      - "mottagningskoordinator vård"
-      - "kundservice vård"
-      - "servicevärd sjukhus"
-      - "bokningskoordinator vård"
-      - "team assistant vård"
-      - "bemanningsassistent vård"
-      - "deltid reception vård"
-      - "deltid service sjukhus"
-
-preference_flags:
-  positive:
-    - "handledning"
-    - "utbildning"
-    - "samordning"
-    - "team"
-    - "hybrid"
-    - "deltid"
-    - "tidsbegränsad"
-  review:
-    - "yrkeslegitimation krävs"
-    - "körkort krävs"
-    - "säkerhetsprövning"
-    - "chefserfarenhet krävs"
-    - "specifik vårdadministrativ utbildning krävs"
-
+    queries: []
 
 user_search_overlay:
   source: user_input

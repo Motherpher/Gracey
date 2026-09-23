@@ -1,76 +1,26 @@
-schema_version: "1.0"
-updated: "2026-09-23"
-status: "arbetsprofil-baserad-pa-intervju-behover-kompletteras-av-grace"
+schema_version: "2.0"
+updated: "2026-09-24"
+policy: "verified-career-sources-only"
 
 identity:
   name: "Grace"
-  current_location: null
-  location_note: "Geografi är ännu inte bekräftad. Sökningen börjar därför brett i Sverige."
+
+career_sources: []
+
+evidence: []
 
 positioning:
-  repository_working_description: "Erfaren, relationsstark och praktiskt orienterad yrkesperson med vana att samordna, handleda och skapa trygghet i patient- och kollegnära arbete."
-  attribution_status: "arbetsprofil-fran-intervju-inte-slutligt-godkand-av-grace"
-  primary_public_roles:
-    - handledare
-    - samordnare
-    - koordinator
-    - instruktör
-    - utbildare
-    - teamledande stöd
-  evidence_domains:
-    - patientnära arbete
-    - handledning
-    - praktiskt lärande
-    - samordning
-    - kollegialt stöd
-    - HLR-instruktion
-    - relationsskapande
-    - situationsanpassad kommunikation
+  headline: ""
+  functional_core: []
+  derived_from_evidence_ids: []
 
-verified_capabilities:
-  - id: handledning
-    label: "Handledning och praktiskt lärande"
-    evidence: "Förklarar, visar praktiskt, låter personen prova och ger direkt återkoppling."
-  - id: samordning
-    label: "Samordning och helhetsperspektiv"
-    evidence: "Har fungerat som koordinator/samordnare och beskriver hur hon väger olika perspektiv och får gruppen att samlas kring ett arbetssätt."
-  - id: tryggt_ledarskap
-    label: "Tydligt och omtänksamt ledarskap"
-    evidence: "Kan fatta och hålla fast vid beslut samtidigt som hon lyssnar och förklarar."
-  - id: relationsformaga
-    label: "Relationsförmåga och lyhördhet"
-    evidence: "Kollegor söker sig till henne och hon uppmärksammar när ord, känslor och kroppsspråk inte riktigt stämmer överens."
-  - id: patientstod
-    label: "Patientnära stöd"
-    evidence: "Har beskrivit konkret stöd i vardagsnära vårdsituationer."
-  - id: hlr
-    label: "Instruktörserfarenhet"
-    evidence: "Tidigare material anger erfarenhet som HLR-instruktör."
-
-career_preferences:
-  employment_types: [full_time, part_time, temporary, permanent]
-  work_modes: [onsite, hybrid]
-  target_geographies: ["Sweden"]
-  lanes: [core, adjacent, bridge]
-  salary:
-    minimum: null
-    currency: "SEK"
-    note: "Bättre ekonomi är viktig, men ingen lönenivå är ännu fastställd."
-  desired_experience:
-    - "känna sig uppskattad för det hon bidrar med"
-    - "ett arbete som känns lättare, friare och mer energigivande"
-    - "balans mellan allvar och en varm, lättsam arbetsmiljö"
-    - "möjlighet att använda handledning, samordning och relationsförmåga"
-  availability: null
-
-verification_needed:
-  - exakt nuvarande yrkestitel
-  - formell utbildning och eventuella legitimationer/certifikat
-  - fullständig arbetslivskronologi
-  - geografiskt sökområde och pendlingsradie
-  - önskad arbetstid
-  - löneanspråk eller lägstanivå
-  - språk
-  - digitala verktyg och system
-  - aktuellt CV
-  - roller eller arbetsuppgifter som ska uteslutas
+verification_queue:
+  - id: career-source-cv
+    question: "Lägg till aktuellt CV som verifierad karriärkälla."
+    status: open
+  - id: career-source-qualifications
+    question: "Lägg till relevanta utbildningar, legitimationer eller certifikat som verifierade karriärkällor."
+    status: open
+  - id: career-source-professional-profile
+    question: "Lägg till professionell profil eller dokumenterad arbetslivshistorik om den ska användas i matchningen."
+    status: open

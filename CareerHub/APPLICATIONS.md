@@ -1,6 +1,6 @@
 # Ansökningar och uppföljning
 
-Varje valt jobb får en egen jobbsida. Här följer Grace processen efter att hon har valt att gå vidare.
+Här samlas de jobb du har valt att gå vidare med. Du ser läget direkt och kan ta nästa steg när du vill.
 
 ## Pågående
 
@@ -12,6 +12,6 @@ Varje valt jobb får en egen jobbsida. Här följer Grace processen efter att ho
 | Roll | Arbetsgivare | Utfall | Uppdaterad |
 |---|---|---|---|
 
-## Så följs en ansökan
+## Din väg genom en ansökan
 
-Valt → Förbereds → Redo att söka → Ansökan skickad → Kontakt → Arbetsprov/Test → Intervju/Möte 1–5 → Erbjudande / Avslutad / Avstår
+Analyserat → Förbereds → Redo att söka → Ansökan skickad → Kontakt → Arbetsprov/Test → Intervju/Möte 1–5 → Erbjudande / Avslutad / Avstår

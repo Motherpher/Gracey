@@ -61,6 +61,28 @@ jobs:
               print("JSON OK", p)
           PY
 
+      - name: Kontrollera verifierad karriärprofil
+        run: |
+          PYTHONPATH=CareerHub/src python - <<'PY'
+          import copy
+          import yaml
+          from careerhub.cli import validate_profile
+
+          profile = yaml.safe_load(open("CareerHub/profile/candidate.yaml", encoding="utf-8"))
+          validate_profile(profile)
+
+          invalid = copy.deepcopy(profile)
+          invalid["specific_wishes_or_needs"] = "ska aldrig bli profilfakta"
+          try:
+              validate_profile(invalid)
+          except SystemExit:
+              pass
+          else:
+              raise AssertionError("Search-only wishes were accepted as candidate profile evidence")
+
+          print("Verified-career profile firewall OK")
+          PY
+
       - name: Kontrollera grundfunktion
         run: python CareerHub/scripts/careerhub.py --help
 
@@ -122,7 +144,18 @@ jobs:
 
           bridge_ranked=rank_jobs([bridge_good], "bridge", bridge, profile, search["defaults"])
           assert bridge_ranked and bridge_ranked[0].title == "Servicevärd sjukhus"
-          print("Matching-quality regression OK")
+
+          overlay_ranked=rank_jobs(
+              [good],
+              "core",
+              core,
+              profile,
+              search["defaults"],
+              search_overlay="deltid handledning",
+          )
+          assert overlay_ranked
+          assert any("search-only wishes/needs fit" in reason for reason in overlay_ranked[0].triage_reasons)
+          print("Matching-quality + search-raster regression OK")
           PY
 
       - name: Kontrollera jobbhistoriken

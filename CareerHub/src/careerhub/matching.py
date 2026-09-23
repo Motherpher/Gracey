@@ -10,61 +10,14 @@ from rapidfuzz.fuzz import token_set_ratio
 from .models import Job
 
 
-LANE_TITLE_TERMS = {
-    "core": [
-        "handledare", "instruktör", "utbildare", "utbildningsledare",
-        "samordnare", "koordinator", "vårdsamordnare", "patientkoordinator",
-        "patientvägledare", "teamledare", "arbetsledare", "mentor",
-        "klinisk handledare", "introduktionsansvarig", "utbildningssamordnare",
-        "servicekoordinator", "omsorgskoordinator"
-    ],
-    "adjacent": [
-        "verksamhetssamordnare", "projektkoordinator", "projektsamordnare",
-        "utbildningskoordinator", "kurskoordinator", "rehabkoordinator",
-        "bemanningskoordinator", "planeringssamordnare", "serviceledare",
-        "kundansvarig", "rådgivare", "stödkoordinator", "case manager",
-        "community coordinator", "onboarding", "trainer", "facilitator"
-    ],
-    "bridge": [
-        "administratör", "administrativ samordnare", "receptionist",
-        "kundservice", "kundtjänst", "servicevärd", "patientservice",
-        "bokningskoordinator", "vårdadministratör", "mottagningskoordinator",
-        "team assistant", "office coordinator", "support", "bemanning"
-    ],
-}
+LANE_TITLE_TERMS = {"core": [], "adjacent": [], "bridge": []}
 
-MISMATCH_TITLE_TERMS = [
-    "software engineer", "backend engineer", "frontend engineer", "full stack",
-    "developer", "devops", "data engineer", "machine learning engineer",
-    "account executive", "sales director", "general counsel", "attorney",
-    "lawyer", "dentist", "physician", "medical doctor",
-    "security engineer", "cybersecurity", "finance director",
-    "financial controller", "accountant", "product director",
-    "engineering manager",
-    "teknisk", "flygtekn", "odontolog", "röntgen", "hyrox", "fitness",
-    "stall", "ridlärare", "ridinstruktör", "ekonomiansvarig", "redovisning",
-    "sälj-", "säljare", "restaurang", "bygg", "ingenjör", "lager", "logistik",
-]
-
-CARE_CONTEXT_TERMS = [
-    "vård", "omsorg", "patient", "sjukhus", "vårdcentral", "klinik",
-    "region ", "regionen", "socialtjänst", "socialpsykiatri", "psykiatri",
-    "rehabiliter", "hälsa", "lss", "funktionsstöd", "äldreomsorg",
-    "hemtjänst", "boendestöd", "personlig assistans", "habiliter",
-    "medarbetare i vården", "hälso- och sjukvård",
-]
-
-CONTEXT_REQUIRED_TITLE_TERMS = [
-    "handledare", "instruktör", "utbildare", "samordnare", "koordinator",
-    "teamledare", "arbetsledare", "mentor", "administratör", "receptionist",
-    "kundservice", "serviceledare", "rådgivare",
-]
-
-UNVERIFIED_PROFESSION_TITLE_TERMS = [
-    "sjuksköterska", "arbetsterapeut", "socionom", "tandsköterska",
-    "läkare", "psykolog", "fysioterapeut", "medicinsk sekreterare",
-    "vårdadministratör",
-]
+# Profile-specific occupational taxonomies are deliberately absent here.
+# Search direction comes from verified career evidence and/or the search-only user raster.
+MISMATCH_TITLE_TERMS = []
+CARE_CONTEXT_TERMS = []
+CONTEXT_REQUIRED_TITLE_TERMS = []
+UNVERIFIED_PROFESSION_TITLE_TERMS = []
 
 REMOTE_US_PATTERNS = [
     "remote - united states", "remote - us", "remote us", "remote, us",

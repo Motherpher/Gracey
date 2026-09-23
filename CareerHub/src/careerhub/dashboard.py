@@ -337,6 +337,7 @@ def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict
         "## 1 · Hitta jobb", "",
         f"**Senast uppdaterad:** {now} · **{len(jobs)} aktuella jobb** · **{vault.get('total_jobs_ever_seen', len(jobs))} jobb i historiken**", "",
         "**När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 sekunder**. Sidan uppdateras när sökningen är klar.", "",
+        "När du vill kan du skriva **specifika önskemål eller behov** i sökningen. Det fungerar som ett extra raster för just sökningen och ändrar aldrig din karriärprofil.", "",
         f"**[Uppdatera jobb →](https://github.com/{REPO}/actions/workflows/careerhub-scan.yml)** · **[Öppna jobbhistoriken →](JOB_VAULT.md)** · **[Analysera ett jobb jag hittat själv →]({choose_any_link()})**", "",
     ]
     for lane_name in ["core", "adjacent", "bridge"]:
@@ -373,10 +374,9 @@ def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict
         "Du kan få påminnelser före sista ansökningsdag och följa nästa steg direkt från jobbsidan. E-post och sms kan läggas till när du vill.", "",
         "**[Ställ in påminnelser →](SETUP.md#påminnelser)**", ""
         "---", "",
-        "<details>", "<summary><strong>Profil, integritet och inställningar</strong></summary>", "",
+        "<details>", "<summary><strong>Profil och inställningar</strong></summary>", "",
         "- [Din arbetsprofil](profile/PROFILE_REVIEW.md)",
-        "- [Integritet](PRIVACY.md)",
-        "- [Inställningar och påminnelser](SETUP.md)",
+                "- [Inställningar och påminnelser](SETUP.md)",
         "- [Jobbkällor](docs/SOURCE_MATRIX.md)",
         "- [Fördjupad matchningslogik](hrdm/HRDM_R_v6.3.md)", "",
         "</details>",

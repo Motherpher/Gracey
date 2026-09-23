@@ -16,15 +16,79 @@ def root_from_here() -> Path:
     return Path(__file__).resolve().parents[3]
 
 
+ALLOWED_CAREER_SOURCE_TYPES = {
+    "cv",
+    "professional_profile",
+    "employment_record",
+    "qualification",
+    "certification",
+    "portfolio_work_sample",
+    "employer_reference",
+    "verified_project_record",
+}
+
+FORBIDDEN_PROFILE_KEYS = {
+    "private_life",
+    "personal_life",
+    "family",
+    "children",
+    "relationship",
+    "marital_status",
+    "health",
+    "medical",
+    "medical_history",
+    "religion",
+    "ethnicity",
+    "sexual_orientation",
+    "political_affiliation",
+    "personal_finance",
+    "private_notes",
+    "career_preferences",
+    "specific_wishes_or_needs",
+    "verified_capabilities",
+    "desired_experience",
+}
+
+
+def _walk_profile_keys(value):
+    if isinstance(value, dict):
+        for key, child in value.items():
+            yield str(key).lower()
+            yield from _walk_profile_keys(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from _walk_profile_keys(child)
+
+
+def validate_profile(profile: dict) -> None:
+    forbidden = sorted({key for key in _walk_profile_keys(profile) if key in FORBIDDEN_PROFILE_KEYS})
+    if forbidden:
+        raise SystemExit("Profilen innehåller fält som inte får användas i CareerHub: " + ", ".join(forbidden))
+
+    verified_sources = {}
+    for source in profile.get("career_sources", []):
+        source_id = str(source.get("id") or "").strip()
+        source_type = str(source.get("source_type") or "").strip()
+        if source_type not in ALLOWED_CAREER_SOURCE_TYPES:
+            raise SystemExit(f"Otillåten karriärkälla: {source_type or '<saknas>'}")
+        if source.get("verification_status") != "verified":
+            raise SystemExit(f"Karriärkällan {source_id or '<utan id>'} är inte verifierad.")
+        if source_id:
+            verified_sources[source_id] = source
+
+    for item in profile.get("evidence", []):
+        if item.get("status") != "verified":
+            raise SystemExit("All matchningsbar karriärevidens måste vara verifierad.")
+        source_ids = set(item.get("source_ids", []))
+        if not source_ids or not source_ids.issubset(set(verified_sources)):
+            raise SystemExit("Karriärevidens måste vara bunden till verifierade karriärkällor.")
+
+
 def load_profile(root: Path) -> dict:
     import yaml
-    base = yaml.safe_load((root / "CareerHub/profile/candidate.yaml").read_text(encoding="utf-8"))
-    local = root / "CareerHub/private/profile.local.yaml"
-    if local.exists():
-        override = yaml.safe_load(local.read_text(encoding="utf-8")) or {}
-        for key, value in override.items():
-            base[key] = value
-    return base
+    profile = yaml.safe_load((root / "CareerHub/profile/candidate.yaml").read_text(encoding="utf-8")) or {}
+    validate_profile(profile)
+    return profile
 
 
 def cmd_scan(args):

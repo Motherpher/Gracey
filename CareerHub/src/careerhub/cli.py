@@ -109,8 +109,9 @@ def cmd_scan(args):
     for lane_name in lane_names:
         lane_cfg = lanes[lane_name]
         source_queries = list(lane_cfg.get("queries", []))
-        source_queries.extend(candidate_terms(profile)[:12])
-        if search_overlay:
+        if lane_name == "core":
+            source_queries.extend(candidate_terms(profile)[:12])
+        if search_overlay and (source_queries or lane_name == "core"):
             source_queries.append(search_overlay)
         source_queries = list(dict.fromkeys(q.strip() for q in source_queries if str(q).strip()))
         sourced = source_lane(source_queries, search_cfg["defaults"], source_cfg)

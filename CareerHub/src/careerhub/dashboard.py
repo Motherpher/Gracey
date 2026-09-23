@@ -81,15 +81,15 @@ def why_short(job: Job) -> str:
         reasons.append("deltid")
     if job.matched_query:
         reasons.append(f"träff på {job.matched_query}")
-    return " · ".join(reasons[:2]) or "matchar Grace profil"
+    return " · ".join(reasons[:2]) or "matchar din profil"
 
 
 def choose_link(job: Job, default_priority: int = 3) -> str:
     title = f"[CareerHub Job] {job.company or 'Arbetsgivare'} — {job.title}"
     lane_labels = {"core": "Huvudspår", "adjacent": "Närliggande möjlighet", "bridge": "Flexibelt / extra"}
     body = (
-        "## Grace · Analysera det här jobbet\n\n"
-        "Allt är redan ifyllt. För att starta analysen behöver du bara skapa jobbsidan längst ned.\n\n"
+        "## Analysera det här jobbet\n\n"
+        "Allt är förberett. När du vill starta analysen skapar du bara jobbsidan längst ned.\n\n"
         "### Länk till jobbet\n"
         f"{job.url}\n\n"
         "### Jobb-ID\n"
@@ -133,9 +133,9 @@ def status_update_link(case: dict, status: str) -> str:
 
 def lane_title(lane: str) -> tuple[str, str]:
     return {
-        "core": ("Huvudspår", "Handledande, samordnande, utbildande och relationsnära roller där Grace befintliga erfarenhet kommer till tydlig användning."),
-        "adjacent": ("Närliggande möjligheter", "Närliggande roller där handledning, samordning, stöd och tryggt ledarskap kan överföras till en ny miljö."),
-        "bridge": ("Flexibelt / extra", "Deltid, tidsbegränsade roller och andra arbeten som kan fungera som en trygg bro till nästa steg."),
+        "core": ("Huvudspår", "Roller där din erfarenhet av handledning, samordning, lärande och relationsskapande kommer till sin rätt."),
+        "adjacent": ("Närliggande möjligheter", "Roller där du kan ta med dina styrkor in i en ny miljö utan att börja om från början."),
+        "bridge": ("Flexibelt / extra", "Flexibla alternativ som ger dig rörelse, handlingsutrymme och en smidig väg vidare."),
     }.get(lane, (lane.title(), ""))
 
 
@@ -244,7 +244,7 @@ def render_applications(path: Path, cases_data: dict):
     active.sort(key=lambda c: (-int(c.get("priority") or 3), c.get("deadline") or "9999"))
     lines = [
         "# Ansökningar och uppföljning", "",
-        "Varje valt jobb får en egen jobbsida. Här följer Grace processen efter att hon har valt att gå vidare.", "",
+        "Här samlas de jobb du har valt att gå vidare med. Du ser nästa steg direkt och kan följa processen i din egen takt.", "",
         "## Pågående", "",
         "| Prioritet | Roll | Arbetsgivare | Läge | Sista dag | Nästa steg | Datum | Jobbsida |",
         "|---|---|---|---|---|---|---|---|",
@@ -332,7 +332,7 @@ def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict
         "![Grace · Karriärhubben](visuals/careerhub-journey.svg)", "",
         "# Grace · Karriärhubben", "",
         "## 1 · HITTA JOBB → 2 · VÄLJ JOBB → 3 · SÖK", "",
-        "Allt annat sköts i bakgrunden. Grace behöver bara följa de tre stegen.", "",
+        "Välkommen. Här är dina aktuella möjligheter, samlade och förberedda. Du väljer tempot. Vi håller ordning på resten.", "",
         "---", "",
         "## 1 · Hitta jobb", "",
         f"**Senast uppdaterad:** {now} · **{len(jobs)} aktuella jobb** · **{vault.get('total_jobs_ever_seen', len(jobs))} jobb i historiken**", "",
@@ -344,9 +344,9 @@ def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict
             render_lane(lines, lane_name, by_lane[lane_name], cases_by_job)
     lines += [
         "---", "", "## 2 · Välj jobb", "",
-        "**Den enda frågan är: Vill du analysera det här jobbet?**", "",
-        "Om svaret är ja trycker du på **JA — Analysera**. Karriärhubben sköter därefter den fulla analysen, arbetsgivar- och rollkontrollen, prioriteringen, jobbsidan och ansökningsunderlaget i bakgrunden.", "",
-        "Grace behöver inte förstå analysmodellen eller hur jobbsidan är uppbyggd.", "",
+        "**När ett jobb väcker ditt intresse är frågan enkel: vill du analysera det?**", "",
+        "När du vill titta närmare trycker du på **JA — Analysera**. Då går vi igenom rollen, arbetsgivaren, kraven och matchningen och förbereder nästa steg åt dig.", "",
+        "Du behöver inte tänka på metoden bakom. När du vill gå vidare tar vi hand om analysen och presenterar det som är viktigt för dig.", "",
     ]
     if active_cases:
         lines += ["| Nivå | Jobb | Läge | Sista dag | Nästa steg |", "|---|---|---|---|---|"]
@@ -359,23 +359,23 @@ def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict
             company = str(c.get("company") or "").replace("|", "\\|")
             lines.append(f"| **{c.get('priority',3)} / 5 · {rank_label(c.get('priority'))}** | [{title} — {company}]({issue_url}) | **{STATUS_LABELS.get(c.get('status'), c.get('status'))}** | {deadline} | {case_actions(c)} |")
     else:
-        lines += ["Inga jobb är analyserade ännu. Tryck **JA — Analysera** vid ett jobb ovan.", ""]
+        lines += ["Inga jobb är analyserade ännu. När något känns intressant väljer du **JA — Analysera**.", ""]
     lines += [
         "", f"**[Öppna ansökningsöversikten →](APPLICATIONS.md)**", "",
         "---", "", "## 3 · Sök", "",
-        "För varje analyserat jobb får Grace en tydlig matchning, en kort arbetsgivar- och rollbild, vad som talar för och emot jobbet samt ett redigerbart ansökningsutkast.", "",
+        "När du vill söka ligger underlaget redan klart: en tydlig matchning, en kort bild av rollen och arbetsgivaren, det som talar för och emot – och ett redigerbart ansökningsutkast.", "",
         "1. Öppna jobbsidan.",
         "2. Ladda ner och justera ansökningsunderlaget.",
         "3. Skicka ansökan till arbetsgivaren.",
         "4. Markera **Ansökan skickad**.",
         "5. Följ sedan processen: kontakt, arbetsprov/test, intervju eller möte 1–5, erbjudande eller avslut.", "",
-        "### Påminnelser", "",
-        "Valda jobb kan få automatiska påminnelser före sista ansökningsdag. Påminnelser på jobbsidan kräver inget extra. E-post och sms kan kopplas på senare utan att kontaktuppgifter behöver ligga i vanliga filer.", "",
-        "**[Ställ in påminnelser →](SETUP.md#deadline-reminders)**", "",
+        "### När du vill hålla tempot", "",
+        "Du kan få påminnelser före sista ansökningsdag och följa nästa steg direkt från jobbsidan. E-post och sms kan läggas till när du vill.", "",
+        "**[Ställ in påminnelser →](SETUP.md#påminnelser)**", ""
         "---", "",
         "<details>", "<summary><strong>Profil, integritet och inställningar</strong></summary>", "",
-        "- [Se vad karriärhubben vet om Grace](profile/PROFILE_REVIEW.md)",
-        "- [Integritet och privat arbetssätt](PRIVACY.md)",
+        "- [Din arbetsprofil](profile/PROFILE_REVIEW.md)",
+        "- [Integritet](PRIVACY.md)",
         "- [Inställningar och påminnelser](SETUP.md)",
         "- [Jobbkällor](docs/SOURCE_MATRIX.md)",
         "- [Fördjupad matchningslogik](hrdm/HRDM_R_v6.3.md)", "",

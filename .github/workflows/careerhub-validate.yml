@@ -1,4 +1,4 @@
-name: Validate CareerHub
+name: Grace · Kontrollera karriärhubben
 
 on:
   push:
@@ -26,14 +26,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
+      - name: Förbered karriärhubben
         run: pip install -r CareerHub/requirements.txt
 
-      - name: Compile Python
+      - name: Kontrollera programfiler
         run: |
           find CareerHub/src CareerHub/scripts -name '*.py' -print0 | xargs -0 -n1 python -m py_compile
 
-      - name: Validate YAML and JSON
+      - name: Kontrollera profil och datafiler
         run: |
           python - <<'PY'
           import json, yaml
@@ -61,10 +61,10 @@ jobs:
               print("JSON OK", p)
           PY
 
-      - name: CLI smoke test
+      - name: Kontrollera grundfunktion
         run: python CareerHub/scripts/careerhub.py --help
 
-      - name: Choose-job parser smoke test
+      - name: Kontrollera formuläret Välj jobb
         run: |
           cat > /tmp/careerhub-event.json <<'JSON'
           {
@@ -72,7 +72,7 @@ jobs:
               "number": 99,
               "title": "[CareerHub Job] Example",
               "user": {"login": "tester"},
-              "body": "### Job URL\nhttps://example.invalid/job\n\n### Role\nCommunications coordinator\n\n### Employer\nExample Org\n\n### Lane\nadjacent — transferable/adjacent role\n\n### Priority 1–5\n4 — High\n\n### Deadline\n2026-10-10\n\n### Job text (optional)\nCommunications coordinator. Part time. Research and writing."
+              "body": "### Länk till jobbet\nhttps://example.invalid/job\n\n### Roll\nUtbildningskoordinator\n\n### Arbetsgivare\nExempelorganisation\n\n### Spår\nNärliggande möjlighet\n\n### Prioritet 1–5\n4 — Mycket intressant\n\n### Sista ansökningsdag\n2026-10-10\n\n### Jobbtext (valfritt)\nUtbildningskoordinator. Deltid. Handledning, planering och samordning."
             }
           }
           JSON
@@ -80,16 +80,16 @@ jobs:
           test "$(cat /tmp/careerhub-request/lane.txt)" = "adjacent"
           test "$(cat /tmp/careerhub-request/priority.txt)" = "4"
           test "$(cat /tmp/careerhub-request/deadline.txt)" = "2026-10-10"
-          grep -q "Communications coordinator" /tmp/careerhub-request/job_text.txt
+          grep -q "Utbildningskoordinator" /tmp/careerhub-request/job_text.txt
 
-      - name: Status-update parser smoke test
+      - name: Kontrollera uppföljningsformuläret
         run: |
           cat > /tmp/careerhub-update-event.json <<'JSON'
           {
             "issue": {
               "number": 101,
               "title": "[CareerHub Update] #99 — Applied",
-              "body": "### CareerHub case issue\n99\n\n### New status\napplied\n\n### Date\n2026-09-23\n\n### Next action (optional)\nFollow up\n\n### Next action date (optional)\n2026-10-01"
+              "body": "### Jobbsidans nummer\n99\n\n### Nytt läge\nAnsökan skickad\n\n### Datum\n2026-09-23\n\n### Nästa steg\nFölj upp\n\n### Datum för nästa steg\n2026-10-01"
             }
           }
           JSON
@@ -97,7 +97,7 @@ jobs:
           test "$(cat /tmp/careerhub-update/case_issue_number.txt)" = "99"
           test "$(cat /tmp/careerhub-update/status.txt)" = "applied"
 
-      - name: Matching-quality regression test
+      - name: Kontrollera jobbmatchningen
         run: |
           PYTHONPATH=CareerHub/src python - <<'PY'
           import yaml
@@ -109,23 +109,23 @@ jobs:
           core=search["lanes"]["core"]
           bridge=search["lanes"]["bridge"]
 
-          good=Job(source="test", title="Communications Officer", company="NGO", location="Stockholm", description="Writing, media relations and stakeholder communication.")
+          good=Job(source="test", title="Utbildningssamordnare", company="Region", location="Uppsala", description="Handledning, introduktion, praktiskt lärande och samordning av medarbetare.")
           bad=Job(source="test", title="Backend Software Engineer", company="TechCo", location="Remote", description="Build APIs and backend systems. Communication skills valued.")
-          us_only=Job(source="test", title="Content Writer", company="USCo", location="United States", work_mode="remote", description="Remote - United States only. Content writing.")
+          us_only=Job(source="test", title="Trainer healthcare", company="USCo", location="United States", work_mode="remote", description="Remote - United States only. Training healthcare staff.")
           bridge_good=Job(source="test", title="Administratör deltid", company="Local", location="Stockholm", description="Deltid administration and reception.")
 
           core_ranked=rank_jobs([good,bad,us_only], "core", core, profile, search["defaults"])
           titles=[j.title for j in core_ranked]
-          assert "Communications Officer" in titles, titles
+          assert "Utbildningssamordnare" in titles, titles
           assert "Backend Software Engineer" not in titles, titles
-          assert "Content Writer" not in titles, titles
+          assert "Trainer healthcare" not in titles, titles
 
           bridge_ranked=rank_jobs([bridge_good], "bridge", bridge, profile, search["defaults"])
           assert bridge_ranked and bridge_ranked[0].title == "Administratör deltid"
           print("Matching-quality regression OK")
           PY
 
-      - name: State/vault regression test
+      - name: Kontrollera jobbhistoriken
         run: |
           PYTHONPATH=CareerHub/src python - <<'PY'
           from pathlib import Path
@@ -137,7 +137,7 @@ jobs:
               root=Path(td)
               vault_path=root/"vault.json"
               cases_path=root/"cases.json"
-              job=Job(source="test", title="Reporter", company="Example", location="Stockholm", deadline="2026-10-15", url="https://example.invalid/reporter", lane="core")
+              job=Job(source="test", title="Handledare", company="Example", location="Uppsala", deadline="2026-10-15", url="https://example.invalid/handledare", lane="core")
               vault=merge_job_vault(vault_path,[job])
               assert vault["total_jobs_ever_seen"] == 1
               case=choose_case(cases_path,job,12,"https://github.com/example/issues/12",5)
@@ -148,9 +148,9 @@ jobs:
           print("State/vault regression OK")
           PY
 
-      - name: Offline drill + DOCX smoke test
+      - name: Kontrollera ansökningsunderlaget
         run: |
-          python CareerHub/scripts/careerhub.py drill             --url "https://example.invalid/job"             --text "Communications coordinator. Part time. Research, writing, stakeholder communication and project coordination."             --title "Communications coordinator"             --company "Example Org"             --deadline "2026-10-10"             --lane adjacent             --out /tmp/careerhub-smoke
+          python CareerHub/scripts/careerhub.py drill             --url "https://example.invalid/job"             --text "Utbildningskoordinator. Deltid. Handledning, introduktion, planering och samordning."             --title "Utbildningskoordinator"             --company "Exempelorganisation"             --deadline "2026-10-10"             --lane adjacent             --out /tmp/careerhub-smoke
           test -f /tmp/careerhub-smoke/job.json
           test -f /tmp/careerhub-smoke/HRDM_input_packet.json
           test -f /tmp/careerhub-smoke/HRDM_result.json

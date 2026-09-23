@@ -90,12 +90,21 @@ def load_yaml(path):
 
 
 def candidate_terms(profile: dict) -> list[str]:
+    verified_sources = {
+        str(src.get("id"))
+        for src in profile.get("career_sources", [])
+        if src.get("verification_status") == "verified"
+    }
     terms = []
-    pos = profile.get("positioning", {})
-    terms += pos.get("primary_public_roles", [])
-    terms += pos.get("evidence_domains", [])
-    for cap in profile.get("verified_capabilities", []):
-        terms.append(cap.get("label", ""))
+    for item in profile.get("evidence", []):
+        source_ids = set(item.get("source_ids", []))
+        if item.get("status") != "verified":
+            continue
+        if not source_ids or not source_ids.issubset(verified_sources):
+            continue
+        claim = str(item.get("claim") or "").strip()
+        if claim:
+            terms.append(claim)
     return [t.lower() for t in terms if t]
 
 
@@ -180,7 +189,7 @@ def _recency(job: Job) -> float:
         return 0.55
 
 
-def triage(job: Job, lane_name: str, lane_cfg: dict, profile: dict, defaults: dict) -> Job:
+def triage(job: Job, lane_name: str, lane_cfg: dict, profile: dict, defaults: dict, search_overlay: str = "") -> Job:
     queries = lane_cfg.get("queries", [])
     blob = job.search_blob
     title = job.title or ""
@@ -205,6 +214,14 @@ def triage(job: Job, lane_name: str, lane_cfg: dict, profile: dict, defaults: di
 
     geo, geo_flags = _geo_fit(job, profile)
     recency = _recency(job)
+
+    overlay_fit = 0.0
+    overlay = (search_overlay or "").strip().lower()
+    if overlay:
+        overlay_tokens = _tokens(overlay)
+        if overlay_tokens:
+            overlay_fit = len(overlay_tokens & jtoken) / max(1, len(overlay_tokens))
+        overlay_fit = max(overlay_fit, token_set_ratio(title, overlay) / 100 * 0.6)
 
     flags = list(geo_flags)
 
@@ -239,6 +256,8 @@ def triage(job: Job, lane_name: str, lane_cfg: dict, profile: dict, defaults: di
         15 * geo +
         5 * recency
     )
+    if overlay:
+        raw += min(10, 10 * overlay_fit)
 
     if title_fit < 0.34:
         raw -= 24
@@ -268,6 +287,8 @@ def triage(job: Job, lane_name: str, lane_cfg: dict, profile: dict, defaults: di
         f"geography/remote fit {round(geo*100)}%",
         f"recency signal {round(recency*100)}%",
     ]
+    if overlay:
+        job.triage_reasons.append(f"search-only wishes/needs fit {round(overlay_fit*100)}%")
     return job
 
 
@@ -284,7 +305,7 @@ def _keep(job: Job, lane_name: str) -> bool:
     return job.triage_score >= minimum
 
 
-def rank_jobs(jobs: list[Job], lane_name: str, lane_cfg: dict, profile: dict, defaults: dict) -> list[Job]:
-    ranked = [triage(j, lane_name, lane_cfg, profile, defaults) for j in jobs]
+def rank_jobs(jobs: list[Job], lane_name: str, lane_cfg: dict, profile: dict, defaults: dict, search_overlay: str = "") -> list[Job]:
+    ranked = [triage(j, lane_name, lane_cfg, profile, defaults, search_overlay=search_overlay) for j in jobs]
     ranked = [j for j in ranked if _keep(j, lane_name)]
     return sorted(ranked, key=lambda j: (-j.triage_score, j.deadline or "9999", (j.title or "").lower()))

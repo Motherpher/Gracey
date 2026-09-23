@@ -7,7 +7,7 @@ from pathlib import Path
 from .application import fallback_application, run_ai_application, write_application_docx, write_hrdm_docx
 from .dashboard import render_applications, render_control_room, render_job_vault, render_visual, save_public_jobs
 from .hrdm import build_packet, fallback_hrdm, packet_prompt, run_ai_hrdm
-from .matching import load_yaml as load_match_yaml, rank_jobs
+from .matching import candidate_terms, load_yaml as load_match_yaml, rank_jobs
 from .sources import fetch_public_job, load_yaml as load_source_yaml, source_lane
 from .state import choose_case, load_cases, merge_job_vault, update_case, update_priority
 
@@ -108,9 +108,11 @@ def cmd_scan(args):
     all_jobs = []
     for lane_name in lane_names:
         lane_cfg = lanes[lane_name]
-        source_queries = list(lane_cfg["queries"])
+        source_queries = list(lane_cfg.get("queries", []))
+        source_queries.extend(candidate_terms(profile)[:12])
         if search_overlay:
             source_queries.append(search_overlay)
+        source_queries = list(dict.fromkeys(q.strip() for q in source_queries if str(q).strip()))
         sourced = source_lane(source_queries, search_cfg["defaults"], source_cfg)
         ranked = rank_jobs(
             sourced,

@@ -181,11 +181,11 @@ def render_job_vault(path: Path, vault: dict, cases_data: dict):
     active = [r for r in records if r.get("in_latest_scan")]
     historic = [r for r in records if not r.get("in_latest_scan")]
     lines = [
-        "# Job Vault", "",
-        f"**{len(records)} jobs preserved** · {len(active)} in the latest scan · {len(historic)} historical", "",
-        "Nothing disappears when a new sourcing run replaces the shortlist. The full machine-readable history is in CareerHub/data/job_vault.json.", "",
-        "## Current / recently sourced", "",
-        "| Rank | Role | Employer | Deadline | First seen | Last seen | State | Action |",
+        "# Jobbhistorik", "",
+        f"**{len(records)} jobb sparade** · {len(active)} i senaste sökningen · {len(historic)} historiska", "",
+        "Inga jobb försvinner när en ny sökning ersätter den aktuella listan. Tidigare träffar sparas här för jämförelse.", "",
+        "## Aktuella / nyligen hittade", "",
+        "| Prioritet | Roll | Arbetsgivare | Sista dag | Först hittad | Senast sedd | Läge | Nästa steg |",
         "|---|---|---|---|---|---|---|---|",
     ]
     for r in active[:100]:
@@ -199,8 +199,8 @@ def render_job_vault(path: Path, vault: dict, cases_data: dict):
             action = f"[case #{case.get('issue_number')}]({case.get('issue_url')})"
         else:
             action = f"**[Välj →]({choose_link(Job.from_dict(r), 3)})**"
-        lines.append(f"| {rank} | [{title}]({url}) | {company} | {deadline} | {str(r.get('first_seen',''))[:10]} | {str(r.get('last_seen',''))[:10]} | active | {action} |")
-    lines += ["", "## Historical / no longer in the latest shortlist", "", "| Role | Employer | Deadline | Last seen | State | Action |", "|---|---|---|---|---|---|"]
+        lines.append(f"| {rank} | [{title}]({url}) | {company} | {deadline} | {str(r.get('first_seen',''))[:10]} | {str(r.get('last_seen',''))[:10]} | aktuell | {action} |")
+    lines += ["", "## Historik / inte längre i den aktuella listan", "", "| Roll | Arbetsgivare | Sista dag | Senast sedd | Läge | Nästa steg |", "|---|---|---|---|---|---|"]
     for r in historic[:180]:
         deadline, _ = deadline_info(r.get("deadline", ""))
         title = str(r.get("title") or "").replace("|", "\\|")
@@ -221,10 +221,10 @@ def render_applications(path: Path, cases_data: dict):
     closed = [c for c in cases if c.get("status") in TERMINAL_STATUSES]
     active.sort(key=lambda c: (-int(c.get("priority") or 3), c.get("deadline") or "9999"))
     lines = [
-        "# Applications & Follow-up", "",
-        "One chosen job becomes one CareerHub case. This is the process monitor after the job has left the sourcing board.", "",
-        "## Active cases", "",
-        "| Priority | Role | Employer | Status | Deadline | Next action | Next date | Case |",
+        "# Ansökningar och uppföljning", "",
+        "Varje valt jobb får en egen jobbsida. Här följer Grace processen efter att hon har valt att gå vidare.", "",
+        "## Pågående", "",
+        "| Prioritet | Roll | Arbetsgivare | Läge | Sista dag | Nästa steg | Datum | Jobbsida |",
         "|---|---|---|---|---|---|---|---|",
     ]
     for c in active:
@@ -236,7 +236,7 @@ def render_applications(path: Path, cases_data: dict):
         next_action = str(c.get("next_action") or "—").replace("|", "\\|")
         next_date = str(c.get("next_action_date") or "—")[:10]
         lines.append(f"| **{rank_label(c.get('priority'))}** | [{title}]({c.get('url') or issue_url}) | {company} | **{STATUS_LABELS.get(c.get('status'), c.get('status'))}** | {deadline} | {next_action} | {next_date} | [#{issue}]({issue_url}) |")
-    lines += ["", "## Closed cases", "", "| Role | Employer | Outcome | Updated |", "|---|---|---|---|"]
+    lines += ["", "## Avslutade", "", "| Roll | Arbetsgivare | Utfall | Uppdaterad |", "|---|---|---|---|"]
     for c in closed[-60:]:
         lines.append(f"| {str(c.get('title') or '').replace('|','\\|')} | {str(c.get('company') or '').replace('|','\\|')} | {STATUS_LABELS.get(c.get('status'), c.get('status'))} | {str(c.get('status_updated_at') or '')[:10]} |")
     lines += ["", "## Så följs en ansökan", "", "Valt → Förbereds → Redo att söka → Ansökan skickad → Kontakt → Arbetsprov/Test → Intervju/Möte 1–5 → Erbjudande / Avslutad / Avstår"]
@@ -249,27 +249,27 @@ def case_actions(case: dict) -> str:
         return "—"
     actions = []
     if status in {"saved", "preparing", "ready"}:
-        actions.append(f"[Mark applied]({status_update_link(case, 'applied')})")
+        actions.append(f"[Ansökan skickad]({status_update_link(case, 'applied')})")
     if status == "applied":
-        actions.append(f"[Contacted]({status_update_link(case, 'contacted')})")
-        actions.append(f"[Denied]({status_update_link(case, 'denied')})")
+        actions.append(f"[Kontakt]({status_update_link(case, 'contacted')})")
+        actions.append(f"[Avslutad]({status_update_link(case, 'denied')})")
     if status in {"contacted", "portfolio"}:
-        actions.append(f"[Interview 1]({status_update_link(case, 'interview_1')})")
-        actions.append(f"[Meeting 1]({status_update_link(case, 'meeting_1')})")
-        actions.append(f"[Portfolio/Test]({status_update_link(case, 'portfolio')})")
+        actions.append(f"[Intervju 1]({status_update_link(case, 'interview_1')})")
+        actions.append(f"[Möte 1]({status_update_link(case, 'meeting_1')})")
+        actions.append(f"[Arbetsprov/Test]({status_update_link(case, 'portfolio')})")
     if str(status).startswith("interview_"):
         n = int(str(status).split("_")[1])
         if n < 5:
-            actions.append(f"[Interview {n+1}]({status_update_link(case, f'interview_{n+1}')})")
-        actions.append(f"[Offer]({status_update_link(case, 'offer')})")
-        actions.append(f"[Denied]({status_update_link(case, 'denied')})")
+            actions.append(f"[Intervju {n+1}]({status_update_link(case, f'interview_{n+1}')})")
+        actions.append(f"[Erbjudande]({status_update_link(case, 'offer')})")
+        actions.append(f"[Avslutad]({status_update_link(case, 'denied')})")
     if str(status).startswith("meeting_"):
         n = int(str(status).split("_")[1])
         if n < 5:
-            actions.append(f"[Meeting {n+1}]({status_update_link(case, f'meeting_{n+1}')})")
-        actions.append(f"[Interview 1]({status_update_link(case, 'interview_1')})")
-        actions.append(f"[Offer]({status_update_link(case, 'offer')})")
-    return " · ".join(actions[:3]) or f"[Update status](https://github.com/{REPO}/issues/new?template=careerhub-update-status.yml)"
+            actions.append(f"[Möte {n+1}]({status_update_link(case, f'meeting_{n+1}')})")
+        actions.append(f"[Intervju 1]({status_update_link(case, 'interview_1')})")
+        actions.append(f"[Erbjudande]({status_update_link(case, 'offer')})")
+    return " · ".join(actions[:3]) or f"[Uppdatera läge](https://github.com/{REPO}/issues/new?template=careerhub-update-status.yml)"
 
 
 def render_lane(lines: list[str], lane: str, jobs: list[Job], cases_by_job: dict):
@@ -277,7 +277,7 @@ def render_lane(lines: list[str], lane: str, jobs: list[Job], cases_by_job: dict
     lines += [f"### {title}", "", explanation, ""]
     visible = jobs[:8]
     if not visible:
-        lines += ["No current leads in this group.", ""]
+        lines += ["Inga aktuella jobb i den här gruppen just nu.", ""]
         return
     lines += ["| Prioritet | Roll | Arbetsgivare | Sista dag | Varför | Välj |", "|---|---|---|---|---|---|"]
     for index, job in enumerate(visible):
@@ -294,7 +294,7 @@ def render_lane(lines: list[str], lane: str, jobs: list[Job], cases_by_job: dict
             default_priority = 5 if index < 2 else 4 if index < 5 else 3
             choose = f"**[Välj →]({choose_link(job, default_priority)})**"
         lines.append(f"| {priority_label(index)} | {source_link} | {company} | {deadline} | {why_short(job).replace('|','\\|')} | {choose} |")
-    lines += ["", f"_Showing the top {len(visible)} of {len(jobs)} current leads in this group._", ""]
+    lines += ["", f"_Visar de {len(visible)} of {len(jobs)} mest relevanta jobben i den här gruppen._", ""]
 
 
 def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict, vault: dict):
@@ -305,13 +305,13 @@ def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict
     active_cases = [c for c in cases if c.get("status") not in TERMINAL_STATUSES]
     active_cases.sort(key=lambda c: (-int(c.get("priority") or 3), c.get("deadline") or "9999"))
     lines = [
-        "![CareerHub journey](visuals/careerhub-journey.svg)", "",
+        "![Grace · Karriärhubben](visuals/careerhub-journey.svg)", "",
         "# Grace · Karriärhubben", "",
         "## 1 · HITTA JOBB → 2 · VÄLJ JOBB → 3 · SÖK", "",
         "Allt annat sköts i bakgrunden. Grace behöver bara följa de tre stegen.", "",
         "---", "",
         "## 1 · Hitta jobb", "",
-        f"**Senast uppdaterad:** {now} · **{len(jobs)} live leads** · **{vault.get('total_jobs_ever_seen', len(jobs))} jobs in the historic vault**", "",
+        f"**Senast uppdaterad:** {now} · **{len(jobs)} aktuella jobb** · **{vault.get('total_jobs_ever_seen', len(jobs))} jobb i historiken**", "",
         "**När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 sekunder**. Sidan uppdateras när sökningen är klar.", "",
         f"**[Uppdatera jobb →](https://github.com/{REPO}/actions/workflows/careerhub-scan.yml)** · **[Öppna jobbhistoriken →](JOB_VAULT.md)** · **[Jag hittade ett jobb själv →]({choose_any_link()})**", "",
     ]

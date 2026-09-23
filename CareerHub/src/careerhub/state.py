@@ -163,12 +163,12 @@ def choose_case(
         "status": "ready",
         "chosen_at": now,
         "status_updated_at": now,
-        "next_action": "Review application pack and submit application",
+        "next_action": "Läs ansökningsunderlaget och sök när du vill",
         "next_action_date": job.deadline or "",
         "notification_log": [],
         "history": [
-            {"at": now, "status": "saved", "event": "Job chosen"},
-            {"at": now, "status": "ready", "event": "Application pack prepared"},
+            {"at": now, "status": "saved", "event": "Jobbet analyserades"},
+            {"at": now, "status": "ready", "event": "Ansökningsunderlaget är klart"},
         ],
     }
     if existing:
@@ -236,26 +236,26 @@ def update_priority(path: Path, issue_number: int, priority: int) -> dict:
 
 def default_next_action(status: str) -> str:
     return {
-        "saved": "Prepare application",
-        "preparing": "Finish application pack",
-        "ready": "Submit application",
-        "applied": "Wait / follow up",
-        "contacted": "Prepare for next contact",
-        "portfolio": "Complete portfolio/test",
-        "interview_1": "Prepare for interview 2 or follow-up",
-        "interview_2": "Prepare for interview 3 or follow-up",
-        "interview_3": "Prepare for next stage",
-        "interview_4": "Prepare for next stage",
-        "interview_5": "Await decision / follow up",
-        "meeting_1": "Prepare for meeting 2 or follow-up",
-        "meeting_2": "Prepare for meeting 3 or follow-up",
-        "meeting_3": "Prepare for next stage",
-        "meeting_4": "Prepare for next stage",
-        "meeting_5": "Await decision / follow up",
-        "offer": "Review offer",
-        "denied": "Close case / capture learning",
-        "withdrawn": "Close case",
-        "archived": "No action",
+        "saved": "Förbered ansökan",
+        "preparing": "Slutför ansökningsunderlaget",
+        "ready": "Sök när du vill",
+        "applied": "Avvakta eller följ upp",
+        "contacted": "Förbered nästa kontakt",
+        "portfolio": "Genomför arbetsprov eller test",
+        "interview_1": "Förbered nästa intervju eller uppföljning",
+        "interview_2": "Förbered nästa intervju eller uppföljning",
+        "interview_3": "Förbered nästa steg",
+        "interview_4": "Förbered nästa steg",
+        "interview_5": "Avvakta beslut eller följ upp",
+        "meeting_1": "Förbered nästa möte eller uppföljning",
+        "meeting_2": "Förbered nästa möte eller uppföljning",
+        "meeting_3": "Förbered nästa steg",
+        "meeting_4": "Förbered nästa steg",
+        "meeting_5": "Avvakta beslut eller följ upp",
+        "offer": "Gå igenom erbjudandet",
+        "denied": "Avsluta och spara det du vill ta med dig",
+        "withdrawn": "Avsluta",
+        "archived": "Ingen åtgärd",
     }.get(status, "")
 
 
@@ -270,4 +270,4 @@ def case_counts(data: dict) -> dict:
 
 
 def rank_label(priority: int) -> str:
-    return {5: "Must apply", 4: "High", 3: "Medium", 2: "Low", 1: "Maybe"}.get(int(priority or 3), "Medium")
+    return {5: "Sök", 4: "Mycket intressant", 3: "Intressant", 2: "Svagare träff", 1: "Avvakta"}.get(int(priority or 3), "Intressant")

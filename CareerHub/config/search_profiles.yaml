@@ -1,66 +1,67 @@
 schema_version: "1.0"
-updated: "2026-09-23T19:09:00+02:00"
-ux_version: "grace-1.0"
+updated: "2026-09-23T19:13:00+02:00"
+ux_version: "grace-1.1"
 
 defaults:
   country: "SE"
   location: ""
   max_per_query: 20
-  max_total: 120
+  max_total: 80
   max_age_days: 45
   remote_allowed: true
 
 lanes:
   core:
-    description: "Roller där Grace tydligt kan använda handledning, samordning, praktiskt lärande och tryggt ledarskap."
+    description: "Roller där Grace tydligt kan använda handledning, samordning, praktiskt lärande och tryggt ledarskap i vård, omsorg, rehabilitering eller patientnära verksamhet."
     weight: 1.0
     queries:
-      - "handledare"
-      - "instruktör"
+      - "handledare vård"
+      - "handledare omsorg"
+      - "handledare rehabilitering"
       - "utbildare vård"
-      - "utbildningssamordnare"
+      - "utbildningssamordnare vård"
       - "samordnare vård"
+      - "samordnare omsorg"
       - "vårdsamordnare"
       - "patientkoordinator"
       - "patientvägledare"
       - "teamledare vård"
-      - "introduktionsansvarig"
-      - "servicekoordinator vård"
+      - "introduktionsansvarig vård"
+      - "servicekoordinator sjukhus"
       - "HLR instruktör"
 
   adjacent:
-    description: "Närliggande roller där hennes sätt att leda, förklara, stödja och se helheten kan överföras."
+    description: "Närliggande roller där hennes sätt att leda, förklara, stödja och se helheten kan överföras utan att kräva en helt ny yrkesidentitet."
     weight: 0.9
     queries:
-      - "verksamhetssamordnare"
-      - "projektkoordinator"
-      - "utbildningskoordinator"
-      - "kurskoordinator"
+      - "verksamhetssamordnare vård"
+      - "verksamhetssamordnare omsorg"
+      - "utbildningskoordinator vård"
+      - "kurskoordinator vård"
       - "rehabkoordinator"
-      - "bemanningskoordinator"
-      - "planeringssamordnare"
-      - "serviceledare"
+      - "bemanningskoordinator vård"
+      - "planeringssamordnare omsorg"
+      - "serviceledare vård"
       - "rådgivare vård"
-      - "stödkoordinator"
-      - "onboarding coordinator"
-      - "trainer healthcare"
+      - "stödkoordinator omsorg"
+      - "onboarding vård"
+      - "mentor vård omsorg"
 
   bridge:
-    description: "Flexibla roller som kan fungera som en trygg bro till nästa steg."
+    description: "Flexibla roller i eller nära vård och omsorg som kan fungera som en trygg bro till nästa steg."
     weight: 0.75
     queries:
-      - "administratör vård"
-      - "vårdadministratör"
+      - "administrativ samordnare vård"
       - "receptionist vård"
       - "patientservice"
-      - "mottagningskoordinator"
+      - "mottagningskoordinator vård"
       - "kundservice vård"
       - "servicevärd sjukhus"
-      - "bokningskoordinator"
-      - "administrativ samordnare"
-      - "team assistant"
-      - "deltid administratör"
-      - "deltid service"
+      - "bokningskoordinator vård"
+      - "team assistant vård"
+      - "bemanningsassistent vård"
+      - "deltid reception vård"
+      - "deltid service sjukhus"
 
 preference_flags:
   positive:
@@ -76,3 +77,4 @@ preference_flags:
     - "körkort krävs"
     - "säkerhetsprövning"
     - "chefserfarenhet krävs"
+    - "specifik vårdadministrativ utbildning krävs"

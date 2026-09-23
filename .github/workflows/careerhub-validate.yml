@@ -128,8 +128,10 @@ jobs:
 
           profile=yaml.safe_load(open("CareerHub/profile/candidate.yaml", encoding="utf-8"))
           search=yaml.safe_load(open("CareerHub/config/search_profiles.yaml", encoding="utf-8"))
-          core=search["lanes"]["core"]
-          bridge=search["lanes"]["bridge"]
+          core=dict(search["lanes"]["core"])
+          bridge=dict(search["lanes"]["bridge"])
+          core["queries"]=["utbildningssamordnare"]
+          bridge["queries"]=["servicevärd sjukhus"]
 
           good=Job(source="test", title="Utbildningssamordnare", company="Region", location="Uppsala", description="Handledning, introduktion, praktiskt lärande och samordning av medarbetare.")
           bad=Job(source="test", title="Backend Software Engineer", company="TechCo", location="Remote", description="Build APIs and backend systems. Communication skills valued.")

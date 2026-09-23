@@ -39,14 +39,35 @@ def main():
     issue = event.get("issue") or {}
     data = sections(issue.get("body") or "")
 
-    case_raw = pick(data, "careerhub case issue", "case issue", "case")
+    case_raw = pick(data, "jobbsidans nummer", "careerhub case issue", "case issue", "case")
     m = re.search(r"(\d+)", case_raw)
     if not m:
-        raise SystemExit("No CareerHub case issue number found.")
+        raise SystemExit("Hittade inget nummer för jobbsidan.")
     case_issue = int(m.group(1))
 
-    status = pick(data, "new status", "status").lower().replace(" ", "_")
-    priority_raw = pick(data, "new priority", "priority")
+    status_raw = pick(data, "nytt läge", "new status", "status").strip().lower()
+    status_map = {
+        "ansökan skickad": "applied",
+        "kontakt": "contacted",
+        "arbetsprov/test": "portfolio",
+        "arbetsprov / test": "portfolio",
+        "intervju 1": "interview_1",
+        "intervju 2": "interview_2",
+        "intervju 3": "interview_3",
+        "intervju 4": "interview_4",
+        "intervju 5": "interview_5",
+        "möte 1": "meeting_1",
+        "möte 2": "meeting_2",
+        "möte 3": "meeting_3",
+        "möte 4": "meeting_4",
+        "möte 5": "meeting_5",
+        "erbjudande": "offer",
+        "avslutad": "denied",
+        "avstår": "withdrawn",
+        "arkiverad": "archived",
+    }
+    status = status_map.get(status_raw, status_raw.replace(" ", "_"))
+    priority_raw = pick(data, "ny prioritet", "new priority", "priority")
     priority = ""
     if priority_raw:
         m2 = re.search(r"\b([1-5])\b", priority_raw)
@@ -58,9 +79,9 @@ def main():
         "case_issue_number": case_issue,
         "status": status,
         "priority": priority,
-        "date": pick(data, "date"),
-        "next_action": pick(data, "next action (optional)", "next action"),
-        "next_action_date": pick(data, "next action date"),
+        "date": pick(data, "datum", "date"),
+        "next_action": pick(data, "nästa steg", "next action (optional)", "next action"),
+        "next_action_date": pick(data, "datum för nästa steg", "next action date"),
     }
 
     outdir = Path(args.out)

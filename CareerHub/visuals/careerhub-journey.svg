@@ -1,23 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="640" viewBox="0 0 1400 640" role="img" aria-labelledby="title desc">
-<title id="title">Grace Karriärhubben</title>
-<desc id="desc">Tre steg: Hitta jobb, Välj jobb, Sök.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="640" viewBox="0 0 1400 640" role="img" aria-label="Grace Karriärhubben">
 <rect width="1400" height="640" fill="#F4D59B"/>
-<rect width="430" height="640" fill="#063A3D"/>
-<circle cx="760" cy="265" r="210" fill="#F2A000"/>
-<rect x="1120" y="0" width="280" height="640" fill="#F7F1E3"/>
+<rect width="390" height="640" fill="#063A3D"/>
+<circle cx="785" cy="245" r="220" fill="#F2A000"/>
+<rect x="1120" width="280" height="640" fill="#F7F1E3"/>
 <rect x="1090" y="420" width="310" height="220" fill="#D94A3A"/>
-<path d="M120 515 C270 390 345 355 520 360 C690 365 820 470 1015 420" fill="none" stroke="#F7F1E3" stroke-width="12" opacity=".88"/>
-<text x="70" y="115" font-family="Helvetica,Arial,sans-serif" font-size="92" font-weight="300" letter-spacing="7" fill="#F4D59B">GRACE</text>
-<text x="70" y="190" font-family="Helvetica,Arial,sans-serif" font-size="32" font-weight="700" letter-spacing="9" fill="#F2A000">KARRIÄRHUBBEN</text>
-<text x="520" y="118" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="3" fill="#063A3D">NÄSTA STEG</text>
-<text x="520" y="470" font-family="Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#063A3D">1 · HITTA JOBB</text>
-<text x="790" y="470" font-family="Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#063A3D">2 · VÄLJ JOBB</text>
-<text x="1080" y="470" font-family="Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#F7F1E3">3 · SÖK</text>
-<text x="520" y="535" font-family="Georgia,serif" font-size="24" font-style="italic" fill="#1B2220">Erfarenheten följer med. Riktningen kan förändras.</text>
-<g opacity=".85" fill="none" stroke="#063A3D" stroke-width="4">
-  <path d="M1010 145c55 40 70 92 28 135-35 35-91 34-124-2 50-6 76-42 78-89 2-20 8-35 18-44z"/>
-  <path d="M1030 280c42 8 76 31 96 70"/>
-  <path d="M990 282c-34 30-52 66-53 112"/>
+<path d="M85 525 C250 385 365 350 535 365 C700 380 825 480 1015 420" fill="none" stroke="#F7F1E3" stroke-width="11" opacity=".86"/>
+
+<text x="62" y="112" font-family="Arial, Helvetica, sans-serif" font-size="91" font-weight="300" letter-spacing="7" fill="#F4D59B">GRACE</text>
+<text x="65" y="173" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="8" fill="#F2A000">KARRIÄRHUBBEN</text>
+<text x="65" y="565" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#F4D59B">TYDLIGT · VARMT · FRAMÅT</text>
+
+<text x="475" y="88" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="5" fill="#063A3D">NÄSTA STEG</text>
+<text x="475" y="145" font-family="Georgia, serif" font-size="24" font-style="italic" fill="#1B2220">Erfarenheten följer med. Riktningen kan förändras.</text>
+
+<g transform="translate(475 245)">
+  <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#063A3D">1 · HITTA JOBB</text>
+  <text x="0" y="62" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="#063A3D">80</text>
+  <text x="0" y="90" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1B2220">aktuella möjligheter</text>
 </g>
-<text x="70" y="575" font-family="Helvetica,Arial,sans-serif" font-size="18" letter-spacing="2" fill="#F4D59B">TYDLIGT · VARMT · FRAMÅT</text>
+
+<g transform="translate(735 355)">
+  <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#063A3D">2 · VÄLJ JOBB</text>
+  <text x="0" y="62" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="#063A3D">0</text>
+  <text x="0" y="90" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1B2220">valda jobb</text>
+</g>
+
+<g transform="translate(1155 468)">
+  <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#F7F1E3">3 · SÖK</text>
+  <text x="0" y="63" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="#F7F1E3">0</text>
+  <text x="0" y="91" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#F7F1E3">pågående</text>
+</g>
+
+<g transform="translate(1138 92)">
+  <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#063A3D">ÖVERSIKT</text>
+  <text x="0" y="58" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="300" fill="#063A3D">21</text>
+  <text x="0" y="82" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#1B2220">sista datum inom 7 dagar</text>
+  <line x1="0" y1="112" x2="205" y2="112" stroke="#063A3D" stroke-width="2" opacity=".45"/>
+  <text x="0" y="160" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="300" fill="#063A3D">80</text>
+  <text x="0" y="184" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#1B2220">jobb sparade i historiken</text>
+</g>
 </svg>

@@ -4,49 +4,81 @@
 
 ## 1 · HITTA JOBB → 2 · VÄLJ JOBB → 3 · SÖK
 
-Det är hela arbetsgången. Resten sköts i bakgrunden.
+Allt annat sköts i bakgrunden. Grace behöver bara följa de tre stegen.
 
 ---
 
 ## 1 · Hitta jobb
 
-**Status:** Karriärhubben är uppsatt och klar för sin första sökning.
+**Senast uppdaterad:** 2026-09-23 17:10 UTC · **80 aktuella jobb** · **80 jobb i historiken**
 
-När du trycker på **Uppdatera jobb** brukar nya resultat synas här efter ungefär **30–90 sekunder**.
+**När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 sekunder**. Sidan uppdateras när sökningen är klar.
 
 **[Uppdatera jobb →](https://github.com/Hybrismannen/Gracey/actions/workflows/careerhub-scan.yml)** · **[Öppna jobbhistoriken →](JOB_VAULT.md)** · **[Jag hittade ett jobb själv →](https://github.com/Hybrismannen/Gracey/issues/new?template=careerhub-choose-job.yml)**
 
 ### Huvudspår
 
-Roller där Grace kan använda sin erfarenhet av att handleda, samordna, skapa trygghet, förklara praktiskt och få grupper att fungera.
+Handledande, samordnande, utbildande och relationsnära roller där Grace befintliga erfarenhet kommer till tydlig användning.
 
-*Första listan skapas när jobbsökningen körs.*
+| Prioritet | Roll | Arbetsgivare | Sista dag | Varför | Välj |
+|---|---|---|---|---|---|
+| Stark träff | [Projektanställning - handledare Naturunderstödd rehabilitering](https://arbetsformedlingen.se/platsbanken/annonser/31479464) | REGION DALARNA | 28 Sep · 5 days | Arbete på plats · matches handledare | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20REGION%20DALARNA%20%E2%80%94%20Projektanst%C3%A4llning%20-%20handledare%20Naturunderst%C3%B6dd%20rehabilitering&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31479464%0A%0A%23%23%23%20Job%20ID%0Af7ba48b73d7808b3%0A%0A%23%23%23%20Role%0AProjektanst%C3%A4llning%20-%20handledare%20Naturunderst%C3%B6dd%20rehabilitering%0A%0A%23%23%23%20Employer%0AREGION%20DALARNA%0A%0A%23%23%23%20Lane%0Acore%0A%0A%23%23%23%20Priority%201%E2%80%935%0A5%0A%0A%23%23%23%20Deadline%0A2026-09-28T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Stark träff | [Vi söker instruktör till Nordiskt Flygteknikcentrum](https://arbetsformedlingen.se/platsbanken/annonser/31464882) | Luleå kommun | 04 Oct · 11 days | Arbete på plats · part-time | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Lule%C3%A5%20kommun%20%E2%80%94%20Vi%20s%C3%B6ker%20instrukt%C3%B6r%20till%20Nordiskt%20Flygteknikcentrum&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31464882%0A%0A%23%23%23%20Job%20ID%0A101c5bff33791148%0A%0A%23%23%23%20Role%0AVi%20s%C3%B6ker%20instrukt%C3%B6r%20till%20Nordiskt%20Flygteknikcentrum%0A%0A%23%23%23%20Employer%0ALule%C3%A5%20kommun%0A%0A%23%23%23%20Lane%0Acore%0A%0A%23%23%23%20Priority%201%E2%80%935%0A5%0A%0A%23%23%23%20Deadline%0A2026-10-04T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Stark träff | [Klinisk handledare inom odontologisk röntgen](https://arbetsformedlingen.se/platsbanken/annonser/31478317) | Karolinska Inst | 28 Sep · 5 days | Arbete på plats · matches handledare | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Karolinska%20Inst%20%E2%80%94%20Klinisk%20handledare%20inom%20odontologisk%20r%C3%B6ntgen&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31478317%0A%0A%23%23%23%20Job%20ID%0A1f99a9798a2129fc%0A%0A%23%23%23%20Role%0AKlinisk%20handledare%20inom%20odontologisk%20r%C3%B6ntgen%0A%0A%23%23%23%20Employer%0AKarolinska%20Inst%0A%0A%23%23%23%20Lane%0Acore%0A%0A%23%23%23%20Priority%201%E2%80%935%0A4%0A%0A%23%23%23%20Deadline%0A2026-09-28T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Stark träff | [Stallansvarig / instruktör](https://arbetsformedlingen.se/platsbanken/annonser/31497432) | Bankeryds Ridklubb | 15 Oct · 22 days | Arbete på plats · matches instruktör | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Bankeryds%20Ridklubb%20%E2%80%94%20Stallansvarig%20/%20instrukt%C3%B6r&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31497432%0A%0A%23%23%23%20Job%20ID%0A36aad87750367338%0A%0A%23%23%23%20Role%0AStallansvarig%20/%20instrukt%C3%B6r%0A%0A%23%23%23%20Employer%0ABankeryds%20Ridklubb%0A%0A%23%23%23%20Lane%0Acore%0A%0A%23%23%23%20Priority%201%E2%80%935%0A4%0A%0A%23%23%23%20Deadline%0A2026-10-15T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Timanställd som handledare inom socialpsykiatrin](https://arbetsformedlingen.se/platsbanken/annonser/31470521) | Lunds kommun | 30 Sep · 7 days | Arbete på plats · matches handledare | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Lunds%20kommun%20%E2%80%94%20Timanst%C3%A4lld%20som%20handledare%20inom%20socialpsykiatrin&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31470521%0A%0A%23%23%23%20Job%20ID%0A54e333ab75ec37be%0A%0A%23%23%23%20Role%0ATimanst%C3%A4lld%20som%20handledare%20inom%20socialpsykiatrin%0A%0A%23%23%23%20Employer%0ALunds%20kommun%0A%0A%23%23%23%20Lane%0Acore%0A%0A%23%23%23%20Priority%201%E2%80%935%0A4%0A%0A%23%23%23%20Deadline%0A2026-09-30T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [HYROX instruktör Malmö](https://arbetsformedlingen.se/platsbanken/annonser/31477381) | Fitness 24Seven AB | 14 Mar · 172 days | Arbete på plats · matches instruktör | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Fitness%2024Seven%20AB%20%E2%80%94%20HYROX%20instrukt%C3%B6r%20Malm%C3%B6&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31477381%0A%0A%23%23%23%20Job%20ID%0A83d119a980e2afd9%0A%0A%23%23%23%20Role%0AHYROX%20instrukt%C3%B6r%20Malm%C3%B6%0A%0A%23%23%23%20Employer%0AFitness%2024Seven%20AB%0A%0A%23%23%23%20Lane%0Acore%0A%0A%23%23%23%20Priority%201%E2%80%935%0A3%0A%0A%23%23%23%20Deadline%0A2027-03-14T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [HYROX. instruktör till Nordic Wellness Hässleholm](https://arbetsformedlingen.se/platsbanken/annonser/31458388) | Sportlife M W AB | 08 Mar · 166 days | Arbete på plats · matches instruktör | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Sportlife%20M%20W%20AB%20%E2%80%94%20HYROX.%20instrukt%C3%B6r%20till%20Nordic%20Wellness%20H%C3%A4ssleholm&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31458388%0A%0A%23%23%23%20Job%20ID%0A50f74ee949f27e3e%0A%0A%23%23%23%20Role%0AHYROX.%20instrukt%C3%B6r%20till%20Nordic%20Wellness%20H%C3%A4ssleholm%0A%0A%23%23%23%20Employer%0ASportlife%20M%20W%20AB%0A%0A%23%23%23%20Lane%0Acore%0A%0A%23%23%23%20Priority%201%E2%80%935%0A3%0A%0A%23%23%23%20Deadline%0A2027-03-08T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Handledare](https://arbetsformedlingen.se/platsbanken/annonser/31484206) | Drivtorget Bemanning AB | 01 Oct · 8 days | Arbete på plats · part-time | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Drivtorget%20Bemanning%20AB%20%E2%80%94%20Handledare&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31484206%0A%0A%23%23%23%20Job%20ID%0A1281bc89e147e816%0A%0A%23%23%23%20Role%0AHandledare%0A%0A%23%23%23%20Employer%0ADrivtorget%20Bemanning%20AB%0A%0A%23%23%23%20Lane%0Acore%0A%0A%23%23%23%20Priority%201%E2%80%935%0A3%0A%0A%23%23%23%20Deadline%0A2026-10-01T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+
+_Visar de 8 of 32 mest relevanta jobben i den här gruppen._
 
 ### Närliggande möjligheter
 
-Roller där samma styrkor kan användas i en ny miljö – till exempel utbildning, samordning, stöd, introduktion, service eller verksamhetsnära koordinering.
+Närliggande roller där handledning, samordning, stöd och tryggt ledarskap kan överföras till en ny miljö.
 
-*Första listan skapas när jobbsökningen körs.*
+| Prioritet | Roll | Arbetsgivare | Sista dag | Varför | Välj |
+|---|---|---|---|---|---|
+| Stark träff | [Vikarierande bemanningskoordinator med chans till schemarad](https://arbetsformedlingen.se/platsbanken/annonser/31471652) | Frösunda Personlig Assistans AB | 13 Mar · 171 days | Arbete på plats · part-time | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Fr%C3%B6sunda%20Personlig%20Assistans%20AB%20%E2%80%94%20Vikarierande%20bemanningskoordinator%20med%20chans%20till%20schemarad&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31471652%0A%0A%23%23%23%20Job%20ID%0A55388f331d0e97ff%0A%0A%23%23%23%20Role%0AVikarierande%20bemanningskoordinator%20med%20chans%20till%20schemarad%0A%0A%23%23%23%20Employer%0AFr%C3%B6sunda%20Personlig%20Assistans%20AB%0A%0A%23%23%23%20Lane%0Aadjacent%0A%0A%23%23%23%20Priority%201%E2%80%935%0A5%0A%0A%23%23%23%20Deadline%0A2027-03-13T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Stark träff | [Teknisk projektkoordinator till vår kund i Finspång](https://arbetsformedlingen.se/platsbanken/annonser/31447155) | Poolia AB | 27 Sep · 4 days | Arbete på plats · matches projektkoordinator | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Poolia%20AB%20%E2%80%94%20Teknisk%20projektkoordinator%20till%20v%C3%A5r%20kund%20i%20Finsp%C3%A5ng&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31447155%0A%0A%23%23%23%20Job%20ID%0Ac48f6e6bdd91c451%0A%0A%23%23%23%20Role%0ATeknisk%20projektkoordinator%20till%20v%C3%A5r%20kund%20i%20Finsp%C3%A5ng%0A%0A%23%23%23%20Employer%0APoolia%20AB%0A%0A%23%23%23%20Lane%0Aadjacent%0A%0A%23%23%23%20Priority%201%E2%80%935%0A5%0A%0A%23%23%23%20Deadline%0A2026-09-27T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Stark träff | [REF-061 \| Senior projektkoordinator och förändringsledare](https://arbetsformedlingen.se/platsbanken/annonser/31484839) | Lynqa AB | 15 Mar · 173 days | Arbete på plats · matches projektkoordinator | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Lynqa%20AB%20%E2%80%94%20REF-061%20%7C%20Senior%20projektkoordinator%20och%20f%C3%B6r%C3%A4ndringsledare&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31484839%0A%0A%23%23%23%20Job%20ID%0A45b7ffeb581f2a0f%0A%0A%23%23%23%20Role%0AREF-061%20%7C%20Senior%20projektkoordinator%20och%20f%C3%B6r%C3%A4ndringsledare%0A%0A%23%23%23%20Employer%0ALynqa%20AB%0A%0A%23%23%23%20Lane%0Aadjacent%0A%0A%23%23%23%20Priority%201%E2%80%935%0A4%0A%0A%23%23%23%20Deadline%0A2027-03-15T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Stark träff | [Engagerad planeringssamordnare](https://arbetsformedlingen.se/platsbanken/annonser/31488907) | Anns Omsorg AB | 17 Oct · 24 days | Arbete på plats · matches planeringssamordnare | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Anns%20Omsorg%20AB%20%E2%80%94%20Engagerad%20planeringssamordnare&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31488907%0A%0A%23%23%23%20Job%20ID%0A2a4fda97092516f5%0A%0A%23%23%23%20Role%0AEngagerad%20planeringssamordnare%0A%0A%23%23%23%20Employer%0AAnns%20Omsorg%20AB%0A%0A%23%23%23%20Lane%0Aadjacent%0A%0A%23%23%23%20Priority%201%E2%80%935%0A4%0A%0A%23%23%23%20Deadline%0A2026-10-17T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Verksamhetssamordnare](https://arbetsformedlingen.se/platsbanken/annonser/31495264) | Karlskrona kommun | 04 Oct · 11 days | Arbete på plats · matches verksamhetssamordnare | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Karlskrona%20kommun%20%E2%80%94%20Verksamhetssamordnare&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31495264%0A%0A%23%23%23%20Job%20ID%0A62e9ed98a7b95a2a%0A%0A%23%23%23%20Role%0AVerksamhetssamordnare%0A%0A%23%23%23%20Employer%0AKarlskrona%20kommun%0A%0A%23%23%23%20Lane%0Aadjacent%0A%0A%23%23%23%20Priority%201%E2%80%935%0A4%0A%0A%23%23%23%20Deadline%0A2026-10-04T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Sälj- och projektkoordinator Speeron Stockholm](https://arbetsformedlingen.se/platsbanken/annonser/31490511) | Closers AB | 18 Oct · 25 days | Arbete på plats · matches projektkoordinator | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Closers%20AB%20%E2%80%94%20S%C3%A4lj-%20och%20projektkoordinator%20Speeron%20Stockholm&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31490511%0A%0A%23%23%23%20Job%20ID%0A3667109f6db2f4e3%0A%0A%23%23%23%20Role%0AS%C3%A4lj-%20och%20projektkoordinator%20Speeron%20Stockholm%0A%0A%23%23%23%20Employer%0AClosers%20AB%0A%0A%23%23%23%20Lane%0Aadjacent%0A%0A%23%23%23%20Priority%201%E2%80%935%0A3%0A%0A%23%23%23%20Deadline%0A2026-10-18T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Projektledare och projektkoordinator i Umeå](https://arbetsformedlingen.se/platsbanken/annonser/31449188) | Academic Work Sweden AB | 07 Mar · 165 days | Arbete på plats · matches projektkoordinator | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Academic%20Work%20Sweden%20AB%20%E2%80%94%20Projektledare%20och%20projektkoordinator%20i%20Ume%C3%A5&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31449188%0A%0A%23%23%23%20Job%20ID%0A2b2b37ad020ce347%0A%0A%23%23%23%20Role%0AProjektledare%20och%20projektkoordinator%20i%20Ume%C3%A5%0A%0A%23%23%23%20Employer%0AAcademic%20Work%20Sweden%20AB%0A%0A%23%23%23%20Lane%0Aadjacent%0A%0A%23%23%23%20Priority%201%E2%80%935%0A3%0A%0A%23%23%23%20Deadline%0A2027-03-07T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Bemanningskoordinator](https://arbetsformedlingen.se/platsbanken/annonser/31512048) | Grums kommun | 14 Oct · 21 days | matches bemanningskoordinator | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Grums%20kommun%20%E2%80%94%20Bemanningskoordinator&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31512048%0A%0A%23%23%23%20Job%20ID%0A5db00190d2516f8c%0A%0A%23%23%23%20Role%0ABemanningskoordinator%0A%0A%23%23%23%20Employer%0AGrums%20kommun%0A%0A%23%23%23%20Lane%0Aadjacent%0A%0A%23%23%23%20Priority%201%E2%80%935%0A3%0A%0A%23%23%23%20Deadline%0A2026-10-14T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+
+_Visar de 8 of 18 mest relevanta jobben i den här gruppen._
 
 ### Flexibelt / extra
 
-Roller med lägre tröskel, deltid eller ett upplägg som kan fungera som en trygg bro till nästa steg.
+Deltid, tidsbegränsade roller och andra arbeten som kan fungera som en trygg bro till nästa steg.
 
-*Första listan skapas när jobbsökningen körs.*
+| Prioritet | Roll | Arbetsgivare | Sista dag | Varför | Välj |
+|---|---|---|---|---|---|
+| Stark träff | [Ekonomiansvarig och administratör på deltid till SITECH Sverige ](https://arbetsformedlingen.se/platsbanken/annonser/31492266) | Performiq AB | 17 Oct · 24 days | Arbete på plats · part-time | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Performiq%20AB%20%E2%80%94%20Ekonomiansvarig%20och%20administrat%C3%B6r%20p%C3%A5%20deltid%20till%20SITECH%20Sverige%20&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31492266%0A%0A%23%23%23%20Job%20ID%0A9b98e34c009d1cc7%0A%0A%23%23%23%20Role%0AEkonomiansvarig%20och%20administrat%C3%B6r%20p%C3%A5%20deltid%20till%20SITECH%20Sverige%20%0A%0A%23%23%23%20Employer%0APerformiq%20AB%0A%0A%23%23%23%20Lane%0Abridge%0A%0A%23%23%23%20Priority%201%E2%80%935%0A5%0A%0A%23%23%23%20Deadline%0A2026-10-17T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Stark träff | [Administratör / Office Coordinator](https://arbetsformedlingen.se/platsbanken/annonser/31441147) | Bravura Sverige AB | 03 Mar · 161 days | Arbete på plats · part-time | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Bravura%20Sverige%20AB%20%E2%80%94%20Administrat%C3%B6r%20/%20Office%20Coordinator&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31441147%0A%0A%23%23%23%20Job%20ID%0Ac660a5239875e7de%0A%0A%23%23%23%20Role%0AAdministrat%C3%B6r%20/%20Office%20Coordinator%0A%0A%23%23%23%20Employer%0ABravura%20Sverige%20AB%0A%0A%23%23%23%20Lane%0Abridge%0A%0A%23%23%23%20Priority%201%E2%80%935%0A5%0A%0A%23%23%23%20Deadline%0A2027-03-03T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Stark träff | [Timavlönad servicevärd till Växjö sjukhus ](https://arbetsformedlingen.se/platsbanken/annonser/31498167) | REGION KRONOBERG | 05 Oct · 12 days | Arbete på plats · matches servicevärd sjukhus | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20REGION%20KRONOBERG%20%E2%80%94%20Timavl%C3%B6nad%20servicev%C3%A4rd%20till%20V%C3%A4xj%C3%B6%20sjukhus%20&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31498167%0A%0A%23%23%23%20Job%20ID%0Ac805cc42e3f20447%0A%0A%23%23%23%20Role%0ATimavl%C3%B6nad%20servicev%C3%A4rd%20till%20V%C3%A4xj%C3%B6%20sjukhus%20%0A%0A%23%23%23%20Employer%0AREGION%20KRONOBERG%0A%0A%23%23%23%20Lane%0Abridge%0A%0A%23%23%23%20Priority%201%E2%80%935%0A4%0A%0A%23%23%23%20Deadline%0A2026-10-05T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Stark träff | [Administrativ samordnare till Molekylär diagnostik och klinisk genetik](https://arbetsformedlingen.se/platsbanken/annonser/31505276) | REGION UPPSALA | 20 Oct · 27 days | matches administratör vård | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20REGION%20UPPSALA%20%E2%80%94%20Administrativ%20samordnare%20till%20Molekyl%C3%A4r%20diagnostik%20och%20klinisk%20genetik&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31505276%0A%0A%23%23%23%20Job%20ID%0A67eddddc22c7a074%0A%0A%23%23%23%20Role%0AAdministrativ%20samordnare%20till%20Molekyl%C3%A4r%20diagnostik%20och%20klinisk%20genetik%0A%0A%23%23%23%20Employer%0AREGION%20UPPSALA%0A%0A%23%23%23%20Lane%0Abridge%0A%0A%23%23%23%20Priority%201%E2%80%935%0A4%0A%0A%23%23%23%20Deadline%0A2026-10-20T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Vårdadministratör](https://arbetsformedlingen.se/platsbanken/annonser/31431479) | REGION ÖSTERGÖTLAND | **25 Sep · 2 days** | Arbete på plats · matches vårdadministratör | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20REGION%20%C3%96STERG%C3%96TLAND%20%E2%80%94%20V%C3%A5rdadministrat%C3%B6r&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31431479%0A%0A%23%23%23%20Job%20ID%0Ae47bd53575c2b77b%0A%0A%23%23%23%20Role%0AV%C3%A5rdadministrat%C3%B6r%0A%0A%23%23%23%20Employer%0AREGION%20%C3%96STERG%C3%96TLAND%0A%0A%23%23%23%20Lane%0Abridge%0A%0A%23%23%23%20Priority%201%E2%80%935%0A4%0A%0A%23%23%23%20Deadline%0A2026-09-25T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Vårdadministratör](https://arbetsformedlingen.se/platsbanken/annonser/31486266) | REGION JÖNKÖPINGS LÄN | 02 Oct · 9 days | Arbete på plats · matches vårdadministratör | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20REGION%20J%C3%96NK%C3%96PINGS%20L%C3%84N%20%E2%80%94%20V%C3%A5rdadministrat%C3%B6r&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31486266%0A%0A%23%23%23%20Job%20ID%0Abc56ca7b14a963b3%0A%0A%23%23%23%20Role%0AV%C3%A5rdadministrat%C3%B6r%0A%0A%23%23%23%20Employer%0AREGION%20J%C3%96NK%C3%96PINGS%20L%C3%84N%0A%0A%23%23%23%20Lane%0Abridge%0A%0A%23%23%23%20Priority%201%E2%80%935%0A3%0A%0A%23%23%23%20Deadline%0A2026-10-02T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Projektanställd administratör och larmmottagare \| Tiohundra](https://arbetsformedlingen.se/platsbanken/annonser/31468047) | Tiohundra AB | 28 Sep · 5 days | Arbete på plats · part-time | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20Tiohundra%20AB%20%E2%80%94%20Projektanst%C3%A4lld%20administrat%C3%B6r%20och%20larmmottagare%20%7C%20Tiohundra&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31468047%0A%0A%23%23%23%20Job%20ID%0A4428aab27adae81e%0A%0A%23%23%23%20Role%0AProjektanst%C3%A4lld%20administrat%C3%B6r%20och%20larmmottagare%20%7C%20Tiohundra%0A%0A%23%23%23%20Employer%0ATiohundra%20AB%0A%0A%23%23%23%20Lane%0Abridge%0A%0A%23%23%23%20Priority%201%E2%80%935%0A3%0A%0A%23%23%23%20Deadline%0A2026-09-28T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+| Bra möjlighet | [Vårdadministratör](https://arbetsformedlingen.se/platsbanken/annonser/31482940) | REGION JÖNKÖPINGS LÄN | 30 Sep · 7 days | Arbete på plats · matches vårdadministratör | **[Välj →](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Job%5D%20REGION%20J%C3%96NK%C3%96PINGS%20L%C3%84N%20%E2%80%94%20V%C3%A5rdadministrat%C3%B6r&body=%23%23%23%20Job%20URL%0Ahttps%3A//arbetsformedlingen.se/platsbanken/annonser/31482940%0A%0A%23%23%23%20Job%20ID%0A26db4c0b31d50b44%0A%0A%23%23%23%20Role%0AV%C3%A5rdadministrat%C3%B6r%0A%0A%23%23%23%20Employer%0AREGION%20J%C3%96NK%C3%96PINGS%20L%C3%84N%0A%0A%23%23%23%20Lane%0Abridge%0A%0A%23%23%23%20Priority%201%E2%80%935%0A3%0A%0A%23%23%23%20Deadline%0A2026-09-30T23%3A59%3A59%0A%0A%23%23%23%20Job%20text%20%28optional%29%0A_Leave%20blank%20unless%20the%20site%20blocks%20automated%20retrieval._)** |
+
+_Visar de 8 of 30 mest relevanta jobben i den här gruppen._
 
 ---
 
 ## 2 · Välj jobb
 
-Välj bara de jobb som känns värda tiden. När Grace trycker **Välj** skapas en egen jobbsida med:
+Välj bara de jobb som känns värda din tid. **Välj →** öppnar en färdig jobbsida. Du behöver normalt inte ändra något – tryck bara på **Skapa jobbsida**.
 
-- en kort förklaring till varför jobbet kan passa,
-- sista ansökningsdag,
-- vad som behöver kontrolleras,
-- ett första ansökningsunderlag,
-- plats för nästa steg.
+Karriärhubben prioriterar jobbet, går igenom hur väl det passar Grace och förbereder ett ansökningsunderlag.
 
-**Prioritet:** 5 Sök · 4 Mycket intressant · 3 Intressant · 2 Svagare träff · 1 Avvakta
+Prioritet: **5 Sök · 4 Mycket intressant · 3 Intressant · 2 Svagare träff · 1 Avvakta**
+
+Inga jobb är valda ännu. Tryck **Välj →** på ett jobb ovan.
+
 
 **[Öppna ansökningsöversikten →](APPLICATIONS.md)**
 
@@ -54,24 +86,29 @@ Välj bara de jobb som känns värda tiden. När Grace trycker **Välj** skapas 
 
 ## 3 · Sök
 
-När ett jobb är valt:
+För varje valt jobb förbereder hubben en tydlig matchning, en kort arbetsgivarbild och ett redigerbart ansökningsutkast.
 
-1. Läs den korta matchningen.
-2. Justera ansökan så att den låter som Grace.
-3. Skicka till arbetsgivaren.
+1. Öppna jobbsidan.
+2. Ladda ner och justera ansökningsunderlaget.
+3. Skicka ansökan till arbetsgivaren.
 4. Markera **Ansökan skickad**.
-5. Följ processen vidare: kontakt → arbetsprov/test → intervju/möte 1–5 → erbjudande eller avslut.
+5. Följ sedan processen: kontakt, arbetsprov/test, intervju eller möte 1–5, erbjudande eller avslut.
 
 ### Påminnelser
 
-Valda jobb kan få automatiska påminnelser före sista ansökningsdag. E-post och sms kan läggas till senare utan att kontaktuppgifter behöver sparas öppet i repot.
+Valda jobb kan få automatiska påminnelser före sista ansökningsdag. Påminnelser på jobbsidan kräver inget extra. E-post och sms kan kopplas på senare utan att kontaktuppgifter behöver ligga i vanliga filer.
+
+**[Ställ in påminnelser →](SETUP.md#deadline-reminders)**
+
+---
 
 <details>
-<summary><strong>Profil och inställningar</strong></summary>
+<summary><strong>Profil, integritet och inställningar</strong></summary>
 
 - [Se vad karriärhubben vet om Grace](profile/PROFILE_REVIEW.md)
-- [Integritet](PRIVACY.md)
+- [Integritet och privat arbetssätt](PRIVACY.md)
 - [Inställningar och påminnelser](SETUP.md)
-- [Hur jobbsökningen är inriktad](config/search_profiles.yaml)
+- [Jobbkällor](docs/SOURCE_MATRIX.md)
+- [Fördjupad matchningslogik](hrdm/HRDM_R_v6.3.md)
 
 </details>

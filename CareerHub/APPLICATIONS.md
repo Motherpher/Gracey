@@ -1,11 +1,17 @@
-# Ansökningsöversikt
+# Ansökningar och uppföljning
 
-Här samlas de jobb som Grace har valt att gå vidare med.
+Varje valt jobb får en egen jobbsida. Här följer Grace processen efter att hon har valt att gå vidare.
 
-| Prioritet | Jobb | Arbetsgivare | Läge | Sista dag | Nästa steg |
-|---|---|---|---|---|---|
-| – | Inga valda jobb ännu | – | – | – | Välj ett jobb i [kontrollrummet](CONTROL_ROOM.md) |
+## Pågående
 
-## Läge i processen
+| Prioritet | Roll | Arbetsgivare | Läge | Sista dag | Nästa steg | Datum | Jobbsida |
+|---|---|---|---|---|---|---|---|
 
-**Valt → Förbereds → Ansökan skickad → Kontakt → Arbetsprov/Test → Intervju/Möte 1–5 → Erbjudande / Avslutad**
+## Avslutade
+
+| Roll | Arbetsgivare | Utfall | Uppdaterad |
+|---|---|---|---|
+
+## Så följs en ansökan
+
+Valt → Förbereds → Redo att söka → Ansökan skickad → Kontakt → Arbetsprov/Test → Intervju/Möte 1–5 → Erbjudande / Avslutad / Avstår

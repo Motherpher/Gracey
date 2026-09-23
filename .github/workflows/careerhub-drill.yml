@@ -1,14 +1,14 @@
-name: CareerHub — Drill & Application Pack
+name: Grace · Fördjupa ett jobb
 
 on:
   workflow_dispatch:
     inputs:
       job_url:
-        description: "Public job-ad URL"
+        description: "Länk till jobbannonsen"
         required: true
         type: string
       lane:
-        description: "Application/search lane"
+        description: "Vilket spår tillhör jobbet?"
         required: true
         type: choice
         options:
@@ -17,7 +17,7 @@ on:
           - bridge
         default: core
       job_text:
-        description: "Optional: paste job text if the URL blocks automated retrieval"
+        description: "Valfritt: klistra in annonstext om länken inte går att läsa"
         required: false
         type: string
 
@@ -41,15 +41,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install CareerHub
+      - name: Förbered karriärhubben
         run: pip install -r CareerHub/requirements.txt
 
-      - name: Build HRDM and application pack
+      - name: Förbered matchning och ansökningsunderlag
         run: |
           OUT="CareerHub/output/run-${{ github.run_id }}"
           python CareerHub/scripts/careerhub.py drill             --url "$JOB_URL"             --text "$JOB_TEXT"             --lane "$LANE"             --out "$OUT"
 
-      - name: Upload application pack
+      - name: Gör ansökningsunderlaget tillgängligt
         uses: actions/upload-artifact@v4
         with:
           name: careerhub-application-${{ github.run_id }}

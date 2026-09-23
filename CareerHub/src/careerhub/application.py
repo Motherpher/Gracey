@@ -8,6 +8,8 @@ from pathlib import Path
 from docx import Document
 from docx.shared import Cm, Pt
 
+from .hrdm import public_candidate_evidence
+
 
 def _safe_name(value: str) -> str:
     value = re.sub(r"[^\w\- ]+", "", value or "job").strip()
@@ -36,24 +38,26 @@ def run_ai_application(job: dict, profile: dict, hrdm: dict, lane: str) -> dict 
             "claims_check": {"type": "array", "items": {"type": "string"}},
         },
     }
-    length_instruction = "Keep the cover letter compact and practical." if lane == "bridge" else "Write a focused one-page professional cover letter."
+    length_instruction = "Håll brevet kompakt och praktiskt." if lane == "bridge" else "Skriv ett fokuserat professionellt brev på högst en sida."
+    verified_profile = public_candidate_evidence(profile)
     prompt = f"""Skapa ett ansökningsunderlag utifrån den genomförda matchningsanalysen.
 
-Rules:
-- Använd endast uppgifter om Grace som finns i underlaget nedan.
-- Never invent dates, employers, tools, language proficiency, qualifications or outcomes.
-- Preserve uncertainty as uncertainty.
+Regler:
+- Använd endast verifierad karriärevidens i profilen nedan.
+- Hitta aldrig på datum, arbetsgivare, verktyg, språknivå, utbildning, kvalifikationer eller resultat.
+- Bevara osäkerhet som osäkerhet.
+- Search-only önskemål eller behov är aldrig kandidatfakta och får inte bli ansökningspåståenden.
 - {length_instruction}
-- Skriv naturlig, vuxen och idiomatisk svenska. Texten ska låta som en människa, inte som en mall.
-- Prioritise evidence directly linked to the HRDM assessment zones and FunctionCore.
-- Do not mention HRDM in the application letter.
-- Return structured JSON only.
+- Skriv naturlig, vuxen och idiomatisk svenska med lugn självsäkerhet.
+- Prioritera belägg som är direkt relevanta för rollen.
+- Nämn inte HRDM i ansökningsbrevet.
+- Returnera endast strukturerad JSON.
 
-JOB:
+JOBB:
 {json.dumps(job, ensure_ascii=False, indent=2)}
 
-PROFILE:
-{json.dumps(profile, ensure_ascii=False, indent=2)}
+VERIFIERAD KARRIÄRPROFIL:
+{json.dumps(verified_profile, ensure_ascii=False, indent=2)}
 
 HRDM:
 {json.dumps(hrdm, ensure_ascii=False, indent=2)}
@@ -75,15 +79,15 @@ def fallback_application(job: dict, profile: dict, hrdm: dict) -> dict:
     evidence = "\n".join(f"- {x}" for x in matches[:4]) or "- Add evidence after HRDM analysis."
     return {
         "cover_letter": (
-            f"Application for {role} at {company}\n\n"
-            f"This is a structured draft placeholder for {name}. Automated application writing was not run. "
-            "Complete the HRDM analysis first, then replace this paragraph with an evidence-based application.\n\n"
-            f"Belägg to consider:\n{evidence}"
+            f"Ansökan – {role} hos {company}\n\n"
+            f"Det här är ett tillfälligt utkast för {name}. Den automatiska ansökningstexten kördes inte. "
+            "När analysen är klar ersätts texten med ett underlag som bygger på verifierad karriärevidens.\n\n"
+            f"Belägg att utgå från:\n{evidence}"
         ),
-        "cv_profile": "Pending HRDM/application drafting.",
+        "cv_profile": "Profiltext förbereds när den verifierade analysen är klar.",
         "cv_bullets": [],
         "interview_notes": [],
-        "claims_check": ["Lägg inte till privata eller obelagda uppgifter utan att Grace har bekräftat dem."],
+        "claims_check": ["Använd endast verifierade karriäruppgifter i den slutliga ansökan."],
     }
 
 
@@ -103,26 +107,26 @@ def _base_doc(title: str) -> Document:
 def write_application_docx(outdir: Path, job: dict, profile: dict, app: dict) -> Path:
     role = job.get("title") or "Role"
     company = job.get("company") or "Employer"
-    doc = _base_doc(f"Application draft — {role}")
+    doc = _base_doc(f"Ansökningsutkast — {role}")
     p = doc.add_paragraph()
     p.add_run(company).bold = True
     if job.get("url"):
         doc.add_paragraph(job["url"])
 
-    doc.add_heading("Cover letter draft", level=1)
+    doc.add_heading("Personligt brev – utkast", level=1)
     for para in app.get("cover_letter", "").split("\n\n"):
         doc.add_paragraph(para)
 
-    doc.add_heading("CV profile draft", level=1)
+    doc.add_heading("CV-profil – utkast", level=1)
     doc.add_paragraph(app.get("cv_profile", ""))
 
     if app.get("cv_bullets"):
-        doc.add_heading("CV emphasis", level=1)
+        doc.add_heading("CV – lyft fram", level=1)
         for x in app["cv_bullets"]:
             doc.add_paragraph(x, style="List Bullet")
 
     if app.get("claims_check"):
-        doc.add_heading("Claims check before sending", level=1)
+        doc.add_heading("Kontroll före skick", level=1)
         for x in app["claims_check"]:
             doc.add_paragraph(x, style="List Bullet")
 

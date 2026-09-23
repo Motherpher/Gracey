@@ -1,5 +1,36 @@
 {
   "schema_version": "1.0",
-  "updated_at": null,
-  "cases": []
+  "updated_at": "2026-09-23T23:16:19.207220+00:00",
+  "cases": [
+    {
+      "job_id": "ee2080b9dd5b523b",
+      "issue_number": 1,
+      "issue_url": "https://github.com/Hybrismannen/Gracey/issues/1",
+      "title": "Bemanningsassistent till urologen",
+      "company": "REGION STOCKHOLM",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31509011",
+      "lane": "bridge",
+      "deadline": "2026-10-07T23:59:59",
+      "location": "",
+      "priority": 3,
+      "status": "ready",
+      "chosen_at": "2026-09-23T23:16:19.207156+00:00",
+      "status_updated_at": "2026-09-23T23:16:19.207156+00:00",
+      "next_action": "Review application pack and submit application",
+      "next_action_date": "2026-10-07T23:59:59",
+      "notification_log": [],
+      "history": [
+        {
+          "at": "2026-09-23T23:16:19.207156+00:00",
+          "status": "saved",
+          "event": "Job chosen"
+        },
+        {
+          "at": "2026-09-23T23:16:19.207156+00:00",
+          "status": "ready",
+          "event": "Application pack prepared"
+        }
+      ]
+    }
+  ]
 }

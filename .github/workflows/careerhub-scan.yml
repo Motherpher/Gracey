@@ -1,4 +1,4 @@
-name: CareerHub — Scan & Rank Jobs
+name: Grace · Uppdatera jobb
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       lane:
-        description: "Search lane"
+        description: "Vilken jobblista ska uppdateras?"
         required: true
         type: choice
         options:
@@ -18,7 +18,7 @@ on:
           - bridge
         default: all
       limit:
-        description: "Maximum ranked leads to keep"
+        description: "Hur många relevanta jobb ska sparas?"
         required: true
         default: "80"
   schedule:
@@ -51,28 +51,28 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install CareerHub
+      - name: Förbered karriärhubben
         run: pip install -r CareerHub/requirements.txt
 
-      - name: Align with latest main
+      - name: Hämta senaste versionen
         run: |
           git fetch origin main
           git checkout main
           git reset --hard origin/main
 
-      - name: Source and rank jobs
+      - name: Hitta och sortera jobb
         run: python CareerHub/scripts/careerhub.py scan --lane "$LANE" --limit "$LIMIT"
 
-      - name: Commit refreshed control room
+      - name: Spara den uppdaterade jobblistan
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add             CareerHub/CONTROL_ROOM.md             CareerHub/JOB_VAULT.md             CareerHub/APPLICATIONS.md             CareerHub/visuals/careerhub-journey.svg             CareerHub/data/latest_jobs.json             CareerHub/data/job_vault.json             CareerHub/data/applications.json
           if git diff --cached --quiet; then
-            echo "No CareerHub changes."
+            echo "Inga nya förändringar i jobblistan."
             exit 0
           fi
-          git commit -m "CareerHub: refresh ranked job leads"
+          git commit -m "Karriärhubben: uppdatera relevanta jobb"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main

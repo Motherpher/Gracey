@@ -142,38 +142,49 @@ def render_visual(path: Path, jobs: list[Job], cases_data: dict, vault: dict):
     applied = counts["applied"]
     total_seen = int(vault.get("total_jobs_ever_seen") or found)
 
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
-<rect width="1200" height="560" fill="{PALETTE["paper"]}"/>
-<path d="M-80 90 C160 40 250 230 420 175 C585 122 565 390 730 328 C880 272 930 120 1280 220"
-      fill="none" stroke="{PALETTE["cobalt"]}" stroke-width="92" stroke-linecap="round"/>
-<text x="68" y="68" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="{PALETTE["ink"]}" letter-spacing="2">GRACE · KARRIÄRHUBBEN</text>
-<text x="68" y="480" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="{PALETTE["ink"]}">Tre steg till nästa jobb</text>
-<g transform="translate(110 122)">
-  <circle cx="0" cy="0" r="70" fill="{PALETTE["paper"]}" stroke="{PALETTE["cobalt"]}" stroke-width="5"/>
-  <text x="0" y="-12" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">1 · HITTA</text>
-  <text x="0" y="21" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="{PALETTE["cobalt"]}">{found}</text>
-  <text x="0" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">aktuella jobb</text>
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="640" viewBox="0 0 1400 640" role="img" aria-label="Grace Karriärhubben">
+<rect width="1400" height="640" fill="{PALETTE["paper"]}"/>
+<rect width="390" height="640" fill="{PALETTE["cobalt"]}"/>
+<circle cx="785" cy="245" r="220" fill="{PALETTE["sun"]}"/>
+<rect x="1120" width="280" height="640" fill="{PALETTE["white"]}"/>
+<rect x="1090" y="420" width="310" height="220" fill="{PALETTE["coral"]}"/>
+<path d="M85 525 C250 385 365 350 535 365 C700 380 825 480 1015 420" fill="none" stroke="{PALETTE["white"]}" stroke-width="11" opacity=".86"/>
+
+<text x="62" y="112" font-family="Arial, Helvetica, sans-serif" font-size="91" font-weight="300" letter-spacing="7" fill="{PALETTE["paper"]}">GRACE</text>
+<text x="65" y="173" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="8" fill="{PALETTE["sun"]}">KARRIÄRHUBBEN</text>
+<text x="65" y="565" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="{PALETTE["paper"]}">TYDLIGT · VARMT · FRAMÅT</text>
+
+<text x="475" y="88" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="5" fill="{PALETTE["cobalt"]}">NÄSTA STEG</text>
+<text x="475" y="145" font-family="Georgia, serif" font-size="24" font-style="italic" fill="{PALETTE["ink"]}">Erfarenheten följer med. Riktningen kan förändras.</text>
+
+<g transform="translate(475 245)">
+  <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="{PALETTE["cobalt"]}">1 · HITTA JOBB</text>
+  <text x="0" y="62" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="{PALETTE["cobalt"]}">{found}</text>
+  <text x="0" y="90" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="{PALETTE["ink"]}">aktuella möjligheter</text>
 </g>
-<g transform="translate(518 290)">
-  <circle cx="0" cy="0" r="78" fill="{PALETTE["pale"]}" stroke="{PALETTE["blue"]}" stroke-width="5"/>
-  <text x="0" y="-16" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">2 · VÄLJ</text>
-  <text x="0" y="23" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="{PALETTE["blue"]}">{chosen}</text>
-  <text x="0" y="49" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">valda jobb</text>
+
+<g transform="translate(735 355)">
+  <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="{PALETTE["cobalt"]}">2 · VÄLJ JOBB</text>
+  <text x="0" y="62" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="{PALETTE["cobalt"]}">{chosen}</text>
+  <text x="0" y="90" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="{PALETTE["ink"]}">valda jobb</text>
 </g>
-<g transform="translate(940 208)">
-  <circle cx="0" cy="0" r="78" fill="{PALETTE["sun"]}" stroke="{PALETTE["ink"]}" stroke-width="4"/>
-  <text x="0" y="-16" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">3 · SÖK</text>
-  <text x="0" y="23" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="{PALETTE["ink"]}">{applied}</text>
-  <text x="0" y="49" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">pågående</text>
+
+<g transform="translate(1155 468)">
+  <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="{PALETTE["white"]}">3 · SÖK</text>
+  <text x="0" y="63" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="{PALETTE["white"]}">{applied}</text>
+  <text x="0" y="91" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="{PALETTE["white"]}">pågående</text>
 </g>
-<g transform="translate(770 430)">
-  <rect x="0" y="0" rx="25" width="350" height="74" fill="{PALETTE["coral"]}"/>
-  <text x="24" y="31" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="{PALETTE["ink"]}">{active_deadlines} sista datum inom 7 dagar</text>
-  <text x="24" y="54" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="{PALETTE["ink"]}">{total_seen} jobb sparade i historiken</text>
+
+<g transform="translate(1138 92)">
+  <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="{PALETTE["cobalt"]}">ÖVERSIKT</text>
+  <text x="0" y="58" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="300" fill="{PALETTE["cobalt"]}">{active_deadlines}</text>
+  <text x="0" y="82" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">sista datum inom 7 dagar</text>
+  <line x1="0" y1="112" x2="205" y2="112" stroke="{PALETTE["cobalt"]}" stroke-width="2" opacity=".45"/>
+  <text x="0" y="160" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="300" fill="{PALETTE["cobalt"]}">{total_seen}</text>
+  <text x="0" y="184" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">jobb sparade i historiken</text>
 </g>
 </svg>'''
     path.write_text(svg, encoding="utf-8")
-
 
 def render_job_vault(path: Path, vault: dict, cases_data: dict):
     cases_by_job = {c.get("job_id"): c for c in cases_data.get("cases", []) if c.get("job_id")}

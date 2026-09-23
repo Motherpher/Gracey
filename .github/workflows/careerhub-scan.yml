@@ -7,20 +7,6 @@ on:
       - "CareerHub/profile/candidate.yaml"
   workflow_dispatch:
     inputs:
-      lane:
-        description: "Vilken jobblista ska uppdateras?"
-        required: true
-        type: choice
-        options:
-          - all
-          - core
-          - adjacent
-          - bridge
-        default: all
-      limit:
-        description: "Hur många relevanta jobb ska sparas?"
-        required: true
-        default: "80"
       specific_wishes_or_needs:
         description: "Specifika önskemål eller behov (valfritt)"
         required: false
@@ -40,8 +26,8 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     env:
-      LANE: ${{ inputs.lane || 'all' }}
-      LIMIT: ${{ inputs.limit || '80' }}
+      LANE: "all"
+      LIMIT: "80"
       SEARCH_OVERLAY: ${{ inputs.specific_wishes_or_needs || '' }}
       ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
       ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
@@ -73,7 +59,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add             CareerHub/CONTROL_ROOM.md             CareerHub/JOB_VAULT.md             CareerHub/APPLICATIONS.md             CareerHub/visuals/careerhub-journey.svg             CareerHub/data/latest_jobs.json             CareerHub/data/job_vault.json             CareerHub/data/applications.json
+          git add CareerHub/CONTROL_ROOM.md CareerHub/JOB_VAULT.md CareerHub/APPLICATIONS.md CareerHub/visuals/careerhub-journey.svg CareerHub/data/latest_jobs.json CareerHub/data/job_vault.json CareerHub/data/applications.json
           if git diff --cached --quiet; then
             echo "Inga nya förändringar i jobblistan."
             exit 0

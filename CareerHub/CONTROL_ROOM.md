@@ -10,9 +10,11 @@ Välkommen. Här är dina aktuella möjligheter, samlade och förberedda. Du vä
 
 ## 1 · Hitta jobb
 
-**Senast uppdaterad:** 24 sep 2026 kl. 01:14 · **72 aktuella jobb** · **159 jobb i historiken**
+**Senast uppdaterad:** 24 sep 2026 kl. 01:15 · **72 aktuella jobb** · **159 jobb i historiken**
 
 **När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 sekunder**. Sidan uppdateras när sökningen är klar.
+
+När du vill kan du skriva **specifika önskemål eller behov** i sökningen. Det fungerar som ett extra raster för just sökningen och ändrar aldrig din karriärprofil.
 
 **[Uppdatera jobb →](https://github.com/Hybrismannen/Gracey/actions/workflows/careerhub-scan.yml)** · **[Öppna jobbhistoriken →](JOB_VAULT.md)** · **[Analysera ett jobb jag hittat själv →](https://github.com/Hybrismannen/Gracey/issues/new?template=careerhub-analyse-job.yml)**
 
@@ -102,10 +104,9 @@ Du kan få påminnelser före sista ansökningsdag och följa nästa steg direkt
 ---
 
 <details>
-<summary><strong>Profil, integritet och inställningar</strong></summary>
+<summary><strong>Profil och inställningar</strong></summary>
 
 - [Din arbetsprofil](profile/PROFILE_REVIEW.md)
-- [Integritet](PRIVACY.md)
 - [Inställningar och påminnelser](SETUP.md)
 - [Jobbkällor](docs/SOURCE_MATRIX.md)
 - [Fördjupad matchningslogik](hrdm/HRDM_R_v6.3.md)

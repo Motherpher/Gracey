@@ -1,12 +1,12 @@
-name: CareerHub — Update an application
-description: Update a chosen job through applied, contacted, interviews, portfolio, offer or denied.
+name: Grace · Uppdatera en ansökan
+description: Följ vad som händer efter att ett jobb har valts.
 title: "[CareerHub Update] "
 body:
   - type: input
     id: case_issue
     attributes:
-      label: CareerHub case issue
-      description: The issue number for the chosen job, for example 12.
+      label: Jobbsidans nummer
+      description: Numret på det valda jobbet, till exempel 12.
       placeholder: "12"
     validations:
       required: true
@@ -14,42 +14,44 @@ body:
   - type: dropdown
     id: status
     attributes:
-      label: New status
+      label: Nytt läge
       options:
-        - applied
-        - contacted
-        - portfolio
-        - interview_1
-        - interview_2
-        - interview_3
-        - interview_4
-        - interview_5
-        - meeting_1
-        - meeting_2
-        - meeting_3
-        - meeting_4
-        - meeting_5
-        - offer
-        - denied
-        - withdrawn
-        - archived
+        - Ansökan skickad
+        - Kontakt
+        - Arbetsprov/Test
+        - Intervju 1
+        - Intervju 2
+        - Intervju 3
+        - Intervju 4
+        - Intervju 5
+        - Möte 1
+        - Möte 2
+        - Möte 3
+        - Möte 4
+        - Möte 5
+        - Erbjudande
+        - Avslutad
+        - Avstår
+        - Arkiverad
     validations:
       required: true
 
   - type: input
     id: date
     attributes:
-      label: Date
-      description: Optional. Use YYYY-MM-DD.
+      label: Datum
+      description: Valfritt. ÅÅÅÅ-MM-DD.
 
   - type: input
     id: next_action
     attributes:
-      label: Next action (optional)
-      placeholder: Prepare interview examples
+      label: Nästa steg
+      description: Valfritt.
+      placeholder: Förbered exempel till intervjun
 
   - type: input
     id: next_action_date
     attributes:
-      label: Next action date (optional)
+      label: Datum för nästa steg
+      description: Valfritt.
       placeholder: "2026-10-02"

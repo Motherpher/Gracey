@@ -21,6 +21,11 @@ on:
         description: "Hur många relevanta jobb ska sparas?"
         required: true
         default: "80"
+      specific_wishes_or_needs:
+        description: "Specifika önskemål eller behov (valfritt)"
+        required: false
+        type: string
+        default: ""
   schedule:
     - cron: "20 5 * * 1-5"
 
@@ -37,6 +42,7 @@ jobs:
     env:
       LANE: ${{ inputs.lane || 'all' }}
       LIMIT: ${{ inputs.limit || '80' }}
+      SEARCH_OVERLAY: ${{ inputs.specific_wishes_or_needs || '' }}
       ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
       ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
       JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}
@@ -61,7 +67,7 @@ jobs:
           git reset --hard origin/main
 
       - name: Hitta och sortera jobb
-        run: python CareerHub/scripts/careerhub.py scan --lane "$LANE" --limit "$LIMIT"
+        run: python CareerHub/scripts/careerhub.py scan --lane "$LANE" --limit "$LIMIT" --search-overlay "$SEARCH_OVERLAY"
 
       - name: Spara den uppdaterade jobblistan
         run: |

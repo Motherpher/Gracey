@@ -88,6 +88,8 @@ def choose_link(job: Job, default_priority: int = 3) -> str:
     title = f"[CareerHub Job] {job.company or 'Arbetsgivare'} — {job.title}"
     lane_labels = {"core": "Huvudspår", "adjacent": "Närliggande möjlighet", "bridge": "Flexibelt / extra"}
     body = (
+        "## Grace · Analysera det här jobbet\n\n"
+        "Allt är redan ifyllt. För att starta analysen behöver du bara skapa jobbsidan längst ned.\n\n"
         "### Länk till jobbet\n"
         f"{job.url}\n\n"
         "### Jobb-ID\n"
@@ -109,7 +111,7 @@ def choose_link(job: Job, default_priority: int = 3) -> str:
 
 
 def choose_any_link() -> str:
-    return f"https://github.com/{REPO}/issues/new?template=careerhub-choose-job.yml"
+    return f"https://github.com/{REPO}/issues/new?template=careerhub-analyse-job.yml"
 
 
 def status_update_link(case: dict, status: str) -> str:
@@ -175,7 +177,7 @@ def render_visual(path: Path, jobs: list[Job], cases_data: dict, vault: dict):
 <g transform="translate(735 355)">
   <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="{PALETTE["cobalt"]}">2 · VÄLJ JOBB</text>
   <text x="0" y="62" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="{PALETTE["cobalt"]}">{chosen}</text>
-  <text x="0" y="90" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="{PALETTE["ink"]}">valda jobb</text>
+  <text x="0" y="90" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="{PALETTE["ink"]}">analyserade jobb</text>
 </g>
 
 <g transform="translate(1155 468)">
@@ -218,7 +220,7 @@ def render_job_vault(path: Path, vault: dict, cases_data: dict):
         if case:
             action = f"[case #{case.get('issue_number')}]({case.get('issue_url')})"
         else:
-            action = f"**[Välj →]({choose_link(Job.from_dict(r), 3)})**"
+            action = f"**[JA — Analysera]({choose_link(Job.from_dict(r), 3)})**"
         lines.append(f"| {rank} | [{title}]({url}) | {company} | {deadline} | {str(r.get('first_seen',''))[:10]} | {str(r.get('last_seen',''))[:10]} | aktuell | {action} |")
     lines += ["", "## Historik / inte längre i den aktuella listan", "", "| Roll | Arbetsgivare | Sista dag | Senast sedd | Läge | Nästa steg |", "|---|---|---|---|---|---|"]
     for r in historic[:180]:
@@ -230,7 +232,7 @@ def render_job_vault(path: Path, vault: dict, cases_data: dict):
         if case:
             action = f"[case #{case.get('issue_number')}]({case.get('issue_url')})"
         else:
-            action = f"**[Välj →]({choose_link(Job.from_dict(r), 2)})**"
+            action = f"**[JA — Analysera]({choose_link(Job.from_dict(r), 2)})**"
         lines.append(f"| [{title}]({url}) | {company} | {deadline} | {str(r.get('last_seen',''))[:10]} | {r.get('deadline_state') or 'historic'} | {action} |")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -299,7 +301,7 @@ def render_lane(lines: list[str], lane: str, jobs: list[Job], cases_by_job: dict
     if not visible:
         lines += ["Inga aktuella jobb i den här gruppen just nu.", ""]
         return
-    lines += ["| Prioritet | Roll | Arbetsgivare | Sista dag | Varför | Välj |", "|---|---|---|---|---|---|"]
+    lines += ["| Prioritet | Roll | Arbetsgivare | Sista dag | Varför | Analysera? |", "|---|---|---|---|---|---|"]
     for index, job in enumerate(visible):
         deadline, days = deadline_info(job.deadline)
         if days is not None and 0 <= days <= 3:
@@ -309,10 +311,10 @@ def render_lane(lines: list[str], lane: str, jobs: list[Job], cases_by_job: dict
         source_link = f"[{title_txt}]({job.url})" if job.url else title_txt
         if job.id in cases_by_job:
             c = cases_by_job[job.id]
-            choose = f"Valt · [jobbsida #{c.get('issue_number')}]({c.get('issue_url')})"
+            choose = f"Analyserat · [öppna jobbsida #{c.get('issue_number')}]({c.get('issue_url')})"
         else:
             default_priority = 5 if index < 2 else 4 if index < 5 else 3
-            choose = f"**[Välj →]({choose_link(job, default_priority)})**"
+            choose = f"**Vill du analysera det här jobbet? [JA →]({choose_link(job, default_priority)})**"
         lines.append(f"| {priority_label(job)} | {source_link} | {company} | {deadline} | {why_short(job).replace('|','\\|')} | {choose} |")
     lines += ["", f"_Visar {len(visible)} av {len(jobs)} mest relevanta jobb i den här gruppen._", ""]
 
@@ -335,16 +337,16 @@ def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict
         "## 1 · Hitta jobb", "",
         f"**Senast uppdaterad:** {now} · **{len(jobs)} aktuella jobb** · **{vault.get('total_jobs_ever_seen', len(jobs))} jobb i historiken**", "",
         "**När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 sekunder**. Sidan uppdateras när sökningen är klar.", "",
-        f"**[Uppdatera jobb →](https://github.com/{REPO}/actions/workflows/careerhub-scan.yml)** · **[Öppna jobbhistoriken →](JOB_VAULT.md)** · **[Jag hittade ett jobb själv →]({choose_any_link()})**", "",
+        f"**[Uppdatera jobb →](https://github.com/{REPO}/actions/workflows/careerhub-scan.yml)** · **[Öppna jobbhistoriken →](JOB_VAULT.md)** · **[Analysera ett jobb jag hittat själv →]({choose_any_link()})**", "",
     ]
     for lane_name in ["core", "adjacent", "bridge"]:
         if lane == "all" or lane == lane_name:
             render_lane(lines, lane_name, by_lane[lane_name], cases_by_job)
     lines += [
         "---", "", "## 2 · Välj jobb", "",
-        "Välj bara de jobb som känns värda din tid. **Välj →** öppnar en färdig jobbsida. Du behöver normalt inte ändra något – tryck bara på **Skapa jobbsida**.", "",
-        "Karriärhubben prioriterar jobbet, går igenom hur väl det passar Grace och förbereder ett ansökningsunderlag.", "",
-        "Prioritet: **5 Sök · 4 Mycket intressant · 3 Intressant · 2 Svagare träff · 1 Avvakta**", "",
+        "**Den enda frågan är: Vill du analysera det här jobbet?**", "",
+        "Om svaret är ja trycker du på **JA — Analysera**. Karriärhubben sköter därefter den fulla analysen, arbetsgivar- och rollkontrollen, prioriteringen, jobbsidan och ansökningsunderlaget i bakgrunden.", "",
+        "Grace behöver inte förstå analysmodellen eller hur jobbsidan är uppbyggd.", "",
     ]
     if active_cases:
         lines += ["| Nivå | Jobb | Läge | Sista dag | Nästa steg |", "|---|---|---|---|---|"]
@@ -357,11 +359,11 @@ def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict
             company = str(c.get("company") or "").replace("|", "\\|")
             lines.append(f"| **{c.get('priority',3)} / 5 · {rank_label(c.get('priority'))}** | [{title} — {company}]({issue_url}) | **{STATUS_LABELS.get(c.get('status'), c.get('status'))}** | {deadline} | {case_actions(c)} |")
     else:
-        lines += ["Inga jobb är valda ännu. Tryck **Välj →** på ett jobb ovan.", ""]
+        lines += ["Inga jobb är analyserade ännu. Tryck **JA — Analysera** vid ett jobb ovan.", ""]
     lines += [
         "", f"**[Öppna ansökningsöversikten →](APPLICATIONS.md)**", "",
         "---", "", "## 3 · Sök", "",
-        "För varje valt jobb förbereder hubben en tydlig matchning, en kort arbetsgivarbild och ett redigerbart ansökningsutkast.", "",
+        "För varje analyserat jobb får Grace en tydlig matchning, en kort arbetsgivar- och rollbild, vad som talar för och emot jobbet samt ett redigerbart ansökningsutkast.", "",
         "1. Öppna jobbsidan.",
         "2. Ladda ner och justera ansökningsunderlaget.",
         "3. Skicka ansökan till arbetsgivaren.",

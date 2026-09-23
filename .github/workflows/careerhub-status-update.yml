@@ -1,4 +1,4 @@
-name: CareerHub — Update Application Status
+name: Grace · Uppdatera ansökans läge
 
 on:
   issues:
@@ -33,21 +33,21 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install CareerHub
+      - name: Förbered karriärhubben
         run: pip install -r CareerHub/requirements.txt
 
-      - name: Align with latest main
+      - name: Hämta senaste versionen
         run: |
           git fetch origin main
           git checkout main
           git reset --hard origin/main
 
-      - name: Parse update
+      - name: Läs uppdateringen
         run: |
           mkdir -p /tmp/careerhub-update
           python CareerHub/scripts/update_request.py             --event "$GITHUB_EVENT_PATH"             --out /tmp/careerhub-update
 
-      - name: Apply update
+      - name: Uppdatera ansökan
         run: |
           CASE="$(cat /tmp/careerhub-update/case_issue_number.txt)"
           STATUS="$(cat /tmp/careerhub-update/status.txt)"
@@ -61,11 +61,11 @@ jobs:
           elif [ -n "$STATUS" ]; then
             python CareerHub/scripts/careerhub.py track               --action status               --issue-number "$CASE"               --status "$STATUS"               --date "$DATE"               --next-action "$NEXT_ACTION"               --next-action-date "$NEXT_DATE"
           else
-            echo "No status or priority update supplied."
+            echo "Ingen ändring av läge eller prioritet angavs."
             exit 1
           fi
 
-      - name: Commit CareerHub state
+      - name: Spara förändringen
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -77,15 +77,15 @@ jobs:
             git push origin HEAD:main
           fi
 
-      - name: Update original case and close helper issue
+      - name: Bekräfta på jobbsidan
         run: |
           CASE="$(cat /tmp/careerhub-update/case_issue_number.txt)"
           STATUS="$(cat /tmp/careerhub-update/status.txt)"
           PRIORITY="$(cat /tmp/careerhub-update/priority.txt)"
           if [ -n "$PRIORITY" ]; then
-            MESSAGE="CareerHub priority updated to **$PRIORITY / 5**. The control room has been refreshed."
+            MESSAGE="Prioriteten är uppdaterad till **$PRIORITY / 5**. Karriärhubben är uppdaterad."
           else
-            MESSAGE="Karriärhubben – uppdatera ansökand to **$STATUS**. The control room and application monitor have been refreshed."
+            MESSAGE="Ansökans läge är uppdaterat till **$STATUS**. Karriärhubben och ansökningsöversikten är uppdaterade."
           fi
           gh issue comment "$CASE" --repo "${{ github.repository }}" --body "$MESSAGE"
-          gh issue close "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --comment "Update applied to CareerHub case #$CASE."
+          gh issue close "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --comment "Uppdateringen är sparad på jobbsida #$CASE."

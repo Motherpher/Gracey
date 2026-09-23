@@ -1,15 +1,15 @@
-name: CareerHub — Välj ett jobb
-description: Add a job you found elsewhere to CareerHub and prepare the application case.
+name: Grace · Välj ett jobb
+description: Lägg till ett jobb som Grace vill titta närmare på.
 title: "[CareerHub Job] "
 body:
   - type: markdown
     attributes:
       value: |
-        ## Step 2 — Choose job
+        ## Välj jobb
 
-        Paste the job link. CareerHub will create the case, run HRDM and prepare the application pack.
+        Klistra in länken. Karriärhubben skapar en jobbsida, går igenom matchningen och förbereder ett första ansökningsunderlag.
 
-        **Public repo notice:** do not include private contact details or confidential notes here.
+        Repot är privat, men skriv ändå inte in känsliga eller onödiga personuppgifter här.
 
   - type: input
     id: job_url
@@ -23,23 +23,23 @@ body:
     id: role
     attributes:
       label: Roll
-      description: Optional, but useful if the job board blocks automated reading.
+      description: Valfritt. Fyll i om jobbsidan är svår att läsa automatiskt.
 
   - type: input
     id: employer
     attributes:
       label: Arbetsgivare
-      description: Optional.
+      description: Valfritt.
 
   - type: dropdown
     id: lane
     attributes:
-      label: Lane
-      description: Why are you considering this job?
+      label: Spår
+      description: Hur ser Grace på jobbet?
       options:
-        - core — career-track role
-        - adjacent — transferable/adjacent role
-        - bridge — extra-income/flexible role
+        - Huvudspår
+        - Närliggande möjlighet
+        - Flexibelt / extra
     validations:
       required: true
 
@@ -47,13 +47,13 @@ body:
     id: priority
     attributes:
       label: Prioritet 1–5
-      description: 5 = Must apply, 1 = Maybe.
+      description: 5 = Sök. 1 = Avvakta.
       options:
-        - "5 — Must apply"
-        - "4 — High"
-        - "3 — Medium"
-        - "2 — Low"
-        - "1 — Maybe"
+        - "5 — Sök"
+        - "4 — Mycket intressant"
+        - "3 — Intressant"
+        - "2 — Svagare träff"
+        - "1 — Avvakta"
     validations:
       required: true
 
@@ -61,19 +61,19 @@ body:
     id: deadline
     attributes:
       label: Sista ansökningsdag
-      description: Optional. Use YYYY-MM-DD if known.
+      description: Valfritt. Skriv ÅÅÅÅ-MM-DD om datumet är känt.
       placeholder: "2026-10-15"
 
   - type: textarea
     id: job_text
     attributes:
       label: Jobbtext (valfritt)
-      description: Paste only when the website blocks automated reading.
+      description: Klistra bara in text om länken inte går att läsa.
 
   - type: checkboxes
     id: public_safe
     attributes:
-      label: Public-safe request
+      label: Integritet
       options:
-        - label: I have not included private or sensitive personal information.
+        - label: Jag har inte lagt in känsliga eller onödiga personuppgifter.
           required: true

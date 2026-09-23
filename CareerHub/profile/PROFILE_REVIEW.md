@@ -1,31 +1,33 @@
-# Grace · arbetsprofil
+# Din arbetsprofil
 
-Det här är **inte ett färdigt CV**. Det är den arbetsbild som karriärhubben använder för att hitta rimliga nästa steg.
+Det här är inte ett färdigt CV. Det är den bild vi använder för att hitta möjligheter där din erfarenhet kan få större utrymme och bättre träff.
 
 ## Det som redan framträder tydligt
 
-Grace verkar vara särskilt stark när hon får:
+I underlaget syns särskilt fem styrkor:
 
-- **handleda praktiskt** – förklara, visa, låta någon prova och ge återkoppling direkt,
-- **samordna människor och arbete** – se lite mer av helheten när andra främst ser sin egen del,
-- **vara tydlig utan att bli hård** – lyssna, förklara och ändå kunna säga ”nu gör vi så här”,
-- **skapa trygghet** – både patienter och kollegor verkar kunna luta sig mot henne,
-- **läsa av människor** – uppmärksamma när det någon säger inte riktigt stämmer med hur personen verkar må.
+- **du handleder praktiskt** – du förklarar, visar, låter någon prova och ger återkoppling direkt,
+- **du samordnar människor och arbete** – du ser helheten och hjälper olika perspektiv att mötas,
+- **du är tydlig utan att bli hård** – du kan lyssna, förklara och ändå hålla en riktning,
+- **du skapar trygghet** – människor verkar kunna luta sig mot dig i både vardag och förändring,
+- **du läser av situationer väl** – du fångar upp när ord, känslor och kroppsspråk inte riktigt stämmer överens.
 
-## Vad nästa jobb gärna ska ge tillbaka
+## Vad nästa jobb gärna ska ge dig
 
-Intervjun pekar mot en önskan om ett arbete som känns **mer uppskattande, friare och mer energigivande** – med en balans mellan det seriösa och en varm, lättsam vardag.
+Nästa steg ska inte bara vara möjligt. Det ska också kännas bättre.
 
-Det betyder inte att Grace måste börja om. Karriärhubben ska i första hand leta efter roller där det hon redan kan blir mer synligt och mer värderat.
+Underlaget pekar mot ett arbete där du får känna dig **mer uppskattad, friare och mer energifylld**, med en bra balans mellan det seriösa och en varm, mänsklig vardag.
 
-## Det vi behöver komplettera
+Du behöver inte börja om. Vi letar i första hand efter roller där det du redan kan blir tydligare, mer användbart och mer värderat.
 
-För att träffarna ska bli riktigt skarpa behöver Grace senare bekräfta:
+## När du vill förfina träffarna
+
+Du kan senare komplettera med:
 
 - exakt yrkestitel och utbildning,
 - eventuella legitimationer och certifikat,
-- var hon vill arbeta,
+- var du vill arbeta,
 - önskad arbetstid,
 - lönenivå,
 - aktuellt CV,
-- vad hon absolut inte vill fortsätta med.
+- sådant du absolut inte vill fortsätta med.

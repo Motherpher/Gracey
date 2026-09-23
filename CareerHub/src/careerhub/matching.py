@@ -41,6 +41,23 @@ MISMATCH_TITLE_TERMS = [
     "security engineer", "cybersecurity", "finance director",
     "financial controller", "accountant", "product director",
     "engineering manager",
+    "teknisk", "flygtekn", "odontolog", "röntgen", "hyrox", "fitness",
+    "stall", "ridlärare", "ridinstruktör", "ekonomiansvarig", "redovisning",
+    "sälj-", "säljare", "restaurang", "bygg", "ingenjör", "lager", "logistik",
+]
+
+CARE_CONTEXT_TERMS = [
+    "vård", "omsorg", "patient", "sjukhus", "vårdcentral", "klinik",
+    "region ", "regionen", "socialtjänst", "socialpsykiatri", "psykiatri",
+    "rehabiliter", "hälsa", "lss", "funktionsstöd", "äldreomsorg",
+    "hemtjänst", "boendestöd", "personlig assistans", "habiliter",
+    "medarbetare i vården", "hälso- och sjukvård",
+]
+
+CONTEXT_REQUIRED_TITLE_TERMS = [
+    "handledare", "instruktör", "utbildare", "samordnare", "koordinator",
+    "teamledare", "arbetsledare", "mentor", "administratör", "receptionist",
+    "kundservice", "serviceledare", "rådgivare",
 ]
 
 REMOTE_US_PATTERNS = [
@@ -93,13 +110,22 @@ def _title_family_fit(title: str, lane_name: str) -> tuple[float, list[str]]:
     return score, hits
 
 
-def _domain_mismatch(title: str, lane_name: str, positive_hits: list[str]) -> bool:
-    title_l = (title or "").lower()
-    if not any(term in title_l for term in MISMATCH_TITLE_TERMS):
-        return False
-    # Explicit lane-relevant title language overrides generic negative words.
-    strong_positive = any(len(term.split()) >= 1 and term.strip() in title_l for term in positive_hits)
-    return not strong_positive
+def _domain_mismatch(job: Job, lane_name: str, positive_hits: list[str]) -> bool:
+    title_l = (job.title or "").lower()
+    blob = job.search_blob.lower()
+
+    # Hard specialist/domain mismatches are never rescued by a generic word
+    # such as "instruktör" or "koordinator".
+    if any(term in title_l for term in MISMATCH_TITLE_TERMS):
+        return True
+
+    # Generic people/coordination titles are useful only when the vacancy
+    # sits in a care, health, rehabilitation or closely related context.
+    generic_title = any(term in title_l for term in CONTEXT_REQUIRED_TITLE_TERMS)
+    if generic_title and not any(term in blob for term in CARE_CONTEXT_TERMS):
+        return True
+
+    return False
 
 
 def _geo_fit(job: Job, profile: dict) -> tuple[float, list[str]]:
@@ -189,7 +215,7 @@ def triage(job: Job, lane_name: str, lane_cfg: dict, profile: dict, defaults: di
         if any(p in blob for p in patterns):
             flags.append(f"{flag}-requirement-needs-verification")
 
-    mismatch = _domain_mismatch(title, lane_name, positive_hits)
+    mismatch = _domain_mismatch(job, lane_name, positive_hits)
     if mismatch:
         flags.append("occupational-family-mismatch")
 

@@ -34,19 +34,19 @@ def build_packet(job: Job, profile: dict, lane: str) -> dict:
         "job": job.full_dict(),
         "candidate_evidence": public_candidate_evidence(profile),
         "constraints": [
-            "Run the complete canonical HRDM-R sequence in order.",
-            "Do not invent candidate evidence.",
+            "Gå igenom hela matchningen systematiskt i rätt ordning.",
+            "Hitta inte på uppgifter om Grace.",
             "Separate job-ad facts from inference.",
-            "Candidate Positioning may use only evidence supplied in this packet.",
-            "Treat unknown language proficiency, current location and current employment as unknown.",
-            "DoD diagnoses role deviation, not candidate quality.",
+            "Bedömningen av Grace får bara använda det underlag som finns i paketet.",
+            "Språk, nuvarande plats och anställning som inte är bekräftade ska markeras som okända.",
+            "Bedöm avståndet till rollen, inte Grace värde eller kvalitet som person.",
             "HCC must address overload, ambiguity, fairness, dignity and structural honesty.",
         ],
     }
 
 
 def packet_prompt(packet: dict) -> str:
-    return f"""You are running HRDM-R v6.3 for CareerHub.
+    return f"""Du gör en fördjupad jobbmatchning för Grace i Karriärhubben.
 
 Canonical sequence:
 1 Ad/Text Intake
@@ -60,11 +60,11 @@ Canonical sequence:
 9 Candidate Positioning Map
 10 HCC Reverse Commentary
 
-Use web research only for current public employer/role context. Do not use web search to invent or supplement candidate history.
+Använd webbkällor bara för aktuell offentlig information om arbetsgivaren och rollen. Använd inte webben för att fylla i Grace bakgrund.
 
-Candidate evidence is bounded to the supplied packet. If evidence is absent, mark it unknown or gap.
+Om en uppgift om Grace saknas ska den markeras som okänd eller som något att kontrollera.
 
-Return the JSON schema supplied by the caller.
+Skriv alla användartexter på tydlig, vuxen och idiomatisk svenska. Undvik tekniskt språk i slutsatserna. Returnera enligt JSON-schemat.
 
 PACKET:
 {json.dumps(packet, ensure_ascii=False, indent=2)}

@@ -15,7 +15,7 @@
 
 <g transform="translate(475 245)">
   <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#063A3D">1 · HITTA JOBB</text>
-  <text x="0" y="62" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="#063A3D">80</text>
+  <text x="0" y="62" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="#063A3D">72</text>
   <text x="0" y="90" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#1B2220">aktuella möjligheter</text>
 </g>
 
@@ -33,10 +33,10 @@
 
 <g transform="translate(1138 92)">
   <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#063A3D">ÖVERSIKT</text>
-  <text x="0" y="58" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="300" fill="#063A3D">23</text>
+  <text x="0" y="58" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="300" fill="#063A3D">19</text>
   <text x="0" y="82" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#1B2220">sista datum inom 7 dagar</text>
   <line x1="0" y1="112" x2="205" y2="112" stroke="#063A3D" stroke-width="2" opacity=".45"/>
-  <text x="0" y="160" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="300" fill="#063A3D">155</text>
+  <text x="0" y="160" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="300" fill="#063A3D">159</text>
   <text x="0" y="184" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#1B2220">jobb sparade i historiken</text>
 </g>
 </svg>

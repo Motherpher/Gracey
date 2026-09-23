@@ -1,17 +1,15 @@
 # Grace · Karriärhubben
 
-Karriärhubben är en personlig arbetsyta för att hitta, välja och söka nya jobb utan att behöva hålla ordning på allt i huvudet.
+Välkommen. Här får du en lugn och tydlig överblick över nästa steg i arbetslivet.
 
-## Så använder Grace den
+Karriärhubben hjälper dig att se möjligheterna, välja vad som är värt din tid och gå vidare först när du själv vill.
 
-1. **Hitta jobb** – öppna kontrollrummet och se nya möjligheter.
-2. **Välj jobb** – när något ser intressant ut svarar Grace bara på frågan **Vill du analysera det här jobbet?**
-3. **Sök** – Karriärhubben har då redan gjort analysen och förberett underlaget; Grace justerar med egen röst och skickar.
+## Så använder du den
 
-Därefter kan varje ansökan följas genom kontakt, test eller arbetsprov, intervju/möte 1–5, erbjudande eller avslut.
+1. **Hitta jobb** – se aktuella möjligheter och börja med de mest relevanta.
+2. **Välj jobb** – när något känns intressant väljer du **JA — Analysera**.
+3. **Sök** – när du vill gå vidare finns analys och ansökningsunderlag redan förberett.
 
-**[Öppna kontrollrummet →](CONTROL_ROOM.md)**
+Du behöver inte hålla ordning på metod, prioritering eller process. Du väljer riktning och tempo; resten hålls samman åt dig.
 
-### Grundprincip
-
-Tekniken ska ligga i bakgrunden. Grace ska möta tydliga ord, tydliga val och en lugn överblick. Den fulla HRDM-R-analysen, arbetsgivar- och rollkontrollen, prioriteringen och dokumentförberedelsen sker automatiskt efter ett ja.
+**[Öppna karriärhubben →](CONTROL_ROOM.md)**

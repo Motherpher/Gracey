@@ -35,11 +35,27 @@ def cmd_scan(args):
     lanes = search_cfg["lanes"]
     lane_names = list(lanes) if args.lane == "all" else [args.lane]
 
+    configured_overlay = (
+        search_cfg.get("user_search_overlay", {}).get("specific_wishes_or_needs", "")
+        if isinstance(search_cfg, dict) else ""
+    )
+    search_overlay = (args.search_overlay or configured_overlay or "").strip()
+
     all_jobs = []
     for lane_name in lane_names:
         lane_cfg = lanes[lane_name]
-        sourced = source_lane(lane_cfg["queries"], search_cfg["defaults"], source_cfg)
-        ranked = rank_jobs(sourced, lane_name, lane_cfg, profile, search_cfg["defaults"])
+        source_queries = list(lane_cfg["queries"])
+        if search_overlay:
+            source_queries.append(search_overlay)
+        sourced = source_lane(source_queries, search_cfg["defaults"], source_cfg)
+        ranked = rank_jobs(
+            sourced,
+            lane_name,
+            lane_cfg,
+            profile,
+            search_cfg["defaults"],
+            search_overlay=search_overlay,
+        )
         all_jobs.extend(ranked)
 
     best = {}
@@ -66,6 +82,7 @@ def cmd_scan(args):
         "jobs_ever_seen": vault.get("total_jobs_ever_seen"),
         "lane": args.lane,
         "top_score": ranked[0].triage_score if ranked else None,
+        "search_overlay_used": bool(search_overlay),
     }, indent=2))
 
 
@@ -179,6 +196,11 @@ def build_parser():
     scan = sub.add_parser("scan", help="Source and rank job leads")
     scan.add_argument("--lane", choices=["core", "adjacent", "bridge", "all"], default="all")
     scan.add_argument("--limit", type=int, default=80)
+    scan.add_argument(
+        "--search-overlay",
+        default="",
+        help="Search-only specific wishes or needs. Never candidate evidence.",
+    )
     scan.set_defaults(func=cmd_scan)
 
     drill = sub.add_parser("drill", help="Run HRDM/application workflow for one job")

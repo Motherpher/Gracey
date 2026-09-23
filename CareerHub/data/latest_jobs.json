@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-09-23T17:13:09.390692+00:00",
+  "generated_at": "2026-09-23T17:15:05.257442+00:00",
   "count": 80,
   "jobs": [
-    {
-      "source": "platsbanken",
-      "title": "Projektanställning - handledare Naturunderstödd rehabilitering",
-      "company": "REGION DALARNA",
-      "location": "Borlänge, Dalarnas län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-09-15T13:39:19",
-      "deadline": "2026-09-28T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31479464",
-      "salary": "",
-      "provider_id": "31479464",
-      "lane": "core",
-      "matched_query": "handledare rehabilitering",
-      "triage_score": 86.9,
-      "triage_reasons": [
-        "title/role fit 100%",
-        "candidate-evidence support 47%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 89%"
-      ],
-      "review_flags": [],
-      "id": "f7ba48b73d7808b3",
-      "description_excerpt": "Hos oss i Region Dalarna får du ett meningsfullt arbete där du kan göra skillnad. Tillsammans arbetar vi för ett hållbart Dalarna med utvecklingskraft i länets alla delar. Om verksamheten Region Dalarna ansvarar för hälso- och sjukvård, tandvård, hjälpmedel, kollektivtrafik och folkhögskolor, samt arbetar med folkbildning, forskning, folkhälsa och kultur. Vi arbetar också med utvecklingsfrågor inom infrastruktur, näringsliv, arbetsmarknad och miljö. Fornby folkhögskola är en av tre folkhögskolor i Dalarna med Region Dalarna som huvudman. Region Dalarnas folkhögskolor arbetar gemensamt för Regionens hälsomål genom bildning, kompetensförsörjning och tillgängliggörande av kultur. Region Dalarna"
-    },
     {
       "source": "platsbanken",
       "title": "Bli mentor i VOOB:s nätverk för chefer inom svensk vård och omsorg",
@@ -136,90 +110,6 @@
     },
     {
       "source": "platsbanken",
-      "title": "Arbetsterapeut med utbildning rehabkoordinator till LARO-mottagningen",
-      "company": "VÄSTRA GÖTALANDSREGIONEN",
-      "location": "Skövde, Västra Götalands län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": null,
-      "published": "2026-09-23T09:48:52",
-      "deadline": "2026-10-14T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31509664",
-      "salary": "",
-      "provider_id": "31509664",
-      "lane": "adjacent",
-      "matched_query": "rehabkoordinator",
-      "triage_score": 79.2,
-      "triage_reasons": [
-        "title/role fit 100%",
-        "candidate-evidence support 19%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 100%"
-      ],
-      "review_flags": [
-        "licence-requirement-needs-verification"
-      ],
-      "id": "3bb8d9dfcdf7795e",
-      "description_excerpt": "Skaraborgs Sjukhus – där engagemang, omtanke och kompetens möts. Med över 4 000 medarbetare inom ett trettiotal specialistområden arbetar vi tillsammans för att bedriva trauma- och specialistsjukvård i framkant. Vår verksamhet finns i hela Skaraborg – och vi gör skillnad för våra invånare varje dag. Hos oss möter du kollegor som stöttar varandra i en miljö där det finns utrymme att utvecklas och ta ansvar. Bli en del av vårt team och bidra tillsammans med oss. Läs mer på http://www.vgregion.se/skas Beskrivning LARO-mottagningen är en mottagning inom Vuxenpsykiatrin där vi möter och behandlar personer med opiatberoende. Behandlingen rekommenderas av Socialstyrelsen och utvecklas ständigt, bla"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Administrativ samordnare, inriktning rekrytering till Samordnad rekrytering",
-      "company": "Örebro kommun",
-      "location": "Örebro, Örebro län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": null,
-      "published": "2026-09-22T13:17:35",
-      "deadline": "2026-10-07T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31506295",
-      "salary": "",
-      "provider_id": "31506295",
-      "lane": "bridge",
-      "matched_query": "administrativ samordnare vård",
-      "triage_score": 79.2,
-      "triage_reasons": [
-        "title/role fit 92%",
-        "candidate-evidence support 19%",
-        "arrangement fit 100%",
-        "geography/remote fit 72%",
-        "recency signal 99%"
-      ],
-      "review_flags": [
-        "remote-eligibility-needs-verification"
-      ],
-      "id": "4812aca106747db5",
-      "description_excerpt": "Vill du arbeta med rekrytering som gör skillnad varje dag? Då kan du vara vår nya kollega på Samrek! Som rekryterare inom Samrek hjälper du våra verksamheter inom vård och omsorg samt funktionsstöd att hitta rätt korttidsvikarier. Tillsammans med erfarna kollegor bidrar du till att säkra kompetensförsörjningen i några av kommunens viktigaste verksamheter. Välkommen med din ansökan! Om tjänsten I din roll som administrativ samordnare inriktning rekrytering hos oss på Samrek (Samordnad rekrytering) är du med och säkerställer att våra verksamheter inom vård och omsorg samt funktionsstöd får rätt korttidsvikarier på plats. Tillsammans rekryterar vi bland annat till hemtjänst, särskilda boenden o"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Rehabkoordinator",
-      "company": "Din Vårdcentral i Stockholm AB",
-      "location": "Stockholm, Stockholms län",
-      "employment_type": "Behovsanställning",
-      "work_mode": null,
-      "published": "2026-07-14T20:47:15",
-      "deadline": "2026-09-30T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31273495",
-      "salary": "",
-      "provider_id": "31273495",
-      "lane": "adjacent",
-      "matched_query": "rehabkoordinator",
-      "triage_score": 78.6,
-      "triage_reasons": [
-        "title/role fit 94%",
-        "candidate-evidence support 47%",
-        "arrangement fit 100%",
-        "geography/remote fit 88%",
-        "recency signal 15%"
-      ],
-      "review_flags": [
-        "licence-requirement-needs-verification"
-      ],
-      "id": "717be6ca7964b2f1",
-      "description_excerpt": "Kassem Vårdcentral söker Rehabkoordinator I Kista möter du patienter i olika åldrar och livssituationer, med varierande vårdbehov och social bakgrund. Vi som jobbar här är ett glatt gäng som främjar teamarbete. Vi trivs med vårt arbete och med varandra. I fikarummet är det högt i tak och glatt humör. Vi värdesätter en hälsosam livsstil och värnar om en god balans mellan arbete och privatliv. Du har möjlighet att till viss del påverka dina egna arbetstider genom flextid och därmed din egen arbetssituation när verksamheten så tillåter. Arbetsuppgifter Arbetet innebär att stödja sjukskrivna patienter i rehabiliteringsprocessen och underlätta för patienten att återgå i arbete eller inträda i arb"
-    },
-    {
-      "source": "platsbanken",
       "title": "Verksamhetssamordnare",
       "company": "Karlskrona kommun",
       "location": "Karlskrona, Blekinge län",
@@ -243,34 +133,6 @@
       "review_flags": [],
       "id": "62e9ed98a7b95a2a",
       "description_excerpt": "I Karlskrona är våra ambitioner höga och vi brinner för att utveckla den moderna staden i havet. Nu söker vi dig som vill vara med och göra skillnad. Välkommen till Blekinges största arbetsgivare, där dina möjligheter att utvecklas är goda. Avdelningen gemensam mottagning och insatser är en av fem avdelningar och utgörs av nio enheter. Avdelning ansvarar för den första kontakten med både medborgare och professionella som kan vara i behov av socialtjänstens insatser. Rådgivning, myndighetsutövning, insatser med och utan behovsprövningen är några av de huvudsakliga ansvarsområdena. Insatserna ges både enskilt och i grupp till barn och vuxna. Avdelning ansvarar även för budget- och skuldrådgivn"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Vårdsamordnare till Beroendecentrum avd. 8",
-      "company": "REGION STOCKHOLM",
-      "location": "Stockholm, Stockholms län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": null,
-      "published": "2026-09-22T09:58:36",
-      "deadline": "2026-10-13T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31504617",
-      "salary": "",
-      "provider_id": "31504617",
-      "lane": "core",
-      "matched_query": "vårdsamordnare",
-      "triage_score": 75.2,
-      "triage_reasons": [
-        "title/role fit 80%",
-        "candidate-evidence support 66%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 99%"
-      ],
-      "review_flags": [
-        "licence-requirement-needs-verification"
-      ],
-      "id": "6cb0d25ce7b53b3d",
-      "description_excerpt": "Beroendecentrum Stockholm är Sveriges största beroendeklinik. Vi erbjuder stöd och hjälp till personer som har problem med alkohol, narkotika, läkemedel eller spel. Vår verksamhet innefattar akut- och heldygnsvård, lokal öppenvård och högspecialiserad vård. Vi är också en klinik som bedriver universitetssjukvård samt forskning och utbildning. Arbetsplatsen Vi söker nu en vårdsamordnare till avdelning 8 som ligger vid St Görans sjukhus och tillhör Beroendecentrum Stockholms sektion för akut- och heldygnsvård. Avdelning 8 tar emot beroendepatienter med ett avancerat psykiatriskt och/eller somatiskt vårdbehov. Våra lokaler är utformade för att ge tryggare, säkrare och effektivare vård- och arbe"
     },
     {
       "source": "platsbanken",
@@ -326,107 +188,31 @@
     },
     {
       "source": "platsbanken",
-      "title": "Samordnare/mentor/lärare -yrkessvenska/vård/omsorg-Landskrona Folkhögskolor",
-      "company": "TORA VEGA FOLKHÖGSKOLA",
-      "location": "Lund, Skåne län",
-      "employment_type": "Tidsbegränsad anställning",
-      "work_mode": null,
-      "published": "2026-08-08T20:08:15",
-      "deadline": "2026-09-30T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31331197",
-      "salary": "",
-      "provider_id": "31331197",
-      "lane": "core",
-      "matched_query": "samordnare vård",
-      "triage_score": 74.7,
-      "triage_reasons": [
-        "title/role fit 80%",
-        "candidate-evidence support 38%",
-        "arrangement fit 100%",
-        "geography/remote fit 88%",
-        "recency signal 36%"
-      ],
-      "review_flags": [],
-      "id": "c959e7684c781ad7",
-      "description_excerpt": "Samordnare, mentor och lärare (yrkessvenska/vård och omsorg) - Landskrona Folkhögskolor Landskrona Folkhögskolor (ett samarbete mellan Tora Vega Folkhögskola och Östra Grevie folkhögskola) Vill du vara med och bygga en ny utbildning som gör verklig skillnad? Landskrona Folkhögskolor söker en engagerad och utvecklingsinriktad samordnare, mentor och lärare till vår nya språk- och yrkesförberedande utbildning och arbetsmarknadsinsats inom vård och omsorg. Utbildningen/arbetsmarknadsinsats startar hösten 2026 och syftar till att ge deltagare med begränsade kunskaper i svenska möjlighet att utvecklas mot arbete eller vidare studier inom vård- och omsorgssektorn. Verksamheten genomförs i nära sama"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Samordnare inom socialtjänst",
-      "company": "Botkyrka kommun",
-      "location": "Botkyrka, Stockholms län",
+      "title": "Projektanställning - handledare Naturunderstödd rehabilitering",
+      "company": "REGION DALARNA",
+      "location": "Borlänge, Dalarnas län",
       "employment_type": "Vanlig anställning",
       "work_mode": "Arbete på plats",
-      "published": "2026-09-15T12:33:27",
+      "published": "2026-09-15T13:39:19",
       "deadline": "2026-09-28T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31479008",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31479464",
       "salary": "",
-      "provider_id": "31479008",
+      "provider_id": "31479464",
       "lane": "core",
-      "matched_query": "samordnare omsorg",
-      "triage_score": 74.3,
+      "matched_query": "handledare rehabilitering",
+      "triage_score": 74.9,
       "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 66%",
+        "title/role fit 100%",
+        "candidate-evidence support 47%",
         "arrangement fit 72%",
         "geography/remote fit 88%",
         "recency signal 89%"
       ],
-      "review_flags": [],
-      "id": "29bee20a02c57a9b",
-      "description_excerpt": "Vill du ha meningsfulla arbetsuppgifter som gör skillnad i människors liv? Välkommen till kommunen som är långt ifrån lagom! Vård- och omsorgsförvaltningens ansvar är att ge vård, omsorg och stöd till äldre och personer med funktionsnedsättning samt ge stöd till deras anhöriga. Vårt mål är att med medborgarens fokus ge goda förutsättningar till en självständig, stimulerande och trygg livssituation - dygnet runt. Vi är 2 500 medarbetare som i våra olika funktioner ger stöd och omsorg till de medborgare som behöver det. Tjänsten och arbetsuppgifterna Som samordnare har du ett brett samverkansuppdrag och ett tydligt ansvar för att utveckla och stärka samverkan mellan socialförvaltningen och vår"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Samordnare analysavdelningen",
-      "company": "Inspektionen För Vård och Omsorg",
-      "location": "Stockholm, Stockholms län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": null,
-      "published": "2026-09-21T14:41:03",
-      "deadline": "2026-10-12T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31501780",
-      "salary": "",
-      "provider_id": "31501780",
-      "lane": "core",
-      "matched_query": "samordnare vård",
-      "triage_score": 73.4,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 57%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 97%"
+      "review_flags": [
+        "degree-requirement-needs-verification"
       ],
-      "review_flags": [],
-      "id": "026af5666e433664",
-      "description_excerpt": "Vill du vara med och forma framtidens vård och omsorg? Inspektionen för vård och omsorg (IVO) befinner sig i en spännande utvecklingsfas med fler uppdrag och fortsatt tillväxt. För att möta detta stärker vi nu vår verksamhet och söker Samordnare till vår analysavdelning. Om jobbet Som samordnare på avdelningen för analys är du ett viktigt nav i avdelningens ledningsarbete. Du arbetar nära avdelningschefen och avdelningens ledningsgrupp, stödjer dem i deras uppdrag och säkerställer effektiv ledning och styrning av avdelningen och dess uppdrag. Din roll är att bidra till struktur, analys, utveckling och uppföljning för att säkerställa att avdelningen och IVO når sina mål. Arbetet är både strat"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Receptionist/Tandsköterska till modern implantat-och protetikklinik",
-      "company": "Praktikertjänst Aktiebolag",
-      "location": "Falun, Dalarnas län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": null,
-      "published": "2026-09-21T14:05:21",
-      "deadline": "2026-10-21T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31501427",
-      "salary": "",
-      "provider_id": "31501427",
-      "lane": "bridge",
-      "matched_query": "patientservice",
-      "triage_score": 73.4,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 57%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 97%"
-      ],
-      "review_flags": [],
-      "id": "960892dc0c73d80d",
-      "description_excerpt": "Vill du ha en nyckelroll i en modern tandvårdsklinik där service, kvalitet och utveckling står i fokus? Vi söker nu en engagerad och driven receptionist med tandsköterskeutbildning i grunden som vill vara navet i vår verksamhet. Rollen passar dig som trivs i en dynamisk miljö, har ett starkt eget driv och tycker om att kombinera patientservice, administration, IT och kliniskt arbete. Om oss Vi är en nybyggd klinik med åtta behandlingsrum och två välfungerande team bestående av fyra tandläkare, fyra tandhygienister och fyra tandsköterskor. Vi arbetar huvudsakligen med vuxentandvård med särskilt fokus på protetik och implantatbehandlingar. Vi är dessutom stolta över att vara en av Sveriges två"
+      "id": "f7ba48b73d7808b3",
+      "description_excerpt": "Hos oss i Region Dalarna får du ett meningsfullt arbete där du kan göra skillnad. Tillsammans arbetar vi för ett hållbart Dalarna med utvecklingskraft i länets alla delar. Om verksamheten Region Dalarna ansvarar för hälso- och sjukvård, tandvård, hjälpmedel, kollektivtrafik och folkhögskolor, samt arbetar med folkbildning, forskning, folkhälsa och kultur. Vi arbetar också med utvecklingsfrågor inom infrastruktur, näringsliv, arbetsmarknad och miljö. Fornby folkhögskola är en av tre folkhögskolor i Dalarna med Region Dalarna som huvudman. Region Dalarnas folkhögskolor arbetar gemensamt för Regionens hälsomål genom bildning, kompetensförsörjning och tillgängliggörande av kultur. Region Dalarna"
     },
     {
       "source": "platsbanken",
@@ -453,32 +239,6 @@
       "review_flags": [],
       "id": "54e333ab75ec37be",
       "description_excerpt": "Om jobbet Hos oss på socialpsykiatrin i Lunds kommun får du möjlighet att arbeta flexibelt – både på särskilt boende och ute i boendestöd. Vi har även verksamheter som innebär arbete endast på särskilt boende eller endast i boendestöd. Som handledare ger du stöd till återhämtning från psykisk ohälsa genom att tex uppmuntra till aktivitet och sysselsättning för att motverka isolering. Det kan också handla om stöttning med strategier, bryta osunda beteende, rutiner kring vardagliga sysslor som matlagning och städ för att skapa en meningsfull och trygg vardag. Genom att erbjuda ett elastiskt stöd med individuellt utformade insatser, där delaktighet och medbestämmande ligger i fokus för att främ"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Sjuksköterska/vårdsamordnare, avd. 95 Länsvuxenpsyk Säter",
-      "company": "REGION DALARNA",
-      "location": "Säter, Dalarnas län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-09-11T13:38:05",
-      "deadline": "2026-09-28T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31467312",
-      "salary": "",
-      "provider_id": "31467312",
-      "lane": "core",
-      "matched_query": "vårdsamordnare",
-      "triage_score": 72.8,
-      "triage_reasons": [
-        "title/role fit 80%",
-        "candidate-evidence support 28%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 83%"
-      ],
-      "review_flags": [],
-      "id": "a8746083f5855ea6",
-      "description_excerpt": "Hos oss i Region Dalarna får du ett meningsfullt arbete där du kan göra skillnad. Tillsammans arbetar vi för ett hållbart Dalarna med utvecklingskraft i länets alla delar. Om verksamheten Nu söker vi en sjuksköterska med tillförordnat uppdrag som vårdsamordnare på avd 95 Säters sjukhus. Länsvuxenpsykiatri Falun/Säter har ett länsövergripande uppdrag inom vuxenpsykiatri och ansvarar för vård och behandling av patienter i akuta psykiatriska tillstånd. Verksamheten är uppdelad mellan Falun och Säter. I Säter finns länets enda psykiatriska akutmottagning samt avdelning 90 och 95. I Falun finns beroendecentrum, en allmänpsykiatrisk slutenvårdsavdelning, LARO samt ECT-verksamhet. Avdelning 95 är e"
     },
     {
       "source": "platsbanken",
@@ -850,58 +610,6 @@
     },
     {
       "source": "platsbanken",
-      "title": "Sjuksköterska Bemanningsenhet",
-      "company": "REGION KALMAR LÄN",
-      "location": "Kalmar, Kalmar län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": null,
-      "published": "2026-09-22T13:43:41",
-      "deadline": "2027-01-10T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31506485",
-      "salary": "",
-      "provider_id": "31506485",
-      "lane": "bridge",
-      "matched_query": "deltid service sjukhus",
-      "triage_score": 69.1,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 9%",
-        "arrangement fit 100%",
-        "geography/remote fit 88%",
-        "recency signal 99%"
-      ],
-      "review_flags": [],
-      "id": "da91228a232adcf6",
-      "description_excerpt": "Om du i din yrkesroll som sjuksköterska värdesätter frihet, flexibilitet och variation passar den här möjligheten dig perfekt. Vi erbjuder dig en flexibel anställning i vår bemanningsenhet där du bokas för arbete på olika vårdavdelningar som har behov av kort- och långtidsvikariat, dag/kväll/natt. Arbetet innebär rotationstjänst när korttidsfrånvaro uppstår på sjukhuset vilket ger dig stor möjlighet till kompetensutveckling. Bemanningsenheten är ett utmärkt val både för dig som är specialistutbildad sjuksköterska eller allmänsjuksköterska och känner att du vill prova på något nytt. Hos oss blir du väl omhändertagen, vi har en familjär gemenskap och lägger stor vikt vid delaktighet. Om dig Fö"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Utbildare inom Diagnosklassificering",
-      "company": "Consensus Sverige AB",
-      "location": "Örebro, Örebro län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-09-07T15:47:12",
-      "deadline": "2026-09-25T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31447411",
-      "salary": "",
-      "provider_id": "31447411",
-      "lane": "core",
-      "matched_query": "utbildare vård",
-      "triage_score": 68.1,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 28%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 77%"
-      ],
-      "review_flags": [],
-      "id": "4d3487b8261c4cf3",
-      "description_excerpt": "Har du erfarenhet av att klassificera och koda diagnoser och åtgärder inom vården– och tycker om att dela med dig av din kunskap?&nbsp; Vi söker en engagerad och kunnig utbildare till kursen ”Diagnosklassificering” inom vår yrkeshögskoleutbildning till medicinsk vårdadministratör i Örebro.&nbsp; Det här är ett uppdrag för dig som vill använda din yrkeserfarenhet på ett nytt sätt och vara med och förbereda framtidens medicinska vårdadministratörer för arbetslivet.&nbsp;&nbsp; Om uppdraget&nbsp; Period: vecka 3–7, 2027&nbsp; Omfattning: cirka 2–3 undervisningsdagar per vecka&nbsp; Plats: Aspholmen, Örebro&nbsp; Ersättning: fast ersättning enligt våra villkor för utbildaruppdrag inom YH&nbsp; I"
-    },
-    {
-      "source": "platsbanken",
       "title": "Bemanningsassistent till urologen",
       "company": "REGION STOCKHOLM",
       "location": "Huddinge, Stockholms län",
@@ -949,36 +657,39 @@
         "recency signal 93%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "b026139d9ceff911",
       "description_excerpt": "Vi är glada över ditt intresse för att bli en del av Luleå kommun. Hos oss får du möjlighet att arbeta i en stimulerande och utvecklande miljö, där vi strävar efter att ge dig en bra medarbetarupplevelse. Du blir en del av en engagerad, kompetent och ansvarstagande organisation som värdesätter dig och din kompetens. Hos oss får du möjlighet att utvecklas och växa i din yrkesroll. Läs mer om våra anställningsförmåner, lönestatistik och vad vi kan erbjuda dig här - https://www.lulea.se/anstallning Luleå kommun är en av Norrbottens största arbetsgivare med en stark framtidstro. Vi arbetar för att skapa en växande och livskraftig kommun med plats för 100 000 invånare. Vårt mål är ett hållbart sa"
     },
     {
       "source": "platsbanken",
-      "title": "Vårdcentralen Snabbdoktor söker Fysioterapeut/Rehabkoordinator ",
-      "company": "S Snabbdoktor AB",
-      "location": "Eskilstuna, Södermanlands län",
-      "employment_type": "Tillsvidareanställning (inkl. eventuell provanställning)",
-      "work_mode": "Arbete på plats",
-      "published": "2026-09-11T09:29:05",
-      "deadline": "2026-10-11T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31465059",
+      "title": "Administrativ samordnare, inriktning rekrytering till Samordnad rekrytering",
+      "company": "Örebro kommun",
+      "location": "Örebro, Örebro län",
+      "employment_type": "Vanlig anställning",
+      "work_mode": null,
+      "published": "2026-09-22T13:17:35",
+      "deadline": "2026-10-07T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31506295",
       "salary": "",
-      "provider_id": "31465059",
-      "lane": "adjacent",
-      "matched_query": "rehabkoordinator",
-      "triage_score": 67.0,
+      "provider_id": "31506295",
+      "lane": "bridge",
+      "matched_query": "administrativ samordnare vård",
+      "triage_score": 67.2,
       "triage_reasons": [
-        "title/role fit 72%",
+        "title/role fit 92%",
         "candidate-evidence support 19%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 83%"
+        "arrangement fit 100%",
+        "geography/remote fit 72%",
+        "recency signal 99%"
       ],
-      "review_flags": [],
-      "id": "7dff0e817893fc9d",
-      "description_excerpt": "Vårdcentralen Snabbdoktor Eskilstuna öppnade sin första vårdcentral den 21 november 2022. Vi är belägna i nybyggda och moderna lokaler i K43 i Eskilstuna. Vårdcentralen Snabbdoktor är en privatägd vårdcentral med ett starkt fokus på kvalitet och tillgänglighet. Idag har vi närmare 6 000 listade patienter och verksamheten fortsätter att växa i stadig takt. Vi har mycket flexibla arbetsramar med bland annat sex timmars arbetsdag och goda möjligheter till egen schemaplanering samt korta vägar till verksamhetsbeslut från idéer. Arbetsbeskrivning Vi söker dig som är legitimerad fysioterapeut med minst tre års erfarenhet och som vill kombinera din kliniska roll med uppdraget som rehabkoordinator –"
+      "review_flags": [
+        "remote-eligibility-needs-verification",
+        "degree-requirement-needs-verification"
+      ],
+      "id": "4812aca106747db5",
+      "description_excerpt": "Vill du arbeta med rekrytering som gör skillnad varje dag? Då kan du vara vår nya kollega på Samrek! Som rekryterare inom Samrek hjälper du våra verksamheter inom vård och omsorg samt funktionsstöd att hitta rätt korttidsvikarier. Tillsammans med erfarna kollegor bidrar du till att säkra kompetensförsörjningen i några av kommunens viktigaste verksamheter. Välkommen med din ansökan! Om tjänsten I din roll som administrativ samordnare inriktning rekrytering hos oss på Samrek (Samordnad rekrytering) är du med och säkerställer att våra verksamheter inom vård och omsorg samt funktionsstöd får rätt korttidsvikarier på plats. Tillsammans rekryterar vi bland annat till hemtjänst, särskilda boenden o"
     },
     {
       "source": "platsbanken",
@@ -1029,7 +740,7 @@
         "recency signal 71%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "91e6a847e180bcf1",
       "description_excerpt": "Har du specialistkompetens inom omsorg för individer med komplexa stödbehov och utmanande beteenden? Brinner du för att samordna, utveckla och skapa en trygg miljö? I slutet av 2026 öppnar Humanas nya LSS-boende, Kårsta. Vi söker nu dig för en nyckelroll som samordnare där du får vara med och bygga upp verksamheten från grunden. På Humana jobbar vi efter visionen \"Alla har rätt till ett bra liv\". Ta chansen att sätta din prägel och utvecklas i ett företag där engagemang, glädje och ansvar är våra ledord. Om oss Kårsta LSS är ett gruppboende enligt LSS §9:9 för fyra vuxna i personkrets 1. Vår målgrupp har intellektuell funktionsnedsättning och autism i kombination med neuropsykiatriska diagno"
@@ -1057,64 +768,10 @@
         "recency signal 97%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "d79c9a8024e3eb74",
       "description_excerpt": "Är du serviceinriktad, strukturerad och tycker om en vardag med många kontaktytor? Vi söker dig som vill ha en central roll där du kombinerar service, administration och problemlösning och bidrar till att skapa en välfungerande vardag för elever och kollegor på både Svea VUX och Svea Gymnasium. Om rollen Som receptionist/skoladministratör blir du en viktig gemensam funktion för Svea VUX och Svea Gymnasium . Du arbetar brett med administration och service för båda verksamheterna och har daglig kontakt med elever, lärare, skolledning och externa kontakter. Det här är en roll för dig som gillar variation och att ha många bollar i luften. Ena stunden hjälper du en elev eller besökare, nästa hant"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Arbetsterapeut/rehabkoordinator",
-      "company": "REGION JÖNKÖPINGS LÄN",
-      "location": "Habo, Jönköpings län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-09-04T11:39:40",
-      "deadline": "2026-09-27T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31438606",
-      "salary": "",
-      "provider_id": "31438606",
-      "lane": "adjacent",
-      "matched_query": "rehabkoordinator",
-      "triage_score": 66.5,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 19%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 73%"
-      ],
-      "review_flags": [],
-      "id": "6f51b406bf9acded",
-      "description_excerpt": "Bra Liv Habo vårdcentral Vill du få möjlighet att jobba med primärvård i utveckling och i en roll där du kan påverka? Habo växer och så gör vi! Bra Liv Habo Vårdcentral är en del av primärvårdskoncernen Vårdcentralerna Bra Liv och bedriver primärvård vid 28 vårdcentraler inom Region Jönköpings län. Vi samverkar inom koncernen med kunskapsutbyte, med resurser och arbetar tillsammans för att du alltid ska kunna nå oss. Bra Liv Habo bedriver primärvård i nära samarbete med våra närmaste vårdgrannar inom Habo Kommun; hemsjukvård, äldreboende och familjecentral innefattande BVC och MVC. Rollen som arbetsterapeut och rehabkoordinator Vi på Habo vårdcentral söker nu en engagerad arbetsterapeut och "
-    },
-    {
-      "source": "platsbanken",
-      "title": "Vårdkoordinator/sjuksköterska till vårdcentralen Lagan ",
-      "company": "REGION KRONOBERG",
-      "location": "Ljungby, Kronobergs län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-08-31T01:35:21",
-      "deadline": "2026-09-30T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31414629",
-      "salary": "",
-      "provider_id": "31414629",
-      "lane": "core",
-      "matched_query": "vårdsamordnare",
-      "triage_score": 66.4,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 28%",
-        "arrangement fit 100%",
-        "geography/remote fit 88%",
-        "recency signal 67%"
-      ],
-      "review_flags": [
-        "licence-requirement-needs-verification"
-      ],
-      "id": "9e3ab79da5828720",
-      "description_excerpt": "Vill du arbeta nära patienterna, ha ett varierat arbete och samtidigt vara en teammedlem i det mindre teamet? Välkommen till vårdcentralen Lagan, den lilla vårdcentralen med ca 3500 listade patienter. Här kombinerar du det lilla teamets gemenskap med Region kronobergs möjligheter till kompetensutveckling. Vi är en vårdcentral där det personliga mötet står i centrum, Vi arbetar tillsammans för att skapa en trygg och nära vård för våra patienter. Vi har korta beslutsvägar och ett nära samarbete mellan professionerna och en arbetsmiljö där alla har möjlighet till att utveckla verksamheten. Som ny kollega får du en trygg introduktion på arbetsplatsen som anpassas efter dina behov och handledning"
     },
     {
       "source": "platsbanken",
@@ -1191,7 +848,7 @@
         "recency signal 63%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "7e49aa075cfd0f3f",
       "description_excerpt": "Beautiful Minds dagliga verksamhet (LSS) söker en trygg och kreativ samordnare! Vår dagliga verksamhet, Beautiful Mind´s, vänder sig till personer inom autismspektrum samt till personer med lindrig till måttlig intellektuell funktionsnedsättning. Vårt mål är att utifrån individens unika förutsättningar erbjuda stimulans, gemenskap och personlig utveckling. Det stöd vi erbjuder utformas utifrån deltagarens egna önskemål och förutsättningar. För att skapa de bästa förutsättningarna för personlig utveckling strävar vi mot ett nära och tydligt samarbete mellan deltagare, handläggare, arbetsgivare och andra viktiga personer i nätverket. Läs mer om hur vår verksamhet är utformad på vår hemsida! Di"
@@ -1219,7 +876,7 @@
         "recency signal 91%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "2a911c445167f7f8",
       "description_excerpt": "Vi är Varbergs kommun, arbetsgivaren som ser möjligheterna i dig. Hos oss får du göra skillnad, både för andra och för dig själv. Med hjälp av kunskap, nytänkande, framåtanda och mod närmar vi oss tillsammans vår vision om att vara Västkustens kreativa mittpunkt. Välkommen att vara med! Socialförvaltningen ansvarar för att ge stöd, omsorg och hjälp till människor i olika skeden av livet. Vi arbetar utifrån individens behov och erbjuder insatser som bygger på flera lagar, bland annat socialtjänstlagen (SoL), lagen om stöd och service till vissa funktionshindrade (LSS) och hälso- och sjukvårdslagen. Det kan handla om att ge äldre en trygg och meningsfull vardag, stödja personer med funktionsne"
@@ -1247,7 +904,7 @@
         "recency signal 89%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "ba056efd5e64b632",
       "description_excerpt": "Fagersta ligger i norra Västmanland. Kommunen har en omfattande samverkan med närliggande kommuner. Det geografiska läget är mycket bra med närhet till ett stort befolkningsområde. I kommunen är vi idag cirka 13 100 invånare. Välkommen till ett meningsfullt arbete och en arbetsplats där vi samarbetar för dem vi är till för utifrån kommunens gemensamma värdegrund; samarbete, trygghet, ansvar, respekt - STAR. Hos oss har du möjlighet till bland annat friskvårdsbidrag och frikort till simhall, gym och utomhusbad. Beskrivning Vi söker en teamledare som tillsammans med enhetschef och medarbetare skapar förutsättningar för en verksamhet med hög kvalitet för personer med psykisk ohälsa. Socialpsyki"
@@ -1280,63 +937,6 @@
     },
     {
       "source": "platsbanken",
-      "title": "Handledare till enheten arbetsnära aktiviteter inriktning vård och omsorg",
-      "company": "Helsingborgs kommun",
-      "location": "Helsingborg, Skåne län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-09-09T12:02:21",
-      "deadline": "2026-09-27T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31456143",
-      "salary": "",
-      "provider_id": "31456143",
-      "lane": "core",
-      "matched_query": "handledare omsorg",
-      "triage_score": 65.7,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 38%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 80%"
-      ],
-      "review_flags": [
-        "licence-requirement-needs-verification"
-      ],
-      "id": "d442a87c943eecc4",
-      "description_excerpt": "Vill du arbeta i ett stödjande och motiverande uppdrag i praktiska verksamheter som gör skillnad för helsingborgarna? Varmt välkommen med din ansökan! Om arbetsplatsen Framtidens välfärd är vår stora utmaning. För att klara den har vi på arbetsmarknadsförvaltningen ett mycket viktigt uppdrag: Vi ska göra det möjligt för invånare med ekonomiskt bistånd att bli självförsörjande så snabbt som möjligt, men även bidra till att arbetsgivare hittar rätt kompetens. Vi möter utmaningen med ett brett utbud av vuxenutbildningar och arbetsmarknadsinsatser – och provar nya sätt att arbeta tillsammans med näringslivet, andra förvaltningar, myndigheter och civilsamhället. För att lyckas måste vi våga, test"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Yrkeslärare/samordnare med inriktning vård",
-      "company": "Piteå kommun",
-      "location": "Piteå, Norrbottens län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-08-31T15:24:38",
-      "deadline": "2026-09-27T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31419040",
-      "salary": "",
-      "provider_id": "31419040",
-      "lane": "core",
-      "matched_query": "samordnare vård",
-      "triage_score": 65.4,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 38%",
-        "arrangement fit 100%",
-        "geography/remote fit 72%",
-        "recency signal 67%"
-      ],
-      "review_flags": [
-        "remote-eligibility-needs-verification",
-        "licence-requirement-needs-verification"
-      ],
-      "id": "a13174d3ee28c08a",
-      "description_excerpt": "Vill du vara med och forma framtiden med oss? Brinner du för att inspirera, utbilda och utveckla? Nu har du chansen att bli en del av vårt team på Vuxenutbildningen! Vi söker en engagerad yrkeslärare inom vård och omsorg som vill ha ett spännande, varierat och meningsfullt arbete. Hos oss får du möjlighet att undervisa, utveckla utbildningar och vara med och stärka samverkan mellan utbildning och arbetsliv. Arbetsuppgifter I rollen som yrkeslärare kommer du att undervisa inom vård- och omsorgsämnen. Du planerar, genomför och följer upp undervisningen utifrån elevernas individuella behov och förutsättningar. Du arbetar både självständigt och i nära samarbete med kollegor och externa aktörer. "
-    },
-    {
-      "source": "platsbanken",
       "title": "Samordnare inom hemtjänsten",
       "company": "Mervida AB",
       "location": "Norrköping, Östergötlands län",
@@ -1358,7 +958,7 @@
         "recency signal 67%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "32c5cf1f39acd3b3",
       "description_excerpt": "Samordnare till Mervida Vill du vara en del av en växande omsorgsverksamhet där kvalitet, omtanke och engagemang står i centrum? Vi söker dig som trivs i en samordnande roll, har hjärta för omsorg och vill bidra till att våra kunder får bästa möjliga stöd i sin vardag. Om oss Mervida AB är ett omsorgsbolag med verksamhet inom hemtjänst, boendestöd och ledsagning. Vi befinner oss i en spännande tillväxtfas och har idag cirka 400 medarbetare fördelade på 10 enheter i Stockholm och Norrköping. Vi söker nu en erfaren och engagerad samordnare som vill bidra till att utveckla och kvalitetssäkra vår verksamhet i Norrköping. Om rollen Tjänsten är en tillsvidareanställning på heltid med start enligt "
@@ -1438,7 +1038,7 @@
         "recency signal 93%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "9a0b4d14dcde7f61",
       "description_excerpt": "Att arbeta i Hörby kommun Hörby kommun med 15 700 invånare ligger mitt i Skånes hjärta med det mesta och det bästa runt hörnet. Hörby är en mycket gammal handelsort. Vi som bor eller arbetar i Hörby är mycket stolta över vår vackra och blandade natur. Här kan man få känslan av att befinna sig mitt i vildmarken och ändå är människor, service och bekvämligheter aldrig långt borta. Kommunen erbjuder en mångfald av arbetsuppgifter och yrken. Att arbeta inom Hörby kommun handlar i första hand om att ge service till våra medborgare. Service inom allt från vård och omsorg till parkskötsel och anläggningsarbeten. Vi arbetar aktivt med att vara en god arbetsgivare med bra anställningsvillkor, arbetsm"
@@ -1544,7 +1144,7 @@
         "recency signal 69%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification",
+        "driving-licence-requirement-needs-verification",
         "security-requirement-needs-verification"
       ],
       "id": "40c75480d23710e0",
@@ -1580,60 +1180,6 @@
     },
     {
       "source": "platsbanken",
-      "title": "Samordnare till SAAND-Hemtjänst",
-      "company": "SAAND Service & Omsorg AB",
-      "location": "Södertälje, Stockholms län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": null,
-      "published": "2026-07-08T06:30:22",
-      "deadline": "2027-01-04T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31257032",
-      "salary": "",
-      "provider_id": "31257032",
-      "lane": "core",
-      "matched_query": "samordnare omsorg",
-      "triage_score": 63.6,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 19%",
-        "arrangement fit 72%",
-        "geography/remote fit 88%",
-        "recency signal 15%"
-      ],
-      "review_flags": [],
-      "id": "0db1a4c55b779829",
-      "description_excerpt": "Vill Du arbeta i företaget med det stora hjärtat? Sätter Du människan och kvaliteten i centrum? Då är Du välkommen till oss på SAAND Service &amp; Omsorg AB SAAND Service &amp; Omsorg AB har varit verksamma inom hemtjänst sedan 2017 och erbjuder idag tjänster i sex kommuner: Södertälje, Salem, Botkyrka, Nacka, Värmdö och Västervik. Rollen som samordnare hos oss Som samordnare inom SAAND Service &amp; Omsorg är du en central del av vårt team och fungerar som verksamhetschefens högra hand. Ditt dagliga arbete innefattar personalbemanning, utformning av genomförandeplaner, planering av insatser samt uppföljning av utfört arbete och nyckeltal. Det är viktigt att du har förmågan att hantera flera"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Rehabkoordinator kombinerad med annan yrkesroll",
-      "company": "Prima Vård Sverige AB",
-      "location": "Timrå, Västernorrlands län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-08-28T15:29:50",
-      "deadline": "2026-09-28T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31412440",
-      "salary": "",
-      "provider_id": "31412440",
-      "lane": "adjacent",
-      "matched_query": "rehabkoordinator",
-      "triage_score": 63.4,
-      "triage_reasons": [
-        "title/role fit 72%",
-        "candidate-evidence support 9%",
-        "arrangement fit 100%",
-        "geography/remote fit 88%",
-        "recency signal 63%"
-      ],
-      "review_flags": [
-        "licence-requirement-needs-verification"
-      ],
-      "id": "b25ca84f2c089632",
-      "description_excerpt": "Rehabkoordinator kombinerad med annan yrkesroll till Premicare Timrå/Söråker I din roll som rehabkoordinator får du en central funktion i att stötta individer på vägen tillbaka till arbetslivet. Du samordnar, vägleder, motiverar och ser till att vården, arbetsgivaren och Försäkringskassan arbetar mot gemensamma mål. Vi söker dig som är legitimerad fysioterapeut eller annan profession inom rehabilitering som även vill ta dig an rollen som rehabkoordinator. En hybridroll där du får vara med och bidra till våra patienters väg tillbaka till hälsa och arbete! Saknar du annan legitimation men är utbildad rehabvetare eller annan erfarenhet av rehab koordinering? Sök gärna, vi är öppna för diskussio"
-    },
-    {
-      "source": "platsbanken",
       "title": "Hemtjänstkoordinator till Dalsjöfors",
       "company": "Borås kommun",
       "location": "Borås, Västra Götalands län",
@@ -1655,10 +1201,38 @@
         "recency signal 61%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "f26552c73647fce8",
       "description_excerpt": "Nu söker vi engagerad Hemtjänstkoordinator till enhet Dalsjöfors! Vård- och äldreförvaltningen i Borås Stad arbetar mot målet att både yngre och äldre invånare som är i behov av vård, omsorg och service, likväl som hälso- och sjukvård samt förebyggande hälsoarbete, ska ha ett gott liv var dag. Förvaltningen består av ca 2 500 medarbetare varav ca 700 arbetar inom den kommunala hemtjänsten. Om verksamheten Vi som jobbar inom hemtjänst Dalsjöfors är ett härligt gäng bestående av undersköterskor, vårdbiträden, chefer, samordnare och hemtjänstkoordinatorer. Hos oss arbetar män och kvinnor med olika bakgrund, vilket berikar vår verksamhet och breddar vår kompetens. Hemtjänst Dalsjöfors utgår från"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Samordnare/mentor/lärare -yrkessvenska/vård/omsorg-Landskrona Folkhögskolor",
+      "company": "TORA VEGA FOLKHÖGSKOLA",
+      "location": "Lund, Skåne län",
+      "employment_type": "Tidsbegränsad anställning",
+      "work_mode": null,
+      "published": "2026-08-08T20:08:15",
+      "deadline": "2026-09-30T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31331197",
+      "salary": "",
+      "provider_id": "31331197",
+      "lane": "core",
+      "matched_query": "samordnare vård",
+      "triage_score": 62.7,
+      "triage_reasons": [
+        "title/role fit 80%",
+        "candidate-evidence support 38%",
+        "arrangement fit 100%",
+        "geography/remote fit 88%",
+        "recency signal 36%"
+      ],
+      "review_flags": [
+        "degree-requirement-needs-verification"
+      ],
+      "id": "c959e7684c781ad7",
+      "description_excerpt": "Samordnare, mentor och lärare (yrkessvenska/vård och omsorg) - Landskrona Folkhögskolor Landskrona Folkhögskolor (ett samarbete mellan Tora Vega Folkhögskola och Östra Grevie folkhögskola) Vill du vara med och bygga en ny utbildning som gör verklig skillnad? Landskrona Folkhögskolor söker en engagerad och utvecklingsinriktad samordnare, mentor och lärare till vår nya språk- och yrkesförberedande utbildning och arbetsmarknadsinsats inom vård och omsorg. Utbildningen/arbetsmarknadsinsats startar hösten 2026 och syftar till att ge deltagare med begränsade kunskaper i svenska möjlighet att utvecklas mot arbete eller vidare studier inom vård- och omsorgssektorn. Verksamheten genomförs i nära sama"
     },
     {
       "source": "platsbanken",
@@ -1683,38 +1257,66 @@
         "recency signal 15%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "acfec629839619b6",
       "description_excerpt": "Vill du vara en del av en växande hemtjänstverksamhet där kvalitet, omtanke och engagemang står i centrum? Vi söker dig som trivs i en samordnande roll, har hjärta för omsorg och vill bidra till att våra kunder får bästa möjliga stöd i sin vardag. Om oss Mervida AB är ett omsorgsbolag med verksamhet inom hemtjänst, boendestöd och ledsagning. Vi befinner oss i en spännande tillväxtfas och har idag cirka 400 medarbetare fördelade på 11 enheter i Stockholm och Norrköping. Vi söker nu en erfaren och engagerad samordnare till vår hemtjänstverksamhet i Hässelby/Vällingby, en nyckelperson som vill bidra till att utveckla och kvalitetssäkra vår verksamhet. Om tjänsten Tjänsten är en tillsvidareanstä"
     },
     {
       "source": "platsbanken",
-      "title": "Disputerad koordinator till Centrum för Primärvårdsforskning, Malmö",
-      "company": "REGION SKÅNE",
-      "location": "Malmö, Skåne län",
+      "title": "Samordnare inom socialtjänst",
+      "company": "Botkyrka kommun",
+      "location": "Botkyrka, Stockholms län",
       "employment_type": "Vanlig anställning",
-      "work_mode": null,
-      "published": "2026-09-23T13:30:17",
-      "deadline": "2026-10-07T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31511274",
+      "work_mode": "Arbete på plats",
+      "published": "2026-09-15T12:33:27",
+      "deadline": "2026-09-28T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31479008",
       "salary": "",
-      "provider_id": "31511274",
+      "provider_id": "31479008",
       "lane": "core",
-      "matched_query": "vårdsamordnare",
-      "triage_score": 62.4,
+      "matched_query": "samordnare omsorg",
+      "triage_score": 62.3,
       "triage_reasons": [
         "title/role fit 72%",
-        "candidate-evidence support 9%",
+        "candidate-evidence support 66%",
         "arrangement fit 72%",
         "geography/remote fit 88%",
-        "recency signal 100%"
+        "recency signal 89%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "degree-requirement-needs-verification"
       ],
-      "id": "d7120b1b4b83b0de",
-      "description_excerpt": "Gör skillnad. Varje dag. Centrum för Primärvårdsforskning (CPF) söker nu en disputerad akademisk koordinator. Du blir en central del av nätverket av disputerade AVC-koordinatorer och får möjlighet att samordna och utveckla verksamheten i nära samarbete med vård och forskning. Region Skåne ansvarar för hälso- och sjukvård, kollektivtrafik och en hållbar utveckling i hela Skåne. Vi främjar det regionala näringslivet, kulturen och samarbeten med andra regioner, i och utanför Sverige. Region Skånes högsta beslutande organ är regionfullmäktige, som väljs direkt av invånarna i Skåne. CPF är en dynamisk forskningsplattform vid Clinical Research Centre (CRC), en myllrande och inspirerande vetenskaps"
+      "id": "29bee20a02c57a9b",
+      "description_excerpt": "Vill du ha meningsfulla arbetsuppgifter som gör skillnad i människors liv? Välkommen till kommunen som är långt ifrån lagom! Vård- och omsorgsförvaltningens ansvar är att ge vård, omsorg och stöd till äldre och personer med funktionsnedsättning samt ge stöd till deras anhöriga. Vårt mål är att med medborgarens fokus ge goda förutsättningar till en självständig, stimulerande och trygg livssituation - dygnet runt. Vi är 2 500 medarbetare som i våra olika funktioner ger stöd och omsorg till de medborgare som behöver det. Tjänsten och arbetsuppgifterna Som samordnare har du ett brett samverkansuppdrag och ett tydligt ansvar för att utveckla och stärka samverkan mellan socialförvaltningen och vår"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Samordnare analysavdelningen",
+      "company": "Inspektionen För Vård och Omsorg",
+      "location": "Stockholm, Stockholms län",
+      "employment_type": "Vanlig anställning",
+      "work_mode": null,
+      "published": "2026-09-21T14:41:03",
+      "deadline": "2026-10-12T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31501780",
+      "salary": "",
+      "provider_id": "31501780",
+      "lane": "core",
+      "matched_query": "samordnare vård",
+      "triage_score": 61.4,
+      "triage_reasons": [
+        "title/role fit 72%",
+        "candidate-evidence support 57%",
+        "arrangement fit 72%",
+        "geography/remote fit 88%",
+        "recency signal 97%"
+      ],
+      "review_flags": [
+        "degree-requirement-needs-verification"
+      ],
+      "id": "026af5666e433664",
+      "description_excerpt": "Vill du vara med och forma framtidens vård och omsorg? Inspektionen för vård och omsorg (IVO) befinner sig i en spännande utvecklingsfas med fler uppdrag och fortsatt tillväxt. För att möta detta stärker vi nu vår verksamhet och söker Samordnare till vår analysavdelning. Om jobbet Som samordnare på avdelningen för analys är du ett viktigt nav i avdelningens ledningsarbete. Du arbetar nära avdelningschefen och avdelningens ledningsgrupp, stödjer dem i deras uppdrag och säkerställer effektiv ledning och styrning av avdelningen och dess uppdrag. Din roll är att bidra till struktur, analys, utveckling och uppföljning för att säkerställa att avdelningen och IVO når sina mål. Arbetet är både strat"
     },
     {
       "source": "platsbanken",
@@ -1739,7 +1341,7 @@
         "recency signal 15%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "driving-licence-requirement-needs-verification"
       ],
       "id": "582d4e9ed6968f80",
       "description_excerpt": "Samordnare till Mervida Vill du vara en del av en växande omsorgsverksamhet där kvalitet, omtanke och engagemang står i centrum? Vi söker dig som trivs i en samordnande roll, har hjärta för omsorg och vill bidra till att våra kunder får bästa möjliga stöd i sin vardag. Om oss Mervida AB är ett omsorgsbolag med verksamhet inom hemtjänst, boendestöd och ledsagning. Vi befinner oss i en spännande tillväxtfas och har idag cirka 400 medarbetare fördelade på 10 enheter i Stockholm och Norrköping. Vi söker nu en erfaren och engagerad samordnare som vill bidra till att utveckla och kvalitetssäkra våra verksamheter. Om rollen Tjänsten är en tillsvidareanställning på heltid med start enligt överenskom"
@@ -1769,6 +1371,34 @@
       "review_flags": [],
       "id": "0bed154a0b3022fb",
       "description_excerpt": "Vi söker en trygg och lugn personlig assistent till en ung och härlig tjej som behöver hjälp i alla delar av sin vardag. Arbetet innebär stöd med personlig omvårdnad, förflyttningar samt att vara ett närvarande och stabilt stöd i dagliga aktiviteter. Som person är du inkännande, tålmodig och har ett lugnt förhållningssätt. Det är viktigt att du kan arbeta strukturerat, är ansvarstagande och är en trygg person. Tidigare erfarenhet av personlig assistans eller vård är meriterande, men personlig lämplighet är viktigast. Arbetet sker i hennes hem och kan även innebära att följa med på aktiviteter utanför hemmet. Arbetstider kan variera mellan dagtid och kvällstid. Tjänsten är på deltid (50%). Vi"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Rehabkoordinator",
+      "company": "Din Vårdcentral i Stockholm AB",
+      "location": "Stockholm, Stockholms län",
+      "employment_type": "Behovsanställning",
+      "work_mode": null,
+      "published": "2026-07-14T20:47:15",
+      "deadline": "2026-09-30T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31273495",
+      "salary": "",
+      "provider_id": "31273495",
+      "lane": "adjacent",
+      "matched_query": "rehabkoordinator",
+      "triage_score": 60.6,
+      "triage_reasons": [
+        "title/role fit 94%",
+        "candidate-evidence support 47%",
+        "arrangement fit 100%",
+        "geography/remote fit 88%",
+        "recency signal 15%"
+      ],
+      "review_flags": [
+        "professional-licence-requirement-needs-verification"
+      ],
+      "id": "717be6ca7964b2f1",
+      "description_excerpt": "Kassem Vårdcentral söker Rehabkoordinator I Kista möter du patienter i olika åldrar och livssituationer, med varierande vårdbehov och social bakgrund. Vi som jobbar här är ett glatt gäng som främjar teamarbete. Vi trivs med vårt arbete och med varandra. I fikarummet är det högt i tak och glatt humör. Vi värdesätter en hälsosam livsstil och värnar om en god balans mellan arbete och privatliv. Du har möjlighet att till viss del påverka dina egna arbetstider genom flextid och därmed din egen arbetssituation när verksamheten så tillåter. Arbetsuppgifter Arbetet innebär att stödja sjukskrivna patienter i rehabiliteringsprocessen och underlätta för patienten att återgå i arbete eller inträda i arb"
     },
     {
       "source": "platsbanken",
@@ -1876,55 +1506,31 @@
     },
     {
       "source": "platsbanken",
-      "title": "Underläkare till VO medicin ",
-      "company": "REGION UPPSALA",
-      "location": "Uppsala, Uppsala län",
+      "title": "Vårdsamordnare till Beroendecentrum avd. 8",
+      "company": "REGION STOCKHOLM",
+      "location": "Stockholm, Stockholms län",
       "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-09-02T08:45:19",
-      "deadline": "2026-09-30T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31426860",
+      "work_mode": null,
+      "published": "2026-09-22T09:58:36",
+      "deadline": "2026-10-13T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31504617",
       "salary": "",
-      "provider_id": "31426860",
+      "provider_id": "31504617",
       "lane": "core",
-      "matched_query": "handledare vård",
-      "triage_score": 57.8,
+      "matched_query": "vårdsamordnare",
+      "triage_score": 57.2,
       "triage_reasons": [
-        "title/role fit 46%",
-        "candidate-evidence support 38%",
-        "arrangement fit 100%",
-        "geography/remote fit 88%",
-        "recency signal 70%"
-      ],
-      "review_flags": [],
-      "id": "546bda32886640b3",
-      "description_excerpt": "Verksamhetsområde medicin Välkommen till Lasarettet i Enköping – stor omtanke i litet format! Hos oss arbetar cirka 700 engagerade kollegor i en miljö där nära samarbete och gemenskap är självklarheter. Vi finns i en expansiv region med smidiga pendlingsmöjligheter till Stockholm, Uppsala och Västerås. För dig som överväger att flytta för att bo nära ditt jobb så har Enköpingsregionen mycket att erbjuda. Lasarettet bedriver akut och planerad vård för cirka 72 000 invånare i Enköping, Håbo och Södra Heby och vi har även specialistuppdrag inom hela Uppsala län. Hos oss kan du göra skillnad - för patienterna och för verksamheten - i en arbetsmiljö där vi ständigt utvecklas tillsammans. Vill du "
-    },
-    {
-      "source": "platsbanken",
-      "title": "Rehabiliteringskoordinator till Vårdcentral Britsarvet Grycksbo",
-      "company": "REGION DALARNA",
-      "location": "Falun, Dalarnas län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-09-16T16:36:52",
-      "deadline": "2026-10-07T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31486221",
-      "salary": "",
-      "provider_id": "31486221",
-      "lane": "adjacent",
-      "matched_query": "rehabkoordinator",
-      "triage_score": 57.3,
-      "triage_reasons": [
-        "title/role fit 51%",
-        "candidate-evidence support 28%",
+        "title/role fit 80%",
+        "candidate-evidence support 66%",
         "arrangement fit 72%",
         "geography/remote fit 88%",
-        "recency signal 90%"
+        "recency signal 99%"
       ],
-      "review_flags": [],
-      "id": "dad61b9a75bc8df5",
-      "description_excerpt": "Hos oss i Region Dalarna får du ett meningsfullt arbete där du kan göra skillnad. Tillsammans arbetar vi för ett hållbart Dalarna med utvecklingskraft i länets alla delar. Om verksamheten Britsarvet-Grycksbo är en välfungerande vårdcentral med två mottagningar, en belägen i Falun och en i Grycksbo. Vi har ca 15 000 listade patienter och ca 75 medarbetare. Vi bedriver läkarmottagning och sjuksköterskemottagning. Du kommer ingå i Teamet för beteendehälsa. I det teamet finns psykologer, vårdsamordnare samt beroende sjuksköterska. Vår fysioterapeut hör till primärvårdsrehab som är gemensamt för de offentligt drivna vårdcentralerna i Falun. Till vårdcentralen hör även en Familjecentral. Arbetsupp"
+      "review_flags": [
+        "professional-licence-requirement-needs-verification"
+      ],
+      "id": "6cb0d25ce7b53b3d",
+      "description_excerpt": "Beroendecentrum Stockholm är Sveriges största beroendeklinik. Vi erbjuder stöd och hjälp till personer som har problem med alkohol, narkotika, läkemedel eller spel. Vår verksamhet innefattar akut- och heldygnsvård, lokal öppenvård och högspecialiserad vård. Vi är också en klinik som bedriver universitetssjukvård samt forskning och utbildning. Arbetsplatsen Vi söker nu en vårdsamordnare till avdelning 8 som ligger vid St Görans sjukhus och tillhör Beroendecentrum Stockholms sektion för akut- och heldygnsvård. Avdelning 8 tar emot beroendepatienter med ett avancerat psykiatriskt och/eller somatiskt vårdbehov. Våra lokaler är utformade för att ge tryggare, säkrare och effektivare vård- och arbe"
     },
     {
       "source": "remoteok",
@@ -2006,57 +1612,31 @@
     },
     {
       "source": "platsbanken",
-      "title": "Sjuksköterska till B194 – bli en del av vårt engagerade magtarmteam",
-      "company": "REGION ÖSTERGÖTLAND",
-      "location": "Linköping, Östergötlands län",
+      "title": "Utbildare inom Diagnosklassificering",
+      "company": "Consensus Sverige AB",
+      "location": "Örebro, Örebro län",
       "employment_type": "Vanlig anställning",
       "work_mode": "Arbete på plats",
-      "published": "2026-08-28T16:27:13",
-      "deadline": "2026-09-28T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31412928",
+      "published": "2026-09-07T15:47:12",
+      "deadline": "2026-09-25T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31447411",
       "salary": "",
-      "provider_id": "31412928",
+      "provider_id": "31447411",
       "lane": "core",
-      "matched_query": "handledare vård",
+      "matched_query": "utbildare vård",
       "triage_score": 56.1,
       "triage_reasons": [
-        "title/role fit 39%",
-        "candidate-evidence support 57%",
-        "arrangement fit 100%",
-        "geography/remote fit 88%",
-        "recency signal 63%"
-      ],
-      "review_flags": [],
-      "id": "e294f46944d741c0",
-      "description_excerpt": "Vill du bli vår nya kollega i ett härligt och engagerat gäng? Välkommen till B194! På magtarmmedicinska klinikens vårdavdelning B194 vårdar vi patienter med sjukdomar i lever och magtarmkanalen som behöver såväl medicinsk som kirurgisk vård. Tillsammans med kirurgiska kliniken har vi ett nationellt uppdrag för högspecialiserad vård (NHV) inom rekonstruktiv kirurgi för patienter med inflammatorisk tarmsjukdom (IBD). Vårt erbjudande Hos oss får du möjlighet att utvecklas utifrån din erfarenhet, dina behov och dina mål. Är du nyutexaminerad sjuksköterska erbjuder vi en trygg start med ett förlängt och individuellt anpassat introduktionsprogram. Du får stöd av en erfaren handledare och introduce"
-    },
-    {
-      "source": "platsbanken",
-      "title": "Rehabsamordnare till Falck",
-      "company": "Falck Sverige AB",
-      "location": "Malmö, Skåne län",
-      "employment_type": "Vanlig anställning",
-      "work_mode": "Arbete på plats",
-      "published": "2026-09-15T16:10:06",
-      "deadline": "2026-10-05T23:59:59",
-      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31480885",
-      "salary": "",
-      "provider_id": "31480885",
-      "lane": "adjacent",
-      "matched_query": "rehabkoordinator",
-      "triage_score": 55.4,
-      "triage_reasons": [
-        "title/role fit 50%",
-        "candidate-evidence support 47%",
+        "title/role fit 72%",
+        "candidate-evidence support 28%",
         "arrangement fit 72%",
         "geography/remote fit 88%",
-        "recency signal 89%"
+        "recency signal 77%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification"
+        "degree-requirement-needs-verification"
       ],
-      "id": "854a7ad05a576de8",
-      "description_excerpt": "Med 1 000 experter på närmare 100 enheter över hela landet är Falck Sveriges mest kompletta leverantör av tjänster inom hälsa och arbetsliv. Vi erbjuder företagshälsovård, kris- och personalstöd, organisations- och ledarskapsutveckling, omställnings- och karriärtjänster samt primärvård och hälsotjänster för privatpersoner. Falcks tjänster inom hälsa och arbetsliv når 1,2 miljoner människor över hela Sverige och bidrar till ett hållbart arbetsliv och privatliv för alla. Är du intresserad av sambandet mellan arbete och hälsa och vill arbeta för att ge människor goda förutsättningar till ett hållbart arbetsliv och privatliv? Falck fortsätter växa och söker nu en till Rehabsamordnare med placeri"
+      "id": "4d3487b8261c4cf3",
+      "description_excerpt": "Har du erfarenhet av att klassificera och koda diagnoser och åtgärder inom vården– och tycker om att dela med dig av din kunskap?&nbsp; Vi söker en engagerad och kunnig utbildare till kursen ”Diagnosklassificering” inom vår yrkeshögskoleutbildning till medicinsk vårdadministratör i Örebro.&nbsp; Det här är ett uppdrag för dig som vill använda din yrkeserfarenhet på ett nytt sätt och vara med och förbereda framtidens medicinska vårdadministratörer för arbetslivet.&nbsp;&nbsp; Om uppdraget&nbsp; Period: vecka 3–7, 2027&nbsp; Omfattning: cirka 2–3 undervisningsdagar per vecka&nbsp; Plats: Aspholmen, Örebro&nbsp; Ersättning: fast ersättning enligt våra villkor för utbildaruppdrag inom YH&nbsp; I"
     },
     {
       "source": "platsbanken",
@@ -2081,7 +1661,7 @@
         "recency signal 99%"
       ],
       "review_flags": [
-        "licence-requirement-needs-verification",
+        "driving-licence-requirement-needs-verification",
         "security-requirement-needs-verification"
       ],
       "id": "fc75a5bde2b3153a",
@@ -2140,6 +1720,439 @@
       ],
       "id": "3decd8f0dbf59bb5",
       "description_excerpt": "About the role The Data Analyst Assistant role is central to our current engagement with a Dubai-based investment firm that requires precise data handling and clear visualization. This position provides the quantitative groundwork that allows our principals to form a view on complex corporate governance and strategy questions. We need an assistant who can organize messy data sets into logical structures that reveal the health and performance of a holding company. About Arabian Private Holdings Arabian Private Holdings was founded on the principle that many critical business problems do not fit the traditional large-firm consulting model. A board facing a succession question or a family group"
+    },
+    {
+      "source": "remoteok",
+      "title": "P2P BD Assistant",
+      "company": "Bybit",
+      "location": "LATAM",
+      "employment_type": "",
+      "work_mode": "remote",
+      "published": "2026-08-12T16:00:24+00:00",
+      "deadline": "",
+      "url": "https://remoteOK.com/remote-jobs/remote-p2p-bd-assistant-bybit-1136568",
+      "salary": "",
+      "provider_id": "1136568",
+      "lane": "bridge",
+      "matched_query": "team assistant vård",
+      "triage_score": 54.2,
+      "triage_reasons": [
+        "title/role fit 57%",
+        "candidate-evidence support 0%",
+        "arrangement fit 100%",
+        "geography/remote fit 72%",
+        "recency signal 40%"
+      ],
+      "review_flags": [
+        "remote-eligibility-needs-verification"
+      ],
+      "id": "6bb11a3b4b933b32",
+      "description_excerpt": "About Us Established in 2018, Bybit is one of the world’s leading cryptocurrency exchanges and digital financial platforms, serving over 80 million users across more than 200 countries and regions. Powered by world-class technology and a user-first mindset, Bybit delivers a seamless ecosystem across trading, payments, wealth management, custody, institutional services, and Web3 — connecting users to the future of digital finance. Our core values define how we build. We listen, care and improve to create products and experiences that put users first. Backed by a global team of ambitious builders, problem-solvers, and innovators, we foster a high-performance and fast-moving environment where t"
+    },
+    {
+      "source": "remotive",
+      "title": "Remote Office Assistant",
+      "company": "Coalition Technologies ",
+      "location": "Worldwide",
+      "employment_type": "full_time",
+      "work_mode": "remote",
+      "published": "2026-09-11T20:16:48",
+      "deadline": "",
+      "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495",
+      "salary": "$35,3k- $52k",
+      "provider_id": "1680495",
+      "lane": "bridge",
+      "matched_query": "team assistant vård",
+      "triage_score": 53.8,
+      "triage_reasons": [
+        "title/role fit 52%",
+        "candidate-evidence support 0%",
+        "arrangement fit 100%",
+        "geography/remote fit 72%",
+        "recency signal 84%"
+      ],
+      "review_flags": [
+        "remote-eligibility-needs-verification"
+      ],
+      "id": "4d8f49855b1609e3",
+      "description_excerpt": "Coalition Technologies is seeking a reliable, detail-oriented, and highly organized Remote Office Assistant to support administrative, bookkeeping, billing, reporting, data entry, and internal operations tasks. This role is ideal for someone with strong communication skills, discretion, attention to detail, and a willingness to learn and grow within a fast-paced remote work environment. As an Office Assistant, you will help support daily administrative operations, assist with entry-level bookkeeping, organize client documents, support internal reporting, and help maintain accurate company records. This position offers strong growth potential for the right candidate, including opportunities f"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Erfaren kontorsansvarig",
+      "company": "Fibio Nordic AB",
+      "location": "Helsingborg, Skåne län",
+      "employment_type": "Vanlig anställning",
+      "work_mode": null,
+      "published": "2026-09-21T14:20:18",
+      "deadline": "2026-10-12T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31501546",
+      "salary": "",
+      "provider_id": "31501546",
+      "lane": "adjacent",
+      "matched_query": "onboarding vård",
+      "triage_score": 53.5,
+      "triage_reasons": [
+        "title/role fit 46%",
+        "candidate-evidence support 19%",
+        "arrangement fit 72%",
+        "geography/remote fit 88%",
+        "recency signal 97%"
+      ],
+      "review_flags": [],
+      "id": "e5c30a51b57d6b41",
+      "description_excerpt": "Kontorsansvarig till Fibio Om Fibio Fibio är en familjevänlig mobiloperatör med grönt hjärta som kombinerar konkurrenskraftiga priser med personlig service. Vi utmanar en traditionell marknad genom att erbjuda kunderna ett alternativ till de klassiska telekombolagen. Vi befinner oss i en utvecklingsfas och bygger nu organisationen för nästa steg. Vår ambition är att skapa ett högpresterande team av hög klass, där drivna människor får tydliga förväntningar, rätt stöd och möjlighet att utvecklas och leverera bra resultat. Därför söker vi nu en driven och självmotiverad personal- och kontorsansvarig som kan hjälpa oss att hitta rätt människor och bygga den struktur, kultur och professionalism s"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Administrativ assistent och planerare på heltid",
+      "company": "Mickes fönsterputs och städ AB",
+      "location": "Stockholm, Stockholms län",
+      "employment_type": "Tillsvidareanställning (inkl. eventuell provanställning)",
+      "work_mode": "Arbete på plats",
+      "published": "2026-09-05T17:31:10",
+      "deadline": "2026-10-05T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31442307",
+      "salary": "",
+      "provider_id": "31442307",
+      "lane": "bridge",
+      "matched_query": "kundservice vård",
+      "triage_score": 53.4,
+      "triage_reasons": [
+        "title/role fit 55%",
+        "candidate-evidence support 19%",
+        "arrangement fit 72%",
+        "geography/remote fit 88%",
+        "recency signal 76%"
+      ],
+      "review_flags": [
+        "driving-licence-requirement-needs-verification"
+      ],
+      "id": "9901c8ed4d922358",
+      "description_excerpt": "Administrativ assistent och planerare på heltid Optimal Trappstädning söker en strukturerad och ansvarstagande administrativ assistent som vill arbeta med planering, kundkontakt och löpande administration på vårt kontor vid Fridhemsplan. Tjänsten är på heltid med arbetstid måndag–fredag kl. 08.00–17.00. Arbetsuppgifterna är lätta att lära sig och du får tydliga rutiner och en ordentlig introduktion. Dina arbetsuppgifter Planera och boka in arbeten Besvara mejl från kunder och personal Svara på inkommande telefonsamtal Registrera och fördela kundärenden Kontakta städpersonal om tider, uppdrag och förändringar Uppdatera scheman och information Följa upp pågående ärenden Utföra enklare administ"
+    },
+    {
+      "source": "remoteok",
+      "title": "Junior Payroll Assistant",
+      "company": "Sleek",
+      "location": "Remote",
+      "employment_type": "",
+      "work_mode": "remote",
+      "published": "2026-09-14T00:00:12+00:00",
+      "deadline": "",
+      "url": "https://remoteOK.com/remote-jobs/remote-junior-payroll-assistant-sleek-1137391",
+      "salary": "",
+      "provider_id": "1137391",
+      "lane": "bridge",
+      "matched_query": "team assistant vård",
+      "triage_score": 53.3,
+      "triage_reasons": [
+        "title/role fit 51%",
+        "candidate-evidence support 0%",
+        "arrangement fit 100%",
+        "geography/remote fit 72%",
+        "recency signal 87%"
+      ],
+      "review_flags": [
+        "remote-eligibility-needs-verification"
+      ],
+      "id": "081ec9073d832019",
+      "description_excerpt": "Through proprietary software and AI, along with a focus on customer delight, Sleek makes the back-office easy for micro SMEs. We give Entrepreneurs time back to focus on what they love doing - growing their business and being with customers. With a surging number of Entrepreneurs globally, we are innovating in a highly lucrative space. We operate across 3 business segments: Corporate Secretary: Automating the company incorporation, secretarial, filing, Nominee Director, mailroom and immigration processes via custom online robots and SleekSign. We are the market leaders in Singapore with ~5% market share of all new business incorporations Accounting &amp; Bookkeeping: Redefining what it means"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Extrajobba inom stöd, service, vård och omsorg!",
+      "company": "Luleå kommun",
+      "location": "Luleå, Norrbottens län",
+      "employment_type": "Vanlig anställning",
+      "work_mode": "Arbete på plats",
+      "published": "2026-09-11T01:36:25",
+      "deadline": "2026-10-01T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31464093",
+      "salary": "",
+      "provider_id": "31464093",
+      "lane": "bridge",
+      "matched_query": "deltid service sjukhus",
+      "triage_score": 52.9,
+      "triage_reasons": [
+        "title/role fit 41%",
+        "candidate-evidence support 19%",
+        "arrangement fit 100%",
+        "geography/remote fit 88%",
+        "recency signal 83%"
+      ],
+      "review_flags": [],
+      "id": "8939b2941c878a85",
+      "description_excerpt": "Vi är glada över ditt intresse för att bli en del av Luleå kommun. Hos oss får du möjlighet att arbeta i en stimulerande och utvecklande miljö, där vi strävar efter att ge dig en bra medarbetarupplevelse. Du blir en del av en engagerad, kompetent och ansvarstagande organisation som värdesätter dig och din kompetens. Hos oss får du möjlighet att utvecklas och växa i din yrkesroll. Läs mer om våra anställningsförmåner, lönestatistik och vad vi kan erbjuda dig här - https://www.lulea.se/anstallning Luleå kommun är en av Norrbottens största arbetsgivare med en stark framtidstro. Vi arbetar för att skapa en växande och livskraftig kommun med plats för 100 000 invånare. Vårt mål är ett hållbart sa"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Undersköterska till Piteå hälsocentral",
+      "company": "REGION NORRBOTTEN",
+      "location": "Piteå, Norrbottens län",
+      "employment_type": "Vanlig anställning",
+      "work_mode": "Arbete på plats",
+      "published": "2026-09-16T13:14:01",
+      "deadline": "2026-10-04T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31484341",
+      "salary": "",
+      "provider_id": "31484341",
+      "lane": "bridge",
+      "matched_query": "deltid reception vård",
+      "triage_score": 51.7,
+      "triage_reasons": [
+        "title/role fit 36%",
+        "candidate-evidence support 28%",
+        "arrangement fit 100%",
+        "geography/remote fit 88%",
+        "recency signal 90%"
+      ],
+      "review_flags": [],
+      "id": "e76d2d5bc91e6602",
+      "description_excerpt": "Piteå hälsocentral har cirka 10 100 listade patienter och är en väl etablerad hälsocentral med ett starkt fokus på samarbete och utveckling. I våra tre tvärprofessionella team arbetar vi tillsammans för att skapa en trygg, tillgänglig och personcentrerad vård för våra patienter. Nu söker vi en undersköterska som vill bli en del av vårt engagerade team. Vi erbjuder ett omväxlande arbete där du får använda och utveckla din kompetens i nära samverkan med andra professioner. Vi söker Vi söker dig med undersköterskeutbildning. Meriterande är utbildning i akutsjukvård eller motsvarande, kunskaper i Cosmic samt erfarenhet av provtagning, sårvård eller erfarenhet av egen mottagning. Stor vikt läggs "
+    },
+    {
+      "source": "platsbanken",
+      "title": "Dispatcher",
+      "company": "Experis AB",
+      "location": "Malmö, Skåne län",
+      "employment_type": "Behovsanställning",
+      "work_mode": null,
+      "published": "2026-09-23T15:09:41",
+      "deadline": "2026-10-03T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31512177",
+      "salary": "",
+      "provider_id": "31512177",
+      "lane": "bridge",
+      "matched_query": "kundservice vård",
+      "triage_score": 51.1,
+      "triage_reasons": [
+        "title/role fit 42%",
+        "candidate-evidence support 19%",
+        "arrangement fit 72%",
+        "geography/remote fit 88%",
+        "recency signal 100%"
+      ],
+      "review_flags": [],
+      "id": "e875bfa46b68d7e4",
+      "description_excerpt": "Brinner du för kundservice? Vill du vara den som får allt att flyta och trivs i en roll där ingen dag är den andra lik? Då kan den här tjänsten som Dispatcher vara något för dig! I rollen som dispatcher arbetar du i en viktig och central funktion där du leder och säkerställer att servicearbetet utförs enligt plan. Du kommer arbeta med att fördela arbetet för tekniker i fält, planera ut dom på arbeten och vid behov planera om inför akutjobb eller andra speciella avvikande situationer. Tjänsten innebär mycket kommunikation över telefon med tekniker, kunder samt övriga kollegor. Dessutom arbetar du till stor del administrativt. Utöver den dagliga planeringen är det även du som arbetar aktivt me"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Timanställd kommunvägledare till Kundcenter",
+      "company": "Östersunds kommun",
+      "location": "Östersund, Jämtlands län",
+      "employment_type": "Behovsanställning",
+      "work_mode": null,
+      "published": "2026-09-21T13:49:26",
+      "deadline": "2026-10-05T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31501245",
+      "salary": "",
+      "provider_id": "31501245",
+      "lane": "bridge",
+      "matched_query": "receptionist vård",
+      "triage_score": 50.8,
+      "triage_reasons": [
+        "title/role fit 36%",
+        "candidate-evidence support 38%",
+        "arrangement fit 72%",
+        "geography/remote fit 88%",
+        "recency signal 97%"
+      ],
+      "review_flags": [],
+      "id": "6d003eb6dec359d8",
+      "description_excerpt": "&nbsp; Vill du göra skillnad för människor varje dag? Är du serviceinriktad, lösningsorienterad och trivs i mötet med olika människor? Då kan rollen som timanställd kommunvägledare på Östersunds kommuns Kundcenter vara något för dig. Hos oss får du ett varierat och meningsfullt arbete där du hjälper medborgare att hitta rätt i kommunens verksamheter och bidrar till god service varje dag. Om oss Kundcenter är kommunens gemensamma ingång för frågor, service och vägledning. Här möter vi medborgare via telefon, e-post, webb och personliga besök, och hjälper dem att hitta rätt i kommunens organisation. Alla kommunvägledare arbetar som generalister och besvarar frågor som rör hela kommunen. Utöver"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Timvikarier till Hemtjänst team Stadion",
+      "company": "Stockholms kommun",
+      "location": "Stockholm, Stockholms län",
+      "employment_type": "Behovsanställning",
+      "work_mode": "Arbete på plats",
+      "published": "2026-09-10T09:45:09",
+      "deadline": "2026-09-27T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31459748",
+      "salary": "",
+      "provider_id": "31459748",
+      "lane": "bridge",
+      "matched_query": "team assistant vård",
+      "triage_score": 50.1,
+      "triage_reasons": [
+        "title/role fit 41%",
+        "candidate-evidence support 19%",
+        "arrangement fit 72%",
+        "geography/remote fit 88%",
+        "recency signal 81%"
+      ],
+      "review_flags": [],
+      "id": "43a98467720e9d9b",
+      "description_excerpt": "Stockholm – vår huvudstad med miljoner drömmar, förväntningar och ambitioner. Vi jobbar för alla som lever här idag och i framtiden. Nu söker vi dig som vill tänka stort, nytt och annorlunda med oss – för stockholmarna. Norra innerstadens stadsdelsområde består av de centrala delarna av Stockholm, Norrmalm och Östermalm. Här arbetar vi för att ge våra 155 000 invånare den bästa verksamheten inom bland annat förskola, socialtjänst, äldreomsorg och stadsutveckling. Vi välkomnar dig som vill vara med och göra skillnad för invånarna i Norra innerstaden. Välkommen till oss Nu söker vi dig som vill arbeta extra hos oss inom hemtjänst team Stadion. Hos oss är du del av ett lagarbete för att våra äl"
+    },
+    {
+      "source": "remoteok",
+      "title": "Customer Service Representative",
+      "company": "Adaptive Teams",
+      "location": "Remote",
+      "employment_type": "",
+      "work_mode": "remote",
+      "published": "2026-08-12T16:00:04+00:00",
+      "deadline": "",
+      "url": "https://remoteOK.com/remote-jobs/remote-customer-service-representative-adaptive-teams-1136566",
+      "salary": "",
+      "provider_id": "1136566",
+      "lane": "bridge",
+      "matched_query": "deltid service sjukhus",
+      "triage_score": 49.7,
+      "triage_reasons": [
+        "title/role fit 49%",
+        "candidate-evidence support 0%",
+        "arrangement fit 100%",
+        "geography/remote fit 72%",
+        "recency signal 40%"
+      ],
+      "review_flags": [
+        "remote-eligibility-needs-verification"
+      ],
+      "id": "37140df697efa2df",
+      "description_excerpt": "&lt;p&gt;Confident on the phone and cool under pressure? This part-time role puts you at the center of fast-paced auction activity—making critical outbound calls, delivering clear info, and keeping everything on track.&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;About the Company: &lt;/strong&gt;&lt;span&gt;This is a &lt;em&gt;full time role &lt;/em&gt;with a partner agency in the self-storage industry, specializing in technology-driven storage solutions. The company enhances the rental experience through seamless digital tools and personalized customer service, helping individuals and businesses with secure, convenient storage options.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;str"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Outbound Sales Advisor",
+      "company": "Vattenfall AB",
+      "location": "Umeå, Västerbottens län",
+      "employment_type": "Tillsvidareanställning (inkl. eventuell provanställning)",
+      "work_mode": null,
+      "published": "2026-09-23T15:10:05",
+      "deadline": "2026-10-14T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31512185",
+      "salary": "",
+      "provider_id": "31512185",
+      "lane": "bridge",
+      "matched_query": "kundservice vård",
+      "triage_score": 49.6,
+      "triage_reasons": [
+        "title/role fit 36%",
+        "candidate-evidence support 28%",
+        "arrangement fit 72%",
+        "geography/remote fit 88%",
+        "recency signal 100%"
+      ],
+      "review_flags": [],
+      "id": "02c22e4e8d406ebe",
+      "description_excerpt": "Företagsbeskrivning Vattenfall är en av Europas största producenter och återförsäljare av el och värme. Våra huvudmarknader är Sverige, Tyskland, Nederländerna, Danmark och Storbritannien. Inom Vattenfallkoncernen finns cirka 20 000 anställda. Vi har elektrifierat industrier, levererat energi till bostäder och förvandlat tillvaron genom innovation i över hundra års tid. Vi driver på övergången till ett hållbart energisystem. Om rollen Brinner du för försäljning? Motiveras du av att nå höga mål, skapa affärer och utvecklas tillsammans med andra drivna säljare? Nu söker Vattenfall Kundservice nya Outbound Sales advisor till vårt team i Umeå. Hos oss får du arbeta i en roll där din prestation g"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Kliniknära farmaceut, Mobila team och specialiserad palliativ vård, Skåne",
+      "company": "REGION SKÅNE",
+      "location": "Lund, Skåne län",
+      "employment_type": "Vanlig anställning",
+      "work_mode": "Arbete på plats",
+      "published": "2026-09-10T15:55:06",
+      "deadline": "2026-09-24T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31462935",
+      "salary": "",
+      "provider_id": "31462935",
+      "lane": "bridge",
+      "matched_query": "team assistant vård",
+      "triage_score": 49.2,
+      "triage_reasons": [
+        "title/role fit 37%",
+        "candidate-evidence support 28%",
+        "arrangement fit 72%",
+        "geography/remote fit 88%",
+        "recency signal 81%"
+      ],
+      "review_flags": [],
+      "id": "5950698dcd383a92",
+      "description_excerpt": "Gör skillnad. Varje dag. Vill du arbeta i en vård där närhet, trygghet och personcentrering står i fokus? Nu söker vi nya medarbetare till Mobila team och specialiserad palliativ vård i Skåne. Verksamheten ingår i primärvårdsområde Mobila Team och specialiserad palliativ vård, vilket innefattar fem geografiska verksamhetsområden och Palliativt utvecklingscentrum. Uppdraget är att dygnet runt erbjuda specialiserad palliativ vård och annan avancerad hemsjukvård i samverkan med övriga sjukvårdsaktörer och kommuner. Vi är i en spännande utvecklingsfas kring bildande av Mobilt team närsjukvård, en vårdform som erbjuder de mest sköra patienterna ett alternativ till sjukhusvård. Vi utgår från åtta "
+    },
+    {
+      "source": "platsbanken",
+      "title": "Bli en del av mitt team – personlig assistent sökes i Västerås!",
+      "company": "Olivia Personlig Assistans Aktiebolag",
+      "location": "Västerås, Västmanlands län",
+      "employment_type": "Vanlig anställning",
+      "work_mode": "Arbete på plats",
+      "published": "2026-09-08T15:20:58",
+      "deadline": "2026-10-11T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31452519",
+      "salary": "",
+      "provider_id": "31452519",
+      "lane": "bridge",
+      "matched_query": "team assistant vård",
+      "triage_score": 48.8,
+      "triage_reasons": [
+        "title/role fit 39%",
+        "candidate-evidence support 28%",
+        "arrangement fit 100%",
+        "geography/remote fit 88%",
+        "recency signal 79%"
+      ],
+      "review_flags": [
+        "driving-licence-requirement-needs-verification"
+      ],
+      "id": "7e53e81cb5d672d1",
+      "description_excerpt": "Om tjänsten Jag är en 26-årig tjej som nu söker en ny personlig assistent som vill bli en del av mitt team! Jag har en intellektuell funktionsnedsättning och behöver därför stöd av en personlig assistent i min vardag. Vid behov använder jag rollator eller manuell rullstol. Jag söker dig som vill arbeta deltid cirka 59% alternativt dig som är intresserad av en mindre tjänstgöringsgrad, då det finns möjlighet att tillsätta två tjänster på cirka 30 % vardera. Jag är en aktiv och social tjej som tycker om att ha saker att göra och gärna hittar på olika aktiviteter. Jag rider, tränar framerunning och bowlar, så jag uppskattar när mina assistenter tycker om att följa med och vara delaktiga i min v"
+    },
+    {
+      "source": "remotive",
+      "title": "Tier III Service Desk Engineer",
+      "company": "Unio Digital",
+      "location": "Worldwide",
+      "employment_type": "full_time",
+      "work_mode": "remote",
+      "published": "2026-09-07T01:10:43",
+      "deadline": "",
+      "url": "https://remotive.com/remote-jobs/information-technology/tier-iii-service-desk-engineer-2091045",
+      "salary": "",
+      "provider_id": "2091045",
+      "lane": "bridge",
+      "matched_query": "deltid service sjukhus",
+      "triage_score": 48.6,
+      "triage_reasons": [
+        "title/role fit 43%",
+        "candidate-evidence support 0%",
+        "arrangement fit 100%",
+        "geography/remote fit 72%",
+        "recency signal 77%"
+      ],
+      "review_flags": [
+        "remote-eligibility-needs-verification"
+      ],
+      "id": "6997d126f629e275",
+      "description_excerpt": "Unió Digital is an Arizona-based managed service provider (MSP) delivering Managed IT Services, Low Voltage Cabling, Access Control, Video Surveillance, and Intrusion Services. We believe technology should be intuitive, not intimidating. We are looking for an experienced Tier 3 Service Desk Technician with exceptional problem-solving skills. You will serve as the escalation point within the team, resolving complex technical issues while also leading client onboarding and project initiatives. You are expected to be involved in direct end-user support when required. If you have a passion for ensuring top-quality user support and thrive in a collaborative environment, this role is for you. Duti"
+    },
+    {
+      "source": "platsbanken",
+      "title": "Stationärväktare till Securitas Jönköping",
+      "company": "Securitas Sverige Aktiebolag",
+      "location": "Jönköping, Jönköpings län",
+      "employment_type": "Tillsvidareanställning (inkl. eventuell provanställning)",
+      "work_mode": "Arbete på plats",
+      "published": "2026-09-15T16:25:00",
+      "deadline": "2026-10-04T23:59:59",
+      "url": "https://arbetsformedlingen.se/platsbanken/annonser/31480993",
+      "salary": "",
+      "provider_id": "31480993",
+      "lane": "bridge",
+      "matched_query": "deltid reception vård",
+      "triage_score": 48.5,
+      "triage_reasons": [
+        "title/role fit 40%",
+        "candidate-evidence support 19%",
+        "arrangement fit 100%",
+        "geography/remote fit 88%",
+        "recency signal 89%"
+      ],
+      "review_flags": [
+        "driving-licence-requirement-needs-verification",
+        "security-requirement-needs-verification"
+      ],
+      "id": "5b14b57aadab728d",
+      "description_excerpt": "Företagsbeskrivning Securitas har en viktig roll i samhället och förvaltar ett av Sveriges viktigaste uppdrag - att skydda och hjälpa människor att känna sig trygga. Nu har du chansen att bli en del av Sveriges största säkerhetsföretag. Oavsett om du vill jobba mycket eller lite, dag eller natt så behöver vi bli fler. Som landets största arbetsgivare i vår bransch kan vi erbjuda dig utvecklingsmöjligheter och variation som få andra företag kan. Vi strävar efter ett enhetligt ledarskap med balans mellan förväntningar och förutsättningar. Securitas Sverige krigsplacerar sin personal. Detta innebär i korthet att du som anställd kommer, i händelse av krig, ha kvar din anställning och arbetsledas"
     }
   ]
 }

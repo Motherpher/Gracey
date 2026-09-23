@@ -1,5 +1,5 @@
 schema_version: "1.0"
-updated: "2026-09-23T19:25:00+02:00"
+updated: "2026-09-24T01:04:00+02:00"
 ux_version: "grace-1.1"
 
 defaults:
@@ -12,7 +12,7 @@ defaults:
 
 lanes:
   core:
-    description: "Roller där Grace tydligt kan använda handledning, samordning, praktiskt lärande och tryggt ledarskap i vård, omsorg, rehabilitering eller patientnära verksamhet."
+    description: "Huvudspår för den här sökningen. Matchningsprofilen hämtas endast från verifierade karriärkällor."
     weight: 1.0
     queries:
       - "handledare vård"
@@ -31,7 +31,7 @@ lanes:
       - "HLR instruktör"
 
   adjacent:
-    description: "Närliggande roller där hennes sätt att leda, förklara, stödja och se helheten kan överföras utan att kräva en helt ny yrkesidentitet."
+    description: "Närliggande möjligheter. Det här är search-only konfiguration och blir aldrig kandidatfakta."
     weight: 0.9
     queries:
       - "verksamhetssamordnare vård"
@@ -48,7 +48,7 @@ lanes:
       - "mentor vård omsorg"
 
   bridge:
-    description: "Flexibla roller i eller nära vård och omsorg som kan fungera som en trygg bro till nästa steg."
+    description: "Flexibla alternativ. Specifika önskemål eller behov kan läggas ovanpå som ett tillfälligt sökraster."
     weight: 0.75
     queries:
       - "administrativ samordnare vård"
@@ -78,3 +78,9 @@ preference_flags:
     - "säkerhetsprövning"
     - "chefserfarenhet krävs"
     - "specifik vårdadministrativ utbildning krävs"
+
+
+user_search_overlay:
+  source: user_input
+  scope: search_only
+  specific_wishes_or_needs: ""

@@ -13,14 +13,14 @@ from .state import STATUS_LABELS, TERMINAL_STATUSES, case_counts, rank_label
 
 REPO = "Hybrismannen/Gracey"
 PALETTE = {
-    "paper": "#F7F8F3",
-    "ink": "#111111",
-    "cobalt": "#2E50E8",
-    "blue": "#2A72A3",
-    "pale": "#C6D8E6",
-    "coral": "#F97279",
-    "sun": "#F6AB16",
-    "white": "#FFFFFF",
+    "paper": "#F4D59B",
+    "ink": "#1B2220",
+    "cobalt": "#063A3D",
+    "blue": "#063A3D",
+    "pale": "#F7F1E3",
+    "coral": "#D94A3A",
+    "sun": "#F2A000",
+    "white": "#F7F1E3",
 }
 
 
@@ -36,10 +36,10 @@ def save_public_jobs(path: Path, jobs: list[Job]):
 
 def priority_label(index: int) -> str:
     if index < 4:
-        return "Top lead"
+        return "Stark träff"
     if index < 8:
-        return "Good option"
-    return "Explore"
+        return "Bra möjlighet"
+    return "Utforska"
 
 
 def deadline_info(value: str) -> tuple[str, int | None]:
@@ -122,9 +122,9 @@ def status_update_link(case: dict, status: str) -> str:
 
 def lane_title(lane: str) -> tuple[str, str]:
     return {
-        "core": ("Career-track", "Handledande, samordnande, utbildande och relationsnära roller där Grace befintliga erfarenhet kommer till tydlig användning."),
-        "adjacent": ("Adjacent", "Närliggande roller där handledning, samordning, stöd och tryggt ledarskap kan överföras till en ny miljö."),
-        "bridge": ("Extra-income / flexible", "Deltid, tidsbegränsade roller och andra arbeten som kan fungera som en trygg bro till nästa steg."),
+        "core": ("Huvudspår", "Handledande, samordnande, utbildande och relationsnära roller där Grace befintliga erfarenhet kommer till tydlig användning."),
+        "adjacent": ("Närliggande möjligheter", "Närliggande roller där handledning, samordning, stöd och tryggt ledarskap kan överföras till en ny miljö."),
+        "bridge": ("Flexibelt / extra", "Deltid, tidsbegränsade roller och andra arbeten som kan fungera som en trygg bro till nästa steg."),
     }.get(lane, (lane.title(), ""))
 
 
@@ -146,30 +146,30 @@ def render_visual(path: Path, jobs: list[Job], cases_data: dict, vault: dict):
 <rect width="1200" height="560" fill="{PALETTE["paper"]}"/>
 <path d="M-80 90 C160 40 250 230 420 175 C585 122 565 390 730 328 C880 272 930 120 1280 220"
       fill="none" stroke="{PALETTE["cobalt"]}" stroke-width="92" stroke-linecap="round"/>
-<text x="68" y="68" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="{PALETTE["ink"]}" letter-spacing="2">CAREERHUB</text>
-<text x="68" y="480" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="{PALETTE["ink"]}">A three-step job journey</text>
+<text x="68" y="68" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="{PALETTE["ink"]}" letter-spacing="2">GRACE · KARRIÄRHUBBEN</text>
+<text x="68" y="480" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="{PALETTE["ink"]}">Tre steg till nästa jobb</text>
 <g transform="translate(110 122)">
   <circle cx="0" cy="0" r="70" fill="{PALETTE["paper"]}" stroke="{PALETTE["cobalt"]}" stroke-width="5"/>
-  <text x="0" y="-12" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">1 · FIND</text>
+  <text x="0" y="-12" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">1 · HITTA</text>
   <text x="0" y="21" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="{PALETTE["cobalt"]}">{found}</text>
-  <text x="0" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">live leads</text>
+  <text x="0" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">aktuella jobb</text>
 </g>
 <g transform="translate(518 290)">
   <circle cx="0" cy="0" r="78" fill="{PALETTE["pale"]}" stroke="{PALETTE["blue"]}" stroke-width="5"/>
-  <text x="0" y="-16" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">2 · CHOOSE</text>
+  <text x="0" y="-16" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">2 · VÄLJ</text>
   <text x="0" y="23" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="{PALETTE["blue"]}">{chosen}</text>
-  <text x="0" y="49" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">active cases</text>
+  <text x="0" y="49" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">valda jobb</text>
 </g>
 <g transform="translate(940 208)">
   <circle cx="0" cy="0" r="78" fill="{PALETTE["sun"]}" stroke="{PALETTE["ink"]}" stroke-width="4"/>
-  <text x="0" y="-16" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">3 · APPLY</text>
+  <text x="0" y="-16" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">3 · SÖK</text>
   <text x="0" y="23" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="{PALETTE["ink"]}">{applied}</text>
-  <text x="0" y="49" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">in process</text>
+  <text x="0" y="49" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">pågående</text>
 </g>
 <g transform="translate(770 430)">
   <rect x="0" y="0" rx="25" width="350" height="74" fill="{PALETTE["coral"]}"/>
-  <text x="24" y="31" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="{PALETTE["ink"]}">{active_deadlines} deadlines within 7 days</text>
-  <text x="24" y="54" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="{PALETTE["ink"]}">{total_seen} jobs preserved in the historic vault</text>
+  <text x="24" y="31" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="{PALETTE["ink"]}">{active_deadlines} sista datum inom 7 dagar</text>
+  <text x="24" y="54" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="{PALETTE["ink"]}">{total_seen} jobb sparade i historiken</text>
 </g>
 </svg>'''
     path.write_text(svg, encoding="utf-8")
@@ -198,7 +198,7 @@ def render_job_vault(path: Path, vault: dict, cases_data: dict):
         if case:
             action = f"[case #{case.get('issue_number')}]({case.get('issue_url')})"
         else:
-            action = f"**[Choose →]({choose_link(Job.from_dict(r), 3)})**"
+            action = f"**[Välj →]({choose_link(Job.from_dict(r), 3)})**"
         lines.append(f"| {rank} | [{title}]({url}) | {company} | {deadline} | {str(r.get('first_seen',''))[:10]} | {str(r.get('last_seen',''))[:10]} | active | {action} |")
     lines += ["", "## Historical / no longer in the latest shortlist", "", "| Role | Employer | Deadline | Last seen | State | Action |", "|---|---|---|---|---|---|"]
     for r in historic[:180]:
@@ -210,7 +210,7 @@ def render_job_vault(path: Path, vault: dict, cases_data: dict):
         if case:
             action = f"[case #{case.get('issue_number')}]({case.get('issue_url')})"
         else:
-            action = f"**[Choose →]({choose_link(Job.from_dict(r), 2)})**"
+            action = f"**[Välj →]({choose_link(Job.from_dict(r), 2)})**"
         lines.append(f"| [{title}]({url}) | {company} | {deadline} | {str(r.get('last_seen',''))[:10]} | {r.get('deadline_state') or 'historic'} | {action} |")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -239,7 +239,7 @@ def render_applications(path: Path, cases_data: dict):
     lines += ["", "## Closed cases", "", "| Role | Employer | Outcome | Updated |", "|---|---|---|---|"]
     for c in closed[-60:]:
         lines.append(f"| {str(c.get('title') or '').replace('|','\\|')} | {str(c.get('company') or '').replace('|','\\|')} | {STATUS_LABELS.get(c.get('status'), c.get('status'))} | {str(c.get('status_updated_at') or '')[:10]} |")
-    lines += ["", "## Status model", "", "Chosen → Preparing → Ready to apply → Applied → Contacted → Portfolio/Test → Interview/Meeting 1–5 → Offer / Denied / Withdrawn"]
+    lines += ["", "## Så följs en ansökan", "", "Valt → Förbereds → Redo att söka → Ansökan skickad → Kontakt → Arbetsprov/Test → Intervju/Möte 1–5 → Erbjudande / Avslutad / Avstår"]
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -289,10 +289,10 @@ def render_lane(lines: list[str], lane: str, jobs: list[Job], cases_by_job: dict
         source_link = f"[{title_txt}]({job.url})" if job.url else title_txt
         if job.id in cases_by_job:
             c = cases_by_job[job.id]
-            choose = f"Chosen · [case #{c.get('issue_number')}]({c.get('issue_url')})"
+            choose = f"Valt · [jobbsida #{c.get('issue_number')}]({c.get('issue_url')})"
         else:
             default_priority = 5 if index < 2 else 4 if index < 5 else 3
-            choose = f"**[Choose →]({choose_link(job, default_priority)})**"
+            choose = f"**[Välj →]({choose_link(job, default_priority)})**"
         lines.append(f"| {priority_label(index)} | {source_link} | {company} | {deadline} | {why_short(job).replace('|','\\|')} | {choose} |")
     lines += ["", f"_Showing the top {len(visible)} of {len(jobs)} current leads in this group._", ""]
 

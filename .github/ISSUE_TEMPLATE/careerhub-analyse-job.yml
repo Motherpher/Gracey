@@ -1,0 +1,59 @@
+name: Grace · Analysera ett jobb
+description: Klistra in en jobblänk och låt Karriärhubben analysera jobbet och förbereda ansökningsunderlaget.
+title: "[CareerHub Job] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Vill du analysera det här jobbet?
+
+        Klistra in länken nedan. Karriärhubben skapar jobbsidan, gör den fulla analysen och förbereder ansökningsunderlaget.
+
+        Du behöver inte förstå analysmodellen, prioriteringen eller hur jobbsidan är uppbyggd.
+
+  - type: input
+    id: job_url
+    attributes:
+      label: Länk till jobbet
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: Roll (valfritt)
+      description: Behövs bara om jobbsidan är svår att läsa automatiskt.
+
+  - type: input
+    id: employer
+    attributes:
+      label: Arbetsgivare (valfritt)
+
+  - type: dropdown
+    id: lane
+    attributes:
+      label: Vilken typ av möjlighet är det?
+      options:
+        - Huvudspår
+        - Närliggande möjlighet
+        - Flexibelt / extra
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Sista ansökningsdag (valfritt)
+      placeholder: "2026-10-15"
+
+  - type: textarea
+    id: job_text
+    attributes:
+      label: Jobbtext (valfritt)
+      description: Klistra bara in annonstexten om länken inte går att läsa.
+
+  - type: markdown
+    attributes:
+      value: |
+        När sidan är klar trycker du på den gröna knappen **Create issue** / **Submit new issue** längst ned. Då startar analysen automatiskt.

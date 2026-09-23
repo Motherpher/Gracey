@@ -35,12 +35,16 @@ def save_public_jobs(path: Path, jobs: list[Job]):
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def priority_label(index: int) -> str:
-    if index < 4:
+def priority_label(job: Job) -> str:
+    flags = set(job.review_flags or [])
+    if "professional-licence-requirement-needs-verification" in flags or "degree-requirement-needs-verification" in flags:
+        return "Kontrollera krav"
+    score = float(job.triage_score or 0)
+    if score >= 80:
         return "Stark träff"
-    if index < 8:
-        return "Bra möjlighet"
-    return "Utforska"
+    if score >= 70:
+        return "Relevant"
+    return "Möjlig"
 
 
 def deadline_info(value: str) -> tuple[str, int | None]:
@@ -309,7 +313,7 @@ def render_lane(lines: list[str], lane: str, jobs: list[Job], cases_by_job: dict
         else:
             default_priority = 5 if index < 2 else 4 if index < 5 else 3
             choose = f"**[Välj →]({choose_link(job, default_priority)})**"
-        lines.append(f"| {priority_label(index)} | {source_link} | {company} | {deadline} | {why_short(job).replace('|','\\|')} | {choose} |")
+        lines.append(f"| {priority_label(job)} | {source_link} | {company} | {deadline} | {why_short(job).replace('|','\\|')} | {choose} |")
     lines += ["", f"_Visar {len(visible)} av {len(jobs)} mest relevanta jobb i den här gruppen._", ""]
 
 

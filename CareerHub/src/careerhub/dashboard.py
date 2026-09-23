@@ -7,7 +7,7 @@ from urllib.parse import quote
 
 from dateutil import parser as dtparser
 
-from .models import Jobb
+from .models import Job
 from .state import STATUS_LABELS, TERMINAL_STATUSES, case_counts, rank_label
 
 
@@ -24,7 +24,7 @@ PALETTE = {
 }
 
 
-def save_public_jobs(path: Path, jobs: list[Jobb]):
+def save_public_jobs(path: Path, jobs: list[Job]):
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -36,9 +36,9 @@ def save_public_jobs(path: Path, jobs: list[Jobb]):
 
 def priority_label(index: int) -> str:
     if index < 4:
-        return "Stark träff"
+        return "Top lead"
     if index < 8:
-        return "Bra möjlighet"
+        return "Good option"
     return "Explore"
 
 
@@ -62,7 +62,7 @@ def deadline_info(value: str) -> tuple[str, int | None]:
         return str(value), None
 
 
-def why_short(job: Jobb) -> str:
+def why_short(job: Job) -> str:
     reasons = []
     blob = job.search_blob
     if job.work_mode:
@@ -76,24 +76,24 @@ def why_short(job: Jobb) -> str:
     return " · ".join(reasons[:2]) or "matched search profile"
 
 
-def choose_link(job: Jobb, default_priority: int = 3) -> str:
-    title = f"[CareerHub Jobb] {job.company or 'Arbetsgivare'} — {job.title}"
+def choose_link(job: Job, default_priority: int = 3) -> str:
+    title = f"[CareerHub Job] {job.company or 'Employer'} — {job.title}"
     body = (
-        "### Jobb URL\n"
+        "### Job URL\n"
         f"{job.url}\n\n"
-        "### Jobb ID\n"
+        "### Job ID\n"
         f"{job.id}\n\n"
-        "### Roll\n"
+        "### Role\n"
         f"{job.title}\n\n"
-        "### Arbetsgivare\n"
+        "### Employer\n"
         f"{job.company}\n\n"
         "### Lane\n"
         f"{job.lane}\n\n"
-        "### Prioritet 1–5\n"
+        "### Priority 1–5\n"
         f"{default_priority}\n\n"
-        "### Sista dag\n"
+        "### Deadline\n"
         f"{job.deadline or ''}\n\n"
-        "### Jobb text (optional)\n"
+        "### Job text (optional)\n"
         "_Leave blank unless the site blocks automated retrieval._"
     )
     return f"https://github.com/{REPO}/issues/new?title={quote(title)}&body={quote(body)}"
@@ -122,13 +122,13 @@ def status_update_link(case: dict, status: str) -> str:
 
 def lane_title(lane: str) -> tuple[str, str]:
     return {
-        "core": ("Huvudspår", "Writing, reporting, editorial, communications, research and culture/NGO."),
-        "adjacent": ("Närliggande möjligheter", "Transferable content, coordination, research-support and communications work."),
-        "bridge": ("Flexibelt / extra", "Part-time, temporary and lower-barrier work."),
+        "core": ("Career-track", "Handledande, samordnande, utbildande och relationsnära roller där Grace befintliga erfarenhet kommer till tydlig användning."),
+        "adjacent": ("Adjacent", "Närliggande roller där handledning, samordning, stöd och tryggt ledarskap kan överföras till en ny miljö."),
+        "bridge": ("Extra-income / flexible", "Deltid, tidsbegränsade roller och andra arbeten som kan fungera som en trygg bro till nästa steg."),
     }.get(lane, (lane.title(), ""))
 
 
-def render_visual(path: Path, jobs: list[Jobb], cases_data: dict, vault: dict):
+def render_visual(path: Path, jobs: list[Job], cases_data: dict, vault: dict):
     path.parent.mkdir(parents=True, exist_ok=True)
     counts = case_counts(cases_data)
     active_deadlines = 0
@@ -152,7 +152,7 @@ def render_visual(path: Path, jobs: list[Jobb], cases_data: dict, vault: dict):
   <circle cx="0" cy="0" r="70" fill="{PALETTE["paper"]}" stroke="{PALETTE["cobalt"]}" stroke-width="5"/>
   <text x="0" y="-12" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="{PALETTE["ink"]}">1 · FIND</text>
   <text x="0" y="21" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="{PALETTE["cobalt"]}">{found}</text>
-  <text x="0" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">aktuella jobb</text>
+  <text x="0" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="{PALETTE["ink"]}">live leads</text>
 </g>
 <g transform="translate(518 290)">
   <circle cx="0" cy="0" r="78" fill="{PALETTE["pale"]}" stroke="{PALETTE["blue"]}" stroke-width="5"/>
@@ -181,11 +181,11 @@ def render_job_vault(path: Path, vault: dict, cases_data: dict):
     active = [r for r in records if r.get("in_latest_scan")]
     historic = [r for r in records if not r.get("in_latest_scan")]
     lines = [
-        "# Jobb Vault", "",
+        "# Job Vault", "",
         f"**{len(records)} jobs preserved** · {len(active)} in the latest scan · {len(historic)} historical", "",
         "Nothing disappears when a new sourcing run replaces the shortlist. The full machine-readable history is in CareerHub/data/job_vault.json.", "",
         "## Current / recently sourced", "",
-        "| Nivå | Roll | Arbetsgivare | Sista dag | First seen | Last seen | State | Action |",
+        "| Rank | Role | Employer | Deadline | First seen | Last seen | State | Action |",
         "|---|---|---|---|---|---|---|---|",
     ]
     for r in active[:100]:
@@ -198,9 +198,9 @@ def render_job_vault(path: Path, vault: dict, cases_data: dict):
         if case:
             action = f"[case #{case.get('issue_number')}]({case.get('issue_url')})"
         else:
-            action = f"**[Välj →]({choose_link(Jobb.from_dict(r), 3)})**"
+            action = f"**[Choose →]({choose_link(Job.from_dict(r), 3)})**"
         lines.append(f"| {rank} | [{title}]({url}) | {company} | {deadline} | {str(r.get('first_seen',''))[:10]} | {str(r.get('last_seen',''))[:10]} | active | {action} |")
-    lines += ["", "## Historical / no longer in the latest shortlist", "", "| Roll | Arbetsgivare | Sista dag | Last seen | State | Action |", "|---|---|---|---|---|---|"]
+    lines += ["", "## Historical / no longer in the latest shortlist", "", "| Role | Employer | Deadline | Last seen | State | Action |", "|---|---|---|---|---|---|"]
     for r in historic[:180]:
         deadline, _ = deadline_info(r.get("deadline", ""))
         title = str(r.get("title") or "").replace("|", "\\|")
@@ -210,7 +210,7 @@ def render_job_vault(path: Path, vault: dict, cases_data: dict):
         if case:
             action = f"[case #{case.get('issue_number')}]({case.get('issue_url')})"
         else:
-            action = f"**[Välj →]({choose_link(Jobb.from_dict(r), 2)})**"
+            action = f"**[Choose →]({choose_link(Job.from_dict(r), 2)})**"
         lines.append(f"| [{title}]({url}) | {company} | {deadline} | {str(r.get('last_seen',''))[:10]} | {r.get('deadline_state') or 'historic'} | {action} |")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -224,7 +224,7 @@ def render_applications(path: Path, cases_data: dict):
         "# Applications & Follow-up", "",
         "One chosen job becomes one CareerHub case. This is the process monitor after the job has left the sourcing board.", "",
         "## Active cases", "",
-        "| Prioritet | Roll | Arbetsgivare | Läge | Sista dag | Next action | Next date | Case |",
+        "| Priority | Role | Employer | Status | Deadline | Next action | Next date | Case |",
         "|---|---|---|---|---|---|---|---|",
     ]
     for c in active:
@@ -236,10 +236,10 @@ def render_applications(path: Path, cases_data: dict):
         next_action = str(c.get("next_action") or "—").replace("|", "\\|")
         next_date = str(c.get("next_action_date") or "—")[:10]
         lines.append(f"| **{rank_label(c.get('priority'))}** | [{title}]({c.get('url') or issue_url}) | {company} | **{STATUS_LABELS.get(c.get('status'), c.get('status'))}** | {deadline} | {next_action} | {next_date} | [#{issue}]({issue_url}) |")
-    lines += ["", "## Closed cases", "", "| Roll | Arbetsgivare | Outcome | Updated |", "|---|---|---|---|"]
+    lines += ["", "## Closed cases", "", "| Role | Employer | Outcome | Updated |", "|---|---|---|---|"]
     for c in closed[-60:]:
         lines.append(f"| {str(c.get('title') or '').replace('|','\\|')} | {str(c.get('company') or '').replace('|','\\|')} | {STATUS_LABELS.get(c.get('status'), c.get('status'))} | {str(c.get('status_updated_at') or '')[:10]} |")
-    lines += ["", "## Läge model", "", "Chosen → Preparing → Ready to apply → Applied → Contacted → Portfolio/Test → Interview/Meeting 1–5 → Offer / Denied / Withdrawn"]
+    lines += ["", "## Status model", "", "Chosen → Preparing → Ready to apply → Applied → Contacted → Portfolio/Test → Interview/Meeting 1–5 → Offer / Denied / Withdrawn"]
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -272,7 +272,7 @@ def case_actions(case: dict) -> str:
     return " · ".join(actions[:3]) or f"[Update status](https://github.com/{REPO}/issues/new?template=careerhub-update-status.yml)"
 
 
-def render_lane(lines: list[str], lane: str, jobs: list[Jobb], cases_by_job: dict):
+def render_lane(lines: list[str], lane: str, jobs: list[Job], cases_by_job: dict):
     title, explanation = lane_title(lane)
     lines += [f"### {title}", "", explanation, ""]
     visible = jobs[:8]
@@ -292,12 +292,12 @@ def render_lane(lines: list[str], lane: str, jobs: list[Jobb], cases_by_job: dic
             choose = f"Chosen · [case #{c.get('issue_number')}]({c.get('issue_url')})"
         else:
             default_priority = 5 if index < 2 else 4 if index < 5 else 3
-            choose = f"**[Välj →]({choose_link(job, default_priority)})**"
+            choose = f"**[Choose →]({choose_link(job, default_priority)})**"
         lines.append(f"| {priority_label(index)} | {source_link} | {company} | {deadline} | {why_short(job).replace('|','\\|')} | {choose} |")
     lines += ["", f"_Showing the top {len(visible)} of {len(jobs)} current leads in this group._", ""]
 
 
-def render_control_room(path: Path, jobs: list[Jobb], lane: str, cases_data: dict, vault: dict):
+def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict, vault: dict):
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     by_lane = {"core": [j for j in jobs if j.lane == "core"], "adjacent": [j for j in jobs if j.lane == "adjacent"], "bridge": [j for j in jobs if j.lane == "bridge"]}
     cases = cases_data.get("cases", [])
@@ -311,18 +311,18 @@ def render_control_room(path: Path, jobs: list[Jobb], lane: str, cases_data: dic
         "Allt annat sköts i bakgrunden. Grace behöver bara följa de tre stegen.", "",
         "---", "",
         "## 1 · Hitta jobb", "",
-        f"**Senast uppdaterad:** {now} · **{len(jobs)} aktuella jobb** · **{vault.get('total_jobs_ever_seen', len(jobs))} jobb i historiken**", "",
-        "**När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 seconds**. Sidan uppdateras när sökningen är klar.", "",
+        f"**Senast uppdaterad:** {now} · **{len(jobs)} live leads** · **{vault.get('total_jobs_ever_seen', len(jobs))} jobs in the historic vault**", "",
+        "**När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 sekunder**. Sidan uppdateras när sökningen är klar.", "",
         f"**[Uppdatera jobb →](https://github.com/{REPO}/actions/workflows/careerhub-scan.yml)** · **[Öppna jobbhistoriken →](JOB_VAULT.md)** · **[Jag hittade ett jobb själv →]({choose_any_link()})**", "",
     ]
     for lane_name in ["core", "adjacent", "bridge"]:
         if lane == "all" or lane == lane_name:
             render_lane(lines, lane_name, by_lane[lane_name], cases_by_job)
     lines += [
-        "---", "", "## 2 · Välj job", "",
-        "Välj only the jobs worth spending attention on. **Välj →** öppnar en färdig jobbsida. Du behöver normalt inte ändra något – tryck bara på **Skapa jobbsida**.", "",
+        "---", "", "## 2 · Välj jobb", "",
+        "Välj bara de jobb som känns värda din tid. **Välj →** öppnar en färdig jobbsida. Du behöver normalt inte ändra något – tryck bara på **Skapa jobbsida**.", "",
         "Karriärhubben prioriterar jobbet, går igenom hur väl det passar Grace och förbereder ett ansökningsunderlag.", "",
-        "Prioritet scale: **5 Sök · 4 Mycket intressant · 3 Intressant · 2 Svagare träff · 1 Avvakta**", "",
+        "Prioritet: **5 Sök · 4 Mycket intressant · 3 Intressant · 2 Svagare träff · 1 Avvakta**", "",
     ]
     if active_cases:
         lines += ["| Nivå | Jobb | Läge | Sista dag | Nästa steg |", "|---|---|---|---|---|"]
@@ -335,17 +335,17 @@ def render_control_room(path: Path, jobs: list[Jobb], lane: str, cases_data: dic
             company = str(c.get("company") or "").replace("|", "\\|")
             lines.append(f"| **{c.get('priority',3)} / 5 · {rank_label(c.get('priority'))}** | [{title} — {company}]({issue_url}) | **{STATUS_LABELS.get(c.get('status'), c.get('status'))}** | {deadline} | {case_actions(c)} |")
     else:
-        lines += ["Inga jobb är valda ännu. Use **Välj →** on any job above.", ""]
+        lines += ["Inga jobb är valda ännu. Tryck **Välj →** på ett jobb ovan.", ""]
     lines += [
         "", f"**[Öppna ansökningsöversikten →](APPLICATIONS.md)**", "",
         "---", "", "## 3 · Sök", "",
-        "För varje valt jobb förbereder hubben en tydlig matchning, kort arbetsgivarbild och ett redigerbart ansökningsutkast.", "",
+        "För varje valt jobb förbereder hubben en tydlig matchning, en kort arbetsgivarbild och ett redigerbart ansökningsutkast.", "",
         "1. Öppna jobbsidan.",
         "2. Ladda ner och justera ansökningsunderlaget.",
         "3. Skicka ansökan till arbetsgivaren.",
-        "4. Markera **Ansökan skickad** här.",
+        "4. Markera **Ansökan skickad**.",
         "5. Följ sedan processen: kontakt, arbetsprov/test, intervju eller möte 1–5, erbjudande eller avslut.", "",
-        "### Sista dag reminders", "",
+        "### Påminnelser", "",
         "Valda jobb kan få automatiska påminnelser före sista ansökningsdag. Påminnelser på jobbsidan kräver inget extra. E-post och sms kan kopplas på senare utan att kontaktuppgifter behöver ligga i vanliga filer.", "",
         "**[Ställ in påminnelser →](SETUP.md#deadline-reminders)**", "",
         "---", "",

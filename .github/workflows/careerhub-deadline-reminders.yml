@@ -1,4 +1,4 @@
-name: CareerHub — Deadline Reminders
+name: Grace · Påminnelser om sista ansökningsdag
 
 on:
   workflow_dispatch:
@@ -35,28 +35,28 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
+      - name: Förbered karriärhubben
         run: pip install -r CareerHub/requirements.txt
 
-      - name: Align with latest main
+      - name: Hämta senaste versionen
         run: |
           git fetch origin main
           git checkout main
           git reset --hard origin/main
 
-      - name: Send due reminders
+      - name: Skicka aktuella påminnelser
         run: python CareerHub/scripts/deadline_notify.py
 
-      - name: Persist reminder log
+      - name: Spara påminnelsehistoriken
         run: |
           if git diff --quiet -- CareerHub/data/applications.json; then
-            echo "No reminder state changes."
+            echo "Inga nya påminnelser att spara."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add CareerHub/data/applications.json
-          git commit -m "CareerHub: record deadline reminders"
+          git commit -m "Karriärhubben: spara skickade påminnelser"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main

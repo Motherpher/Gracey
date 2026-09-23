@@ -9,6 +9,12 @@ Det mesta är redan förberett. Grace behöver normalt bara använda [kontrollru
 3. Vänta ungefär 30–90 sekunder.
 4. Gå tillbaka till kontrollrummet och uppdatera sidan.
 
+## Analysera ett jobb
+
+När Grace ser ett intressant jobb trycker hon på **JA — Analysera**. Hon behöver inte välja analysmetod eller sätta någon egen poäng. Karriärhubben kör hela analysflödet i bakgrunden och förbereder jobbsidan och ansökningsunderlaget.
+
+Ett jobb som hittas utanför hubben kan läggas in via **Analysera ett jobb jag hittat själv**.
+
 ## Påminnelser
 
 Påminnelser på GitHubs jobbsidor fungerar utan extra tjänster.

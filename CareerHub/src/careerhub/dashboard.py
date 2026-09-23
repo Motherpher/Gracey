@@ -4,6 +4,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
+from zoneinfo import ZoneInfo
 
 from dateutil import parser as dtparser
 
@@ -44,20 +45,21 @@ def priority_label(index: int) -> str:
 
 def deadline_info(value: str) -> tuple[str, int | None]:
     if not value:
-        return "No deadline shown", None
+        return "Datum saknas", None
     try:
         d = dtparser.parse(str(value))
         if d.tzinfo is None:
             d = d.replace(tzinfo=timezone.utc)
         days = (d.date() - datetime.now(timezone.utc).date()).days
-        label = d.strftime("%d %b")
+        months = ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+        label = f"{d.day} {months[d.month - 1]}"
         if days < 0:
-            return f"{label} · closed", days
+            return f"{label} · stängd", days
         if days == 0:
-            return f"{label} · today", days
+            return f"{label} · idag", days
         if days == 1:
-            return f"{label} · 1 day", days
-        return f"{label} · {days} days", days
+            return f"{label} · 1 dag", days
+        return f"{label} · {days} dagar", days
     except Exception:
         return str(value), None
 
@@ -65,36 +67,39 @@ def deadline_info(value: str) -> tuple[str, int | None]:
 def why_short(job: Job) -> str:
     reasons = []
     blob = job.search_blob
-    if job.work_mode:
-        reasons.append(job.work_mode)
+    work_mode = (job.work_mode or "").lower()
+    mode_labels = {"remote": "distans", "hybrid": "hybrid", "onsite": "på plats"}
+    if work_mode:
+        reasons.append(mode_labels.get(work_mode, work_mode))
     elif "remote" in blob or "distans" in blob:
-        reasons.append("remote")
+        reasons.append("distans")
     if any(x in blob for x in ["part time", "part-time", "deltid"]):
-        reasons.append("part-time")
+        reasons.append("deltid")
     if job.matched_query:
-        reasons.append(f"matches {job.matched_query}")
-    return " · ".join(reasons[:2]) or "matched search profile"
+        reasons.append(f"träff på {job.matched_query}")
+    return " · ".join(reasons[:2]) or "matchar Grace profil"
 
 
 def choose_link(job: Job, default_priority: int = 3) -> str:
-    title = f"[CareerHub Job] {job.company or 'Employer'} — {job.title}"
+    title = f"[CareerHub Job] {job.company or 'Arbetsgivare'} — {job.title}"
+    lane_labels = {"core": "Huvudspår", "adjacent": "Närliggande möjlighet", "bridge": "Flexibelt / extra"}
     body = (
-        "### Job URL\n"
+        "### Länk till jobbet\n"
         f"{job.url}\n\n"
-        "### Job ID\n"
+        "### Jobb-ID\n"
         f"{job.id}\n\n"
-        "### Role\n"
+        "### Roll\n"
         f"{job.title}\n\n"
-        "### Employer\n"
+        "### Arbetsgivare\n"
         f"{job.company}\n\n"
-        "### Lane\n"
-        f"{job.lane}\n\n"
-        "### Priority 1–5\n"
+        "### Spår\n"
+        f"{lane_labels.get(job.lane, job.lane)}\n\n"
+        "### Prioritet 1–5\n"
         f"{default_priority}\n\n"
-        "### Deadline\n"
+        "### Sista ansökningsdag\n"
         f"{job.deadline or ''}\n\n"
-        "### Job text (optional)\n"
-        "_Leave blank unless the site blocks automated retrieval._"
+        "### Jobbtext (valfritt)\n"
+        "_Lämna tomt om länken går att läsa._"
     )
     return f"https://github.com/{REPO}/issues/new?title={quote(title)}&body={quote(body)}"
 
@@ -108,14 +113,14 @@ def status_update_link(case: dict, status: str) -> str:
     label = STATUS_LABELS.get(status, status)
     title = f"[CareerHub Update] #{issue} — {label}"
     body = (
-        "### Grace · Karriärhubben case issue\n"
+        "### Jobbsidans nummer\n"
         f"{issue}\n\n"
-        "### New status\n"
-        f"{status}\n\n"
-        "### Date\n"
-        f"{datetime.now(timezone.utc).date().isoformat()}\n\n"
-        "### Next action (optional)\n\n"
-        "### Next action date (optional)\n"
+        "### Nytt läge\n"
+        f"{label}\n\n"
+        "### Datum\n"
+        f"{datetime.now(ZoneInfo('Europe/Stockholm')).date().isoformat()}\n\n"
+        "### Nästa steg\n\n"
+        "### Datum för nästa steg\n"
     )
     return f"https://github.com/{REPO}/issues/new?title={quote(title)}&body={quote(body)}"
 
@@ -305,11 +310,13 @@ def render_lane(lines: list[str], lane: str, jobs: list[Job], cases_by_job: dict
             default_priority = 5 if index < 2 else 4 if index < 5 else 3
             choose = f"**[Välj →]({choose_link(job, default_priority)})**"
         lines.append(f"| {priority_label(index)} | {source_link} | {company} | {deadline} | {why_short(job).replace('|','\\|')} | {choose} |")
-    lines += ["", f"_Visar de {len(visible)} of {len(jobs)} mest relevanta jobben i den här gruppen._", ""]
+    lines += ["", f"_Visar {len(visible)} av {len(jobs)} mest relevanta jobb i den här gruppen._", ""]
 
 
 def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict, vault: dict):
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    now_local = datetime.now(ZoneInfo("Europe/Stockholm"))
+    months = ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+    now = f"{now_local.day} {months[now_local.month - 1]} {now_local.year} kl. {now_local.strftime('%H:%M')}"
     by_lane = {"core": [j for j in jobs if j.lane == "core"], "adjacent": [j for j in jobs if j.lane == "adjacent"], "bridge": [j for j in jobs if j.lane == "bridge"]}
     cases = cases_data.get("cases", [])
     cases_by_job = {c.get("job_id"): c for c in cases if c.get("job_id")}

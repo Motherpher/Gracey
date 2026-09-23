@@ -96,16 +96,29 @@ def candidate_terms(profile: dict) -> list[str]:
         if src.get("verification_status") == "verified"
     }
     terms = []
+    verified_evidence_ids = set()
     for item in profile.get("evidence", []):
         source_ids = set(item.get("source_ids", []))
         if item.get("status") != "verified":
             continue
         if not source_ids or not source_ids.issubset(verified_sources):
             continue
+        evidence_id = str(item.get("id") or "").strip()
+        if evidence_id:
+            verified_evidence_ids.add(evidence_id)
         claim = str(item.get("claim") or "").strip()
         if claim:
             terms.append(claim)
-    return [t.lower() for t in terms if t]
+
+    positioning = profile.get("positioning", {}) or {}
+    derived = set(positioning.get("derived_from_evidence_ids", []) or [])
+    if derived and derived.issubset(verified_evidence_ids):
+        terms += [str(x).strip() for x in positioning.get("functional_core", []) if str(x).strip()]
+        headline = str(positioning.get("headline") or "").strip()
+        if headline:
+            terms.append(headline)
+
+    return list(dict.fromkeys(t.lower() for t in terms if t))
 
 
 def _tokens(text: str) -> set[str]:

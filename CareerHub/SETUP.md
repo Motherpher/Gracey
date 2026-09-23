@@ -1,33 +1,35 @@
 # Inställningar
 
-Det mesta är redan förberett. Grace behöver normalt bara använda [kontrollrummet](CONTROL_ROOM.md).
+Det mesta är redan klart. När du vill använder du [karriärhubben](CONTROL_ROOM.md) och väljer nästa steg därifrån.
 
-## Första gången
+## När du vill se nya jobb
 
-1. Öppna **Uppdatera jobb** i kontrollrummet.
-2. Välj **Run workflow** på GitHub.
+1. Öppna **Uppdatera jobb**.
+2. Tryck på **Run workflow**.
 3. Vänta ungefär 30–90 sekunder.
-4. Gå tillbaka till kontrollrummet och uppdatera sidan.
+4. Gå tillbaka till karriärhubben och uppdatera sidan.
 
-## Analysera ett jobb
+## När du vill analysera ett jobb
 
-När Grace ser ett intressant jobb trycker hon på **JA — Analysera**. Hon behöver inte välja analysmetod eller sätta någon egen poäng. Karriärhubben kör hela analysflödet i bakgrunden och förbereder jobbsidan och ansökningsunderlaget.
+När ett jobb väcker ditt intresse väljer du **JA — Analysera**.
 
-Ett jobb som hittas utanför hubben kan läggas in via **Analysera ett jobb jag hittat själv**.
+Vi går då igenom rollen, arbetsgivaren, kraven och hur väl möjligheten passar din profil. Därefter förbereds jobbsidan och ett första ansökningsunderlag.
+
+Har du hittat jobbet någon annanstans använder du **Analysera ett jobb jag hittat själv**.
 
 ## Påminnelser
 
-Påminnelser på GitHubs jobbsidor fungerar utan extra tjänster.
+När du vill kan du få påminnelser före sista ansökningsdag och hålla nästa steg samlat på jobbsidan.
 
-E-post och sms kan läggas till senare. Kontaktuppgifterna ska då läggas som privata repository secrets och inte skrivas i någon fil.
+E-post och sms kan läggas till senare.
 
-## När Grace är redo
+## När du vill göra träffarna ännu skarpare
 
-Komplettera profilen med sådant som ännu saknas, framför allt:
+Du kan komplettera profilen med:
 
-- var hon vill arbeta geografiskt,
+- var du vill arbeta,
 - formell yrkestitel och utbildning,
-- vilka roller hon absolut vill respektive inte vill ha,
+- roller du särskilt vill ha eller undvika,
 - önskad arbetstid,
 - lönenivå,
 - aktuellt CV.

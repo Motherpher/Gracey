@@ -81,7 +81,7 @@ def why_short(job: Job) -> str:
         reasons.append("deltid")
     if job.matched_query:
         reasons.append(f"träff på {job.matched_query}")
-    return " · ".join(reasons[:2]) or "matchar din profil"
+    return " · ".join(reasons[:2]) or "relevant för sökningen"
 
 
 def choose_link(job: Job, default_priority: int = 3) -> str:
@@ -133,9 +133,9 @@ def status_update_link(case: dict, status: str) -> str:
 
 def lane_title(lane: str) -> tuple[str, str]:
     return {
-        "core": ("Huvudspår", "Roller där din erfarenhet av handledning, samordning, lärande och relationsskapande kommer till sin rätt."),
-        "adjacent": ("Närliggande möjligheter", "Roller där du kan ta med dina styrkor in i en ny miljö utan att börja om från början."),
-        "bridge": ("Flexibelt / extra", "Flexibla alternativ som ger dig rörelse, handlingsutrymme och en smidig väg vidare."),
+        "core": ("Huvudspår", "Roller som ligger närmast den aktuella sökinriktningen."),
+        "adjacent": ("Närliggande möjligheter", "Roller som ligger nära huvudspåret och kan vara värda att jämföra."),
+        "bridge": ("Flexibelt / extra", "Alternativ med ett flexiblare upplägg eller en enklare väg in."),
     }.get(lane, (lane.title(), ""))
 
 

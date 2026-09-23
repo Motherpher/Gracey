@@ -10,10 +10,10 @@ Det här är Grace egen arbetsyta för nästa steg i arbetslivet.
 Hubben samlar relevanta jobb och visar de mest intressanta först.
 
 **2. Välj jobb**  
-Grace väljer själv vad som känns värt att gå vidare med.
+När ett jobb ser intressant ut svarar Grace bara på frågan **Vill du analysera det här jobbet?** Ett ja startar hela analysen automatiskt.
 
 **3. Sök**  
-Varje valt jobb får ett tydligt ansökningsunderlag och kan följas hela vägen från ansökan till intervju, erbjudande eller avslut.
+Varje analyserat jobb får en tydlig matchning och ett ansökningsunderlag och kan följas hela vägen från ansökan till intervju, erbjudande eller avslut.
 
 **[Öppna karriärhubben →](CareerHub/CONTROL_ROOM.md)**
 

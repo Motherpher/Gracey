@@ -1,0 +1,79 @@
+name: CareerHub — Välj ett jobb
+description: Add a job you found elsewhere to CareerHub and prepare the application case.
+title: "[CareerHub Job] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Step 2 — Choose job
+
+        Paste the job link. CareerHub will create the case, run HRDM and prepare the application pack.
+
+        **Public repo notice:** do not include private contact details or confidential notes here.
+
+  - type: input
+    id: job_url
+    attributes:
+      label: Länk till jobbet
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: Roll
+      description: Optional, but useful if the job board blocks automated reading.
+
+  - type: input
+    id: employer
+    attributes:
+      label: Arbetsgivare
+      description: Optional.
+
+  - type: dropdown
+    id: lane
+    attributes:
+      label: Lane
+      description: Why are you considering this job?
+      options:
+        - core — career-track role
+        - adjacent — transferable/adjacent role
+        - bridge — extra-income/flexible role
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioritet 1–5
+      description: 5 = Must apply, 1 = Maybe.
+      options:
+        - "5 — Must apply"
+        - "4 — High"
+        - "3 — Medium"
+        - "2 — Low"
+        - "1 — Maybe"
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Sista ansökningsdag
+      description: Optional. Use YYYY-MM-DD if known.
+      placeholder: "2026-10-15"
+
+  - type: textarea
+    id: job_text
+    attributes:
+      label: Jobbtext (valfritt)
+      description: Paste only when the website blocks automated reading.
+
+  - type: checkboxes
+    id: public_safe
+    attributes:
+      label: Public-safe request
+      options:
+        - label: I have not included private or sensitive personal information.
+          required: true

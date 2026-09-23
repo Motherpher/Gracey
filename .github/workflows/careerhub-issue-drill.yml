@@ -96,9 +96,9 @@ jobs:
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           UPDATE_URL="${{ github.server_url }}/${{ github.repository }}/issues/new?template=careerhub-update-status.yml"
           gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "$(cat <<EOF
-          ## Steg 3 — Sök
+          ## Din analys är klar
 
-          Jobbet är nu **analyserat**, prioriterat och sparat i Karriärhubben. Den fulla matchningsanalysen och ansökningsunderlaget är klara.
+          Vi har gått igenom jobbet och förberett nästa steg åt dig. Matchningsanalysen och ansökningsunderlaget är klara.
 
           **[Hämta ansökningsunderlaget →]($RUN_URL)**
 
@@ -111,11 +111,11 @@ jobs:
 
           **[Uppdatera ansökans läge →]($UPDATE_URL)**
 
-          Jobbet ligger kvar i historiken även när annonsen inte längre finns i den aktuella listan.
+          Jobbet finns kvar i historiken, så du kan återvända till det när du vill.
           EOF
           )"
 
       - name: Förklara om jobbsidan inte gick att läsa
         if: failure()
         run: |
-          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "Karriärhubben kunde inte läsa klart den här annonsen automatiskt. Det vanligaste är att jobbsidan blockerar automatisk läsning. Öppna **Analysera ett jobb** igen och klistra in annonstexten under **Jobbtext (valfritt)**."
+          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "Vi kunde inte läsa hela annonsen från länken. Öppna **Analysera ett jobb** igen och klistra in annonstexten under **Jobbtext (valfritt)**, så tar vi det därifrån."

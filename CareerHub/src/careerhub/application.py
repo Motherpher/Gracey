@@ -37,14 +37,14 @@ def run_ai_application(job: dict, profile: dict, hrdm: dict, lane: str) -> dict 
         },
     }
     length_instruction = "Keep the cover letter compact and practical." if lane == "bridge" else "Write a focused one-page professional cover letter."
-    prompt = f"""Create an application package from the completed HRDM-R analysis.
+    prompt = f"""Skapa ett ansökningsunderlag utifrån den genomförda matchningsanalysen.
 
 Rules:
-- Use only candidate evidence supplied below.
+- Använd endast uppgifter om Grace som finns i underlaget nedan.
 - Never invent dates, employers, tools, language proficiency, qualifications or outcomes.
 - Preserve uncertainty as uncertainty.
 - {length_instruction}
-- The letter should sound like a human writer, not HR boilerplate.
+- Skriv naturlig, vuxen och idiomatisk svenska. Texten ska låta som en människa, inte som en mall.
 - Prioritise evidence directly linked to the HRDM assessment zones and FunctionCore.
 - Do not mention HRDM in the application letter.
 - Return structured JSON only.
@@ -68,7 +68,7 @@ HRDM:
 
 
 def fallback_application(job: dict, profile: dict, hrdm: dict) -> dict:
-    name = profile.get("identity", {}).get("name", "Candidate")
+    name = profile.get("identity", {}).get("name", "Grace")
     role = job.get("title") or "the role"
     company = job.get("company") or "your organisation"
     matches = hrdm.get("candidate_positioning", {}).get("strong_matches", [])
@@ -83,7 +83,7 @@ def fallback_application(job: dict, profile: dict, hrdm: dict) -> dict:
         "cv_profile": "Pending HRDM/application drafting.",
         "cv_bullets": [],
         "interview_notes": [],
-        "claims_check": ["No private or unsupported candidate claims should be added without verification."],
+        "claims_check": ["Lägg inte till privata eller obelagda uppgifter utan att Grace har bekräftat dem."],
     }
 
 

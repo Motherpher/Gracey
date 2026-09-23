@@ -1,4 +1,4 @@
-name: CareerHub — Choose Job & Prepare Pack
+name: Grace · Förbered valt jobb
 
 on:
   issues:
@@ -36,21 +36,21 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install CareerHub
+      - name: Förbered karriärhubben
         run: pip install -r CareerHub/requirements.txt
 
-      - name: Align with latest main
+      - name: Hämta senaste versionen
         run: |
           git fetch origin main
           git checkout main
           git reset --hard origin/main
 
-      - name: Read chosen-job request
+      - name: Läs valt jobb
         run: |
           mkdir -p /tmp/careerhub-request
           python CareerHub/scripts/issue_request.py             --event "$GITHUB_EVENT_PATH"             --out /tmp/careerhub-request
 
-      - name: Build HRDM and application pack
+      - name: Förbered matchning och ansökan
         run: |
           JOB_URL="$(cat /tmp/careerhub-request/job_url.txt)"
           LANE="$(cat /tmp/careerhub-request/lane.txt)"
@@ -63,12 +63,12 @@ jobs:
 
           cp /tmp/careerhub-request/request.json "$OUT/request.json"
 
-      - name: Register chosen job and refresh CareerHub
+      - name: Spara valt jobb och uppdatera översikten
         run: |
           PRIORITY="$(cat /tmp/careerhub-request/priority.txt)"
           python CareerHub/scripts/careerhub.py track             --action choose             --job-json "CareerHub/output/issue-${{ github.event.issue.number }}/job.json"             --issue-number "${{ github.event.issue.number }}"             --issue-url "${{ github.event.issue.html_url }}"             --priority "$PRIORITY"
 
-      - name: Commit CareerHub state
+      - name: Spara förändringen
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -82,7 +82,7 @@ jobs:
             git push origin HEAD:main
           fi
 
-      - name: Upload finished pack
+      - name: Gör ansökningsunderlaget tillgängligt
         uses: actions/upload-artifact@v4
         with:
           name: CareerHub-${{ github.event.issue.number }}-application-pack
@@ -90,32 +90,32 @@ jobs:
           retention-days: 14
           if-no-files-found: error
 
-      - name: Tell the user Step 3 is ready
+      - name: Berätta att ansökningsunderlaget är klart
         if: success()
         run: |
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           UPDATE_URL="${{ github.server_url }}/${{ github.repository }}/issues/new?template=careerhub-update-status.yml"
           gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "$(cat <<EOF
-          ## Step 3 — Apply
+          ## Steg 3 — Sök
 
-          The job is now **chosen**, ranked and stored in CareerHub. The HRDM/application pack is ready.
+          Jobbet är nu **valt**, prioriterat och sparat i Karriärhubben. Ansökningsunderlaget är klart.
 
-          **[Download the application pack →]($RUN_URL)**
+          **[Hämta ansökningsunderlaget →]($RUN_URL)**
 
-          Download **CareerHub-${{ github.event.issue.number }}-application-pack**.
+          Öppna **CareerHub-${{ github.event.issue.number }}-application-pack**.
 
-          Then:
-          1. edit the Word application,
-          2. submit it to the employer,
-          3. return to CareerHub and mark the case **Applied**.
+          Sedan:
+          1. läs och justera Word-underlaget så att det låter som Grace,
+          2. skicka ansökan till arbetsgivaren,
+          3. gå tillbaka till Karriärhubben och markera **Ansökan skickad**.
 
-          **[Update application status →]($UPDATE_URL)**
+          **[Uppdatera ansökans läge →]($UPDATE_URL)**
 
-          CareerHub will keep the job in the historic vault even after it disappears from the live sourcing list.
+          Jobbet ligger kvar i historiken även när annonsen inte längre finns i den aktuella listan.
           EOF
           )"
 
-      - name: Explain retrieval failures
+      - name: Förklara om jobbsidan inte gick att läsa
         if: failure()
         run: |
-          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "CareerHub could not finish this job automatically. A common reason is that the job board blocks automated reading. Open a new **Choose job** request and paste the public job-ad text into **Job text (optional)**."
+          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "Karriärhubben kunde inte läsa klart den här annonsen automatiskt. Det vanligaste är att jobbsidan blockerar automatisk läsning. Öppna **Välj ett jobb** igen och klistra in annonstexten under **Jobbtext (valfritt)**."

@@ -46,24 +46,24 @@ def main():
     body = issue.get("body") or ""
     data = sections(body)
 
-    url = pick(data, "job url", "job link", "annons")
-    lane_raw = pick(data, "lane", "job type", "search lane").lower()
-    if lane_raw.startswith("adjacent"):
+    url = pick(data, "länk till jobbet", "job url", "job link", "annons")
+    lane_raw = pick(data, "spår", "lane", "job type", "search lane").lower()
+    if lane_raw.startswith("adjacent") or lane_raw.startswith("närliggande"):
         lane = "adjacent"
-    elif lane_raw.startswith("bridge") or "extra" in lane_raw:
+    elif lane_raw.startswith("bridge") or "extra" in lane_raw or "flexib" in lane_raw:
         lane = "bridge"
     else:
         lane = "core"
 
-    text = pick(data, "job text")
-    role = pick(data, "role", "job title")
-    employer = pick(data, "employer", "company")
-    deadline = pick(data, "deadline")
-    priority = parse_priority(pick(data, "priority", "rank"))
-    note = pick(data, "note to self", "notes")
+    text = pick(data, "jobbtext", "job text")
+    role = pick(data, "roll", "role", "job title")
+    employer = pick(data, "arbetsgivare", "employer", "company")
+    deadline = pick(data, "sista ansökningsdag", "deadline")
+    priority = parse_priority(pick(data, "prioritet", "priority", "rank"))
+    note = pick(data, "anteckning", "note to self", "notes")
 
     if not url:
-        raise SystemExit("No Job URL found in the CareerHub issue.")
+        raise SystemExit("Ingen jobblänk hittades i formuläret.")
 
     outdir = Path(args.out)
     outdir.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,78 @@
+schema_version: "1.0"
+updated: "2026-09-23T18:55:00+02:00"
+ux_version: "grace-1.0"
+
+defaults:
+  country: "SE"
+  location: ""
+  max_per_query: 20
+  max_total: 120
+  max_age_days: 45
+  remote_allowed: true
+
+lanes:
+  core:
+    description: "Roller där Grace tydligt kan använda handledning, samordning, praktiskt lärande och tryggt ledarskap."
+    weight: 1.0
+    queries:
+      - "handledare"
+      - "instruktör"
+      - "utbildare vård"
+      - "utbildningssamordnare"
+      - "samordnare vård"
+      - "vårdsamordnare"
+      - "patientkoordinator"
+      - "patientvägledare"
+      - "teamledare vård"
+      - "introduktionsansvarig"
+      - "servicekoordinator vård"
+      - "HLR instruktör"
+
+  adjacent:
+    description: "Närliggande roller där hennes sätt att leda, förklara, stödja och se helheten kan överföras."
+    weight: 0.9
+    queries:
+      - "verksamhetssamordnare"
+      - "projektkoordinator"
+      - "utbildningskoordinator"
+      - "kurskoordinator"
+      - "rehabkoordinator"
+      - "bemanningskoordinator"
+      - "planeringssamordnare"
+      - "serviceledare"
+      - "rådgivare vård"
+      - "stödkoordinator"
+      - "onboarding coordinator"
+      - "trainer healthcare"
+
+  bridge:
+    description: "Flexibla roller som kan fungera som en trygg bro till nästa steg."
+    weight: 0.75
+    queries:
+      - "administratör vård"
+      - "vårdadministratör"
+      - "receptionist vård"
+      - "patientservice"
+      - "mottagningskoordinator"
+      - "kundservice vård"
+      - "servicevärd sjukhus"
+      - "bokningskoordinator"
+      - "administrativ samordnare"
+      - "team assistant"
+      - "deltid administratör"
+      - "deltid service"
+
+preference_flags:
+  positive:
+    - "handledning"
+    - "utbildning"
+    - "samordning"
+    - "team"
+    - "hybrid"
+    - "deltid"
+    - "tidsbegränsad"
+  review:
+    - "yrkeslegitimation krävs"
+    - "körkort krävs"
+    - "säkerhetsprövning"
+    - "chefserfarenhet krävs"

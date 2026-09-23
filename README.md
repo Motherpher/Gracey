@@ -1,24 +1,24 @@
-# Graceys Karriärhub
+# Grace · Karriärhubben
 
-Det här är Graceys arbetsyta för nästa steg i arbetslivet.
+![Grace · Karriärhubben](CareerHub/visuals/careerhub-journey.svg)
 
-## Tre steg
+Det här är Grace egen arbetsyta för nästa steg i arbetslivet.
+
+## Tre enkla steg
 
 **1. Hitta jobb**  
-Karriärhubben letar efter relevanta jobb och samlar dem på ett ställe.
+Hubben samlar relevanta jobb och visar de mest intressanta först.
 
 **2. Välj jobb**  
-Grace väljer vilka jobb som är värda att lägga tid på. Varje valt jobb får en egen sida med sista ansökningsdag, prioritet och förberedelser.
+Grace väljer själv vad som känns värt att gå vidare med.
 
 **3. Sök**  
-Hubben hjälper till att ta fram ett första ansökningsunderlag och följer sedan processen från skickad ansökan till kontakt, intervju, erbjudande eller avslut.
+Varje valt jobb får ett tydligt ansökningsunderlag och kan följas hela vägen från ansökan till intervju, erbjudande eller avslut.
 
 **[Öppna karriärhubben →](CareerHub/CONTROL_ROOM.md)**
 
-### Viktigt om integritet
+### Privat arbetsyta
 
-Det här repot är offentligt. Därför ska privata kontaktuppgifter, ekonomiska uppgifter, hälsouppgifter och andra känsliga personuppgifter inte läggas här. Karriärprofilen innehåller bara arbetslivsrelevant information.
+Repot är **privat**. Ändå sparar vi bara sådant som behövs för jobbsökandet. Kontaktuppgifter, privata ekonomiska uppgifter, hälsouppgifter och annat som inte behövs ska inte läggas in.
 
----
-
-Karriärhubben är byggd för att vara enkel att använda. Grace ska inte behöva förstå hur den fungerar bakom kulisserna för att kunna använda den.
+Karriärhubben är byggd för att vara enkel för Grace att använda. Hon ska inte behöva förstå hur något fungerar bakom kulisserna.

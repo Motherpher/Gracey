@@ -60,6 +60,12 @@ CONTEXT_REQUIRED_TITLE_TERMS = [
     "kundservice", "serviceledare", "rådgivare",
 ]
 
+UNVERIFIED_PROFESSION_TITLE_TERMS = [
+    "sjuksköterska", "arbetsterapeut", "socionom", "tandsköterska",
+    "läkare", "psykolog", "fysioterapeut", "medicinsk sekreterare",
+    "vårdadministratör",
+]
+
 REMOTE_US_PATTERNS = [
     "remote - united states", "remote - us", "remote us", "remote, us",
     "united states only", "us only", "u.s. only", "must be based in the us",
@@ -208,7 +214,9 @@ def triage(job: Job, lane_name: str, lane_cfg: dict, profile: dict, defaults: di
 
     uncertainty_patterns = [
         ("language", ["native swedish", "modersmål svenska", "flytande svenska", "fluent swedish"]),
-        ("licence", ["driver's licence", "körkort", "legitimation", "licensed"]),
+        ("driving-licence", ["driver's licence", "körkort"]),
+        ("professional-licence", ["legitimation", "legitimerad", "licensed"]),
+        ("degree", ["högskoleutbildning", "universitetsutbildning", "akademisk examen", "kandidatexamen"]),
         ("security", ["security clearance", "säkerhetsprövning", "säkerhetsklass"]),
     ]
     for flag, patterns in uncertainty_patterns:
@@ -218,6 +226,9 @@ def triage(job: Job, lane_name: str, lane_cfg: dict, profile: dict, defaults: di
     mismatch = _domain_mismatch(job, lane_name, positive_hits)
     if mismatch:
         flags.append("occupational-family-mismatch")
+
+    if any(term in title_l for term in UNVERIFIED_PROFESSION_TITLE_TERMS):
+        flags.append("unverified-profession-in-title")
 
     # Title/role identity carries most of the score. Evidence overlap is supportive,
     # not allowed to turn a software/sales/legal role into a journalism match.
@@ -236,6 +247,12 @@ def triage(job: Job, lane_name: str, lane_cfg: dict, profile: dict, defaults: di
         raw -= 38
     if "remote-us-only-or-us-focused" in flags:
         raw -= 28
+    if "unverified-profession-in-title" in flags:
+        raw -= 35
+    if "professional-licence-requirement-needs-verification" in flags:
+        raw -= 18
+    if "degree-requirement-needs-verification" in flags:
+        raw -= 8
     if any(f.endswith("requirement-needs-verification") for f in flags):
         raw -= 4
     if "language-title-requirement-unconfirmed" in flags:
@@ -260,6 +277,8 @@ def _keep(job: Job, lane_name: str) -> bool:
     if "remote-us-only-or-us-focused" in job.review_flags:
         return False
     if "language-title-requirement-unconfirmed" in job.review_flags:
+        return False
+    if "unverified-profession-in-title" in job.review_flags:
         return False
     minimum = {"core": 55, "adjacent": 52, "bridge": 48}.get(lane_name, 52)
     return job.triage_score >= minimum

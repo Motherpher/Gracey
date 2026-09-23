@@ -1,4 +1,4 @@
-name: Grace · Förbered valt jobb
+name: Grace · Analysera jobb och förbered ansökan
 
 on:
   issues:
@@ -45,12 +45,12 @@ jobs:
           git checkout main
           git reset --hard origin/main
 
-      - name: Läs valt jobb
+      - name: Läs jobbet som ska analyseras
         run: |
           mkdir -p /tmp/careerhub-request
           python CareerHub/scripts/issue_request.py             --event "$GITHUB_EVENT_PATH"             --out /tmp/careerhub-request
 
-      - name: Förbered matchning och ansökan
+      - name: Kör full analys och förbered ansökan
         run: |
           JOB_URL="$(cat /tmp/careerhub-request/job_url.txt)"
           LANE="$(cat /tmp/careerhub-request/lane.txt)"
@@ -63,7 +63,7 @@ jobs:
 
           cp /tmp/careerhub-request/request.json "$OUT/request.json"
 
-      - name: Spara valt jobb och uppdatera översikten
+      - name: Spara analyserat jobb och uppdatera översikten
         run: |
           PRIORITY="$(cat /tmp/careerhub-request/priority.txt)"
           python CareerHub/scripts/careerhub.py track             --action choose             --job-json "CareerHub/output/issue-${{ github.event.issue.number }}/job.json"             --issue-number "${{ github.event.issue.number }}"             --issue-url "${{ github.event.issue.html_url }}"             --priority "$PRIORITY"
@@ -76,7 +76,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No state changes."
           else
-            git commit -m "CareerHub: choose job #${{ github.event.issue.number }}"
+            git commit -m "Karriärhubben: analysera jobb #${{ github.event.issue.number }}"
             git fetch origin main
             git rebase origin/main
             git push origin HEAD:main
@@ -98,7 +98,7 @@ jobs:
           gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "$(cat <<EOF
           ## Steg 3 — Sök
 
-          Jobbet är nu **valt**, prioriterat och sparat i Karriärhubben. Ansökningsunderlaget är klart.
+          Jobbet är nu **analyserat**, prioriterat och sparat i Karriärhubben. Den fulla matchningsanalysen och ansökningsunderlaget är klara.
 
           **[Hämta ansökningsunderlaget →]($RUN_URL)**
 
@@ -118,4 +118,4 @@ jobs:
       - name: Förklara om jobbsidan inte gick att läsa
         if: failure()
         run: |
-          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "Karriärhubben kunde inte läsa klart den här annonsen automatiskt. Det vanligaste är att jobbsidan blockerar automatisk läsning. Öppna **Välj ett jobb** igen och klistra in annonstexten under **Jobbtext (valfritt)**."
+          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "Karriärhubben kunde inte läsa klart den här annonsen automatiskt. Det vanligaste är att jobbsidan blockerar automatisk läsning. Öppna **Analysera ett jobb** igen och klistra in annonstexten under **Jobbtext (valfritt)**."

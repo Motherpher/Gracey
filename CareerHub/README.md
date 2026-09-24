@@ -2,7 +2,7 @@
 
 Grace CareerHub is now registered as an active profile instance of the central motor:
 
-**`Motherpher/CareerHubZero` — 0.2.4-alpha**
+**`Motherpher/CareerHubZero` — 0.2.5-alpha**
 
 ## Current state
 

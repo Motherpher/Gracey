@@ -13,7 +13,7 @@ from .models import Job
 from .state import STATUS_LABELS, TERMINAL_STATUSES, case_counts, rank_label
 
 
-REPO = os.getenv("GITHUB_REPOSITORY", "Hybrismannen/Gracey")
+REPO = os.getenv("GITHUB_REPOSITORY", "Motherpher/Gracey")
 PALETTE = {
     "paper": "#F4D59B",
     "ink": "#1B2220",

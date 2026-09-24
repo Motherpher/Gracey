@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-24T01:37:00+02:00",
+  "updated_at": "2026-09-24T02:50:00+02:00",
   "cases": [
     {
       "job_id": "ee2080b9dd5b523b",
       "issue_number": 2,
-      "issue_url": "https://github.com/Hybrismannen/Gracey/issues/2",
+      "issue_url": "https://github.com/Motherpher/Gracey/issues/2",
       "title": "Bemanningsassistent till urologen",
       "company": "REGION STOCKHOLM",
       "url": "https://arbetsformedlingen.se/platsbanken/annonser/31509011",

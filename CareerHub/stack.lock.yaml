@@ -8,6 +8,5 @@ blockers:
   - CareerHub/src/careerhub
   - CareerHub/scripts/careerhub.py
   - CareerHub/hrdm/HRDM_R_v6.3.md
-  - repository relocation to Motherpher pending
 generated_by: Motherpher/CareerHubZero
-note: Grace is registered and policy-normalised. The legacy motor remains active only until central-motor parity and Motherpher repository relocation are completed.
+note: Motherpher ownership and instance contract are now correct. The legacy local motor remains the only stack-alignment blocker pending central-motor parity and cutover.

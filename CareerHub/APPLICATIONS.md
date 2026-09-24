@@ -6,7 +6,7 @@ Här samlas de jobb du har valt att gå vidare med. Du ser nästa steg direkt oc
 
 | Prioritet | Roll | Arbetsgivare | Läge | Sista dag | Nästa steg | Datum | Jobbsida |
 |---|---|---|---|---|---|---|---|
-| **Intressant** | [Bemanningsassistent till urologen](https://arbetsformedlingen.se/platsbanken/annonser/31509011) | REGION STOCKHOLM | **Kräver omvalidering** | 7 okt | Lägg in verifierade karriärkällor och kör HRDM + ansökningsunderlag på nytt. Det tidigare underlaget är spärrat för extern användning. | 2026-10-07 | [#2](https://github.com/Hybrismannen/Gracey/issues/2) |
+| **Intressant** | [Bemanningsassistent till urologen](https://arbetsformedlingen.se/platsbanken/annonser/31509011) | REGION STOCKHOLM | **Kräver omvalidering** | 7 okt | Lägg in verifierade karriärkällor och kör HRDM + ansökningsunderlag på nytt. Det tidigare underlaget är spärrat för extern användning. | 2026-10-07 | [#2](https://github.com/Motherpher/Gracey/issues/2) |
 
 ## Avslutade
 

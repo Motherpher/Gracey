@@ -12,8 +12,8 @@ Grace CareerHub is now registered as an active profile instance of the central m
 - Historical job vault: **159 jobs preserved**
 - Existing Region Stockholm case: **revalidation required**
 - Local CareerHub motor: **temporary migration dependency**
-- Stack alignment: **blocked until central-motor parity and repository relocation**
-- Stable repository target: **`Motherpher/CareerHub-Grace`**
+- Stack alignment: **blocked only until central-motor parity and local-motor cutover**
+- Repository: **`Motherpher/Gracey`**
 
 The absence of current matched jobs is intentional while the verified career profile is empty. Search wishes may modify searching, but they never become evidence about Grace.
 

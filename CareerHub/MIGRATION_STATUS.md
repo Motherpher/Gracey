@@ -8,7 +8,7 @@ Repository:
 `Motherpher/Gracey`
 
 Central engine binding:
-`Motherpher/CareerHubZero@0.2.4-alpha`
+`Motherpher/CareerHubZero@0.2.5-alpha`
 
 Alignment:
 **BLOCKED — local motor cutover only**

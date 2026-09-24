@@ -1,0 +1,12 @@
+careerhub:
+  instance_id: grace
+  engine:
+    repository: Motherpher/CareerHubZero
+    version: 0.2.4-alpha
+profile:
+  path: CareerHub/profile/candidate.yaml
+search:
+  path: CareerHub/config/search_profile.yaml
+state:
+  job_vault: CareerHub/data/job_vault.json
+  applications: CareerHub/data/applications.json

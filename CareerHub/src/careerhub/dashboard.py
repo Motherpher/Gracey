@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -12,7 +13,7 @@ from .models import Job
 from .state import STATUS_LABELS, TERMINAL_STATUSES, case_counts, rank_label
 
 
-REPO = "Hybrismannen/Gracey"
+REPO = os.getenv("GITHUB_REPOSITORY", "Hybrismannen/Gracey")
 PALETTE = {
     "paper": "#F4D59B",
     "ink": "#1B2220",
@@ -257,7 +258,7 @@ def render_applications(path: Path, cases_data: dict):
         issue_url = c.get("issue_url") or f"https://github.com/{REPO}/issues/{issue}"
         next_action = str(c.get("next_action") or "—").replace("|", "\\|")
         next_date = str(c.get("next_action_date") or "—")[:10]
-        lines.append(f"| **{rank_label(c.get('priority'))}** | [{title}]({c.get('url') or issue_url}) | {company} | **{STATUS_LABELS.get(c.get('status'), c.get('status'))}** | {deadline} | {next_action} | {next_date} | [#{issue}]({issue_url}) |")
+        lines.append(f"| **{rank_label(c.get('priority'))}** | [{title}]({c.get('url') or issue_url}) | {company} | **{case_status_label(c)}** | {deadline} | {next_action} | {next_date} | [#{issue}]({issue_url}) |")
     lines += ["", "## Avslutade", "", "| Roll | Arbetsgivare | Utfall | Uppdaterad |", "|---|---|---|---|"]
     for c in closed[-60:]:
         lines.append(f"| {str(c.get('title') or '').replace('|','\\|')} | {str(c.get('company') or '').replace('|','\\|')} | {STATUS_LABELS.get(c.get('status'), c.get('status'))} | {str(c.get('status_updated_at') or '')[:10]} |")
@@ -265,8 +266,16 @@ def render_applications(path: Path, cases_data: dict):
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def case_status_label(case: dict) -> str:
+    if case.get("audit_status") == "pre_firewall_revalidation_required" or case.get("external_use_allowed") is False:
+        return "Kräver omvalidering"
+    return STATUS_LABELS.get(case.get("status"), case.get("status"))
+
+
 def case_actions(case: dict) -> str:
     status = case.get("status")
+    if case.get("audit_status") == "pre_firewall_revalidation_required" or case.get("external_use_allowed") is False:
+        return "Omvalidera först"
     if status in TERMINAL_STATUSES:
         return "—"
     actions = []
@@ -361,14 +370,23 @@ def render_control_room(path: Path, jobs: list[Job], lane: str, cases_data: dict
             lines.append(f"| **{c.get('priority',3)} / 5 · {rank_label(c.get('priority'))}** | [{title} — {company}]({issue_url}) | **{STATUS_LABELS.get(c.get('status'), c.get('status'))}** | {deadline} | {case_actions(c)} |")
     else:
         lines += ["Inga jobb är analyserade ännu. När något känns intressant väljer du **JA — Analysera**.", ""]
+    has_revalidation_block = any(
+        c.get("audit_status") == "pre_firewall_revalidation_required" or c.get("external_use_allowed") is False
+        for c in active_cases
+    )
+    search_intro = (
+        "Ett eller flera äldre ansökningsunderlag är spärrade tills verifierade karriärkällor finns och analysen har körts om."
+        if has_revalidation_block
+        else "När du vill söka ligger underlaget klart efter analysen: en tydlig matchning och ett redigerbart ansökningsutkast."
+    )
     lines += [
         "", f"**[Öppna ansökningsöversikten →](APPLICATIONS.md)**", "",
         "---", "", "## 3 · Sök", "",
-        "När du vill söka ligger underlaget redan klart: en tydlig matchning, en kort bild av rollen och arbetsgivaren, det som talar för och emot – och ett redigerbart ansökningsutkast.", "",
-        "1. Öppna jobbsidan.",
-        "2. Ladda ner och justera ansökningsunderlaget.",
-        "3. Skicka ansökan till arbetsgivaren.",
-        "4. Markera **Ansökan skickad**.",
+        search_intro, "",
+        "1. Säkerställ att kandidatprofilen bygger på verifierade karriärkällor.",
+        "2. Öppna jobbsidan och kör eller omkör analysen.",
+        "3. Läs och justera det nya ansökningsunderlaget.",
+        "4. Skicka först när underlaget är godkänt för extern användning.",
         "5. Följ sedan processen: kontakt, arbetsprov/test, intervju eller möte 1–5, erbjudande eller avslut.", "",
         "### När du vill hålla tempot", "",
         "Du kan få påminnelser före sista ansökningsdag och följa nästa steg direkt från jobbsidan. E-post och sms kan läggas till när du vill.", "",

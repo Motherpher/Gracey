@@ -10,7 +10,7 @@ Välkommen. Här är dina aktuella möjligheter, samlade och förberedda. Du vä
 
 ## 1 · Hitta jobb
 
-**Senast uppdaterad:** 24 sep 2026 kl. 12:10 · **0 aktuella jobb** · **159 jobb i historiken**
+**Senast uppdaterad:** 24 sep 2026 kl. 22:34 · **0 aktuella jobb** · **159 jobb i historiken**
 
 **När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 sekunder**. Sidan uppdateras när sökningen är klar.
 

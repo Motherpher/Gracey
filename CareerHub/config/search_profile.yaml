@@ -1,25 +1,42 @@
-version: "2.0"
-intent: "Find relevant opportunities from Grace's verified career profile, with optional user search preferences."
+version: "2.1"
+intent: "Find relevant opportunities from Grace's verified career evidence, with optional search-only preferences."
+
 geographies:
   country: "SE"
-  location: ""
+  anchors: []
   remote_allowed: true
+  remote_scopes:
+    - SE
+  progressive_widening:
+    - anchor
+    - travel_time
+    - functional_labour_market
+    - region
+    - country
+    - remote
+
 engagement_types: []
 salary: {}
 
 lanes:
   - lane_id: core
-    name: Huvudspår
+    name: "Huvudspår"
+    bucket: core
     priority: 1
+    queries: []
   - lane_id: adjacent
-    name: Närliggande möjligheter
+    name: "Närliggande möjligheter"
+    bucket: adjacent
     priority: 2
+    queries: []
   - lane_id: bridge
-    name: Flexibelt / extra
+    name: "Flexibelt / extra"
+    bucket: bridge
     priority: 3
+    queries: []
 
 negative_filters: []
-triage_rule: "Verified career evidence defines candidate fit. User wishes or needs may only modify search and ranking as a search-only overlay."
+triage_rule: "Verified career evidence defines candidate fit. Search hypotheses may modify sourcing/ranking only."
 
 user_search_overlay:
   source: user_input

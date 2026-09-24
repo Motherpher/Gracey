@@ -10,7 +10,7 @@ Välkommen. Här är dina aktuella möjligheter, samlade och förberedda. Du vä
 
 ## 1 · Hitta jobb
 
-**Senast uppdaterad:** 24 sep 2026 kl. 01:24 · **0 aktuella jobb** · **159 jobb i historiken**
+**Senast uppdaterad:** 24 sep 2026 kl. 02:30 · **0 aktuella jobb** · **159 jobb i historiken**
 
 **När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 sekunder**. Sidan uppdateras när sökningen är klar.
 
@@ -48,7 +48,7 @@ Du behöver inte tänka på metoden bakom. När du vill gå vidare tar vi hand o
 
 | Nivå | Jobb | Läge | Sista dag | Nästa steg |
 |---|---|---|---|---|
-| **3 / 5 · Intressant** | [Bemanningsassistent till urologen — REGION STOCKHOLM](https://github.com/Hybrismannen/Gracey/issues/2) | **Redo att söka** | 7 okt · 14 dagar | [Ansökan skickad](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Update%5D%20%232%20%E2%80%94%20Ans%C3%B6kan%20skickad&body=%23%23%23%20Jobbsidans%20nummer%0A2%0A%0A%23%23%23%20Nytt%20l%C3%A4ge%0AAns%C3%B6kan%20skickad%0A%0A%23%23%23%20Datum%0A2026-09-24%0A%0A%23%23%23%20N%C3%A4sta%20steg%0A%0A%23%23%23%20Datum%20f%C3%B6r%20n%C3%A4sta%20steg%0A) |
+| **3 / 5 · Intressant** | [Bemanningsassistent till urologen — REGION STOCKHOLM](https://github.com/Hybrismannen/Gracey/issues/2) | **Redo att söka** | 7 okt · 13 dagar | [Ansökan skickad](https://github.com/Hybrismannen/Gracey/issues/new?title=%5BCareerHub%20Update%5D%20%232%20%E2%80%94%20Ans%C3%B6kan%20skickad&body=%23%23%23%20Jobbsidans%20nummer%0A2%0A%0A%23%23%23%20Nytt%20l%C3%A4ge%0AAns%C3%B6kan%20skickad%0A%0A%23%23%23%20Datum%0A2026-09-24%0A%0A%23%23%23%20N%C3%A4sta%20steg%0A%0A%23%23%23%20Datum%20f%C3%B6r%20n%C3%A4sta%20steg%0A) |
 
 **[Öppna ansökningsöversikten →](APPLICATIONS.md)**
 

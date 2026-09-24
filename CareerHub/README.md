@@ -1,15 +1,32 @@
 # Grace · Karriärhubben
 
-Välkommen. Här får du en lugn och tydlig överblick över nästa steg i arbetslivet.
+Grace CareerHub is now registered as an active profile instance of the central motor:
 
-Karriärhubben hjälper dig att se möjligheterna, välja vad som är värt din tid och gå vidare först när du själv vill.
+**`Motherpher/CareerHubZero` — 0.2.4-alpha**
 
-## Så använder du den
+## Current state
 
-1. **Hitta jobb** – se aktuella möjligheter och börja med de mest relevanta.
-2. **Välj jobb** – när något känns intressant väljer du **JA — Analysera**.
-3. **Sök** – när du vill gå vidare finns analys och ansökningsunderlag redan förberett.
+- Candidate evidence policy: **verified career sources only**
+- Verified career sources currently loaded: **0**
+- Current profile-matched jobs: **0**
+- Historical job vault: **159 jobs preserved**
+- Existing Region Stockholm case: **revalidation required**
+- Local CareerHub motor: **temporary migration dependency**
+- Stack alignment: **blocked until central-motor parity and repository relocation**
+- Stable repository target: **`Motherpher/CareerHub-Grace`**
 
-Du behöver inte hålla ordning på metod, prioritering eller process. Du väljer riktning och tempo; resten hålls samman åt dig.
+The absence of current matched jobs is intentional while the verified career profile is empty. Search wishes may modify searching, but they never become evidence about Grace.
 
-**[Öppna karriärhubben →](CONTROL_ROOM.md)**
+## Use
+
+1. Add the professional sources that are allowed to build Grace's profile.
+2. Regenerate verified evidence.
+3. Run a new job scan.
+4. Analyse selected jobs.
+5. Use only application artifacts that pass the current evidence rules.
+
+**[Open Grace CareerHub →](CONTROL_ROOM.md)**
+
+System binding: [`instance.yaml`](instance.yaml)  
+Stack state: [`stack.lock.yaml`](stack.lock.yaml)  
+Migration state: [`MIGRATION_STATUS.md`](MIGRATION_STATUS.md)

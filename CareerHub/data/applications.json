@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-23T23:17:13.153687+00:00",
+  "updated_at": "2026-09-24T01:37:00+02:00",
   "cases": [
     {
       "job_id": "ee2080b9dd5b523b",
@@ -13,11 +13,13 @@
       "deadline": "2026-10-07T23:59:59",
       "location": "",
       "priority": 3,
-      "status": "ready",
+      "status": "saved",
       "chosen_at": "2026-09-23T23:17:13.153639+00:00",
-      "status_updated_at": "2026-09-23T23:17:13.153639+00:00",
-      "next_action": "Läs ansökningsunderlaget och sök när du vill",
+      "status_updated_at": "2026-09-24T01:37:00+02:00",
+      "next_action": "Omvalidera HRDM och ansökningsunderlag efter att verifierade karriärkällor har lagts in",
       "next_action_date": "2026-10-07T23:59:59",
+      "audit_status": "pre_firewall_revalidation_required",
+      "external_use_allowed": false,
       "notification_log": [],
       "history": [
         {
@@ -28,7 +30,12 @@
         {
           "at": "2026-09-23T23:16:19.207156+00:00",
           "status": "ready",
-          "event": "Ansökningsunderlaget är klart"
+          "event": "Ansökningsunderlaget skapades före verifierad-karriärevidensbrandväggen"
+        },
+        {
+          "at": "2026-09-24T01:37:00+02:00",
+          "status": "saved",
+          "event": "Pre-firewall-underlaget spärrades för extern användning och kräver omvalidering"
         }
       ]
     }

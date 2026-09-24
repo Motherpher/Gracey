@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 
 from .models import Job, clean_text
 
-UA = "WPB-CareerHub/0.1 (+https://github.com/Hybrismannen/Gracey)"
+UA = "CareerHub/0.2.4 (+https://github.com/Motherpher/CareerHubZero)"
 TIMEOUT = 15
 
 

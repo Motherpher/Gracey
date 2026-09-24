@@ -16,7 +16,7 @@ Din matchningsbara profil bygger nu enbart på **verifierade karriärkällor**. 
 
 Specifika önskemål eller behov får användas som **sökraster**, men de ändrar aldrig din karriärprofil och får aldrig bli belägg i HRDM, CV eller ansökan.
 
-**[Öppna jobbhistoriken →](JOB_VAULT.md)** · **[Analysera ett jobb jag hittat själv →](https://github.com/Hybrismannen/Gracey/issues/new?template=careerhub-analyse-job.yml)**
+**[Öppna jobbhistoriken →](JOB_VAULT.md)** · **[Analysera ett jobb jag hittat själv →](https://github.com/Motherpher/Gracey/issues/new?template=careerhub-analyse-job.yml)**
 
 ### Huvudspår
 Inga aktuella profilmatchade jobb innan verifierade karriärkällor har lagts in.
@@ -35,7 +35,7 @@ När ett jobb väcker ditt intresse kan det analyseras mot jobbets faktiska krav
 
 | Nivå | Jobb | Läge | Sista dag | Nästa steg |
 |---|---|---|---|---|
-| **3 / 5 · Intressant** | [Bemanningsassistent till urologen — REGION STOCKHOLM](https://github.com/Hybrismannen/Gracey/issues/2) | **Kräver omvalidering** | 7 okt | Lägg in verifierade karriärkällor och kör analys + ansökningsunderlag på nytt |
+| **3 / 5 · Intressant** | [Bemanningsassistent till urologen — REGION STOCKHOLM](https://github.com/Motherpher/Gracey/issues/2) | **Kräver omvalidering** | 7 okt | Lägg in verifierade karriärkällor och kör analys + ansökningsunderlag på nytt |
 
 Det tidigare ansökningsunderlaget skapades före evidensbrandväggen och är **spärrat för extern användning**.
 

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-24T20:34:08.122792+00:00",
+  "updated_at": "2026-09-25T10:17:01.609575+00:00",
   "total_jobs_ever_seen": 159,
   "current_jobs": 0,
   "jobs": [
@@ -34,7 +34,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 170
+      "days_to_deadline": 169
     },
     {
       "source": "platsbanken",
@@ -66,7 +66,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -98,7 +98,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 23
+      "days_to_deadline": 22
     },
     {
       "source": "platsbanken",
@@ -130,7 +130,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 10
+      "days_to_deadline": 9
     },
     {
       "source": "platsbanken",
@@ -162,7 +162,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 160
+      "days_to_deadline": 159
     },
     {
       "source": "platsbanken",
@@ -195,8 +195,8 @@
       "last_seen": "2026-09-23T17:10:00.876186+00:00",
       "scan_count": 1,
       "in_latest_scan": false,
-      "deadline_state": "soon",
-      "days_to_deadline": 4
+      "deadline_state": "urgent",
+      "days_to_deadline": 3
     },
     {
       "source": "platsbanken",
@@ -228,7 +228,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 21
+      "days_to_deadline": 20
     },
     {
       "source": "platsbanken",
@@ -260,7 +260,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 172
+      "days_to_deadline": 171
     },
     {
       "source": "platsbanken",
@@ -292,7 +292,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 11
+      "days_to_deadline": 10
     },
     {
       "source": "platsbanken",
@@ -324,7 +324,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 24
+      "days_to_deadline": 23
     },
     {
       "source": "platsbanken",
@@ -356,7 +356,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 171
+      "days_to_deadline": 170
     },
     {
       "source": "platsbanken",
@@ -388,7 +388,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 164
+      "days_to_deadline": 163
     },
     {
       "source": "platsbanken",
@@ -420,7 +420,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 165
+      "days_to_deadline": 164
     },
     {
       "source": "platsbanken",
@@ -452,7 +452,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 20
+      "days_to_deadline": 19
     },
     {
       "source": "platsbanken",
@@ -484,7 +484,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 102
+      "days_to_deadline": 101
     },
     {
       "source": "platsbanken",
@@ -516,7 +516,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 1
+      "days_to_deadline": 0
     },
     {
       "source": "platsbanken",
@@ -547,8 +547,8 @@
       "last_seen": "2026-09-23T17:10:00.876186+00:00",
       "scan_count": 1,
       "in_latest_scan": false,
-      "deadline_state": "historic",
-      "days_to_deadline": 8
+      "deadline_state": "soon",
+      "days_to_deadline": 7
     },
     {
       "source": "platsbanken",
@@ -579,8 +579,8 @@
       "last_seen": "2026-09-23T17:10:00.876186+00:00",
       "scan_count": 1,
       "in_latest_scan": false,
-      "deadline_state": "soon",
-      "days_to_deadline": 4
+      "deadline_state": "urgent",
+      "days_to_deadline": 3
     },
     {
       "source": "platsbanken",
@@ -614,7 +614,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 28
+      "days_to_deadline": 27
     },
     {
       "source": "platsbanken",
@@ -646,7 +646,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 7
+      "days_to_deadline": 6
     },
     {
       "source": "platsbanken",
@@ -680,7 +680,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -714,7 +714,7 @@
       "scan_count": 2,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 20
+      "days_to_deadline": 19
     },
     {
       "source": "platsbanken",
@@ -748,7 +748,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 67
+      "days_to_deadline": 66
     },
     {
       "source": "platsbanken",
@@ -780,7 +780,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 130
+      "days_to_deadline": 129
     },
     {
       "source": "platsbanken",
@@ -812,7 +812,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -844,7 +844,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 73
+      "days_to_deadline": 72
     },
     {
       "source": "platsbanken",
@@ -876,7 +876,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 23
+      "days_to_deadline": 22
     },
     {
       "source": "platsbanken",
@@ -908,7 +908,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 1
+      "days_to_deadline": 0
     },
     {
       "source": "platsbanken",
@@ -940,7 +940,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 10
+      "days_to_deadline": 9
     },
     {
       "source": "platsbanken",
@@ -972,7 +972,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 26
+      "days_to_deadline": 25
     },
     {
       "source": "platsbanken",
@@ -1006,7 +1006,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 24
+      "days_to_deadline": 23
     },
     {
       "source": "platsbanken",
@@ -1040,7 +1040,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -1074,7 +1074,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 98
+      "days_to_deadline": 97
     },
     {
       "source": "platsbanken",
@@ -1106,7 +1106,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 10
+      "days_to_deadline": 9
     },
     {
       "source": "platsbanken",
@@ -1138,7 +1138,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 24
+      "days_to_deadline": 23
     },
     {
       "source": "platsbanken",
@@ -1170,7 +1170,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -1202,7 +1202,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 21
+      "days_to_deadline": 20
     },
     {
       "source": "platsbanken",
@@ -1234,7 +1234,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 21
+      "days_to_deadline": 20
     },
     {
       "source": "platsbanken",
@@ -1266,7 +1266,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 21
+      "days_to_deadline": 20
     },
     {
       "source": "platsbanken",
@@ -1298,7 +1298,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 21
+      "days_to_deadline": 20
     },
     {
       "source": "platsbanken",
@@ -1330,7 +1330,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 21
+      "days_to_deadline": 20
     },
     {
       "source": "platsbanken",
@@ -1362,7 +1362,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 24
+      "days_to_deadline": 23
     },
     {
       "source": "platsbanken",
@@ -1396,7 +1396,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 12
+      "days_to_deadline": 11
     },
     {
       "source": "platsbanken",
@@ -1428,7 +1428,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 178
+      "days_to_deadline": 177
     },
     {
       "source": "platsbanken",
@@ -1460,7 +1460,7 @@
       "scan_count": 2,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 27
+      "days_to_deadline": 26
     },
     {
       "source": "platsbanken",
@@ -1491,8 +1491,8 @@
       "last_seen": "2026-09-23T17:10:00.876186+00:00",
       "scan_count": 1,
       "in_latest_scan": false,
-      "deadline_state": "soon",
-      "days_to_deadline": 4
+      "deadline_state": "urgent",
+      "days_to_deadline": 3
     },
     {
       "source": "platsbanken",
@@ -1523,8 +1523,8 @@
       "last_seen": "2026-09-23T17:13:09.407781+00:00",
       "scan_count": 2,
       "in_latest_scan": false,
-      "deadline_state": "soon",
-      "days_to_deadline": 4
+      "deadline_state": "urgent",
+      "days_to_deadline": 3
     },
     {
       "source": "platsbanken",
@@ -1556,7 +1556,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 17
+      "days_to_deadline": 16
     },
     {
       "source": "platsbanken",
@@ -1588,7 +1588,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 26
+      "days_to_deadline": 25
     },
     {
       "source": "platsbanken",
@@ -1620,7 +1620,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 23
+      "days_to_deadline": 22
     },
     {
       "source": "platsbanken",
@@ -1651,8 +1651,8 @@
       "last_seen": "2026-09-23T17:10:00.876186+00:00",
       "scan_count": 1,
       "in_latest_scan": false,
-      "deadline_state": "urgent",
-      "days_to_deadline": 0
+      "deadline_state": "expired",
+      "days_to_deadline": -1
     },
     {
       "source": "platsbanken",
@@ -1684,7 +1684,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -1716,7 +1716,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 13
+      "days_to_deadline": 12
     },
     {
       "source": "platsbanken",
@@ -1748,7 +1748,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 20
+      "days_to_deadline": 19
     },
     {
       "source": "platsbanken",
@@ -1780,7 +1780,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 160
+      "days_to_deadline": 159
     },
     {
       "source": "platsbanken",
@@ -1812,7 +1812,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 37
+      "days_to_deadline": 36
     },
     {
       "source": "platsbanken",
@@ -1844,7 +1844,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -1878,7 +1878,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 11
+      "days_to_deadline": 10
     },
     {
       "source": "platsbanken",
@@ -1910,7 +1910,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 18
+      "days_to_deadline": 17
     },
     {
       "source": "platsbanken",
@@ -1942,7 +1942,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 20
+      "days_to_deadline": 19
     },
     {
       "source": "platsbanken",
@@ -1973,8 +1973,8 @@
       "last_seen": "2026-09-23T17:10:00.876186+00:00",
       "scan_count": 1,
       "in_latest_scan": false,
-      "deadline_state": "historic",
-      "days_to_deadline": 8
+      "deadline_state": "soon",
+      "days_to_deadline": 7
     },
     {
       "source": "platsbanken",
@@ -2008,7 +2008,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 24
+      "days_to_deadline": 23
     },
     {
       "source": "platsbanken",
@@ -2040,7 +2040,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 37
+      "days_to_deadline": 36
     },
     {
       "source": "platsbanken",
@@ -2076,7 +2076,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 11
+      "days_to_deadline": 10
     },
     {
       "source": "platsbanken",
@@ -2108,7 +2108,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 5
+      "days_to_deadline": 4
     },
     {
       "source": "platsbanken",
@@ -2142,7 +2142,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 22
+      "days_to_deadline": 21
     },
     {
       "source": "platsbanken",
@@ -2174,7 +2174,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 29
+      "days_to_deadline": 28
     },
     {
       "source": "platsbanken",
@@ -2206,7 +2206,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 179
+      "days_to_deadline": 178
     },
     {
       "source": "platsbanken",
@@ -2238,7 +2238,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 17
+      "days_to_deadline": 16
     },
     {
       "source": "platsbanken",
@@ -2270,7 +2270,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 108
+      "days_to_deadline": 107
     },
     {
       "source": "platsbanken",
@@ -2302,7 +2302,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -2335,8 +2335,8 @@
       "last_seen": "2026-09-23T23:21:53.595186+00:00",
       "scan_count": 8,
       "in_latest_scan": false,
-      "deadline_state": "soon",
-      "days_to_deadline": 4
+      "deadline_state": "urgent",
+      "days_to_deadline": 3
     },
     {
       "source": "platsbanken",
@@ -2368,7 +2368,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 31
+      "days_to_deadline": 30
     },
     {
       "source": "platsbanken",
@@ -2400,7 +2400,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -2432,7 +2432,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -2464,7 +2464,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 172
+      "days_to_deadline": 171
     },
     {
       "source": "platsbanken",
@@ -2496,7 +2496,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 1
+      "days_to_deadline": 0
     },
     {
       "source": "platsbanken",
@@ -2528,7 +2528,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 17
+      "days_to_deadline": 16
     },
     {
       "source": "platsbanken",
@@ -2560,7 +2560,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 1
+      "days_to_deadline": 0
     },
     {
       "source": "platsbanken",
@@ -2592,7 +2592,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -2624,7 +2624,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -2658,7 +2658,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -2692,7 +2692,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -2727,7 +2727,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -2761,7 +2761,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 24
+      "days_to_deadline": 23
     },
     {
       "source": "platsbanken",
@@ -2793,7 +2793,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 37
+      "days_to_deadline": 36
     },
     {
       "source": "platsbanken",
@@ -2825,7 +2825,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 11
+      "days_to_deadline": 10
     },
     {
       "source": "platsbanken",
@@ -2857,7 +2857,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 13
+      "days_to_deadline": 12
     },
     {
       "source": "platsbanken",
@@ -2889,7 +2889,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 16
+      "days_to_deadline": 15
     },
     {
       "source": "platsbanken",
@@ -2921,7 +2921,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 57
+      "days_to_deadline": 56
     },
     {
       "source": "platsbanken",
@@ -2953,7 +2953,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 17
+      "days_to_deadline": 16
     },
     {
       "source": "platsbanken",
@@ -2985,7 +2985,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 17
+      "days_to_deadline": 16
     },
     {
       "source": "platsbanken",
@@ -3017,7 +3017,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 17
+      "days_to_deadline": 16
     },
     {
       "source": "platsbanken",
@@ -3049,7 +3049,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 14
+      "days_to_deadline": 13
     },
     {
       "source": "platsbanken",
@@ -3081,7 +3081,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 153
+      "days_to_deadline": 152
     },
     {
       "source": "platsbanken",
@@ -3116,7 +3116,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 13
+      "days_to_deadline": 12
     },
     {
       "source": "platsbanken",
@@ -3150,7 +3150,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 14
+      "days_to_deadline": 13
     },
     {
       "source": "platsbanken",
@@ -3184,7 +3184,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 14
+      "days_to_deadline": 13
     },
     {
       "source": "platsbanken",
@@ -3215,8 +3215,8 @@
       "last_seen": "2026-09-23T23:21:53.595186+00:00",
       "scan_count": 8,
       "in_latest_scan": false,
-      "deadline_state": "soon",
-      "days_to_deadline": 4
+      "deadline_state": "urgent",
+      "days_to_deadline": 3
     },
     {
       "source": "platsbanken",
@@ -3248,7 +3248,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 102
+      "days_to_deadline": 101
     },
     {
       "source": "platsbanken",
@@ -3280,7 +3280,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 21
+      "days_to_deadline": 20
     },
     {
       "source": "platsbanken",
@@ -3313,8 +3313,8 @@
       "last_seen": "2026-09-23T17:13:09.407781+00:00",
       "scan_count": 1,
       "in_latest_scan": false,
-      "deadline_state": "soon",
-      "days_to_deadline": 4
+      "deadline_state": "urgent",
+      "days_to_deadline": 3
     },
     {
       "source": "platsbanken",
@@ -3348,7 +3348,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 17
+      "days_to_deadline": 16
     },
     {
       "source": "platsbanken",
@@ -3380,7 +3380,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 153
+      "days_to_deadline": 152
     },
     {
       "source": "platsbanken",
@@ -3412,7 +3412,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -3444,7 +3444,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 7
+      "days_to_deadline": 6
     },
     {
       "source": "platsbanken",
@@ -3478,7 +3478,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 13
+      "days_to_deadline": 12
     },
     {
       "source": "platsbanken",
@@ -3511,8 +3511,8 @@
       "last_seen": "2026-09-23T17:26:06.845375+00:00",
       "scan_count": 3,
       "in_latest_scan": false,
-      "deadline_state": "soon",
-      "days_to_deadline": 4
+      "deadline_state": "urgent",
+      "days_to_deadline": 3
     },
     {
       "source": "platsbanken",
@@ -3546,7 +3546,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 158
+      "days_to_deadline": 157
     },
     {
       "source": "platsbanken",
@@ -3580,7 +3580,7 @@
       "scan_count": 4,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 18
+      "days_to_deadline": 17
     },
     {
       "source": "platsbanken",
@@ -3614,7 +3614,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -3648,7 +3648,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 15
+      "days_to_deadline": 14
     },
     {
       "source": "platsbanken",
@@ -3682,7 +3682,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 5
+      "days_to_deadline": 4
     },
     {
       "source": "platsbanken",
@@ -3716,7 +3716,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 159
+      "days_to_deadline": 158
     },
     {
       "source": "platsbanken",
@@ -3751,7 +3751,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 102
+      "days_to_deadline": 101
     },
     {
       "source": "platsbanken",
@@ -3785,7 +3785,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 156
+      "days_to_deadline": 155
     },
     {
       "source": "platsbanken",
@@ -3819,7 +3819,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -3853,7 +3853,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 9
+      "days_to_deadline": 8
     },
     {
       "source": "platsbanken",
@@ -3885,7 +3885,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 27
+      "days_to_deadline": 26
     },
     {
       "source": "platsbanken",
@@ -3917,7 +3917,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 13
+      "days_to_deadline": 12
     },
     {
       "source": "platsbanken",
@@ -3949,7 +3949,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -3981,7 +3981,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 17
+      "days_to_deadline": 16
     },
     {
       "source": "platsbanken",
@@ -4013,7 +4013,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 16
+      "days_to_deadline": 15
     },
     {
       "source": "platsbanken",
@@ -4045,7 +4045,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 13
+      "days_to_deadline": 12
     },
     {
       "source": "platsbanken",
@@ -4079,7 +4079,7 @@
       "scan_count": 4,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 19
+      "days_to_deadline": 18
     },
     {
       "source": "remoteok",
@@ -4145,7 +4145,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -4179,7 +4179,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 5
+      "days_to_deadline": 4
     },
     {
       "source": "platsbanken",
@@ -4213,7 +4213,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 87
+      "days_to_deadline": 86
     },
     {
       "source": "platsbanken",
@@ -4247,7 +4247,7 @@
       "scan_count": 3,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 1
+      "days_to_deadline": 0
     },
     {
       "source": "platsbanken",
@@ -4278,8 +4278,8 @@
       "last_seen": "2026-09-23T17:13:09.407781+00:00",
       "scan_count": 1,
       "in_latest_scan": false,
-      "deadline_state": "soon",
-      "days_to_deadline": 4
+      "deadline_state": "urgent",
+      "days_to_deadline": 3
     },
     {
       "source": "platsbanken",
@@ -4313,7 +4313,7 @@
       "scan_count": 1,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 11
+      "days_to_deadline": 10
     },
     {
       "source": "platsbanken",
@@ -4345,7 +4345,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 1
+      "days_to_deadline": 0
     },
     {
       "source": "platsbanken",
@@ -4377,7 +4377,7 @@
       "scan_count": 4,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 170
+      "days_to_deadline": 169
     },
     {
       "source": "remoteok",
@@ -4477,7 +4477,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "remotive",
@@ -4543,7 +4543,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -4577,7 +4577,7 @@
       "scan_count": 8,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -4609,7 +4609,7 @@
       "scan_count": 2,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 18
+      "days_to_deadline": 17
     },
     {
       "source": "remoteok",
@@ -4678,7 +4678,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 19
+      "days_to_deadline": 18
     },
     {
       "source": "platsbanken",
@@ -4710,7 +4710,7 @@
       "scan_count": 2,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 10
+      "days_to_deadline": 9
     },
     {
       "source": "platsbanken",
@@ -4742,7 +4742,7 @@
       "scan_count": 7,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 6
+      "days_to_deadline": 5
     },
     {
       "source": "platsbanken",
@@ -4774,7 +4774,7 @@
       "scan_count": 2,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 11
+      "days_to_deadline": 10
     },
     {
       "source": "platsbanken",
@@ -4808,7 +4808,7 @@
       "scan_count": 6,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 11
+      "days_to_deadline": 10
     },
     {
       "source": "platsbanken",
@@ -4840,7 +4840,7 @@
       "scan_count": 2,
       "in_latest_scan": false,
       "deadline_state": "urgent",
-      "days_to_deadline": 3
+      "days_to_deadline": 2
     },
     {
       "source": "platsbanken",
@@ -4872,7 +4872,7 @@
       "scan_count": 6,
       "in_latest_scan": false,
       "deadline_state": "soon",
-      "days_to_deadline": 7
+      "days_to_deadline": 6
     },
     {
       "source": "platsbanken",
@@ -4906,7 +4906,7 @@
       "scan_count": 4,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 19
+      "days_to_deadline": 18
     },
     {
       "source": "remoteok",
@@ -4972,7 +4972,7 @@
       "scan_count": 2,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 20
+      "days_to_deadline": 19
     },
     {
       "source": "platsbanken",
@@ -5003,8 +5003,8 @@
       "last_seen": "2026-09-23T17:26:06.845375+00:00",
       "scan_count": 2,
       "in_latest_scan": false,
-      "deadline_state": "urgent",
-      "days_to_deadline": 0
+      "deadline_state": "expired",
+      "days_to_deadline": -1
     },
     {
       "source": "platsbanken",
@@ -5038,7 +5038,7 @@
       "scan_count": 2,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 17
+      "days_to_deadline": 16
     },
     {
       "source": "remotive",
@@ -5104,7 +5104,7 @@
       "scan_count": 4,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 10
+      "days_to_deadline": 9
     },
     {
       "source": "platsbanken",
@@ -5139,7 +5139,7 @@
       "scan_count": 2,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 10
+      "days_to_deadline": 9
     },
     {
       "source": "platsbanken",
@@ -5171,7 +5171,7 @@
       "scan_count": 6,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 9
+      "days_to_deadline": 8
     },
     {
       "source": "platsbanken",
@@ -5203,7 +5203,7 @@
       "scan_count": 4,
       "in_latest_scan": false,
       "deadline_state": "historic",
-      "days_to_deadline": 12
+      "days_to_deadline": 11
     }
   ]
 }

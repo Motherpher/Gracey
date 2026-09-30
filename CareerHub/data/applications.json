@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-24T02:50:00+02:00",
+  "updated_at": "2026-09-30T11:21:23.554930+00:00",
   "cases": [
     {
       "job_id": "ee2080b9dd5b523b",
@@ -20,7 +20,16 @@
       "next_action_date": "2026-10-07T23:59:59",
       "audit_status": "pre_firewall_revalidation_required",
       "external_use_allowed": false,
-      "notification_log": [],
+      "notification_log": [
+        {
+          "key": "deadline:2026-10-07:7",
+          "at": "2026-09-30T11:21:23.554905+00:00",
+          "days_left": 7,
+          "channels": [
+            "github"
+          ]
+        }
+      ],
       "history": [
         {
           "at": "2026-09-23T23:16:19.207156+00:00",

@@ -10,7 +10,7 @@ Välkommen. Här är dina aktuella möjligheter, samlade och förberedda. Du vä
 
 ## 1 · Hitta jobb
 
-**Senast uppdaterad:** 29 sep 2026 kl. 13:25 · **0 aktuella jobb** · **159 jobb i historiken**
+**Senast uppdaterad:** 30 sep 2026 kl. 13:13 · **0 aktuella jobb** · **159 jobb i historiken**
 
 **När du trycker på Uppdatera jobb:** nya jobb brukar synas här efter ungefär **30–90 sekunder**. Sidan uppdateras när sökningen är klar.
 
@@ -48,7 +48,7 @@ Du behöver inte tänka på metoden bakom. När du vill gå vidare tar vi hand o
 
 | Nivå | Jobb | Läge | Sista dag | Nästa steg |
 |---|---|---|---|---|
-| **3 / 5 · Intressant** | [Bemanningsassistent till urologen — REGION STOCKHOLM](https://github.com/Motherpher/Gracey/issues/2) | **Valt** | 7 okt · 8 dagar | Omvalidera först |
+| **3 / 5 · Intressant** | [Bemanningsassistent till urologen — REGION STOCKHOLM](https://github.com/Motherpher/Gracey/issues/2) | **Valt** | 7 okt · 7 dagar | Omvalidera först |
 
 **[Öppna ansökningsöversikten →](APPLICATIONS.md)**
 

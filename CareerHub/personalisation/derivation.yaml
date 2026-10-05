@@ -1,0 +1,11 @@
+schema_version: "1.0"
+status: STRUCTURE_READY
+source_basis:
+  - profile/candidate.yaml
+  - config/search_profile.yaml
+material_decisions:
+  - guided Swedish-first experience
+  - airy information density
+  - source completion and profile verification foregrounded
+  - profile-search-analysis-application-tracking journey
+evidence_rule: "Grace currently has no verified career evidence; the interface must remain fail-closed until sources are verified."

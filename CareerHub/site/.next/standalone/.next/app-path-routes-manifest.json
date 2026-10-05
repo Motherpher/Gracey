@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/analyse/page": "/analyse",
+  "/api/library/file/route": "/api/library/file",
+  "/api/library/reload/route": "/api/library/reload",
+  "/api/library/route": "/api/library",
+  "/api/wish/route": "/api/wish",
+  "/apply/page": "/apply",
+  "/find/page": "/find",
+  "/library/page": "/library",
+  "/page": "/",
+  "/profile/page": "/profile",
+  "/track/page": "/track",
+  "/wish/page": "/wish"
+}

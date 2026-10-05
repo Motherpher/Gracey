@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/analyse/page": "app/analyse/page.js",
+  "/api/library/file/route": "app/api/library/file/route.js",
+  "/api/library/reload/route": "app/api/library/reload/route.js",
+  "/api/library/route": "app/api/library/route.js",
+  "/api/wish/route": "app/api/wish/route.js",
+  "/apply/page": "app/apply/page.js",
+  "/find/page": "app/find/page.js",
+  "/library/page": "app/library/page.js",
+  "/page": "app/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/track/page": "app/track/page.js",
+  "/wish/page": "app/wish/page.js"
+}

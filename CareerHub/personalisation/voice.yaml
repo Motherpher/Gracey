@@ -1,0 +1,10 @@
+schema_version: "1.0"
+posture: "clear, guided, calm, practical"
+prefer:
+  - simple Swedish navigation
+  - explicit next steps
+  - visible distinction between verified profile and search wishes
+avoid:
+  - technical system language in the primary interface
+  - unsupported career claims
+  - pressure to act before the profile has verified sources

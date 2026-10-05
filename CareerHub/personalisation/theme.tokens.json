@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "typography": {"display": "ui-sans-serif, system-ui, sans-serif", "body": "ui-sans-serif, system-ui, sans-serif", "scale": "comfortable"},
+  "shape": {"radius": "soft", "border": "subtle"},
+  "surface": {"treatment": "calm", "shadow": "none"},
+  "palette": {"background": "#F7F6F2", "foreground": "#202220", "muted": "#6C716C", "accent": "#315C4A", "accent_foreground": "#FFFFFF"}
+}

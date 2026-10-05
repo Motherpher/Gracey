@@ -3,18 +3,19 @@ profile_id: grace
 
 profile:
   path: profile/candidate.yaml
-
 search:
   path: config/search_profile.yaml
-
 state:
   job_vault: data/job_vault.json
   applications: data/applications.json
   hrdm_ledger: data/hrdm_ledger.json
-
 artifacts:
   hrdm_reports: reports/hrdm/active
   hrdm_history: reports/hrdm/history
-
 ui:
   language: sv
+presentation:
+  profile: personalisation/hub.profile.yaml
+  theme: personalisation/theme.tokens.json
+  voice: personalisation/voice.yaml
+  site_root: site

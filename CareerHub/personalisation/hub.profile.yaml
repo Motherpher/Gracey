@@ -1,0 +1,24 @@
+schema_version: "1.0"
+identity:
+  display_name: "Grace"
+  strapline: "Din karriärprofil, dina sökval och nästa steg samlade på ett ställe."
+  language: "sv"
+experience:
+  mode: guided
+  density: airy
+  guidance: high
+  motion: subtle
+home:
+  headline: "Din profil. Dina val. Nästa steg."
+  intro: "Börja med den profil som CareerHub faktiskt får använda. Fyll på verifierade källor, justera sökningen och gå vidare först när underlaget är tydligt."
+  slots: [identity, profile_health, next_action, search_coverage, opportunities, pipeline, hrdm, artifacts]
+navigation:
+  primary: [profile, find, analyse, apply, track, library, home]
+  labels:
+    profile: Profil
+    find: Sök
+    analyse: Analysera
+    apply: Ansök
+    track: Följ
+    library: Bibliotek
+    home: Översikt

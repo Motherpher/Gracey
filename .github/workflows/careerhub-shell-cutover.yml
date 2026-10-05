@@ -1,0 +1,147 @@
+name: CareerHub · Current Motor Shell Cutover
+
+on:
+  push:
+    branches: [feat/current-motor-cutover]
+    paths:
+      - ".github/workflows/careerhub-shell-cutover.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  cutover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/current-motor-cutover
+          fetch-depth: 0
+
+      - name: Checkout canonical CareerHub motor
+        uses: actions/checkout@v4
+        with:
+          repository: Motherpher/CareerHubZero
+          ref: main
+          path: .careerhub-zero
+
+      - name: Install Grace personalisation contract
+        shell: bash
+        run: |
+          mkdir -p CareerHub/personalisation
+          cat > CareerHub/personalisation/hub.profile.yaml <<'EOF'
+          schema_version: "1.0"
+          identity:
+            display_name: "Grace"
+            strapline: "Din karriärprofil, dina sökval och nästa steg samlade på ett ställe."
+            language: "sv"
+          experience:
+            mode: guided
+            density: airy
+            guidance: high
+            motion: subtle
+          home:
+            headline: "Din profil. Dina val. Nästa steg."
+            intro: "Börja med den profil som CareerHub faktiskt får använda. Fyll på verifierade källor, justera sökningen och gå vidare först när underlaget är tydligt."
+            slots: [identity, profile_health, next_action, search_coverage, opportunities, pipeline, hrdm, artifacts]
+          navigation:
+            primary: [profile, find, analyse, apply, track, library, home]
+            labels:
+              profile: Profil
+              find: Sök
+              analyse: Analysera
+              apply: Ansök
+              track: Följ
+              library: Bibliotek
+              home: Översikt
+          EOF
+          cat > CareerHub/personalisation/theme.tokens.json <<'EOF'
+          {
+            "schema_version": "1.0",
+            "typography": {"display": "ui-sans-serif, system-ui, sans-serif", "body": "ui-sans-serif, system-ui, sans-serif", "scale": "comfortable"},
+            "shape": {"radius": "soft", "border": "subtle"},
+            "surface": {"treatment": "calm", "shadow": "none"},
+            "palette": {"background": "#F7F6F2", "foreground": "#202220", "muted": "#6C716C", "accent": "#315C4A", "accent_foreground": "#FFFFFF"}
+          }
+          EOF
+          cat > CareerHub/personalisation/voice.yaml <<'EOF'
+          schema_version: "1.0"
+          posture: "clear, guided, calm, practical"
+          prefer:
+            - simple Swedish navigation
+            - explicit next steps
+            - visible distinction between verified profile and search wishes
+          avoid:
+            - technical system language in the primary interface
+            - unsupported career claims
+            - pressure to act before the profile has verified sources
+          EOF
+          cat > CareerHub/personalisation/derivation.yaml <<'EOF'
+          schema_version: "1.0"
+          status: STRUCTURE_READY
+          source_basis:
+            - profile/candidate.yaml
+            - config/search_profile.yaml
+          material_decisions:
+            - guided Swedish-first experience
+            - airy information density
+            - source completion and profile verification foregrounded
+            - profile-search-analysis-application-tracking journey
+          evidence_rule: "Grace currently has no verified career evidence; the interface must remain fail-closed until sources are verified."
+          EOF
+
+      - name: Align versionless manifest
+        shell: bash
+        run: |
+          cat > CareerHub/careerhub.yaml <<'EOF'
+          schema_version: "1.0"
+          profile_id: grace
+
+          profile:
+            path: profile/candidate.yaml
+          search:
+            path: config/search_profile.yaml
+          state:
+            job_vault: data/job_vault.json
+            applications: data/applications.json
+            hrdm_ledger: data/hrdm_ledger.json
+          artifacts:
+            hrdm_reports: reports/hrdm/active
+            hrdm_history: reports/hrdm/history
+          ui:
+            language: sv
+          presentation:
+            profile: personalisation/hub.profile.yaml
+            theme: personalisation/theme.tokens.json
+            voice: personalisation/voice.yaml
+            site_root: site
+          EOF
+
+      - name: Sync canonical managed web shell
+        run: python .careerhub-zero/scripts/sync_web_shell.py CareerHub
+
+      - name: Validate profile against central motor
+        env:
+          PYTHONPATH: .careerhub-zero/src
+        run: |
+          python -m pip install -r .careerhub-zero/requirements.txt
+          python .careerhub-zero/scripts/careerhub.py --manifest CareerHub/careerhub.yaml validate
+
+      - name: Build personalised site
+        working-directory: CareerHub/site
+        run: |
+          npm install
+          npm run build
+
+      - name: Commit cutover output
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CareerHub/careerhub.yaml CareerHub/personalisation CareerHub/site CareerHub/data/hrdm_ledger.json
+          if git diff --cached --quiet; then
+            echo "No cutover changes."
+            exit 0
+          fi
+          git commit -m "Sync Grace CareerHub to current central motor shell"
+          git push origin HEAD:feat/current-motor-cutover

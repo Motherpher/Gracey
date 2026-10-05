@@ -1,17 +1,23 @@
-name: Grace · Uppdatera jobb
+name: Grace · Sök och rangordna jobb
 
 on:
   push:
     paths:
-      - "CareerHub/config/search_profiles.yaml"
-      - "CareerHub/profile/candidate.yaml"
+      - "CareerHub/config/**"
+      - "CareerHub/profile/**"
+      - "CareerHub/careerhub.yaml"
   workflow_dispatch:
     inputs:
-      specific_wishes_or_needs:
-        description: "Specifika önskemål eller behov (valfritt)"
-        required: false
-        type: string
-        default: ""
+      lane:
+        description: "Sökspår"
+        required: true
+        type: choice
+        options: [all, core, adjacent, bridge]
+        default: all
+      limit:
+        description: "Max antal rangordnade jobb"
+        required: true
+        default: "80"
   schedule:
     - cron: "20 5 * * 1-5"
 
@@ -26,45 +32,46 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     env:
-      LANE: "all"
-      LIMIT: "80"
-      SEARCH_OVERLAY: ${{ inputs.specific_wishes_or_needs || '' }}
+      LANE: ${{ inputs.lane || 'all' }}
+      LIMIT: ${{ inputs.limit || '80' }}
       ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
       ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
       JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}
       JOOBLE_API_ENDPOINT: ${{ secrets.JOOBLE_API_ENDPOINT }}
-
+      GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
+      - uses: actions/checkout@v4
+        with:
+          repository: Motherpher/CareerHubZero
+          ref: main
+          path: .careerhub-zero
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Förbered karriärhubben
-        run: pip install -r CareerHub/requirements.txt
-
+      - name: Förbered den centrala CareerHub-motorn
+        run: pip install -r .careerhub-zero/requirements.txt
       - name: Hämta senaste versionen
         run: |
           git fetch origin main
           git checkout main
           git reset --hard origin/main
-
-      - name: Hitta och sortera jobb
-        run: python CareerHub/scripts/careerhub.py scan --lane "$LANE" --limit "$LIMIT" --search-overlay "$SEARCH_OVERLAY"
-
-      - name: Spara den uppdaterade jobblistan
+      - name: Sök och rangordna jobb
+        env:
+          PYTHONPATH: .careerhub-zero/src
+        run: python .careerhub-zero/scripts/careerhub.py --manifest CareerHub/careerhub.yaml scan --lane "$LANE" --limit "$LIMIT"
+      - name: Spara uppdaterad CareerHub-status
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add CareerHub/CONTROL_ROOM.md CareerHub/JOB_VAULT.md CareerHub/APPLICATIONS.md CareerHub/visuals/careerhub-journey.svg CareerHub/data/latest_jobs.json CareerHub/data/job_vault.json CareerHub/data/applications.json
+          git add CareerHub/CONTROL_ROOM.md CareerHub/JOB_VAULT.md CareerHub/APPLICATIONS.md CareerHub/data/latest_jobs.json CareerHub/data/job_vault.json CareerHub/data/applications.json CareerHub/data/maps 2>/dev/null || true
           if git diff --cached --quiet; then
-            echo "Inga nya förändringar i jobblistan."
+            echo "Inga CareerHub-förändringar."
             exit 0
           fi
-          git commit -m "Karriärhubben: uppdatera relevanta jobb"
+          git commit -m "Karriärhubben: uppdatera rangordnade jobb"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main

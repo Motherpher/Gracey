@@ -21,67 +21,64 @@ jobs:
        github.event.issue.author_association == 'MEMBER' ||
        github.event.issue.author_association == 'COLLABORATOR')
     runs-on: ubuntu-latest
-
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       CAREERHUB_MODEL: ${{ secrets.CAREERHUB_MODEL }}
       GH_TOKEN: ${{ github.token }}
-
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
+      - uses: actions/checkout@v4
+        with:
+          repository: Motherpher/CareerHubZero
+          ref: main
+          path: .careerhub-zero
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Förbered karriärhubben
-        run: pip install -r CareerHub/requirements.txt
-
+      - name: Förbered den centrala CareerHub-motorn
+        run: pip install -r .careerhub-zero/requirements.txt
       - name: Hämta senaste versionen
         run: |
           git fetch origin main
           git checkout main
           git reset --hard origin/main
-
       - name: Läs jobbet som ska analyseras
         run: |
           mkdir -p /tmp/careerhub-request
-          python CareerHub/scripts/issue_request.py             --event "$GITHUB_EVENT_PATH"             --out /tmp/careerhub-request
-
+          python .careerhub-zero/scripts/issue_request.py --event "$GITHUB_EVENT_PATH" --out /tmp/careerhub-request
       - name: Kör full analys och förbered ansökan
+        env:
+          PYTHONPATH: .careerhub-zero/src
         run: |
           JOB_URL="$(cat /tmp/careerhub-request/job_url.txt)"
           LANE="$(cat /tmp/careerhub-request/lane.txt)"
           ROLE="$(cat /tmp/careerhub-request/role.txt)"
           EMPLOYER="$(cat /tmp/careerhub-request/employer.txt)"
           DEADLINE="$(cat /tmp/careerhub-request/deadline.txt)"
-          OUT="CareerHub/output/issue-${{ github.event.issue.number }}"
-
-          python CareerHub/scripts/careerhub.py drill             --url "$JOB_URL"             --text-file /tmp/careerhub-request/job_text.txt             --title "$ROLE"             --company "$EMPLOYER"             --deadline "$DEADLINE"             --lane "$LANE"             --out "$OUT"
-
-          cp /tmp/careerhub-request/request.json "$OUT/request.json"
-
+          OUT_REL="output/issue-${{ github.event.issue.number }}"
+          python .careerhub-zero/scripts/careerhub.py --manifest CareerHub/careerhub.yaml drill --url "$JOB_URL" --text-file /tmp/careerhub-request/job_text.txt --title "$ROLE" --company "$EMPLOYER" --deadline "$DEADLINE" --lane "$LANE" --out "$OUT_REL"
+          cp /tmp/careerhub-request/request.json "CareerHub/$OUT_REL/request.json"
       - name: Spara analyserat jobb och uppdatera översikten
+        env:
+          PYTHONPATH: .careerhub-zero/src
         run: |
           PRIORITY="$(cat /tmp/careerhub-request/priority.txt)"
-          python CareerHub/scripts/careerhub.py track             --action choose             --job-json "CareerHub/output/issue-${{ github.event.issue.number }}/job.json"             --issue-number "${{ github.event.issue.number }}"             --issue-url "${{ github.event.issue.html_url }}"             --priority "$PRIORITY"
-
-      - name: Spara förändringen
+          python .careerhub-zero/scripts/careerhub.py --manifest CareerHub/careerhub.yaml track --action choose --job-json "CareerHub/output/issue-${{ github.event.issue.number }}/job.json" --issue-number "${{ github.event.issue.number }}" --issue-url "${{ github.event.issue.html_url }}" --priority "$PRIORITY" --analysis-complete
+      - name: Spara förändringen och analysunderlaget
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add             CareerHub/data/applications.json             CareerHub/CONTROL_ROOM.md             CareerHub/APPLICATIONS.md             CareerHub/JOB_VAULT.md             CareerHub/visuals/careerhub-journey.svg
+          git add CareerHub/data/applications.json CareerHub/data/hrdm_ledger.json CareerHub/reports CareerHub/output/issue-${{ github.event.issue.number }} CareerHub/CONTROL_ROOM.md CareerHub/APPLICATIONS.md CareerHub/JOB_VAULT.md
           if git diff --cached --quiet; then
-            echo "No state changes."
+            echo "Inga statusförändringar."
           else
             git commit -m "Karriärhubben: analysera jobb #${{ github.event.issue.number }}"
             git fetch origin main
             git rebase origin/main
             git push origin HEAD:main
           fi
-
       - name: Gör ansökningsunderlaget tillgängligt
         uses: actions/upload-artifact@v4
         with:
@@ -89,33 +86,12 @@ jobs:
           path: CareerHub/output/issue-${{ github.event.issue.number }}/
           retention-days: 14
           if-no-files-found: error
-
       - name: Berätta att ansökningsunderlaget är klart
         if: success()
         run: |
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           UPDATE_URL="${{ github.server_url }}/${{ github.repository }}/issues/new?template=careerhub-update-status.yml"
-          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "$(cat <<EOF
-          ## Din analys är klar
-
-          Vi har gått igenom jobbet och förberett nästa steg åt dig. Matchningsanalysen och ansökningsunderlaget är klara.
-
-          **[Hämta ansökningsunderlaget →]($RUN_URL)**
-
-          Öppna **CareerHub-${{ github.event.issue.number }}-application-pack**.
-
-          Sedan:
-          1. läs och justera Word-underlaget så att det låter som Grace,
-          2. skicka ansökan till arbetsgivaren,
-          3. gå tillbaka till Karriärhubben och markera **Ansökan skickad**.
-
-          **[Uppdatera ansökans läge →]($UPDATE_URL)**
-
-          Jobbet finns kvar i historiken, så du kan återvända till det när du vill.
-          EOF
-          )"
-
-      - name: Förklara om jobbsidan inte gick att läsa
+          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "## Din analys är klar\n\nMatchningsanalysen och ansökningsunderlaget är klara.\n\n**[Hämta ansökningsunderlaget →]($RUN_URL)**\n\nJustera Word-underlaget så att det låter som Grace, skicka ansökan och **[uppdatera sedan ansökans läge →]($UPDATE_URL)**."
+      - name: Förklara om analysen inte gick att slutföra
         if: failure()
-        run: |
-          gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "Vi kunde inte läsa hela annonsen från länken. Öppna **Analysera ett jobb** igen och klistra in annonstexten under **Jobbtext (valfritt)**, så tar vi det därifrån."
+        run: gh issue comment "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --body "Analysen kunde inte slutföras. Om länken blockerar läsning, öppna Analysera ett jobb igen och klistra in annonstexten under Jobbtext."

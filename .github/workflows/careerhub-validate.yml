@@ -1,16 +1,16 @@
 name: Grace · Kontrollera karriärhubben
 
 on:
-  push:
-    paths:
-      - "CareerHub/**"
-      - ".github/workflows/careerhub-*.yml"
-      - ".github/ISSUE_TEMPLATE/careerhub-*.yml"
+  workflow_dispatch:
   pull_request:
     paths:
       - "CareerHub/**"
       - ".github/workflows/careerhub-*.yml"
-      - ".github/ISSUE_TEMPLATE/careerhub-*.yml"
+  push:
+    branches: [main]
+    paths:
+      - "CareerHub/**"
+      - ".github/workflows/careerhub-*.yml"
 
 permissions:
   contents: read
@@ -18,175 +18,44 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
+        with:
+          repository: Motherpher/CareerHubZero
+          ref: main
+          path: .careerhub-zero
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Förbered karriärhubben
-        run: pip install -r CareerHub/requirements.txt
-
-      - name: Kontrollera programfiler
+      - name: Förbered den centrala CareerHub-motorn
+        run: pip install -r .careerhub-zero/requirements.txt
+      - name: Kontrollera att profilen inte längre innehåller en egen motor
         run: |
-          find CareerHub/src CareerHub/scripts -name '*.py' -print0 | xargs -0 -n1 python -m py_compile
-
-      - name: Kontrollera profil och datafiler
+          test -f CareerHub/careerhub.yaml
+          test ! -d CareerHub/src
+          test ! -d CareerHub/scripts
+          test ! -d CareerHub/hrdm
+          test ! -f CareerHub/requirements.txt
+      - name: Kontrollera profilkontraktet mot den centrala motorn
+        env:
+          PYTHONPATH: .careerhub-zero/src
+        run: python .careerhub-zero/scripts/careerhub.py --manifest CareerHub/careerhub.yaml validate
+      - name: Bygg Grace-ytorna med den centrala motorn
+        env:
+          PYTHONPATH: .careerhub-zero/src
+        run: python .careerhub-zero/scripts/careerhub.py --manifest CareerHub/careerhub.yaml render
+      - name: Kontrollera att manifestets profil- och tillståndsfiler finns kvar
         run: |
           python - <<'PY'
-          import json, yaml
           from pathlib import Path
-
-          yaml_files = [
-              Path("CareerHub/profile/candidate.yaml"),
-              Path("CareerHub/config/sources.yaml"),
-              Path("CareerHub/config/search_profiles.yaml"),
-              Path(".github/ISSUE_TEMPLATE/careerhub-analyse-job.yml"),
-              Path(".github/ISSUE_TEMPLATE/careerhub-update-status.yml"),
-          ]
-          for p in yaml_files:
-              yaml.safe_load(p.read_text(encoding="utf-8"))
-              print("YAML OK", p)
-
-          json_files = [
-              Path("CareerHub/hrdm/hrdm_result.schema.json"),
-              Path("CareerHub/data/latest_jobs.json"),
-              Path("CareerHub/data/job_vault.json"),
-              Path("CareerHub/data/applications.json"),
-          ]
-          for p in json_files:
-              json.loads(p.read_text(encoding="utf-8"))
-              print("JSON OK", p)
-          PY
-
-      - name: Kontrollera verifierad karriärprofil
-        run: |
-          PYTHONPATH=CareerHub/src python - <<'PY'
-          import copy
           import yaml
-          from careerhub.cli import validate_profile
-
-          profile = yaml.safe_load(open("CareerHub/profile/candidate.yaml", encoding="utf-8"))
-          validate_profile(profile)
-
-          invalid = copy.deepcopy(profile)
-          invalid["specific_wishes_or_needs"] = "ska aldrig bli profilfakta"
-          try:
-              validate_profile(invalid)
-          except SystemExit:
-              pass
-          else:
-              raise AssertionError("Search-only wishes were accepted as candidate profile evidence")
-
-          print("Verified-career profile firewall OK")
+          root = Path('CareerHub')
+          manifest = yaml.safe_load((root / 'careerhub.yaml').read_text(encoding='utf-8'))
+          required = [manifest['profile']['path'], manifest['search']['path'], *manifest['state'].values()]
+          required += ['CONTROL_ROOM.md', 'APPLICATIONS.md', 'JOB_VAULT.md']
+          missing = [rel for rel in required if not (root / rel).exists()]
+          if missing:
+              raise SystemExit('Missing preserved profile/state paths: ' + ', '.join(missing))
+          print('Preserved profile/state paths OK:', ', '.join(required))
           PY
-
-      - name: Kontrollera grundfunktion
-        run: python CareerHub/scripts/careerhub.py --help
-
-      - name: Kontrollera formuläret Analysera jobb
-        run: |
-          cat > /tmp/careerhub-event.json <<'JSON'
-          {
-            "issue": {
-              "number": 99,
-              "title": "[CareerHub Job] Example",
-              "user": {"login": "tester"},
-              "body": "### Länk till jobbet\nhttps://example.invalid/job\n\n### Roll\nUtbildningskoordinator\n\n### Arbetsgivare\nExempelorganisation\n\n### Spår\nNärliggande möjlighet\n\n### Prioritet 1–5\n4 — Mycket intressant\n\n### Sista ansökningsdag\n2026-10-10\n\n### Jobbtext (valfritt)\nUtbildningskoordinator. Deltid. Handledning, planering och samordning."
-            }
-          }
-          JSON
-          python CareerHub/scripts/issue_request.py --event /tmp/careerhub-event.json --out /tmp/careerhub-request
-          test "$(cat /tmp/careerhub-request/lane.txt)" = "adjacent"
-          test "$(cat /tmp/careerhub-request/priority.txt)" = "4"
-          test "$(cat /tmp/careerhub-request/deadline.txt)" = "2026-10-10"
-          grep -q "Utbildningskoordinator" /tmp/careerhub-request/job_text.txt
-
-      - name: Kontrollera uppföljningsformuläret
-        run: |
-          cat > /tmp/careerhub-update-event.json <<'JSON'
-          {
-            "issue": {
-              "number": 101,
-              "title": "[CareerHub Update] #99 — Applied",
-              "body": "### Jobbsidans nummer\n99\n\n### Nytt läge\nAnsökan skickad\n\n### Datum\n2026-09-23\n\n### Nästa steg\nFölj upp\n\n### Datum för nästa steg\n2026-10-01"
-            }
-          }
-          JSON
-          python CareerHub/scripts/update_request.py --event /tmp/careerhub-update-event.json --out /tmp/careerhub-update
-          test "$(cat /tmp/careerhub-update/case_issue_number.txt)" = "99"
-          test "$(cat /tmp/careerhub-update/status.txt)" = "applied"
-
-      - name: Kontrollera jobbmatchningen
-        run: |
-          PYTHONPATH=CareerHub/src python - <<'PY'
-          import yaml
-          from careerhub.models import Job
-          from careerhub.matching import rank_jobs
-
-          profile=yaml.safe_load(open("CareerHub/profile/candidate.yaml", encoding="utf-8"))
-          search=yaml.safe_load(open("CareerHub/config/search_profiles.yaml", encoding="utf-8"))
-          core=dict(search["lanes"]["core"])
-          bridge=dict(search["lanes"]["bridge"])
-          core["queries"]=["utbildningssamordnare"]
-          bridge["queries"]=["servicevärd sjukhus"]
-
-          good=Job(source="test", title="Utbildningssamordnare", company="Region", location="Uppsala", description="Handledning, introduktion, praktiskt lärande och samordning av medarbetare.")
-          bad=Job(source="test", title="Backend Software Engineer", company="TechCo", location="Remote", description="Build APIs and backend systems. Communication skills valued.")
-          us_only=Job(source="test", title="Trainer healthcare", company="USCo", location="United States", work_mode="remote", description="Remote - United States only. Training healthcare staff.")
-          bridge_good=Job(source="test", title="Servicevärd sjukhus", company="Region", location="Uppsala", description="Deltid service och patientnära stöd på sjukhus.")
-
-          core_ranked=rank_jobs([good,bad,us_only], "core", core, profile, search["defaults"])
-          titles=[j.title for j in core_ranked]
-          assert "Utbildningssamordnare" in titles, titles
-          assert "Backend Software Engineer" not in titles, titles
-          assert "Trainer healthcare" not in titles, titles
-
-          bridge_ranked=rank_jobs([bridge_good], "bridge", bridge, profile, search["defaults"])
-          assert bridge_ranked and bridge_ranked[0].title == "Servicevärd sjukhus"
-
-          overlay_ranked=rank_jobs(
-              [good],
-              "core",
-              core,
-              profile,
-              search["defaults"],
-              search_overlay="deltid handledning",
-          )
-          assert overlay_ranked
-          assert any("search-only wishes/needs fit" in reason for reason in overlay_ranked[0].triage_reasons)
-          print("Matching-quality + search-raster regression OK")
-          PY
-
-      - name: Kontrollera jobbhistoriken
-        run: |
-          PYTHONPATH=CareerHub/src python - <<'PY'
-          from pathlib import Path
-          from tempfile import TemporaryDirectory
-          from careerhub.models import Job
-          from careerhub.state import merge_job_vault, choose_case, update_case, load_cases
-
-          with TemporaryDirectory() as td:
-              root=Path(td)
-              vault_path=root/"vault.json"
-              cases_path=root/"cases.json"
-              job=Job(source="test", title="Handledare", company="Example", location="Uppsala", deadline="2026-10-15", url="https://example.invalid/handledare", lane="core")
-              vault=merge_job_vault(vault_path,[job])
-              assert vault["total_jobs_ever_seen"] == 1
-              case=choose_case(cases_path,job,12,"https://github.com/example/issues/12",5)
-              assert case["priority"] == 5 and case["status"] == "ready"
-              case=update_case(cases_path,12,"applied")
-              assert case["status"] == "applied"
-              assert load_cases(cases_path)["cases"][0]["history"]
-          print("State/vault regression OK")
-          PY
-
-      - name: Kontrollera ansökningsunderlaget
-        run: |
-          python CareerHub/scripts/careerhub.py drill             --url "https://example.invalid/job"             --text "Utbildningskoordinator. Deltid. Handledning, introduktion, planering och samordning."             --title "Utbildningskoordinator"             --company "Exempelorganisation"             --deadline "2026-10-10"             --lane adjacent             --out /tmp/careerhub-smoke
-          test -f /tmp/careerhub-smoke/job.json
-          test -f /tmp/careerhub-smoke/HRDM_input_packet.json
-          test -f /tmp/careerhub-smoke/HRDM_result.json
-          ls /tmp/careerhub-smoke/*.docx >/dev/null

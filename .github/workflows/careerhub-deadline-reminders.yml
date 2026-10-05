@@ -25,29 +25,29 @@ jobs:
       TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
       TWILIO_FROM_NUMBER: ${{ secrets.TWILIO_FROM_NUMBER }}
       CAREERHUB_NOTIFY_PHONE: ${{ secrets.CAREERHUB_NOTIFY_PHONE }}
-
+      CAREERHUB_APPLICATIONS: CareerHub/data/applications.json
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
+      - uses: actions/checkout@v4
+        with:
+          repository: Motherpher/CareerHubZero
+          ref: main
+          path: .careerhub-zero
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Förbered karriärhubben
-        run: pip install -r CareerHub/requirements.txt
-
+      - name: Förbered den centrala CareerHub-motorn
+        run: pip install -r .careerhub-zero/requirements.txt
       - name: Hämta senaste versionen
         run: |
           git fetch origin main
           git checkout main
           git reset --hard origin/main
-
-      - name: Skicka aktuella påminnelser
-        run: python CareerHub/scripts/deadline_notify.py
-
-      - name: Spara påminnelsehistoriken
+      - name: Skicka påminnelser som är aktuella
+        run: python .careerhub-zero/scripts/deadline_notify.py
+      - name: Spara påminnelseloggen
         run: |
           if git diff --quiet -- CareerHub/data/applications.json; then
             echo "Inga nya påminnelser att spara."
@@ -56,7 +56,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add CareerHub/data/applications.json
-          git commit -m "Karriärhubben: spara skickade påminnelser"
+          git commit -m "Karriärhubben: registrera påminnelser"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main

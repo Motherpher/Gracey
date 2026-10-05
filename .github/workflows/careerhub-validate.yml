@@ -30,13 +30,15 @@ jobs:
           python-version: "3.12"
       - name: Förbered den centrala CareerHub-motorn
         run: pip install -r .careerhub-zero/requirements.txt
-      - name: Kontrollera att profilen inte längre innehåller en egen motor
+      - name: Kontrollera att profilen inte längre innehåller en egen motor eller migreringslås
         run: |
           test -f CareerHub/careerhub.yaml
           test ! -d CareerHub/src
           test ! -d CareerHub/scripts
           test ! -d CareerHub/hrdm
           test ! -f CareerHub/requirements.txt
+          test ! -f CareerHub/instance.yaml
+          test ! -f CareerHub/stack.lock.yaml
       - name: Kontrollera profilkontraktet mot den centrala motorn
         env:
           PYTHONPATH: .careerhub-zero/src

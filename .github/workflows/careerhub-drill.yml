@@ -1,20 +1,17 @@
-name: Grace · Fördjupa ett jobb
+name: Grace · Analysera jobb manuellt
 
 on:
   workflow_dispatch:
     inputs:
       job_url:
-        description: "Länk till jobbannonsen"
+        description: "Publik länk till jobbannons"
         required: true
         type: string
       lane:
-        description: "Vilket spår tillhör jobbet?"
+        description: "Sök-/ansökningsspår"
         required: true
         type: choice
-        options:
-          - core
-          - adjacent
-          - bridge
+        options: [core, adjacent, bridge]
         default: core
       job_text:
         description: "Valfritt: klistra in annonstext om länken inte går att läsa"
@@ -33,22 +30,24 @@ jobs:
       LANE: ${{ inputs.lane }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       CAREERHUB_MODEL: ${{ secrets.CAREERHUB_MODEL }}
-
     steps:
       - uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
+        with:
+          repository: Motherpher/CareerHubZero
+          ref: main
+          path: .careerhub-zero
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Förbered karriärhubben
-        run: pip install -r CareerHub/requirements.txt
-
-      - name: Förbered matchning och ansökningsunderlag
+      - name: Förbered den centrala CareerHub-motorn
+        run: pip install -r .careerhub-zero/requirements.txt
+      - name: Bygg HRDM och ansökningsunderlag
+        env:
+          PYTHONPATH: .careerhub-zero/src
         run: |
-          OUT="CareerHub/output/run-${{ github.run_id }}"
-          python CareerHub/scripts/careerhub.py drill             --url "$JOB_URL"             --text "$JOB_TEXT"             --lane "$LANE"             --out "$OUT"
-
+          OUT_REL="output/run-${{ github.run_id }}"
+          python .careerhub-zero/scripts/careerhub.py --manifest CareerHub/careerhub.yaml drill --url "$JOB_URL" --text "$JOB_TEXT" --lane "$LANE" --out "$OUT_REL"
       - name: Gör ansökningsunderlaget tillgängligt
         uses: actions/upload-artifact@v4
         with:

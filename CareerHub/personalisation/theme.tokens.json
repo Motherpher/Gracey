@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "typography": {
+    "display": "Inter, ui-sans-serif, system-ui, sans-serif",
+    "body": "Inter, ui-sans-serif, system-ui, sans-serif",
+    "scale": "balanced"
+  },
+  "shape": {
+    "radius": "10px",
+    "border": "1px solid rgba(23,32,28,0.14)"
+  },
+  "surface": {
+    "treatment": "soft",
+    "shadow": "none"
+  },
+  "palette": {
+    "background": "#F3F4F1",
+    "foreground": "#17201C",
+    "muted": "#68716C",
+    "accent": "#356859",
+    "accent_foreground": "#FFFFFF"
+  }
+}

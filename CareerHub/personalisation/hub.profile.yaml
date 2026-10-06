@@ -1,39 +1,54 @@
 schema_version: "1.0"
+
 identity:
   display_name: "Grace"
-  strapline: "En personlig CareerHub som byggs upp från verifierad erfarenhet och egna sökval."
-  language: sv
+  strapline: "Erfarenheten följer med. Riktningen kan förändras."
+  language: "sv"
+
 experience:
-  mode: guided
-  density: balanced
-  guidance: high
-  motion: subtle
+  mode: "editorial"
+  density: "airy"
+  guidance: "high"
+  motion: "subtle"
+
 home:
-  headline: "Bygg profilen. Ställ in sökningen. Börja arbeta."
-  intro: "Karriärprofilen är ännu inte verifierad. CareerHub visar därför nästa steg och håller sökning och matchning separerade från sådant som ännu inte kan styrkas."
+  headline: "Välkommen, Grace. Nästa steg är redan framlagt."
+  intro: "Se möjligheter, välj vad du vill titta närmare på och gå vidare när det känns rätt. Vi håller ihop analys, underlag och uppföljning."
   slots:
     - identity
-    - profile_health
     - next_action
-    - search_coverage
     - opportunities
     - pipeline
-    - hrdm
     - artifacts
+    - profile_health
+
 navigation:
   primary:
-    - profile
+    - home
     - find
     - analyse
     - apply
     - track
+    - profile
     - library
-    - home
   labels:
-    profile: "Profil"
-    find: "Sök"
-    analyse: "Analysera"
-    apply: "Ansök"
-    track: "Följ upp"
-    library: "Bibliotek"
     home: "Översikt"
+    find: "Hitta jobb"
+    analyse: "Analysera"
+    apply: "Sök"
+    track: "Följ"
+    profile: "Min profil"
+    library: "Mina underlag"
+
+modules:
+  portfolio: false
+  analytics: true
+  profile_health: true
+  geography: true
+  hrdm_explainer: false
+
+visibility:
+  show_verified_sources: false
+  show_match_scores: true
+  show_hrdm_trace: false
+  show_application_history: true

@@ -1,11 +1,19 @@
 schema_version: "1.0"
-posture: tydlig, lugn, vägledande
-language: sv
-principles:
-  - skilj verifierad erfarenhet från sökpreferenser
-  - visa nästa konkreta steg när underlag saknas
-  - håll språket vardagsnära och precist
-avoid:
-  - generiska karriärklyschor
-  - påhittade kompetenser
-  - överdrivna styrkepåståenden
+voice:
+  posture: "varm, vuxen, självsäker, diskret serviceorienterad"
+  person: "second"
+  verbosity: "compact"
+  avoid:
+    - "tredjeperson om Grace i löpande text"
+    - "teknisk CareerHub-terminologi på användarytor"
+    - "generiska karriärklyschor"
+    - "myndighets- eller HR-språk"
+    - "startup-ton och gamifiering"
+    - "överdrivna eller obelagda styrkepåståenden"
+  prefer:
+    - "när du vill"
+    - "när något känns intressant"
+    - "vi har förberett nästa steg"
+    - "en tydlig nästa handling åt gången"
+    - "kort och evidensbunden förklaring"
+    - "service före instruktion"

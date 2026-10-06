@@ -1,0 +1,39 @@
+schema_version: "1.0"
+identity:
+  display_name: "Grace"
+  strapline: "En personlig CareerHub som byggs upp från verifierad erfarenhet och egna sökval."
+  language: sv
+experience:
+  mode: guided
+  density: balanced
+  guidance: high
+  motion: subtle
+home:
+  headline: "Bygg profilen. Ställ in sökningen. Börja arbeta."
+  intro: "Karriärprofilen är ännu inte verifierad. CareerHub visar därför nästa steg och håller sökning och matchning separerade från sådant som ännu inte kan styrkas."
+  slots:
+    - identity
+    - profile_health
+    - next_action
+    - search_coverage
+    - opportunities
+    - pipeline
+    - hrdm
+    - artifacts
+navigation:
+  primary:
+    - profile
+    - find
+    - analyse
+    - apply
+    - track
+    - library
+    - home
+  labels:
+    profile: "Profil"
+    find: "Sök"
+    analyse: "Analysera"
+    apply: "Ansök"
+    track: "Följ upp"
+    library: "Bibliotek"
+    home: "Översikt"

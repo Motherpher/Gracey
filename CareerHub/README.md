@@ -17,29 +17,30 @@ Tillåtna källtyper är CV, professionell profil, dokumenterad anställning, ut
 
 Privatliv, modellminne, samtalsintryck, lösa biografiska uppgifter och icke verifierade påståenden har ingen väg in i kandidatprofilen.
 
+## Verified professional source
+
+Grace LinkedIn-profil är nu registrerad som den första verifierade professionella källan:
+
+https://www.linkedin.com/in/grace-assabil-b304b340/
+
+Den offentliga indexeringen stödjer två kandidatfakta:
+
+- professionell anknytning till **Region Skåne**,
+- professionell geografisk kontext: **Greater Malmö Metropolitan Area**.
+
+Övriga arbetsrelaterade teman från intervjumaterial ligger kvar i verifieringskö tills de styrks av CV eller annan godkänd karriärkälla.
+
 ## Search-only raster
 
-Grace kan vid sökning skriva **specifika önskemål eller behov**. Detta lagras och behandlas som `user_input / search_only`.
+Vid sökning kan du skriva **specifika önskemål eller behov**. Detta behandlas som `user_input / search_only`.
 
-Det får påverka:
-
-- sourcing,
-- filtrering,
-- ranking,
-- presentationsordning.
-
-Det får inte påverka:
-
-- kandidatfakta,
-- CV-påståenden,
-- HRDM proof points,
-- ansökningspåståenden.
+Det får påverka sourcing, filtrering, ranking och presentationsordning, men inte kandidatfakta, CV-påståenden, HRDM proof points eller ansökningspåståenden.
 
 ## Current state
 
-- Verified career sources: **0**
-- Verified candidate evidence: **0**
-- Current profile-matched jobs: **0 until verified sources are added or a one-search raster is supplied**
+- Verified career sources: **1**
+- Verified candidate evidence: **2**
+- Next primary verification source: **current CV**
 - Historical job vault: **preserved**
 - Historical Region Stockholm application artifact: **retired from external use**
 - Web shell: **centrally managed**
@@ -58,4 +59,5 @@ Det får inte påverka:
 
 **[Open Grace CareerHub →](CONTROL_ROOM.md)**
 
+Profile source register: [`profile/SOURCE_REGISTER.md`](profile/SOURCE_REGISTER.md)  
 Migration and alignment record: [`MIGRATION_STATUS.md`](MIGRATION_STATUS.md)

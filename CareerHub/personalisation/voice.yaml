@@ -1,0 +1,11 @@
+schema_version: "1.0"
+posture: tydlig, lugn, vägledande
+language: sv
+principles:
+  - skilj verifierad erfarenhet från sökpreferenser
+  - visa nästa konkreta steg när underlag saknas
+  - håll språket vardagsnära och precist
+avoid:
+  - generiska karriärklyschor
+  - påhittade kompetenser
+  - överdrivna styrkepåståenden

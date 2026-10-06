@@ -1,9 +1,27 @@
 identity:
   name: "Grace"
 
-career_sources: []
+career_sources:
+  - id: linkedin-professional-profile-2026-10-06
+    source_type: professional_profile
+    reference: "https://www.linkedin.com/in/grace-assabil-b304b340/"
+    verification_status: verified
+    verified_at: "2026-10-06"
+    notes: "User-supplied professional profile. Public LinkedIn indexing confirms Grace Assabil in Greater Malmö Metropolitan Area with Region Skåne."
 
-evidence: []
+evidence:
+  - id: ev-linkedin-region-skane
+    claim: "Professionell profil anger Region Skåne som arbetsgivaranknytning."
+    status: verified
+    source_ids:
+      - linkedin-professional-profile-2026-10-06
+    external_use: true
+  - id: ev-linkedin-malmo-region
+    claim: "Professionell profil är geografiskt knuten till Greater Malmö Metropolitan Area."
+    status: verified
+    source_ids:
+      - linkedin-professional-profile-2026-10-06
+    external_use: true
 
 positioning:
   headline: ""
@@ -19,4 +37,11 @@ verification_queue:
     status: open
   - id: career-source-professional-profile
     question: "Lägg till professionell profil eller dokumenterad arbetslivshistorik om den ska användas i matchningen."
+    status: resolved
+    resolution: "LinkedIn-profil tillagd och verifierad 2026-10-06."
+  - id: career-role-title-current
+    question: "Bekräfta exakt aktuell befattning och arbetsplats mot CV eller annan godkänd karriärkälla."
+    status: open
+  - id: career-handling-coordination
+    question: "Bekräfta handlednings-, introduktions- och samordningsansvar mot CV, arbetsgivarunderlag eller annan godkänd karriärkälla."
     status: open

@@ -57,9 +57,12 @@ jobs:
         shell: bash
         run: |
           rm -rf .careerhub-zero CareerHub/site/node_modules CareerHub/site/.next
-          git add CareerHub/site .github/workflows/careerhub-operations.yml
+          git add CareerHub/site
+          if ! git diff --quiet -- .github/workflows/careerhub-operations.yml; then
+            echo 'Central operations workflow changed but is not auto-committed because GitHub Actions tokens cannot mutate workflow files without workflows permission.'
+          fi
           if git diff --cached --quiet; then
-            echo 'Managed shell already current.'
+            echo 'Managed site shell already current.'
             exit 0
           fi
           git config user.name 'github-actions[bot]'

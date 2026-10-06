@@ -1,102 +1,91 @@
 schema_version: "1.0"
-profile_id: "grace"
-state: "STRUCTURE_READY"
+profile_id: grace
+state: IMPLEMENTATION_READY
+
+principle:
+  summary: "Grace uses the shared CareerHubZero body. Personalisation changes composition, language, visual grammar and interaction emphasis without creating a local runtime or a second evidence truth."
 
 vectors:
   identity_signature:
-    status: active
-    decision: "Grace is the visible identity; no unverified professional title is used in the masthead."
-    provenance:
-      - EXPLICIT_USER
-      - VERIFIED_CAREER
+    state: active
+    decisions:
+      - decision: "Use Grace as the visible identity and avoid an unverified professional title in the masthead."
+        provenance: [EXPLICIT_USER, VERIFIED_CAREER]
+        confidence: high
+      - decision: "Use second-person address throughout normal user-facing copy."
+        provenance: [EXPLICIT_USER]
+        confidence: high
   work_logic_signature:
-    status: active
-    decision: "The surface is organised around next action, opportunities, progress, prepared material and profile status."
-    provenance:
-      - EXPLICIT_USER
-      - CHAT_PATTERN
+    state: active
+    decisions:
+      - decision: "Organise the landing experience around next action, opportunities, progress, prepared material and profile status."
+        provenance: [EXPLICIT_USER, CHAT_PATTERN]
+        confidence: high
   information_need_signature:
-    status: active
-    decision: "High guidance with low cognitive clutter, progressive disclosure and one primary action per block."
-    provenance:
-      - EXPLICIT_USER
-      - CHAT_PATTERN
+    state: active
+    decisions:
+      - decision: "High guidance with low cognitive clutter, airy density and progressive disclosure."
+        provenance: [EXPLICIT_USER, CHAT_PATTERN]
+        confidence: high
   career_surface_signature:
-    status: active
-    decision: "One professional CareerHub surface until verified career evidence supports materially distinct professional views."
-    provenance:
-      - VERIFIED_CAREER
+    state: active
+    decisions:
+      - decision: "Use one professional CareerHub surface until verified career evidence supports materially distinct professional surfaces."
+        provenance: [VERIFIED_CAREER]
+        confidence: high
   voice_signature:
-    status: active
-    decision: "Second-person Swedish with warm, adult, discreet service language and no third-person Grace prose."
-    provenance:
-      - EXPLICIT_USER
-      - CHAT_PATTERN
+    state: active
+    decisions:
+      - decision: "Warm, adult, self-assured and discreetly service-oriented Swedish."
+        provenance: [EXPLICIT_USER]
+        confidence: high
+      - decision: "Prefer 'när du vill' and service-before-instruction phrasing."
+        provenance: [EXPLICIT_USER, CHAT_PATTERN]
+        confidence: high
   visual_grammar_signature:
-    status: active
-    decision: "Editorial quiet-luxury grammar: ivory field, deep petrol actions, serif display hierarchy, generous whitespace and restrained organic accents."
-    provenance:
-      - EXPLICIT_USER
+    state: active
+    decisions:
+      - decision: "Editorial botanical-collage composition with parchment, espresso, teal, burnt orange, hibiscus red and botanical green; large serif display type and generous whitespace."
+        provenance: [EXPLICIT_USER, VISUAL_HARVEST]
+        confidence: high
+      - decision: "Use teal as the functional action colour, botanical green as secondary structure, burnt orange as highlight and hibiscus red as signal/accent."
+        provenance: [VISUAL_HARVEST]
+        confidence: high
+      - decision: "Use textile/damask rhythm, botanical collage and parchment/cartographic texture as abstract visual grammar; never copy the supplied artworks."
+        provenance: [VISUAL_HARVEST]
+        confidence: high
+      - decision: "Do not reproduce Prada or Gucci trade dress; use the reference only as a service-experience metaphor."
+        provenance: [EXPLICIT_USER]
+        confidence: high
   interaction_signature:
-    status: active
-    decision: "Service-facing journey prioritises Hitta jobb → Analysera? → Sök → Följ while preserving the canonical Profile → Search → Analyse → Apply → Track architecture."
-    provenance:
-      - EXPLICIT_USER
+    state: active
+    decisions:
+      - decision: "Lead with what is ready and what the user can do next rather than configuration or system state."
+        provenance: [EXPLICIT_USER, CHAT_PATTERN]
+        confidence: high
+      - decision: "Keep the service-facing flow simple: Hitta jobb → Analysera? → Sök → Följ."
+        provenance: [EXPLICIT_USER]
+        confidence: high
   reference_provenance:
-    status: active
-    decision: "Every material deviation from CH-Core records an admissible source class; private-life and sensitive information are excluded."
-    provenance:
-      - VERIFIED_CAREER
-      - EXPLICIT_USER
+    state: active
+    decisions:
+      - decision: "Every material deviation from CHZero defaults has explicit provenance and no sensitive/private-life attribute is admissible."
+        provenance: [EXPLICIT_USER, VERIFIED_CAREER]
+        confidence: high
 
-material_decisions:
-  - id: D01
-    decision: "Always address the user as du."
-    source_state: EXPLICIT_USER
-    lock_state: locked
-  - id: D02
-    decision: "Use service language such as när du vill and när något känns intressant."
-    source_state: EXPLICIT_USER
-    lock_state: locked
-  - id: D03
-    decision: "Use an airy editorial hierarchy rather than a dense SaaS dashboard."
-    source_state: EXPLICIT_USER
-    lock_state: implementation_ready
-  - id: D04
-    decision: "Use ivory, charcoal and deep petrol as the core accessible palette; cream, saffron and coral remain secondary expressive accents."
-    source_state: EXPLICIT_USER
-    lock_state: implementation_ready
-  - id: D05
-    decision: "Use a restrained serif display stack with a contemporary sans-serif body stack."
-    source_state: EXPLICIT_USER
-    lock_state: implementation_ready
-  - id: D06
-    decision: "Keep one professional surface until verified evidence supports more."
-    source_state: VERIFIED_CAREER
-    lock_state: locked
-  - id: D07
-    decision: "Do not use an unverified professional title in the hero."
-    source_state: VERIFIED_CAREER
-    lock_state: locked
-  - id: D08
-    decision: "Do not expose technical CareerHub vocabulary on the normal user path."
-    source_state: EXPLICIT_USER
-    lock_state: locked
-  - id: D09
-    decision: "Do not use a portrait unless an image is intentionally supplied and approved."
-    source_state: EXPLICIT_USER
-    lock_state: locked
+core_invariants:
+  - "CareerHubZero remains the only runtime authority."
+  - "Candidate truth remains bound to verified career sources."
+  - "Search wishes remain search-only and cannot become candidate evidence."
+  - "Accessibility primitives remain central and reusable."
+  - "No local fork of shared React components."
 
-unchanged_from_core:
-  - accessibility primitives
-  - evidence firewall
-  - HRDM execution
-  - application state model
-  - reusable component ownership
-  - canonical Profile → Search → Analyse → Apply → Track architecture
-
-forbidden_sources:
-  - private_life
-  - sensitive_personal_attributes
-  - model_memory
-  - unsupported_biographical_inference
+lock_conditions:
+  contracts_valid: false
+  provenance_complete: true
+  central_localisation_resolved: false
+  swedish_user_path_complete: false
+  accessibility_pass: false
+  anti_generic_pass: false
+  preview_reviewed: true
+  unsupported_candidate_claims: false

@@ -1,65 +1,91 @@
 schema_version: "1.0"
-profile_id: "grace"
-state: "STRUCTURE_READY"
-external_visual_reference_state: "REFERENCE_PENDING"
+profile_id: grace
+state: VISUAL_HARVEST_COMPLETE
+external_visual_reference_state: VISUAL_HARVEST
 
-observed:
-  source: "explicit_user_brief"
+source_assets:
+  - id: grace-ref-01
+    source: "user_uploaded_image"
+    observed:
+      - "warm cream/parchment ground"
+      - "saturated teal botanical pattern"
+      - "saffron-gold linework"
+      - "hibiscus-red ornamental accents"
+      - "deep espresso/black anchors"
+      - "layered floral, insect and organic motifs"
+  - id: grace-ref-02
+    source: "user_uploaded_image"
+    observed:
+      - "aged cartographic parchment"
+      - "sepia, clay and sand tonal field"
+      - "dark sculptural linework"
+      - "small orange and dusty-rose floral accents"
+      - "editorial collage with historical-paper texture"
+  - id: grace-ref-03
+    source: "user_uploaded_image"
+    observed:
+      - "saturated burnt-orange field"
+      - "red/coral accent"
+      - "fresh botanical green"
+      - "cream highlights"
+      - "bold collage cut-out composition"
+      - "high-energy colour blocking"
+
+visual_synthesis:
   typography_character:
-    - editorial
-    - restrained
-    - mature
+    - "large editorial serif display remains appropriate"
+    - "clean sans-serif body keeps dense colour work readable"
   grid_layout_rhythm:
-    - airy
-    - progressive_disclosure
-    - one_primary_action_per_block
+    - "airy editorial structure remains"
+    - "large fields may carry a single saturated colour statement"
+    - "ornament appears at edges and transitions rather than behind long text"
   whitespace_density:
-    - generous_whitespace
-    - low_cognitive_clutter
+    - "warm paper space is retained"
+    - "saturated colours are concentrated, not spread evenly"
   geometry:
-    - soft_radius
-    - quiet_borders
-    - restrained_shadow
+    - "organic petal, leaf and loop shapes"
+    - "thin ornamental linework"
+    - "collage cut-out silhouettes"
   hierarchy:
-    - large_display_type
-    - strong_section_openings
-    - clear_next_action
+    - "teal remains the functional action colour"
+    - "botanical green carries secondary structure"
+    - "burnt orange carries highlight energy"
+    - "hibiscus red carries signal/accent emphasis"
+    - "espresso replaces cool charcoal as the dark anchor"
   colour_logic:
     core:
-      background: "#F7F1E3"
-      foreground: "#1B2220"
-      muted: "#7F7A5B"
-      action: "#063A3D"
-      action_foreground: "#FFFFFF"
-    expressive_secondary:
-      - "#F4D59B"
-      - "#F2A000"
-      - "#D94A3A"
-  card_surface_behaviour:
-    - editorial_blocks
-    - low_box_density
-    - quiet_separation
-  iconography:
-    - minimal
-    - functional
-  data_visualisation_language:
-    - restrained
-    - explanatory
-    - no_gamification
+      background: "#F2E8D0"
+      foreground: "#20130B"
+      muted: "#6A5745"
+      action_teal: "#2F7865"
+      action_foreground: "#FFF8E8"
+    semantic_accents:
+      secondary_botanical_green: "#7DA36A"
+      highlight_burnt_orange: "#E97A3C"
+      signal_hibiscus_red: "#B64A3B"
+    harvested_reserve:
+      teal_secondary: "#348365"
+      saffron_gold: "#D8942A"
+  surface_behaviour:
+    - "paper-like warm ground"
+    - "teal action fields"
+    - "isolated orange/red/green ornamental hits"
+    - "avoid large low-contrast text on saturated warm accents"
   imagery_illustration_language:
-    - abstract_botanical
-    - organic_linework
-    - muted_graphic_texture
+    - "botanical and floral collage"
+    - "ornamental textile/damask rhythm"
+    - "map/paper texture as a secondary editorial reference"
+    - "birds, butterflies, bees or leaves may inspire abstract motifs but should not be copied literally"
   motion_character:
-    - subtle
-    - reduced_motion_safe
+    - "subtle only"
+    - "ornamental shapes may drift or reveal slightly; no gamification"
 
-not_observed:
-  - external brand visual system
-  - nominated Pinterest or Behance reference
-  - approved portrait asset
+pinterest_reference:
+  url: "https://se.pinterest.com/?tabId=448389775340145884"
+  state: REFERENCE_PENDING
+  note: "The supplied Pinterest tab could not be directly inspected from the current environment. No visual claims are derived from it until screenshots or directly accessible pin/board URLs are supplied."
 
-rules:
-  - "Do not claim visual attributes from an external reference until it has been directly inspected."
-  - "Prada/Gucci wording is a service metaphor only, not a harvested brand reference."
-  - "No sensitive or private-life attribute may influence visual derivation."
+guardrails:
+  - "Do not copy the uploaded artworks or identifiable compositions."
+  - "Use palette, rhythm, texture and botanical/collage principles as inspiration only."
+  - "Do not infer sensitive personal attributes from people depicted in visual references."

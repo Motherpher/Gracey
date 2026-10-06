@@ -1,58 +1,60 @@
 schema_version: "1.0"
-profile_id: "grace"
-
+profile_id: grace
 references:
-  - id: grace-service-brief-2026-10
-    type: explicit_user_brief
-    status: active
-    provenance_state: EXPLICIT_USER
-    influence:
-      - voice
-      - information_hierarchy
-      - interaction
-      - visual_grammar
-    note: "Quiet-luxury service brief: calm, welcoming, adult, prepared and high-service. Prada/Gucci are service metaphors only and must not be reproduced as brand design."
+  - id: grace-service-brief-2026-10-06
+    type: explicit_user_decision
+    state: EXPLICIT_USER
+    purpose: "Service posture, language and user experience"
+    summary: "The hub should feel welcoming, composed, attentive and prepared. High-end fashion retail is used as an experience metaphor only."
+    restrictions:
+      - "Do not copy logos, typography, trade dress or proprietary visual systems."
+      - "Do not infer personal/private attributes from the metaphor."
+
+  - id: grace-visual-ref-01-2026-10-06
+    type: uploaded_visual_reference
+    state: VISUAL_HARVEST
+    purpose: "Palette, botanical ornament, textile rhythm and layered editorial collage"
+    local_reference: "user supplied visual reference 01"
+
+  - id: grace-visual-ref-02-2026-10-06
+    type: uploaded_visual_reference
+    state: VISUAL_HARVEST
+    purpose: "Parchment, cartographic texture, sepia tonal grounding and restrained floral contrast"
+    local_reference: "user supplied visual reference 02"
+
+  - id: grace-visual-ref-03-2026-10-06
+    type: uploaded_visual_reference
+    state: VISUAL_HARVEST
+    purpose: "Burnt-orange colour field, saturated collage accents and botanical green"
+    local_reference: "user supplied visual reference 03"
+
+  - id: grace-pinterest-2026-10-06
+    type: external_visual_reference
+    state: REFERENCE_PENDING
+    purpose: "Additional visual inspiration requested by user"
+    url: "https://se.pinterest.com/?tabId=448389775340145884"
+    note: "Personalised Pinterest tab could not be directly inspected. Await screenshots or direct pin/board URLs before harvesting."
 
   - id: grace-ux-review
-    type: governed_profile_document
-    status: active
-    provenance_state: EXPLICIT_USER
-    reference: "CareerHub/docs/UX_REVIEW.md"
-    influence:
-      - voice
-      - interaction
-      - user_journey
+    type: existing_profile_document
+    state: EXPLICIT_USER
+    purpose: "Second-person language, service-before-instruction, calm adult tone"
+    repository_path: "CareerHub/docs/UX_REVIEW.md"
 
-  - id: grace-verified-career-profile
+  - id: grace-verified-career-source-linkedin
     type: verified_career
-    status: active
-    provenance_state: VERIFIED_CAREER
-    reference: "CareerHub/profile/candidate.yaml"
-    influence:
-      - identity_boundary
-      - career_surface_boundary
-      - title_boundary
+    state: VERIFIED_CAREER
+    purpose: "Identity boundary only; prevents unsupported professional-title branding"
+    repository_path: "CareerHub/profile/candidate.yaml"
 
-  - id: careerhubzero-non-generic-formula
-    type: system_contract
-    status: active
-    provenance_state: SYSTEM_CONTRACT
-    reference: "Motherpher/CareerHubZero/docs/NON_GENERIC_PROFILE_FORMULA.md"
-    influence:
-      - derivation_method
-      - anti_generic_audit
-      - provenance
+  - id: chzero-non-generic-profile-formula
+    type: central_contract
+    state: CENTRAL_CONTRACT
+    purpose: "Eight-vector personalisation and provenance rules"
+    repository_path: "Motherpher/CareerHubZero/docs/NON_GENERIC_PROFILE_FORMULA.md"
 
-  - id: external-visual-reference
-    type: visual_reference
-    status: pending
-    provenance_state: REFERENCE_PENDING
-    influence:
-      - visual_grammar
-    note: "No external visual reference is harvested until it has been intentionally nominated and directly inspected."
-
-exclusions:
-  - private_life
-  - sensitive_personal_information
-  - unverified_candidate_claims
-  - copied_brand_trade_dress
+  - id: chzero-personal-workspace-architecture
+    type: central_contract
+    state: CENTRAL_CONTRACT
+    purpose: "Profile → Search → Analyse → Apply → Track architecture"
+    repository_path: "Motherpher/CareerHubZero/docs/PERSONAL_WORKSPACE_PROFILE_LIBRARY_SEARCH.md"

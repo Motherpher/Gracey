@@ -14,14 +14,20 @@
     "shadow": "subtle"
   },
   "palette": {
-    "background": "#F7F1E3",
-    "foreground": "#1B2220",
-    "muted": "#7F7A5B",
-    "accent": "#063A3D",
-    "accent_foreground": "#FFFFFF"
+    "background": "#F2E8D0",
+    "foreground": "#20130B",
+    "muted": "#6A5745",
+    "accent": "#2F7865",
+    "accent_foreground": "#FFF8E8",
+    "secondary": "#7DA36A",
+    "secondary_foreground": "#20130B",
+    "highlight": "#E97A3C",
+    "highlight_foreground": "#20130B",
+    "signal": "#B64A3B",
+    "signal_foreground": "#FFF8E8"
   },
   "imagery": {
     "mode": "graphic",
-    "treatment": "muted"
+    "treatment": "natural"
   }
 }

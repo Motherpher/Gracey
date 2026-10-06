@@ -1,0 +1,102 @@
+schema_version: "1.0"
+profile_id: "grace"
+state: "STRUCTURE_READY"
+
+vectors:
+  identity_signature:
+    status: active
+    decision: "Grace is the visible identity; no unverified professional title is used in the masthead."
+    provenance:
+      - EXPLICIT_USER
+      - VERIFIED_CAREER
+  work_logic_signature:
+    status: active
+    decision: "The surface is organised around next action, opportunities, progress, prepared material and profile status."
+    provenance:
+      - EXPLICIT_USER
+      - CHAT_PATTERN
+  information_need_signature:
+    status: active
+    decision: "High guidance with low cognitive clutter, progressive disclosure and one primary action per block."
+    provenance:
+      - EXPLICIT_USER
+      - CHAT_PATTERN
+  career_surface_signature:
+    status: active
+    decision: "One professional CareerHub surface until verified career evidence supports materially distinct professional views."
+    provenance:
+      - VERIFIED_CAREER
+  voice_signature:
+    status: active
+    decision: "Second-person Swedish with warm, adult, discreet service language and no third-person Grace prose."
+    provenance:
+      - EXPLICIT_USER
+      - CHAT_PATTERN
+  visual_grammar_signature:
+    status: active
+    decision: "Editorial quiet-luxury grammar: ivory field, deep petrol actions, serif display hierarchy, generous whitespace and restrained organic accents."
+    provenance:
+      - EXPLICIT_USER
+  interaction_signature:
+    status: active
+    decision: "Service-facing journey prioritises Hitta jobb → Analysera? → Sök → Följ while preserving the canonical Profile → Search → Analyse → Apply → Track architecture."
+    provenance:
+      - EXPLICIT_USER
+  reference_provenance:
+    status: active
+    decision: "Every material deviation from CH-Core records an admissible source class; private-life and sensitive information are excluded."
+    provenance:
+      - VERIFIED_CAREER
+      - EXPLICIT_USER
+
+material_decisions:
+  - id: D01
+    decision: "Always address the user as du."
+    source_state: EXPLICIT_USER
+    lock_state: locked
+  - id: D02
+    decision: "Use service language such as när du vill and när något känns intressant."
+    source_state: EXPLICIT_USER
+    lock_state: locked
+  - id: D03
+    decision: "Use an airy editorial hierarchy rather than a dense SaaS dashboard."
+    source_state: EXPLICIT_USER
+    lock_state: implementation_ready
+  - id: D04
+    decision: "Use ivory, charcoal and deep petrol as the core accessible palette; cream, saffron and coral remain secondary expressive accents."
+    source_state: EXPLICIT_USER
+    lock_state: implementation_ready
+  - id: D05
+    decision: "Use a restrained serif display stack with a contemporary sans-serif body stack."
+    source_state: EXPLICIT_USER
+    lock_state: implementation_ready
+  - id: D06
+    decision: "Keep one professional surface until verified evidence supports more."
+    source_state: VERIFIED_CAREER
+    lock_state: locked
+  - id: D07
+    decision: "Do not use an unverified professional title in the hero."
+    source_state: VERIFIED_CAREER
+    lock_state: locked
+  - id: D08
+    decision: "Do not expose technical CareerHub vocabulary on the normal user path."
+    source_state: EXPLICIT_USER
+    lock_state: locked
+  - id: D09
+    decision: "Do not use a portrait unless an image is intentionally supplied and approved."
+    source_state: EXPLICIT_USER
+    lock_state: locked
+
+unchanged_from_core:
+  - accessibility primitives
+  - evidence firewall
+  - HRDM execution
+  - application state model
+  - reusable component ownership
+  - canonical Profile → Search → Analyse → Apply → Track architecture
+
+forbidden_sources:
+  - private_life
+  - sensitive_personal_attributes
+  - model_memory
+  - unsupported_biographical_inference

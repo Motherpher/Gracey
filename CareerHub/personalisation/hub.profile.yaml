@@ -6,7 +6,7 @@ identity:
   language: "sv"
 
 experience:
-  mode: "editorial"
+  mode: "custom"
   density: "airy"
   guidance: "high"
   motion: "subtle"

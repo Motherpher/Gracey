@@ -1,29 +1,41 @@
 # Din karriärprofil
 
-Din profil byggs enbart av **verifierade karriärkällor**. Det gör att varje matchning går att spåra tillbaka till något som faktiskt finns dokumenterat.
+Din CareerHub-profil byggs endast av **verifierade karriärkällor**. Varje matchningsbar uppgift ska kunna spåras tillbaka till ett dokumenterat karriärunderlag.
 
-## Det som kan bygga din profil
-
-När du vill kan du lägga till exempelvis:
+## Källor som får bygga profilen
 
 - aktuellt CV,
 - professionell profil,
 - dokumenterad arbetslivshistorik,
-- utbildningar och examina,
-- legitimationer och certifikat,
-- arbetsprover eller portfolio,
-- dokumenterade projekt eller referenser.
+- utbildning och examen,
+- legitimation och certifiering,
+- arbetsprov eller portfolio,
+- arbetsgivarreferens,
+- verifierat projektrecord.
 
-Det som är verifierat kan användas i matchning, HRDM-analys och ansökningsunderlag.
+En uppladdad eller nämnd uppgift blir inte automatiskt kandidatfakta. Den måste först vara godkänd som verifierad karriärevidens.
+
+## Det som aldrig får bli kandidatfakta
+
+CareerHub får inte bygga profil, matchning, HRDM-positionering eller ansökningspåståenden från:
+
+- privatliv,
+- familje- eller relationsuppgifter,
+- hälsouppgifter,
+- modellminne,
+- samtalsintryck,
+- lösa biografiska antaganden,
+- icke verifierade karriärpåståenden,
+- text i sökrutan **specifika önskemål eller behov**.
+
+Saknas verifierat stöd ska uppgiften betraktas som **okänd**, inte fyllas i genom inferens.
 
 ## Justera sökningen utan att ändra profilen
 
-När du söker kan du skriva **specifika önskemål eller behov**.
+När du söker kan du skriva **specifika önskemål eller behov**. Det fungerar som ett extra raster för den sökningen och kan påverka sourcing, filtrering och ranking.
 
-Det fungerar som ett extra raster för just sökningen — till exempel arbetstid, område, typ av arbetsplats eller något annat du vill att vi ska väga in.
+Det ändrar inte karriärprofilen och får inte återanvändas som bevis om dig.
 
-Det ändrar inte din karriärprofil och blir inte en uppgift om dig.
+## Nuvarande läge
 
-## Nästa steg
-
-När du vill göra matchningen skarpare börjar vi med att lägga in ett aktuellt CV och de karriärkällor du vill använda.
+Det finns ännu inga verifierade karriärkällor aktiverade. Därför ska CareerHub inte skapa någon matchningsbar profil förrän sådant underlag har lagts till och verifierats.

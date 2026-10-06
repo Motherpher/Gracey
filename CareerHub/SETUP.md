@@ -1,38 +1,35 @@
 # Inställningar
 
-Det mesta är redan klart. När du vill använder du [karriärhubben](CONTROL_ROOM.md) och väljer nästa steg därifrån.
+Grace CareerHub använder den centrala CareerHubZero-motorn. Profil, sökning och ansökningsunderlag hålls åtskilda så att endast verifierad karriärevidens kan bli kandidatfakta.
 
-## När du vill se nya jobb
+## Uppdatera jobb
 
 1. Öppna **Uppdatera jobb**.
-2. Skriv, om du vill, något i rutan **Specifika önskemål eller behov**.
-3. Tryck på **Run workflow**.
-4. Vänta ungefär 30–90 sekunder.
-5. Gå tillbaka till karriärhubben och uppdatera sidan.
+2. Skriv vid behov något i rutan **Specifika önskemål eller behov**.
+3. Starta sökningen.
+4. Vänta tills den centrala sökningen är klar.
+5. Öppna CareerHub igen.
 
-Det du skriver i rutan påverkar bara sökningen. Det ändrar inte din karriärprofil.
+Rutan är ett tillfälligt sökraster. Det du skriver där får påverka vilka jobb som hämtas och rangordnas, men det ändrar inte din karriärprofil.
 
-## När du vill analysera ett jobb
+## Profil
 
-När ett jobb väcker ditt intresse väljer du **JA — Analysera**.
+Profilen byggs endast av verifierade karriärkällor. Ett aktuellt CV är normalt den första källan att lägga in. Därefter kan relevanta utbildningar, certifikat, dokumenterad arbetslivshistorik, arbetsprover, portfolio, arbetsgivarreferenser och verifierade projekt läggas till.
 
-Vi går då igenom rollen, arbetsgivaren, kraven och hur väl möjligheten passar din verifierade karriärprofil. Därefter förbereds jobbsidan och ett första ansökningsunderlag.
+Privatliv och icke verifierade personuppgifter används inte för matchning.
 
-Har du hittat jobbet någon annanstans använder du **Analysera ett jobb jag hittat själv**.
+## Analysera jobb
 
-## Påminnelser
+När ett jobb är relevant körs HRDM-R mot:
 
-När du vill kan du få påminnelser före sista ansökningsdag och hålla nästa steg samlat på jobbsidan.
+- jobbets faktiska text och offentliga arbetsgivarkontext,
+- den verifierade karriärprofilen,
+- inte mot privata eller antagna uppgifter om kandidaten.
 
-E-post och sms kan läggas till senare.
+## Ansökan
 
-## När du vill göra profilen skarpare
+Ansökningsunderlag får bara använda kandidatpåståenden som kan härledas till verifierad karriärevidens och den aktuella analysen.
 
-Lägg till de verifierade karriärkällor du vill använda, till exempel:
+## Följ upp
 
-- aktuellt CV,
-- professionell profil,
-- dokumenterad arbetslivshistorik,
-- utbildningar,
-- legitimationer och certifikat,
-- relevanta arbetsprover eller dokumenterade projekt.
+Ansökningsstatus, deadlines, kontakter, intervjuer och utfall sparas separat från kandidatprofilen. Dessa processhändelser får inte användas för att skriva om vem kandidaten är.

@@ -1,0 +1,58 @@
+schema_version: "1.0"
+profile_id: "grace"
+
+references:
+  - id: grace-service-brief-2026-10
+    type: explicit_user_brief
+    status: active
+    provenance_state: EXPLICIT_USER
+    influence:
+      - voice
+      - information_hierarchy
+      - interaction
+      - visual_grammar
+    note: "Quiet-luxury service brief: calm, welcoming, adult, prepared and high-service. Prada/Gucci are service metaphors only and must not be reproduced as brand design."
+
+  - id: grace-ux-review
+    type: governed_profile_document
+    status: active
+    provenance_state: EXPLICIT_USER
+    reference: "CareerHub/docs/UX_REVIEW.md"
+    influence:
+      - voice
+      - interaction
+      - user_journey
+
+  - id: grace-verified-career-profile
+    type: verified_career
+    status: active
+    provenance_state: VERIFIED_CAREER
+    reference: "CareerHub/profile/candidate.yaml"
+    influence:
+      - identity_boundary
+      - career_surface_boundary
+      - title_boundary
+
+  - id: careerhubzero-non-generic-formula
+    type: system_contract
+    status: active
+    provenance_state: SYSTEM_CONTRACT
+    reference: "Motherpher/CareerHubZero/docs/NON_GENERIC_PROFILE_FORMULA.md"
+    influence:
+      - derivation_method
+      - anti_generic_audit
+      - provenance
+
+  - id: external-visual-reference
+    type: visual_reference
+    status: pending
+    provenance_state: REFERENCE_PENDING
+    influence:
+      - visual_grammar
+    note: "No external visual reference is harvested until it has been intentionally nominated and directly inspected."
+
+exclusions:
+  - private_life
+  - sensitive_personal_information
+  - unverified_candidate_claims
+  - copied_brand_trade_dress

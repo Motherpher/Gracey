@@ -1,20 +1,26 @@
-# Grace · Karriärhubben
+# Grace · CareerHub
 
-![Grace · Karriärhubben](CareerHub/visuals/careerhub-journey.svg)
+Grace CareerHub är en personlig karriärarbetsyta som använder den centrala motorn i `Motherpher/CareerHubZero`.
 
-Välkommen, Grace. Här finns nästa steg samlat — utvalt, tydligt och redo när du är.
+## Arbetsgång
 
-Du väljer tempot. När du vill titta närmare på en möjlighet finns analysen, strukturen och nästa steg nära till hands.
+**Profil → Sök → Analysera → Ansök → Följ upp**
 
-## Tre enkla steg
+### Profil
+Karriärprofilen får endast byggas av **verifierade karriärkällor**. I nuläget finns inga verifierade källor aktiverade, vilket innebär att CareerHub inte ska skapa någon matchningsbar bild av Grace genom antaganden.
 
-**1. Hitta jobb**  
-När du vill se vad som finns får du en aktuell överblick med de mest relevanta möjligheterna först.
+### Sök
+Vid varje sökning kan Grace skriva **specifika önskemål eller behov**. Detta är ett separat sökraster som får påverka vilka jobb som hämtas och hur de rangordnas, men det får aldrig bli kandidatfakta eller ändra karriärprofilen.
 
-**2. Välj jobb**  
-När något väcker ditt intresse svarar du bara på en fråga: **Vill du analysera det här jobbet?**
+### Analysera
+Valda jobb analyseras med den centrala HRDM-R-processen mot verifierad karriärevidens.
 
-**3. Sök**  
-När du vill gå vidare ligger en tydlig matchning och ett första ansökningsunderlag redan förberett.
+### Ansök
+Ansökningsunderlag får endast använda verifierade kandidatuppgifter och ett aktuellt, godkänt analysunderlag.
 
-**[Öppna karriärhubben →](CareerHub/CONTROL_ROOM.md)**
+### Följ upp
+Jobb, analyser, ansökningar, deadlines och utfall hålls som separat CareerHub-status.
+
+**[Öppna CareerHub →](CareerHub/CONTROL_ROOM.md)**
+
+Systemstatus och arkitektur finns i [`CareerHub/MIGRATION_STATUS.md`](CareerHub/MIGRATION_STATUS.md).

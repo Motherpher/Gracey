@@ -1,0 +1,65 @@
+schema_version: "1.0"
+profile_id: "grace"
+state: "STRUCTURE_READY"
+external_visual_reference_state: "REFERENCE_PENDING"
+
+observed:
+  source: "explicit_user_brief"
+  typography_character:
+    - editorial
+    - restrained
+    - mature
+  grid_layout_rhythm:
+    - airy
+    - progressive_disclosure
+    - one_primary_action_per_block
+  whitespace_density:
+    - generous_whitespace
+    - low_cognitive_clutter
+  geometry:
+    - soft_radius
+    - quiet_borders
+    - restrained_shadow
+  hierarchy:
+    - large_display_type
+    - strong_section_openings
+    - clear_next_action
+  colour_logic:
+    core:
+      background: "#F7F1E3"
+      foreground: "#1B2220"
+      muted: "#7F7A5B"
+      action: "#063A3D"
+      action_foreground: "#FFFFFF"
+    expressive_secondary:
+      - "#F4D59B"
+      - "#F2A000"
+      - "#D94A3A"
+  card_surface_behaviour:
+    - editorial_blocks
+    - low_box_density
+    - quiet_separation
+  iconography:
+    - minimal
+    - functional
+  data_visualisation_language:
+    - restrained
+    - explanatory
+    - no_gamification
+  imagery_illustration_language:
+    - abstract_botanical
+    - organic_linework
+    - muted_graphic_texture
+  motion_character:
+    - subtle
+    - reduced_motion_safe
+
+not_observed:
+  - external brand visual system
+  - nominated Pinterest or Behance reference
+  - approved portrait asset
+
+rules:
+  - "Do not claim visual attributes from an external reference until it has been directly inspected."
+  - "Prada/Gucci wording is a service metaphor only, not a harvested brand reference."
+  - "No sensitive or private-life attribute may influence visual derivation."

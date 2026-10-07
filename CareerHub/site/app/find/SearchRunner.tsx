@@ -39,7 +39,7 @@ export default function SearchRunner({ language = 'en' }: { language?: string })
   const [decisionBusy, setDecisionBusy] = useState('');
   const [error, setError] = useState('');
   const [data, setData] = useState<SearchResponse | null>(null);
-  const [showSeen, setShowSeen] = useState(true);
+  const [showSeen, setShowSeen] = useState(false);
   const [showDismissed, setShowDismissed] = useState(false);
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function SearchRunner({ language = 'en' }: { language?: string })
       const response = await fetch('/api/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ lane: 'all', overlay: overlay.trim(), filters, limit: 100 }) });
       const payload = await response.json();
       if (!response.ok) throw new Error(payload?.error || (sv ? 'Sökningen kunde inte genomföras.' : 'Search could not be completed.'));
-      setData(payload); setFilters(payload.filters ?? filters); setShowSeen(true); setShowDismissed(false);
+      setData(payload); setFilters(payload.filters ?? filters); setShowSeen(false); setShowDismissed(false);
     } catch (err) {
       setError(err instanceof Error ? err.message : (sv ? 'Sökningen kunde inte genomföras.' : 'Search could not be completed.'));
     } finally { setLoading(false); }
@@ -130,7 +130,7 @@ export default function SearchRunner({ language = 'en' }: { language?: string })
       {error ? <p className="wish-status wish-status--error" role="alert">{error}</p> : null}
 
       {data ? <section className="search-results" aria-live="polite">
-        <div className="search-results__head"><div><p className="meta-label">{data.sourceHealth === 'HEALTHY' ? (sv ? 'Sökning klar' : 'Search completed') : (sv ? 'Sökning klar med källvarning' : 'Search completed with source warning')}</p><h2>{visible.length} {sv ? 'träffar' : 'matches'} · {data.counts.new} {sv ? 'nya' : 'new'} · {data.counts.changed} {sv ? 'ändrade' : 'changed'}</h2></div><span className={`status source-health source-health--${data.sourceHealth.toLowerCase()}`}>{data.sourceHealth}</span></div>
+        <div className="search-results__head"><div><p className="meta-label">{data.sourceHealth === 'HEALTHY' ? (sv ? 'Sökning klar' : 'Search completed') : (sv ? 'Sökning klar med källvarning' : 'Search completed with source warning')}</p><h2>{data.counts.new} {sv ? 'nya' : 'new'} · {data.counts.changed} {sv ? 'ändrade' : 'changed'}</h2></div><span className={`status source-health source-health--${data.sourceHealth.toLowerCase()}`}>{data.sourceHealth}</span></div>
 
         <div className="search-summary-grid">
           <span><strong>{data.counts.checked}</strong><small>{sv ? 'kontrollerade' : 'checked'}</small></span>
@@ -146,12 +146,12 @@ export default function SearchRunner({ language = 'en' }: { language?: string })
         {data.baselineEstablished ? <div className="notice">{sv ? 'Detta är den första registrerade körningen för dessa sökval. Resultaten etablerar baslinjen.' : 'This is the first recorded run for these search choices. These results establish the baseline.'}</div> : null}
         {data.historyAvailable && !data.baselineEstablished && data.counts.new === 0 && data.counts.changed === 0 ? <div className="notice">{sv ? `Sökningen genomfördes korrekt. ${data.counts.checked} jobb kontrollerades, men inga nya eller ändrade jobb hittades.` : `Search completed successfully. ${data.counts.checked} roles were checked, but no new or changed roles were found.`}</div> : null}
 
-        <div className="inline-actions">{data.counts.seen > 0 ? <button type="button" className="button" onClick={() => setShowSeen((value) => !value)}>{showSeen ? (sv ? `Dölj ${data.counts.seen} redan sedda` : `Hide ${data.counts.seen} seen`) : (sv ? `Visa ${data.counts.seen} redan sedda` : `Show ${data.counts.seen} seen`)}</button> : null}{data.dismissedResults.length > 0 ? <button type="button" className="button" onClick={() => setShowDismissed((value) => !value)}>{showDismissed ? (sv ? 'Dölj bortvalda' : 'Hide dismissed') : (sv ? `Visa ${data.dismissedResults.length} bortvalda` : `Show ${data.dismissedResults.length} dismissed`)}</button> : null}</div>
+        <div className="inline-actions">{data.counts.seen > 0 ? <button type="button" className="button" onClick={() => setShowSeen((value) => !value)}>{showSeen ? (sv ? 'Dölj redan sedda' : 'Hide seen') : (sv ? `Visa ${data.counts.seen} redan sedda` : `Show ${data.counts.seen} seen`)}</button> : null}{data.dismissedResults.length > 0 ? <button type="button" className="button" onClick={() => setShowDismissed((value) => !value)}>{showDismissed ? (sv ? 'Dölj bortvalda' : 'Hide dismissed') : (sv ? `Visa ${data.dismissedResults.length} bortvalda` : `Show ${data.dismissedResults.length} dismissed`)}</button> : null}</div>
 
         {visible.length ? <div className="search-result-list">{visible.map((result) => <article className="search-result" key={`${result.id}-${result.laneId}`}>
           <div className="search-result__main"><p className="meta-label"><span className={`novelty novelty--${result.novelty.toLowerCase()}`}>{result.novelty}</span> · {result.laneName} · {sv ? 'poäng' : 'score'} {result.score}</p><h3>{result.title}</h3><p><strong>{result.company || (sv ? 'Arbetsgivare ej angiven' : 'Employer not stated')}</strong>{result.location ? ` · ${result.location}` : ''}</p><p className="muted">{result.jobType} · {result.workMode}{result.published ? ` · ${sv ? 'publicerad' : 'published'} ${result.published.slice(0, 10)}` : ''}{result.deadline ? ` · ${sv ? 'sista dag' : 'deadline'} ${result.deadline.slice(0, 10)}` : ''}</p></div>
-          <div className="inline-actions search-result__actions"><button type="button" className="button button--quiet" disabled={decisionBusy === result.identityKey || !data.historyAvailable} onClick={() => dismiss(result)} aria-label={sv ? `Dölj ${result.title}` : `Dismiss ${result.title}`}>×</button><a className="button" href={result.url} target="_blank" rel="noreferrer">{sv ? 'Öppna jobbet' : 'Open role'}</a><a className="button button--primary" href={analyseHref(result)}>{sv ? 'Analysera jobbet' : 'Analyse job'}</a></div>
-        </article>)}</div> : <div className="empty-state">{data.historyAvailable ? (sv ? 'Inga möjligheter visas med nuvarande visningsval.' : 'No opportunities are shown with the current display choice.') : (sv ? 'Inga matchande möjligheter hittades.' : 'No matching opportunities were returned.')}</div>}
+          <div className="inline-actions"><button type="button" className="button button--quiet" disabled={decisionBusy === result.identityKey || !data.historyAvailable} onClick={() => dismiss(result)} aria-label={sv ? `Dölj ${result.title}` : `Dismiss ${result.title}`}>×</button><a className="button" href={result.url} target="_blank" rel="noreferrer">{sv ? 'Öppna jobbet' : 'Open role'}</a><a className="button button--primary" href={analyseHref(result)}>{sv ? 'Analysera jobbet' : 'Analyse job'}</a></div>
+        </article>)}</div> : <div className="empty-state">{data.historyAvailable ? (sv ? 'Inga nya eller ändrade möjligheter i denna körning.' : 'No new or changed opportunities in this run.') : (sv ? 'Inga matchande möjligheter hittades.' : 'No matching opportunities were returned.')}</div>}
 
         {showDismissed && data.dismissedResults.length ? <div className="dismissed-results"><h3>{sv ? 'Bortvalda jobb' : 'Dismissed roles'}</h3>{data.dismissedResults.map((result) => <article className="search-result search-result--dismissed" key={`dismissed-${result.identityKey}`}><div className="search-result__main"><h3>{result.title}</h3><p>{result.company}{result.location ? ` · ${result.location}` : ''}</p></div><div className="inline-actions"><button className="button" type="button" disabled={decisionBusy === result.identityKey} onClick={() => restore(result)}>{sv ? 'Återställ' : 'Restore'}</button></div></article>)}</div> : null}
       </section> : null}

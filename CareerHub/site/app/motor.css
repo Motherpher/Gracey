@@ -36,10 +36,9 @@
 .novelty { display:inline-flex; padding:3px 7px; border:1px solid currentColor; border-radius:999px; font-size:.68rem; letter-spacing:.08em; }
 .search-result-list,.dismissed-results { display:grid; gap:10px; margin-top:16px; }
 .dismissed-results { padding-top:18px; border-top:1px solid color-mix(in srgb,var(--ch-fg) 12%,transparent); }
-.search-result { display:flex; justify-content:space-between; gap:24px; padding:18px; border:1px solid color-mix(in srgb,var(--ch-fg) 13%,transparent); min-width:0; }
+.search-result { display:flex; justify-content:space-between; gap:24px; padding:18px; border:1px solid color-mix(in srgb,var(--ch-fg) 13%,transparent); }
 .search-result--dismissed { opacity:.72; }
-.search-result__main { min-width:0; overflow-wrap:anywhere; }
-.search-result__actions { align-self:flex-start; margin-top:0; }
+.search-result__main { min-width:0; }
 .button--quiet { min-width:40px; padding-inline:10px; font-size:1.15rem; }
 .hrdm-report { display:grid; gap:16px; margin-top:24px; }
 .hrdm-report__header { padding-bottom:18px; border-bottom:1px solid color-mix(in srgb,var(--ch-fg) 14%,transparent); }
@@ -59,5 +58,5 @@
 .global-process__status span,.global-process__status small { color:var(--ch-muted); }
 .global-process__actions { display:flex; gap:8px; flex:0 0 auto; }
 @media(max-width:900px){ .motor-flow{grid-template-columns:repeat(2,1fr)} .motor-guide__head,.motor-guide__lanes,.search-results__head,.hrdm-report__header,.search-result{flex-direction:column} .global-process{align-items:flex-start;flex-direction:column}.global-process__actions{width:100%;flex-wrap:wrap}.search-summary-grid{grid-template-columns:repeat(2,1fr)} }
-@media(max-width:620px){ .motor-flow{grid-template-columns:1fr} .date-filter-row,.search-summary-grid{grid-template-columns:1fr} .search-results__head{gap:10px}.search-result{gap:14px;padding:15px}.search-result__actions{width:100%;display:grid;grid-template-columns:1fr;gap:8px}.search-result__actions .button{width:100%;min-height:44px}.search-result__actions .button--quiet{min-height:40px}.filter-chip-row{gap:6px}.filter-chip{max-width:100%}.search-run-meta{display:grid;gap:6px}.search-summary-grid span{padding:10px}.search-controls--workspace>.inline-actions{display:grid;grid-template-columns:1fr}.search-controls--workspace>.inline-actions .button{width:100%} }
+@media(max-width:620px){ .motor-flow{grid-template-columns:1fr} .date-filter-row,.search-summary-grid{grid-template-columns:1fr} }
 @media(prefers-reduced-motion:reduce){ .process-status__dot--active{animation:none;opacity:1} }

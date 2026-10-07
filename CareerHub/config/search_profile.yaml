@@ -1,5 +1,5 @@
 version: "2.1"
-intent: "Find relevant opportunities from Grace's verified career evidence, with optional search-only preferences."
+intent: "Find relevant opportunities from Grace's verified career evidence while using interview-derived role hypotheses only as search guidance."
 
 geographies:
   country: "SE"
@@ -20,23 +20,49 @@ salary: {}
 
 lanes:
   - lane_id: core
-    name: "Huvudspår"
+    name: "Handledning, introduktion och samordning"
     bucket: core
     priority: 1
-    queries: []
+    queries:
+      - handledare
+      - praktikhandledare
+      - introduktionsansvarig
+      - onboarding coordinator
+      - instruktör
+      - internutbildare
+      - samordnare
+      - koordinator
+      - teamkoordinator
+      - teamledare
   - lane_id: adjacent
-    name: "Närliggande möjligheter"
+    name: "Utbildning, service och verksamhetsnära stöd"
     bucket: adjacent
     priority: 2
-    queries: []
+    queries:
+      - utbildningssamordnare
+      - kompetensutveckling
+      - verksamhetsstöd
+      - patientkoordinator
+      - servicekoordinator
+      - vårdkoordinator
+      - introduktionssamordnare
+      - arbetsplatslärande
   - lane_id: bridge
-    name: "Flexibelt / extra"
+    name: "Förbättring och operativ koordinering"
     bucket: bridge
     priority: 3
-    queries: []
+    queries:
+      - förbättringsstöd
+      - kvalitetsstöd
+      - operativ koordinator
+      - administrativ samordnare
+      - verksamhetskoordinator
+      - teamstöd
 
-negative_filters: []
-triage_rule: "Verified career evidence defines candidate fit. Search hypotheses may modify sourcing/ranking only."
+negative_filters:
+  - "Do not infer professional licences, education or formal leadership responsibility that is not verified in the candidate profile."
+  - "Interview-derived role hypotheses may guide sourcing and ranking only; they may not become candidate evidence."
+triage_rule: "Verified career evidence defines candidate fit. Interview-derived role hypotheses modify sourcing/ranking only. Full HRDM is required before candidate positioning or application claims."
 
 user_search_overlay:
   source: user_input

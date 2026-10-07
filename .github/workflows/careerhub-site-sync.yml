@@ -1,5 +1,5 @@
 name: CareerHub Managed Site Sync
-# Fleet rollout marker: 2026-10-06 motor-close-loop-v6
+# Fleet rollout marker: 2026-10-07 parity-repair-v1
 
 on:
   push:
@@ -9,6 +9,7 @@ on:
       - 'CareerHub/profile/**'
       - 'CareerHub/config/**'
       - 'CareerHub/personalisation/**'
+      - 'CareerHub/site/personal/**'
       - '.github/workflows/careerhub-site-sync.yml'
   workflow_dispatch:
   schedule:
